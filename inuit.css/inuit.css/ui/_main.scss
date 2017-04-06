@@ -1,0 +1,137 @@
+/**
+ * $main
+ */
+
+/* baseline to develop on */
+ body {
+	 //background-image: url('images/bg/baseline.png');
+	 font-family: $body-face;
+	 -webkit-font-smoothing: antialiased;
+	 background: #fff;
+ }
+
+a {
+    color: $black;
+		border-bottom: .1em solid $black;
+    -webkit-transition: color 150ms ease-in;
+       -moz-transition: color 150ms ease-in;
+	     -o-transition: color 150ms ease-in;
+	        transition: color 150ms ease-in;
+
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: none;
+				border: 0;
+        color: $black;
+    }
+
+    &:focus {
+			outline: 3px solid $brand-color;
+		}
+
+}
+
+ ::selection {
+	background: $brand-color;
+	color: #fff;
+	}
+ ::-moz-selection {
+	background: $brand-color;
+	color: #fff;
+	}
+
+/**
+ * $page
+ */
+
+#page,
+.page {
+	@extend .cf;
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 0 $half-spacing-unit;
+	@include media-query(palm) {
+		padding: 0 $half-spacing-unit/2;
+	}
+}
+
+.static .page {
+	padding: 0;
+}
+
+.white-bg {
+	background: #fff;
+}
+
+.page-bg {
+	padding: $base-spacing-unit 0;
+	background: #F3F3F3;
+	@include media-query(palm) {
+		padding: $half-spacing-unit/2 0;
+	}
+}
+
+.page-template-default {
+	max-width: 100%;
+	padding: 0;
+}
+
+.page-bg.type-page {
+	max-width: 100%;
+}
+
+.grid-item {
+	background: red;
+	margin: 5px;
+}
+
+.blue-bg {
+	background: #DCEFF5;
+}
+
+.category-eating-in-manchester .page-bg,
+.page-bg.category-eating-in-manchester {
+	background: lighten(#e9d2b6, 10%);
+}
+
+.category-music .page-bg {
+	background: lighten(#D1DCD2, 5%);
+}
+
+.category-arts .page-bg {
+	background: lighten(#EAD9DB, 5%);
+}
+
+.category-drinking-in-manchester .page-bg,
+.page-bg.category-drinking-in-manchester {
+	background: lighten(#e3c7e7, 10%);
+}
+
+.skip-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+
+  ul {
+    list-style: none;
+    margin: 0px;
+  }
+
+  a {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    font-size: 20px;
+    padding: $half-spacing-unit/2 $half-spacing-unit;
+    color: #fff;
+    background: $darkgrey;
+    white-space: nowrap;
+
+    &:focus,
+    &:active {
+      left: $half-spacing-unit;
+    }
+  }
+}

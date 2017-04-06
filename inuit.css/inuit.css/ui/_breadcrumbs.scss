@@ -1,0 +1,30 @@
+/*------------------------------------*\
+    $Breadcrumb
+\*------------------------------------*/
+
+.breadcrumbs {
+	margin-bottom: $half-spacing-unit;
+	padding: 0;
+	@include font-size(16px);
+
+	position: relative;
+	top: -1px;
+	span {
+		display: inline-block;
+		margin-left: 0;
+		margin-right: $half-spacing-unit/2;
+	}
+	.current {
+		color: lighten($black, 40%);
+		border-color: lighten($black, 40%);
+	}
+	a {
+		color: lighten($black, 40%);
+		border-color: lighten($black, 40%);
+
+		&:hover {
+			color: lighten($black, 40%);
+			border-color: lighten($black, 40%);
+		}
+	}
+}

@@ -1,0 +1,68 @@
+/*------------------------------------*\
+    $Adverts
+\*------------------------------------*/
+.g-single,
+.g-6 {
+	width: 100%;
+}
+
+.ad-horz {
+	.g {
+		float: none;
+		padding-left: 0px;
+	}
+  @extend .cf;
+	img {
+		width: 100%;
+	}
+  a {
+		width: 100%;
+		display: block;
+    border-bottom: 0;
+  }
+	@include media-query(palm) {
+    margin-bottom: 0;
+  }
+}
+
+.ad-title {
+	margin-bottom: $base-spacing-unit !important;
+}
+
+.ad-sq {
+	margin: 0 auto $half-spacing-unit auto;
+	@include media-query(palm) {
+  	height:auto !important;
+  }
+  @include media-query(mob) {
+  	height:auto !important;
+  }
+	a {
+		border: 0;
+	}
+	img {
+		width: 100%;
+	}
+}
+
+.grid-helper {
+	.ad-sq {
+		@include media-query(palm) {
+			width: 50%;
+			height: auto;
+			float: left;
+				&:nth-of-type(2) {
+					margin-right: $base-spacing-unit !important;
+				}
+			}
+		@include media-query(mob) {
+			width: 100%;
+			height: auto;
+			float: none;
+		}
+	}
+}
+
+.ad-sense {
+  margin: 0 auto $base-spacing-unit auto;
+}
