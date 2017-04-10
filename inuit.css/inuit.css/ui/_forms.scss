@@ -1,6 +1,15 @@
 /*------------------------------------*\
     $Forms
 \*------------------------------------*/
+
+div.wpcf7 img.ajax-loader {
+	display: inline;
+	margin-left: 16px;
+	width: 32px;
+  max-width: 32px;
+  height: auto;
+}
+
 input[type=text], input[type=email], input[type=password] {
 	width: 100%;
 	padding: $half-spacing-unit;
@@ -132,7 +141,7 @@ textarea:focus, input:focus{
 	textarea {
 		width: 100%;
 		padding: $half-spacing-unit;
-		background: $lightgrey;
+		background: #fff;
 		&:hover {
 			background: #fff;
 		}
@@ -151,11 +160,10 @@ textarea:focus, input:focus{
 	}
 }
 
+
+
 .connect {
 	.social {
-
-
-
 	}
 	input[type=email] {
 		width: 70% !important;
@@ -177,24 +185,19 @@ textarea:focus, input:focus{
 	}
 	.wpcf7-response-output {
 		margin-left: 0;
-		margin-top: -$base-spacing-unit;
 	}
 	.wpcf7-not-valid-tip {
-		top: -9px;
-		left: 0%;
-		@include font-size($milli-size);
-		background: #ffecec;
-		border: 2px solid #ff0000;
-		color:#a10000;
+		background: #ff0000 !important;
+		border: 2px solid #ff0000 !important;
+		color: inherit#fff !important;
 		width: 100%;
-		padding: $half-spacing-unit+1 $half-spacing-unit $half-spacing-unit $half-spacing-unit;
+		padding: $half-spacing-unit;
 	}
 }
 
 .newscta {
 	min-height: 227px;
 	border-top: 1px solid #999;
-	// border-bottom: 1px solid #999;
 	padding-top: $base-spacing-unit;
 	padding-bottom: $half-spacing-unit;
 	#fit-brand {
@@ -226,53 +229,54 @@ textarea:focus, input:focus{
 	input[type=submit] {
 		padding: $half-spacing-unit+2 $half-spacing-unit $half-spacing-unit+2 $half-spacing-unit;
 		background: $brand-color;
-		@include vendor(border-radius, 4px);
 		border:0;
 		color: #fff;
-
 	}
 	.wpcf7-not-valid-tip {
-		top: -9px;
-		left: 0%;
-		@include font-size($milli-size);
-		background: #ffecec;
-		border: 2px solid #ff0000;
-		color:#a10000;
-		width: 100%;
-		padding: $half-spacing-unit+1 $half-spacing-unit $half-spacing-unit $half-spacing-unit;
+		background: #CE0000 !important;
+		color: #fff !important;
+		width: 100% !important;
+		padding: $half-spacing-unit !important;
 		}
-	img.ajax-loader {
-		//position: relative;
-		//bottom: 1.9em;
-	}
 	.wpcf7-response-output {
-		position: absolute;
-		width: 165px;
-		margin: 0;
-		padding: $half-spacing-unit;
-		@include font-size($milli-size);
+		margin: 0 !important;
+		padding: $half-spacing-unit !important;
 	}
 }
 
 .wpcf7-validation-errors {
-	border: 2px solid #f7e700;
-	background: #ffffd0;
+	border: 2px solid #CE0000 !important;
+	background: #CE0000 !important;
+	font-weight: bold !important;
+	color: #fff !important;
 }
 
 .wpcf7-response-output {
-	margin: 0 0 $half-spacing-unit 0;
-	padding: $half-spacing-unit;
+	margin: 0 0 $half-spacing-unit 0 !important;
+	padding: $half-spacing-unit !important;
 }
 
 .wpcf7-mail-sent-ng {
-	border: 2px solid #ff0000;
-	background: #ffecec;
-	color:#a10000;
+	background: #CE0000 !important;
+	font-weight: bold !important;
+	color: #fff !important;
 }
 
 #mc_embed_signup .mc-field-group input {
 	display: inline !important;
 	width: 70% !important;
+}
+
+span.wpcf7-not-valid-tip {
+	position: static !important;
+	border: 2px solid #CE0000 !important;
+	background: #CE0000 !important;
+	font-weight: bold !important;
+	color: #fff !important;
+	padding: $half-spacing-unit !important;
+	display: block;
+	width: 100%;
+	font-size: 18px !important;
 }
 
 #mc_embed_signup .mc-field-group input.button {
@@ -282,8 +286,6 @@ textarea:focus, input:focus{
 	display: inline !important;
 	width: 25% !important;
 }
-
-
 
 
 /* Comments form */

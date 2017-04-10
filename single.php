@@ -10,7 +10,7 @@
 get_header(); ?>
 
 	<div class="site-content">
-		<div class="gw" role="main">
+		<div class="gw">
 
 			<div class="g two-thirds palm-one-whole">
 
@@ -153,20 +153,6 @@ get_header(); ?>
 					</div>
 
 				</div>
-
-				<div class="ad-sense">
-					<h5 class="sub-title ad-title">Advert</h5>
-					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-					<!-- Article Custom size 2 -->
-					<ins class="adsbygoogle"
-					     style="display:inline-block;width:430px;height:430px"
-					     data-ad-client="ca-pub-0654331869436657"
-					     data-ad-slot="1388693406"></ins>
-					<script>
-					(adsbygoogle = window.adsbygoogle || []).push({});
-					</script>
-				</div>
-
 			</div>
 
 		</div><!-- #content -->

@@ -40,8 +40,9 @@ get_header(); ?>
 									<div class="newscta">
 											<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
 											<style type="text/css">
-                                            #mce-responses { position: fixed; top: 0px; left: 0; width: 100%; }
-                                            #mc_embed_signup div.response { width: 100%; text-align: center;  padding: 1.5em 1em 1em 1em; }
+                                            #mce-responses { margin: 0 auto; }
+                                            #mc_embed_signup div.response { width: 100%; text-align: left;  padding: 12px; font-size: 18px; margin: 0 auto 16px auto;}
+											#mc_embed_signup div#mce-responses { margin: 0 auto 0px auto; width: 100%; padding:0;}
                                             #mc_embed_signup #mce-success-response { background: #529214; color: #fff;}
                                             #mc_embed_signup #mce-error-response { background: #CE0000; color: #fff;}
                                             #mc_embed_signup div#mce-responses { z-index:9999; }
@@ -51,7 +52,7 @@ get_header(); ?>
                                             #mc_embed_signup .button:hover { background: #b88d0b; }
                                             #mc_embed_signup .mc-field-group { min-height:60px; }
                                             #mc_embed_signup form {padding: 0;}
-                                            #mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error { border: 1px solid #CE0000; }
+                                            #mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {background: #CE0000; color: #fff; font-weight: bold; font-size: 18px; border-radius: 0; width: 100%;}
 											</style>
 											<div id="mc_embed_signup">
 											<form action="//ManchestersFinest.us2.list-manage.com/subscribe/post?u=80f2869a6d1828e3a9de6548f&amp;id=3b2131b21e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -82,7 +83,7 @@ get_header(); ?>
 			<div class="g two-thirds palm-one-whole">
 			<div id="sort-container">
 				<!-- Featured Articles -->
-				<?php $do_not_duplicate = array();  ?>
+				<?php $do_not_duplicate = array(); ?>
 
 				<!-- Normal Articles Loop -->
 			   <?php if (have_posts()) : while (have_posts()) : the_post();

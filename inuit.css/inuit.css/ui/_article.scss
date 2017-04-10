@@ -7,8 +7,7 @@
 }
 
 .readability-right {
-	margin-top: 16px;
-	padding-left: 24px !important;
+	// margin-top: 16px;
 }
 
 .event-time {
@@ -132,10 +131,9 @@
 		width: 100% !important;
 	}
 	.wp-caption-text {
-		background-color: $lightgrey;
-		padding: $half-spacing-unit;
-		@include font-size($milli-size);
-		font-style: italic;
+		background-color: #fff;
+		padding: $half-spacing-unit/2 $half-spacing-unit;
+		@include font-size(16px);
 		color: lighten($darkgrey, 20%);
 	}
 	@include media-query(palm) {

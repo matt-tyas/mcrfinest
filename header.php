@@ -88,7 +88,7 @@
 					<?php get_search_form(); ?>
 				</div>
 			</div>
-            <div class="g two-fifths lap-one-half palm-one-whole desk-position">
+            <div class="g one-half lap-one-half palm-one-whole desk-position">
 				<div class="ad-horz">
 					<?php
 			        if ( is_active_sidebar( 'header-advert' ) ) : ?>

@@ -16,10 +16,10 @@ get_header(); ?>
 
 
         <?php if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ?>
-			<div class="gw" role="main">
+			<div class="gw">
 
 				<div class="g two-thirds palm-one-whole">
-					<div class="static">
+					<div class="f-article media">
 						<?php while ( have_posts() ) : the_post(); ?>
 							<?php get_template_part( 'content', 'page' ); ?>
 						<?php endwhile; // end of the loop. ?>
@@ -28,14 +28,14 @@ get_header(); ?>
 
 				<div class="g one-third palm-one-whole">
 
-				<aside class="social-links">
-					<h5 class="sub-title">Share on&hellip;</h5>
-					<ul class="nav nav--banner">
-						<li><a title="<?php the_title(); ?>" href="https://twitter.com/intent/tweet?original_referer=<?php the_permalink(); ?>source=tweetbutton&amp;text=<?php the_title(); ?> <?php the_permalink(); ?>&amp;url=<?php the_permalink(); ?>&amp;<?php the_permalink(); ?>via=Manchesters_Finest" target="_blank" rel="nofollow" class="btn btn--twitter">Twitter</a></li>
-						<li><a title="<?php the_title(); ?>" href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>" target="_blank" rel="nofollow" class="btn btn--facebook">Facebook</a></li>
-						<li><a class="btn  btn--finest" href="mailto:?subject=Article from Manchester's Finest - <?php the_title(); ?>&amp;body=<?php the_permalink(); ?>" title="Send to a friend">Email</a></li>
-					</ul>
-				</aside>
+					<aside class="social-links">
+						<h5 class="sub-title">Share on&hellip;</h5>
+						<ul class="nav nav--banner">
+							<li><a title="<?php the_title(); ?>" href="https://twitter.com/intent/tweet?original_referer=<?php the_permalink(); ?>source=tweetbutton&amp;text=<?php the_title(); ?> <?php the_permalink(); ?>&amp;url=<?php the_permalink(); ?>&amp;<?php the_permalink(); ?>via=Manchesters_Finest" target="_blank" rel="nofollow" class="btn btn--twitter">Twitter</a></li>
+							<li><a title="<?php the_title(); ?>" href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>" target="_blank" rel="nofollow" class="btn btn--facebook">Facebook</a></li>
+							<li><a class="btn  btn--finest" href="mailto:?subject=Article from Manchester's Finest - <?php the_title(); ?>&amp;body=<?php the_permalink(); ?>" title="Send to a friend">Email</a></li>
+						</ul>
+					</aside>
 
 				</div>
 
@@ -118,11 +118,8 @@ get_header(); ?>
 
 				</div>
 
-			</div>
 
-			<div class="g one-third palm-one-whole">
-
-			<!-- Connect CTAs -->
+				<!-- Connect CTAs -->
 				<aside class="connect">
 
 					<h5 class="sub-title">// Say hello&hellip;</h5>
@@ -140,7 +137,10 @@ get_header(); ?>
 
 				</aside>
 
+
 			</div>
+
+
 
 
 

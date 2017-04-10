@@ -17,7 +17,7 @@ get_header(); ?>
 
 <div class="gw row">
 
-    <?php // The Query
+    <!-- <?php // The Query
         global $wp_query;
 
         $term = $wp_query->queried_object;
@@ -38,9 +38,9 @@ get_header(); ?>
                     )
             );
         $new_query = new WP_Query($args);
-    ?>
+    ?> -->
 
-    <div class="g one-third palm-one-whole">
+    <!-- <div class="g one-third palm-one-whole">
 
         <h1><?php single_cat_title(); ?></h1>
         <h2>Finest picks</h2>
@@ -85,14 +85,15 @@ get_header(); ?>
             <li>No A-Z as yet&hellip;</li>
             <?php endif; ?>
         </ul>
-    </div>
-    <div class="g two-thirds palm-one-whole">
+    </div> -->
+    <div class="g one-whole palm-one-whole">
         <section class="latest-articles">
-            <h2>Articles</h2>
+            <h1><?php single_cat_title(); ?></h1>
+            <!-- <h2>Articles</h2> -->
             <div id="sort-container">
                 <!-- Normal Articles Loop -->
                <?php if (have_posts()) : while (have_posts()) : the_post();
-                     if (in_array($post->ID, $do_not_duplicate)) continue;
+                     //if (in_array($post->ID, $do_not_duplicate)) continue;
                 ?>
                 <article <?php post_class('post-tile'); ?>>
                     <a href="<?php the_permalink() ?>" rel="bookmark">

@@ -26,9 +26,10 @@ a {
         color: $black;
     }
 
-    &:focus {
-			outline: 3px solid $brand-color;
-		}
+    // &:focus {
+		// 	background: $brand-color;
+		// 	color: #fff !important;
+		// }
 
 }
 
@@ -56,8 +57,10 @@ a {
 	}
 }
 
-.static .page {
-	padding: 0;
+.static .page,
+.page.type-page {
+	padding-left: 0;
+	padding-right: 0;
 }
 
 .white-bg {
@@ -90,8 +93,7 @@ a {
 	background: #DCEFF5;
 }
 
-.category-eating-in-manchester .page-bg,
-.page-bg.category-eating-in-manchester {
+.category-eating-in-manchester .page-bg {
 	background: lighten(#e9d2b6, 10%);
 }
 

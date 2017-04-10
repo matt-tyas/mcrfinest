@@ -14,9 +14,6 @@
 		margin-bottom: $half-spacing-unit/2;
 		line-height: 1.2;
 	}
-	.event-link {
-		min-height: 80px;
-	}
 }
 
 .event-list {
@@ -42,7 +39,7 @@
 	.event-link {
 		padding: $half-spacing-unit;
 		display: block;
-		min-height: 78px;
+		min-height: 115px;
 		border: 0;
 		-webkit-transition:all 150ms ease-in;
        -moz-transition:all 150ms ease-in;

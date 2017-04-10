@@ -88,15 +88,14 @@ header {
 	color: #333;
 	font-weight: 300;
 	text-align: center;
-	// dropped test
-    @extend .visuallyhidden--palm;
+  @extend .visuallyhidden--palm;
 	@include media-query(lap-and-up) {
 		display: block;
-    	text-align: left;
-    }
+	  text-align: left;
+  }
 	@include media-query(desk) {
-    	text-align: left;
-    }
+  	text-align: left;
+  }
 }
 
 .ad-horz {
@@ -104,6 +103,7 @@ header {
 	height: auto;
     margin: $half-spacing-unit auto 0 auto;
     @include media-query(desk) {
+      width: 600px;
     	float: right;
     }
 		@include media-query(palm) {
