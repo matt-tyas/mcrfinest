@@ -91,12 +91,12 @@ function twentytwelve_setup() {
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 624, 9999 ); // Unlimited height, soft crop
 	if ( function_exists( 'add_image_size' ) ) {
-	        add_image_size( 'cat-post-thumb', 172, 88, true );
-	        add_image_size( 'big-post-thumb', 224, 115, true );
-			add_image_size( 'big-article-image', 750, 366, true );
-			add_image_size( 'sq-post-thumb', 165, 165, true );
-			add_image_size( 'large-post-thumb', 120, 120, true );
-			add_image_size( 'mini-post-thumb', 50, 50, true );
+	    add_image_size( 'cat-post-thumb', 172, 88, true );
+	    add_image_size( 'big-post-thumb', 308, 158, true );
+	    add_image_size( 'big-article-image', 750, 450, true );
+		add_image_size( 'sq-post-thumb', 400, 400, true );
+		// add_image_size( 'large-post-thumb', 120, 120, true );
+		// add_image_size( 'mini-post-thumb', 50, 50, true );
 	}
 
 	function setup() {
@@ -605,6 +605,22 @@ function twentytwelve_widgets_init() {
 
 }
 add_action( 'widgets_init', 'twentytwelve_widgets_init' );
+
+/**
+ * Filter the except length
+ */
+
+function get_excerpt($limit, $source = null){
+    if($source == "content" ? ($excerpt = get_the_content()) : ($excerpt = get_the_excerpt()));
+    $excerpt = preg_replace(" (\[.*?\])",'',$excerpt);
+    $excerpt = strip_shortcodes($excerpt);
+    $excerpt = strip_tags($excerpt);
+    $excerpt = substr($excerpt, 0, $limit);
+    $excerpt = substr($excerpt, 0, strripos($excerpt, " "));
+    $excerpt = trim(preg_replace( '/\s+/', ' ', $excerpt));
+    $excerpt = $excerpt.'&hellip;';
+    return $excerpt;
+}
 
 if ( ! function_exists( 'twentytwelve_content_nav' ) ) :
 /**

@@ -4,11 +4,11 @@
 		<div class="g one-third palm-one-half mob-one-whole">
 			<article <?php post_class('post-tile post-tile-whole equal-cols'); ?>>
 				<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
-					<?php the_post_thumbnail( 'cat-post-thumb'); ?>
+					<?php the_post_thumbnail( 'big-post-thumb'); ?>
 					<span class="category"><?php $category = get_the_category(); echo $category[0]->cat_name; ?></span>
 					<h3><?php the_title(); ?></h3>
 					<div class="intro">
-					<?php the_excerpt(); ?>
+					<p><?php echo get_excerpt(140); ?></p>
 				</div>
 				</a>
 			</article>

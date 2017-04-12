@@ -26,11 +26,6 @@ a {
         color: $black;
     }
 
-    // &:focus {
-		// 	background: $brand-color;
-		// 	color: #fff !important;
-		// }
-
 }
 
  ::selection {
@@ -58,9 +53,16 @@ a {
 }
 
 .static .page,
-.page.type-page {
+.page.type-page,
+.page.type-page .breadcrumbs {
 	padding-left: 0;
 	padding-right: 0;
+	width: 100%;
+  max-width: 100%;
+	@media only screen and (min-width: 1400px) {
+		padding-left: 16px;
+		padding-right: 16px;
+	}
 }
 
 .white-bg {
@@ -80,16 +82,27 @@ a {
 	padding: 0;
 }
 
-.page-bg.type-page {
-	max-width: 100%;
+.page-template-default .wrapper .one-whole {
+	padding-left: 0;
 }
 
 .grid-item {
-	background: red;
 	margin: 5px;
 }
 
 .blue-bg {
+	background: lighten(#DCEFF5, 5%);
+}
+
+.category-featured .page-bg {
+	background: lighten(#f8f8d8, 5%);
+}
+
+.category-shopping-in-manchester .page-bg {
+	background: #ECE4F4;
+}
+
+.category-from-mcr-to .page-bg {
 	background: #DCEFF5;
 }
 

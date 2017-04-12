@@ -71,6 +71,7 @@
 	@extend .cf;
 	float: left;
 	width: 23%;
+  margin-right: 2.5%;
 	&:nth-of-type(3n) {
 		margin-right: 2.5%;
 	}
@@ -93,7 +94,7 @@
 	float: left;
 	width: 31%;
 	height: auto;
-	margin-right: 2.5%;
+	margin-right: 3.4%;
 	background: #fff;
 	margin-bottom: $base-spacing-unit;
 	&:nth-of-type(3n) {
@@ -486,7 +487,7 @@ article.category-northern-quarter {
 	}
 	p {
 		margin-bottom: 0;
-		@include font-size(14px);
+		@include font-size(16px);
 		line-height: 1.4 !important;
 		color: #000;
 	}

@@ -41,7 +41,7 @@ get_header(); ?>
 				</aside>
 
                 <div class="gw">
-					<div class="g one-whole palm-one-half mob-one-whole">
+					<div class="g one-whole palm-one-whole mob-one-whole">
 						<div class="newscta">
 								<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
 								<style type="text/css">

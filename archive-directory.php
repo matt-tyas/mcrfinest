@@ -51,7 +51,7 @@ get_header(); ?>
 								<span class="category"><?php $category = get_the_category(); echo $category[0]->cat_name; ?></span>
 								<h3><?php the_title(); ?></h3>
 								<div class="intro">
-								<?php the_excerpt(); ?>
+								<p><?php echo get_excerpt(140); ?></p>
 							</div>
 							</a>
 						</article>

@@ -20,9 +20,9 @@
     		padding:0;
     	}
     	@include media-query(palm) {
-			position:  absolute;
+			// position:  absolute;
 			top: $half-spacing-unit/2;
-			width: 101%;
+			width: 100%;
 			margin-left: -$base-spacing-unit;
 	    	a {
 	    		display: block;
@@ -209,8 +209,8 @@
 		@extend .btn;
 		font-size: 32px;
 		@media only screen and (max-width: 859px) {
-			top: 1px;
-			right: 24px;
+			top: 12px;
+			right: 0px;
 		}
 		span {
 			position: relative;

@@ -132,8 +132,10 @@
 
 	h3 {
 		margin-bottom: $half-spacing-unit;
-		//border-bottom: 1px solid #fff;
 		color: #fff;
+		@include media-query(palm) {
+			margin-bottom: 0;
+	  }
 	}
 	p {
 		font-family: sans-serif;
@@ -141,8 +143,8 @@
 		color: #fff;
 		line-height: 1.25;
 		@include media-query(palm) {
-			// display: none;
-	    }
+			display: none;
+	  }
 	}
 
 	&:hover h3,

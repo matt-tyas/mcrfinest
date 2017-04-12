@@ -45,7 +45,7 @@ get_header(); ?>
 
 				<div class="gw">
 
-					<div class="g one-half palm-one-whole">
+					<div class="g one-half palm-one-quarter mob-one-half">
 
 						<?php
 						if ( is_active_sidebar( 'category-page-advert-1' ) ) : ?>
@@ -53,21 +53,21 @@ get_header(); ?>
 						<?php endif; ?>
 					</div>
 
-					<div class="g one-half palm-one-whole">
+					<div class="g one-half palm-one-quarter mob-one-half">
 						<?php
 						if ( is_active_sidebar( 'category-page-advert-2' ) ) : ?>
 						<?php dynamic_sidebar( 'category-page-advert-2' ); ?>
 						<?php endif; ?>
 					</div>
 
-					<div class="g one-half palm-one-whole">
+					<div class="g one-half palm-one-quarter mob-one-half">
 						<?php
 						if ( is_active_sidebar( 'category-page-advert-3' ) ) : ?>
 				        <?php dynamic_sidebar( 'category-page-advert-3' ); ?>
 				        <?php endif; ?>
 				    </div>
 
-					<div class="g one-half palm-one-whole">
+					<div class="g one-half palm-one-quarter mob-one-half">
 					 	<?php
 				        if ( is_active_sidebar( 'category-page-advert-4' ) ) : ?>
                         <?php dynamic_sidebar( 'category-page-advert-4' ); ?>
