@@ -297,7 +297,7 @@ article.category-northern-quarter {
 		}
 	}
 	&:before {
-		display: block;
+		display: none;
 		content:"Northern Quarter";
 		@include font-size($milli-size);
 		font-family: $quote-face;
@@ -510,7 +510,7 @@ article.category-northern-quarter {
 
 .yarpp-related h3 {
 	font-weight: 700 !important;
-	padding: $half-spacing-unit !important;
+	padding: $half-spacing-unit $half-spacing-unit 0 $half-spacing-unit !important;
 	line-height: 1.4 !important;
   font-size: 100% !important;
   text-transform: none;
@@ -563,14 +563,5 @@ article.category-northern-quarter {
 			text-decoration: none;
 			background: $lightgrey;
 		}
-	}
-}
-
-.social-links {
-	h5 {
-		margin-bottom: $base-spacing-unit;
-	}
-	.btn {
-		margin-bottom: 0;
 	}
 }

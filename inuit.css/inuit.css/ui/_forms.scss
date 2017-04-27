@@ -195,7 +195,7 @@ textarea:focus, input:focus{
 	}
 }
 
-.newscta {
+.home .post .newscta {
 	min-height: 227px;
 	border-top: 1px solid #999;
 	padding-top: $base-spacing-unit;
@@ -210,6 +210,22 @@ textarea:focus, input:focus{
 		margin-bottom: $half-spacing-unit;
 	}
 
+}
+
+.post .newscta {
+	min-height: 150px;
+	border-top: 0;
+	padding-top: 0;
+	padding-bottom: $half-spacing-unit;
+	#fit-brand {
+		margin-bottom: $half-spacing-unit/4;
+		@include media-query(palm) {
+			font-size: 35px;
+		}
+	}
+	p {
+		margin-bottom: $half-spacing-unit;
+	}
 }
 
 .newsletter {

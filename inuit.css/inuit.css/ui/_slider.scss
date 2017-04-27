@@ -2,6 +2,14 @@
     $Slider
 \*------------------------------------*/
 
+.royalSlider > .rsContent {
+  visibility: hidden;
+}
+
+.rsMinW .rsPreloader {
+	background-image: none !important;
+}
+
 .features {
 	h4 {
 		font-family: Georgia, Times, "Times New Roman", serif;
@@ -56,7 +64,8 @@
 }
 
 .rsMinW, .rsMinW .rsOverflow, .rsMinW .rsSlide, .rsMinW .rsVideoFrameHolder, .rsMinW .rsThumbs {
-	background: #fff !important;
+	background: url('images/mf-loader.svg') #f3f3f3 center no-repeat !important;
+	background-size: 80px 60px !important;
 }
 
 .ie8 .rsABlock {
@@ -146,11 +155,6 @@
 			display: none;
 	  }
 	}
-
-	&:hover h3,
-	&:hover p {
-		//color: $brand-color !important;
-		}
 
 	&:hover h3 {
 		color: #fff !important;

@@ -72,3 +72,46 @@
 		}
 	}
 }
+
+.social-wrap {
+	height: 64px;
+	width: 105px;
+	position: relative;
+	@include media-query(palm) {
+		display: none;
+	}
+}
+
+.social-links {
+
+	position: absolute;
+	h5 {
+		font-size: 16px;
+		margin-top: 2px;
+		margin-bottom: 0;
+		padding-bottom: 0;
+		border-bottom: 0;
+	}
+	.btn {
+		margin-bottom: 0;
+	}
+
+
+}
+
+.social-share {
+		.btn-circle {
+			font-size: .4em;
+	    padding: 8px 10px 0px 0px;
+			color: #999;
+			margin-bottom: 0;
+		}
+
+		.icon-envelope {
+			font-size: 3em;
+			&:before{
+				position: relative;
+				top: 1px;
+			}
+		}
+}

@@ -73,7 +73,7 @@
 			<nav role="navigation" id="navigation" class="g  one-whole  primary">
 				<div class="site-naviagtion">
 				    <div class="main-search-control">
-				    	<a id="search-toggle" href="#"><span> Search</span></a>
+				    	<a id="search-toggle" href="#"><span> <span class="search-text">Search</span></span></a>
 				    	<div class="mob-search">
 							<?php get_search_form(); ?>
 						</div>

@@ -16,7 +16,8 @@
 
 get_header(); ?>
 	<div id="content" role="main">
-        <h1 class="accessibility">Manchester's Finest and the Northern Quarter - Restaurants, Bars, Offers and Competitions in Manchester</h1>
+        <h1 class="accessibility">Manchester's Finest and the Northern Quarter</h1>
+        <h2 class="accessibility">Restaurants, Bars, Offers and Competitionss in Manchester</h2>
 		<div class="gw row">
 			<div class="g two-thirds palm-one-whole">
 				<?php echo get_new_royalslider(1); ?>

@@ -42,6 +42,7 @@
         				<div class="gw row">
         			        <div class="g two-thirds palm-one-whole">
         						<?php the_content(); ?>
+        						
         					</div>
         					<div class="g one-third palm-one-whole">
         						<div class="directory__address">
@@ -56,10 +57,14 @@
         							</a>
         						</div>
         					</div>
-        					<div class="cf" style="overflow:visible; display: block; clear: both; padding: 0px 32px;">
+        					<div class="g one-whole">
+      
+        						<div class="cf" style="width: 100%; overflow:visible; display: block; clear: both; padding: 0px;">
         						<h2>Latest <?php the_title(); ?> articles</h2>
         						<?php if (function_exists('related_posts') ) : related_posts(); endif; ?>
+								</div>
         					</div>
+        					
         				</div>
         			</div>
         			<?php endif; ?>

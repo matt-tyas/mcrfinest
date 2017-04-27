@@ -2,6 +2,10 @@
     $Comments
 \*------------------------------------*/
 
+.fb-finest-comments + p {
+  display: none;
+}
+
 .comments-area {
 	h2 {
 		@include font-size($h4-size);

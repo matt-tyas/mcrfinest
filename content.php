@@ -7,14 +7,14 @@
  * @since Twenty Twelve 1.0
  */
 ?>
-<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentytwelve' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">
-	<article class="f-article media" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+	<article class=" media" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<?php if ( is_sticky() && is_home() && ! is_paged() ) : ?>
 		<div class="featured-post">
 			<?php _e( 'Featured post', 'twentytwelve' ); ?>
 		</div>
 		<?php endif; ?>
-		<header class="entry-header">
+
 
 			<?php if ( is_single() ) : ?>
 
@@ -24,7 +24,7 @@
 			<h2><?php the_title(); ?></h2>
 
 			<?php endif; // is_single() ?>
-		</header><!-- .entry-header -->
+
 
 		<?php if ( is_search() ) : // Only display Excerpts for Search ?>
 		<div class="media__img search--img">
@@ -78,4 +78,4 @@
 
 
 	</article><!-- #post -->
-	</a>
+	

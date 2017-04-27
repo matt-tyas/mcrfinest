@@ -1,9 +1,6 @@
 $(window).load(function() {
-	/* When the page has loaded show the category
-	---------------------------------------------
-	This avoids the flags loading in the top left of the browser whilst witing for isotope to finish */
-	$(".tag-highlight").show();
-	$(".category-northern-quarter").show();
+	/* This avoids the flags loading in the top left of the browser whilst witing for JS to finish */
+  $('<style> .category-northern-quarter:before { display: block !important; } </style>').appendTo('head');
 });
 
 $(document).ready(function(){
