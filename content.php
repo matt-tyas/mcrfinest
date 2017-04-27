@@ -8,39 +8,42 @@
  */
 ?>
 
-	<article class=" media" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
 		<?php if ( is_sticky() && is_home() && ! is_paged() ) : ?>
 		<div class="featured-post">
 			<?php _e( 'Featured post', 'twentytwelve' ); ?>
 		</div>
 		<?php endif; ?>
 
+		<?php if ( is_single() ) : ?>
 
-			<?php if ( is_single() ) : ?>
+		<article class="media" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-			<h1><?php the_title(); ?></h1>
+		<h1><?php the_title(); ?></h1>
 
-			<?php else : ?>
-			<h2><?php the_title(); ?></h2>
-
-			<?php endif; // is_single() ?>
+		<?php endif; // is_single() ?>
 
 
 		<?php if ( is_search() ) : // Only display Excerpts for Search ?>
-		<div class="media__img search--img">
-			<?php
-				$post_thumbnail_id = get_post_thumbnail_id( );
-				$imagesized = wp_get_attachment_image_src( $post_thumbnail_id, 'big-post-thumb');
-				if ($imagesized[1] == 308) {
-					the_post_thumbnail('big-post-thumb');
-				} else {
-					the_post_thumbnail('cat-post-thumb');
-				}
-			?>
-		</div>
-		<div class="entry-summary">
-			<p><?php echo get_excerpt(140); ?></p>
-		</div><!-- .entry-summary -->
+		<a href="<?php the_permalink() ?>" rel="bookmark">
+			<article class="search-post media" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<h2><?php the_title(); ?></h2>
+				<div class="media__img search--img">
+					<?php
+						$post_thumbnail_id = get_post_thumbnail_id( );
+						$imagesized = wp_get_attachment_image_src( $post_thumbnail_id, 'big-post-thumb');
+						if ($imagesized[1] == 308) {
+							the_post_thumbnail('big-post-thumb');
+						} else {
+							the_post_thumbnail('cat-post-thumb');
+						}
+					?>
+				</div>
+				<div class="entry-summary">
+					<p><?php echo get_excerpt(140); ?></p>
+				</div><!-- .entry-summary -->
+	        </article><!-- #post -->
+		</a>
 
 		<?php else : ?>
 		<div id="article-content" class="entry-content">
@@ -74,8 +77,5 @@
 
 			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'twentytwelve' ), 'after' => '</div>' ) ); ?>
 		</div><!-- .entry-content -->
+		</article><!-- #post -->
 		<?php endif; ?>
-
-
-	</article><!-- #post -->
-	
