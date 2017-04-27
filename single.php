@@ -34,14 +34,50 @@ get_header(); ?>
 			</div>
 
 			<div class="g six-tenths lap-four-fifths palm-one-whole f-article">
+				<?php
+					global $post;
+					$compare_date = strtotime( "2017-04-26" );
+					$post_date    = strtotime( $post->post_date );
 
-				<?php while ( have_posts() ) : the_post(); ?>
+					if ( $compare_date > $post_date  ) {
 
-				<?php if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ?>
+						// Old posts
 
-				<?php get_template_part( 'content', get_post_format() ); ?>
+						while ( have_posts() ) : the_post();
 
-				<?php endwhile; // end of the loop. ?>
+					    if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs();
+
+						get_template_part( 'content', get_post_format() );
+
+						endwhile; // end of the loop.
+
+					} else {
+
+						// New format posts
+
+						while ( have_posts() ) : the_post();
+
+						if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs();
+
+					    echo "<h1>";
+							echo apply_filters( 'the_title', get_the_title( get_option( 'page_for_posts' ) ) );
+						echo "</h1>";
+
+						echo "<p class='lead'>";
+							echo nl2br(get_the_excerpt());
+						echo "</p>";
+
+						echo apply_filters( 'the_content', get_post_field( 'post_content', get_option( 'page_for_posts' ) ) );
+
+						endwhile; // end of the loop.
+
+					}
+
+				?>
+
+
+
+
 
 				<h3>Related to <?php the_title(); ?></h2>
 				<?php if (function_exists('related_posts') ) : related_posts(); endif; ?>
