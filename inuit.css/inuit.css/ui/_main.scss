@@ -52,6 +52,28 @@ a {
 	}
 }
 
+.page-template-default .wrapper.page {
+	padding: 0 $base-spacing-unit;
+	@include media-query(palm) {
+		padding: 0 $half-spacing-unit/2;
+	}
+}
+
+.directory-template-default .wrapper.page {
+  @include media-query(portable) {
+		padding-left: 42px;
+	}
+}
+
+.home main.page {
+  @media only screen and (max-width: 1023px) {
+    padding-left: 16px;
+  }
+	@include media-query(palm) {
+		padding-left: 8px;
+	}
+}
+
 .static .page,
 .page.type-page,
 .page.type-page .breadcrumbs {

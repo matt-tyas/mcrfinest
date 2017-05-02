@@ -992,7 +992,7 @@ function create_post_type() {
 	$labels = array(
       'name'               => _x( 'Directory', 'post type general name' ),
       'singular_name'      => _x( 'Directory', 'post type singular name' ),
-      'add_new_item'       => __( 'Add New lisitng' ),
+      'add_new_item'       => __( 'Add New listing' ),
       'edit_item'          => __( 'Edit listing' ),
       'new_item'           => __( 'New Listing' ),
       'all_items'          => __( 'All listings' ),

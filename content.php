@@ -23,7 +23,6 @@
 
 		<?php endif; // is_single() ?>
 
-
 		<?php if ( is_search() ) : // Only display Excerpts for Search ?>
 		<a href="<?php the_permalink() ?>" rel="bookmark">
 			<article class="search-post media" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -47,11 +46,6 @@
 
 		<?php else : ?>
 		<div id="article-content" class="entry-content">
-
-            <div class="article-meta">
-                <time datetime="2012-02-17"><?php the_date(); ?></time>
-                <div class="author">By <?php the_author_posts_link(); ?></div>
-            </div>
 
 			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentytwelve' ) ); ?>
 

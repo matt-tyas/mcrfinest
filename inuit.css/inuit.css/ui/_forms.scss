@@ -212,7 +212,8 @@ textarea:focus, input:focus{
 
 }
 
-.post .newscta {
+.post .newscta,
+.directory .newscta {
 	min-height: 150px;
 	border-top: 0;
 	padding-top: 0;
@@ -308,4 +309,37 @@ span.wpcf7-not-valid-tip {
 
 .form-allowed-tags {
 	display: none;
+}
+
+.post-113 #mc_embed_signup .mc-field-group input.button {
+  background: $brand-color;
+	color: white;
+	font-weight: bold;
+	border-radius: 3px;
+	padding: 16px 12px;
+	&:hover {
+	background: lighten($brand-color, 10%);
+	color: #fff !important;
+	}
+}
+
+.post-113 {
+	#mc_embed_signup .mc-field-group input {
+		@include media-query(palm) {
+			display: block !important;
+	    width: 100% !important;
+			margin-bottom: 12px;
+		}
+  }
+	#mc_embed_signup .mc-field-group input.button {
+		@include media-query(palm) {
+			display: block !important;
+	    width: auto !important;
+			margin-left: 0px;
+		}
+  }
+}
+
+.clear {
+	@extend .cf;
 }

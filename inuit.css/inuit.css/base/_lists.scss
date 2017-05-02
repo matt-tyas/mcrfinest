@@ -4,7 +4,10 @@
 /**
  * Remove vertical spacing from nested lists.
  */
-li{
+ ul {
+   margin-bottom: $base-spacing-unit;
+ }
+li {
     > ul,
     > ol{
          margin-bottom:0;
@@ -14,6 +17,7 @@ li{
 /**
  * Have a numbered `ul` without the semantics implied by using an `ol`.
  */
-/*ul*/.numbered-list{
+/*ul*/
+.numbered-list{
     list-style-type:decimal;
 }

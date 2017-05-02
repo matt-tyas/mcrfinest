@@ -42,6 +42,7 @@ h1,.alpha{
 }
 h2,.beta{
     @include font-size($h2-size);
+    margin-bottom: $half-spacing-unit;
 }
 h3,.gamma{
     @include font-size($h3-size);

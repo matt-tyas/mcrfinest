@@ -63,6 +63,15 @@ get_header(); ?>
 							echo apply_filters( 'the_title', get_the_title( get_option( 'page_for_posts' ) ) );
 						echo "</h1>";
 
+                        echo "<div class='article-meta'>";
+                        echo "<time datetime='2012-02-17'>";
+                            echo the_date();
+                        echo "</time>";
+                            echo "<div class='author'> By ";
+                                echo the_author_posts_link();
+                            echo "</div>";
+                        echo "</div>";
+
 						echo "<p class='lead'>";
 							echo nl2br(get_the_excerpt());
 						echo "</p>";
@@ -74,10 +83,6 @@ get_header(); ?>
 					}
 
 				?>
-
-
-
-
 
 				<h3>Related to <?php the_title(); ?></h2>
 				<?php if (function_exists('related_posts') ) : related_posts(); endif; ?>
