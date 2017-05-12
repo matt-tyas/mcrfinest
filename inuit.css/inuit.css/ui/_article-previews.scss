@@ -6,10 +6,6 @@
 	@extend .cf;
 	margin-top: 10px;
 	padding: 0 $half-spacing-unit $half-spacing-unit 0;
-	.brandface-title-2 {
-		font-size: 32px;
-		margin-bottom: 0;
-	}
 	ul {
 		margin: 0;
 	}
@@ -59,12 +55,17 @@
 		-o-border-radius: 4px;
 		border-radius: 4px;
 	}
+	.beta {
+		@include media-query(palm) {
+	    width: 70%;
+	  }
+	}
 
 
   @include media-query(palm) {
     position: fixed;
 		height: 100%;
-		width: 100%;
+		width: 105%;
 		z-index: 9999;
     bottom: 0px;
 		left: -5px;
@@ -88,14 +89,19 @@
 	@include media-query(palm) {
 		display: block;
 		position: fixed;
-		width: 100%;
+		width: 105%;
 		left: -5px;
 		padding: 5px;
 		bottom: 0px;
 		z-index: 999;
-		background: #f4f4f4;
+		background: $brand-color;
+		color: #fff;
 		border-bottom: 0;
 		text-align: center;
+		&:hover {
+			color: #fff;
+			background: #b88d0b;
+		}
 	}
 	.is-pressed {
 
@@ -105,10 +111,10 @@
 .finder-close-trigger {
 	display: none;
 	@include media-query(palm) {
-		display: inline-block;
+		display: inline;
 		position: absolute;
-		top: 10px;
-		right: 10px;
+		top: 20px;
+		right: 20px;
 	}
 	.is-pressed {
 

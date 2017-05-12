@@ -56,6 +56,12 @@ a {
 	max-width: 1400px;
 	margin: $half-spacing-unit auto $half-spacing-unit auto;
 	padding: 0;
+  @include media-query(lap) {
+		margin: 0 auto $half-spacing-unit auto;
+	}
+	@include media-query(palm) {
+		margin: 0 auto $half-spacing-unit auto;
+	}
 }
 
 .page-template-default .wrapper.page {
@@ -109,6 +115,12 @@ a {
 
 .home .page-bg {
 	background: #F3F3F3 !important;
+	@include media-query(lap) {
+		padding-top: 0;
+	}
+	@include media-query(palm) {
+		padding-top: 0;
+	}
 }
 
 .page-bg {

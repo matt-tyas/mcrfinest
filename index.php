@@ -38,14 +38,14 @@
 		<div class="border-wrap">
 			<div class="gw">
 				<div class="g two-thirds lap-one-half palm-one-whole">
-					<a href="#" class="finder-trigger">Find things to do in Manchester</a>
+					<a href="#" class="finder-trigger"><span aria-hidden="true" data-icon="&#x260c;"></span> Find things to do in&nbsp;Manchester</a>
 					<div class="mf-directory-search-home">
 						<h3 class="beta">Find things to do in Manchester</h3>
 						<?php
 							if ( is_active_sidebar( 'directory-search' ) ) : ?>
 							<?php dynamic_sidebar( 'directory-search' ); ?>
 						<?php endif; ?>
-						<a href="#" class="finder-close-trigger">Close</a>
+						<a href="#" class="finder-close-trigger"><span aria-hidden="true" data-icon="&#x2612;"></span> Close </a>
 					</div>
 				</div>
 

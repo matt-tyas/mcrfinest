@@ -47,111 +47,6 @@
 	}
 }
 
-/*.Articles {
-	span {
-		@extend .visuallyhidden;
-	}
-	&:before {
-		content: "\f10e";
-	}
-}*/
-/*.Events {
-	span {
-		@extend .visuallyhidden;
-	}
-	&:before {
-		content: "\f073";
-	}
-}*/
-/*.Clubs, .Nights, .Venues {
-	span {
-		@extend .visuallyhidden;
-	}
-	&:before {
-		content: "\e001";
-	}
-}*/
-/*.gigs, .Music, .Bands {
-	span {
-		@extend .visuallyhidden;
-	}
-	&:before {
-		content: "\e000";
-	}
-}
-.Health, .Mens, .Streetstyle, .Various, .Womens {
-	span {
-		@extend .visuallyhidden;
-	}
-	&:before {
-		content: "\e002";
-	}
-} */
-/*.Arts {
-	span {
-		@extend .visuallyhidden;
-	}
-	&:before {
-		content: "\e01a";
-	}
-}*/
-/*.Eatery, .Eating, .Restaurants, .Takeaway {
-	span {
-		@extend .visuallyhidden;
-	}
-	&:before {
-		content: "\f0f5";
-	}
-}*/
-/*.Cafes, .Delis {
-	span {
-		@extend .visuallyhidden;
-	}
-	&:before {
-		content: "\f0f4";
-	}
-}*/
-/*.Drink, .Drinking, .Bars {
-	span {
-		@extend .visuallyhidden;
-	}
-	&:before {
-		content: "\f000";
-	}
-}*/
-/*.Pubs {
-	span {
-		@extend .visuallyhidden;
-	}
-	&:before {
-		content: "\e006";
-	}
-}
-.Charity {
-	span {
-		@extend .visuallyhidden;
-	}
-	&:before {
-		content: "\f06c";
-	}
-}
-.Theatre {
-	span {
-		@extend .visuallyhidden;
-	}
-	&:before {
-		content: "\e017";
-	}
-}
-.People {
-	span {
-		@extend .visuallyhidden;
-	}
-	&:before {
-		content: "\f086";
-	}
-}*/
-
 .Northern {
 	span {
 		@extend .visuallyhidden;
@@ -160,30 +55,7 @@
 		content: "\e013";
 	}
 }
-/*.Manchester, .Canal, .China, .Lettings, .Northern, .Southern, .Spinningfields, .Town {
-	span {
-		@extend .visuallyhidden;
-	}
-	&:before {
-		content: "\e013";
-	}
-}
-.Film, .Cinema {
-	span {
-		@extend .visuallyhidden;
-	}
-	&:before {
-		content: "\e005";
-	}
-}
-.Exhibitions, .Galleries {
-	span {
-		@extend .visuallyhidden;
-	}
-	&:before {
-		content: "\e01d";
-	}
-}*/
+
 .icon-star:before {
 	content: "\2605";
 }
@@ -237,7 +109,7 @@
 }
 .icon-minus:before {
 	content: "\2d";
-} 
+}
 .icon-twitter:before {
 	content: "\2604";
 }
@@ -357,7 +229,7 @@
 }
 .icon-microphone:before {
 	content: "\e018";
-} 
+}
 .icon-marker:before {
 	content: "\e019";
 }
