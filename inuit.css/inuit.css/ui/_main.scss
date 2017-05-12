@@ -4,7 +4,6 @@
 
 /* baseline to develop on */
  body {
-	 //background-image: url('images/bg/baseline.png');
 	 font-family: $body-face;
 	 -webkit-font-smoothing: antialiased;
 	 background: #fff;
@@ -44,12 +43,19 @@ a {
 #page,
 .page {
 	@extend .cf;
-	max-width: 1400px;
+	max-width: 1280px;
 	margin: 0 auto;
 	padding: 0 $half-spacing-unit;
 	@include media-query(palm) {
 		padding: 0 $half-spacing-unit/2;
 	}
+}
+
+.featured-home {
+	@extend .cf;
+	max-width: 1400px;
+	margin: $half-spacing-unit auto $half-spacing-unit auto;
+	padding: 0;
 }
 
 .page-template-default .wrapper.page {
@@ -71,6 +77,16 @@ a {
   }
 	@include media-query(palm) {
 		padding-left: 8px;
+	}
+}
+
+.border-wrap {
+	padding: $base-spacing-unit 0 $half-spacing-unit 0;
+	margin-bottom: $base-spacing-unit;
+	border-top: 1px solid #999;
+	border-bottom: 1px solid #999;
+	.ad-sq {
+		margin-bottom: 0;
 	}
 }
 
@@ -96,7 +112,7 @@ a {
 }
 
 .page-bg {
-	padding: $base-spacing-unit 0;
+	padding: $half-spacing-unit 0;
 	background: #F3F3F3;
 	@include media-query(palm) {
 		padding: $half-spacing-unit/2 0;

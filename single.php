@@ -34,6 +34,7 @@ get_header(); ?>
 			</div>
 
 			<div class="g six-tenths lap-four-fifths palm-one-whole f-article">
+                
 				<?php
 					global $post;
 					$compare_date = strtotime( "2017-04-26" );

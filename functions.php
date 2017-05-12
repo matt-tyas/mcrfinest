@@ -601,6 +601,16 @@ function twentytwelve_widgets_init() {
 		'after_title' => '',
 	) );
 
+    register_sidebar( array(
+		'name' => __( 'Directory Search', 'twentytwelve' ),
+		'id' => 'directory-search',
+		'description' => __( 'Directory search', 'twentytwelve' ),
+		'before_widget' => '<div class="mf-directory-search">',
+		'after_widget' => '</div>',
+		'before_title' => '',
+		'after_title' => '',
+	) );
+
 
 
 }

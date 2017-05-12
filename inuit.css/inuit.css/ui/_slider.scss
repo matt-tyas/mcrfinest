@@ -1,6 +1,127 @@
 /*------------------------------------*\
     $Slider
 \*------------------------------------*/
+.rsUni,
+.rsUni .rsSlide,
+.rsUni .rsOverflow {
+	background: transparent !important;
+}
+.rsUni .rsTmb {
+	.title {
+		display: block !important;
+		font-size: 24px !important;
+		color: #888 !important;
+		font-weight: 700 !important;
+		margin-bottom: 0 !important;
+		line-height: 1.2 !important;
+		position: absolute !important;
+  	top: 50% !important;
+  	transform: translateY(-50%) !important;
+		-webkit-transition:all 100ms ease-in !important;
+				 -moz-transition:all 100ms ease-in !important;
+				 -o-transition:all 100ms ease-in !important;
+						transition:all 100ms ease-in !important;
+	}
+	p {
+		display: none !important;
+	}
+}
+.rsUni .rsGCaption {
+	width: 80% !important;
+	bottom: 20px !important;
+	left: 60px !important;
+	background: transparent !important;
+	padding: $half-spacing-unit !important;
+}
+.rsUni .rsGCaption h2 {
+	display: inline-block !important;
+	padding: 0 12px !important;
+	margin-bottom: $half-spacing-unit/4;
+	font-size: 38px !important;
+	font-weight: 700;
+	color: #000 !important;
+	background: rgba(255,255,255,0.9) !important;
+}
+.rsUni .rsGCaption p {
+	display: inline-block !important;
+	padding: 0 12px !important;
+	width: 90% !important;
+	font-size: 19px !important;
+	margin-bottom: 0 !important;
+	color: #000 !important;
+	line-height: 1.6 !important;
+	background: rgba(255,255,255,0.9) !important;
+}
+.rsUni .rsTmb span,
+.galleryTextThumbs .rsThumbs span {
+	opacity: 1 !important;
+	margin-bottom: 16px !important;
+	line-height: 1.4 !important;
+	color: #888 !important;
+	font-size: 16px !important;
+	font-size: .8rem !important;
+}
+
+.rsThumbs {
+	background: transparent !important;
+	color: #000 !important;
+}
+.galleryTextThumbs .rsTmb {
+	padding: 8px 16px;
+	-webkit-transition:all 100ms ease-in !important;
+			 -moz-transition:all 100ms ease-in !important;
+			 -o-transition:all 100ms ease-in !important;
+					transition:all 100ms ease-in !important;
+}
+
+.galleryTextThumbs .rsThumb.rsNavSelected .rsTmb {
+	padding: 8px 16px 8px 28px;
+	-webkit-transition:all 100ms ease-in !important;
+			 -moz-transition:all 100ms ease-in !important;
+			 -o-transition:all 100ms ease-in !important;
+					transition:all 100ms ease-in !important;
+}
+
+.galleryTextThumbs .rsThumbs .rsThumb {
+	margin: 0 12px 12px 12px;
+	border-bottom: 0 !important;
+	background: #dddddd !important;
+	-webkit-transition:all 100ms ease-in !important;
+		 -moz-transition:all 100ms ease-in !important;
+			 -o-transition:all 100ms ease-in !important;
+					transition:all 100ms ease-in !important;
+  &:hover {
+		.title {
+			color: #000 !important;
+		}
+		background: #fff !important;
+		.title {color: $brand-color;}
+	}
+}
+
+.rsUni .rsThumb.rsNavSelected {
+
+	margin: 0 12px 12px 0px;
+	background: #fff !important;
+	-webkit-transition:all 100ms ease-in !important;
+			 -moz-transition:all 100ms ease-in !important;
+			 -o-transition:all 100ms ease-in !important;
+					transition:all 100ms ease-in !important;
+	.title {
+		color: #000 !important;
+	}
+}
+
+.rsUni, .rsUni .rsOverflow, .rsUni .rsSlide, .rsUni .rsVideoFrameHolder {
+	background: url('images/mf-loader.svg') #f3f3f3 center no-repeat !important;
+	background-size: 80px 60px !important;
+}
+
+
+
+
+
+
 
 .royalSlider > .rsContent {
   visibility: hidden;
@@ -92,47 +213,47 @@
 .rsMinW .rsArrowDisabled .rsArrowIcn { opacity: .3 !important; filter: alpha(opacity=30);  *display: none; }
 
 .rsABlock {
-	background: rgba(0,0,0,0.7);
+  // background: rgba(0,0,0,0.7);
 	bottom:0px !important;
 	left: 0px !important;
 	top: auto!important;
 	width: 100%;
 	z-index: 50 !important;
+	padding: $half-spacing-unit/2 $half-spacing-unit $half-spacing-unit $half-spacing-unit;
 	cursor: pointer;
 	.text {
 		width: 80%;
 		padding: $half-spacing-unit;
-		//border-right: 1px solid $keylinegrey;
 	}
-	&:after {
-		content: "\25bb";
-		font-size: $h1-size;
-		position: absolute;
-		left: 94%;
-		bottom: 38%;
-		color: #fff;
-		-webkit-transition:all 150ms ease-in !important;
-           -moz-transition:all 150ms ease-in !important;
-	         -o-transition:all 150ms ease-in !important;
-	            transition:all 150ms ease-in !important;
-		}
-	&:hover:after {
-		color: $brand-color !important;
-		-webkit-animation-fill-mode:both;
-		-moz-animation-fill-mode:both;
-		-ms-animation-fill-mode:both;
-		-o-animation-fill-mode:both;
-		animation-fill-mode:both;
-		-webkit-animation-duration:1s;
-		-moz-animation-duration:1s;
-		-ms-animation-duration:1s;
-		-o-animation-duration:1s;animation-duration:1s;
-		-webkit-animation-name: bounce;
-		-moz-animation-name: bounce;
-		-o-animation-name: bounce;
-		animation-name: bounce;
-	}
-	h3, p {
+	// &:after {
+	// 	content: "\25bb";
+	// 	font-size: $h1-size;
+	// 	position: absolute;
+	// 	left: 94%;
+	// 	bottom: 38%;
+	// 	color: #000;
+	// 	-webkit-transition:all 150ms ease-in !important;
+  //          -moz-transition:all 150ms ease-in !important;
+	//          -o-transition:all 150ms ease-in !important;
+	//             transition:all 150ms ease-in !important;
+	// 	}
+	// &:hover:after {
+	// 	color: $brand-color !important;
+	// 	-webkit-animation-fill-mode:both;
+	// 	-moz-animation-fill-mode:both;
+	// 	-ms-animation-fill-mode:both;
+	// 	-o-animation-fill-mode:both;
+	// 	animation-fill-mode:both;
+	// 	-webkit-animation-duration:1s;
+	// 	-moz-animation-duration:1s;
+	// 	-ms-animation-duration:1s;
+	// 	-o-animation-duration:1s;animation-duration:1s;
+	// 	-webkit-animation-name: bounce;
+	// 	-moz-animation-name: bounce;
+	// 	-o-animation-name: bounce;
+	// 	animation-name: bounce;
+	// }
+	h2, p {
 	-webkit-transition:all 150ms ease-in !important;
        -moz-transition:all 150ms ease-in !important;
 	     -o-transition:all 150ms ease-in !important;
@@ -156,8 +277,8 @@
 	  }
 	}
 
-	&:hover h3 {
-		color: #fff !important;
+	&:hover h2 {
+		color: $brand-color !important;
 	}
 
 	@include media-query(palm) {

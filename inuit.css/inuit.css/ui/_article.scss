@@ -219,6 +219,24 @@
 	padding: $half-spacing-unit $half-spacing-unit $half-spacing-unit $base-spacing-unit*3;
 }
 
+a[rel~="attachment"] {
+  border-bottom: 0;
+
+	img {
+		width: 100%;
+		display: block;
+	}
+}
+
+.wp-caption {
+
+	.wp-caption-text {
+		padding: 10px;
+		background: #fff;
+	}
+
+}
+
 .author-info {
 	width: 100%;
 	min-height: 160px;

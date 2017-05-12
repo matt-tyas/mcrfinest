@@ -41,7 +41,7 @@ q{
 
 /*blockquote{
     quotes:"#{$open-quote}" "#{$close-quote}";
-    
+
     p:before{
         content:"#{$open-quote}";
         content:open-quote;
@@ -67,29 +67,42 @@ q{
 
 
 /**
- * 
+ *
    <blockquote>
        <p>Insanity: doing the same thing over and over again and expecting
        different results.</p>
        <b class=source>Albert Einstein</b>
    </blockquote>
- * 
+ *
  */
 blockquote{
     /**
      * .4em is roughly equal to the width of the opening “ that we wish to hang.
      */
     //text-indent:-0.41em;
-    
+
     p:last-of-type{
         margin-bottom:0;
     }
 }
 
+blockquote {
+  width: 95%;
+  padding: $half-spacing-unit $base-spacing-unit;
+  @include font-size($h2-size);
+  font-family: $quote-face;
+  border-left: 3px solid $brand-color;
+  p {
+    width: 100%;
+    @include font-size($h3-size);
+    line-height: 1.5em;
+  }
+}
+
 .source{
     display:block;
     text-indent:0;
-    
+
     &:before{
         content:"—";
     }

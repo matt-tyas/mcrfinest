@@ -5,6 +5,18 @@ $(window).load(function() {
 
 $(document).ready(function(){
 
+  $(".finder-trigger").click(function() {
+    $(this).toggleClass("is--pressed");
+    $(".mf-directory-search-home").addClass("is--open");
+    return false;
+  });
+
+  $(".finder-close-trigger").click(function() {
+    $(this).toggleClass("is--pressed");
+    $(".mf-directory-search-home").removeClass("is--open");
+    return false;
+  });
+
 	/* Primary navigation interactions
 	---------------------------------- */
 
@@ -157,5 +169,8 @@ $(document).ready(function(){
 	/* Fit Vid
 	---------------------------------- */
 	$("#article-content").fitVids();
+  $(".featured-home-media").fitVids();
+
+
 
 });

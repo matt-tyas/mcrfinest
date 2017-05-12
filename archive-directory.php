@@ -12,13 +12,19 @@
  */
 
 get_header(); ?>
-
 	<section class="site-content author">
-
 		<?php if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ?>
-
+		<h1>Find what you want to do in Manchester</h1>
+		<div class="mf-directory-search">
+	   		<?php echo do_shortcode('[searchandfilter id="25457"]'); ?>
+	    </div>
 		<?php if ( have_posts() ) : ?>
-
+			<div class="gw">
+				<div class="g one-whole palm-one-whole">
+					<?php $countPosts = $wp_the_query->post_count; ?>
+					<p>We found <?php echo $countPosts ?> for you</p>
+				</div>
+			</div>
 			<?php
 				/* Queue the first post, that way we know
 				 * what author we're dealing with (if that is the case).
@@ -29,8 +35,6 @@ get_header(); ?>
 				the_post();
 			?>
 
-			<h1>Directory</h1>
-
 			<?php
 				/* Since we called the_post() above, we need to
 				 * rewind the loop back to the beginning that way
@@ -39,15 +43,21 @@ get_header(); ?>
 				rewind_posts();
 			?>
 
-
 			<div class="gw">
-
-				<div class="g two-thirds palm-one-whole">
+				<div class="g one-whole palm-one-whole">
 					<div id="sort-container">
-					<?php while ( have_posts() ) : the_post(); ?>
+						<?php while ( have_posts() ) : the_post(); ?>
 						<article <?php post_class('post-tile'); ?>>
 							<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
-								<?php the_post_thumbnail( 'cat-post-thumb'); ?>
+								<?php
+								    $post_thumbnail_id = get_post_thumbnail_id( );
+									$imagesized = wp_get_attachment_image_src( $post_thumbnail_id, 'big-post-thumb');
+									if ($imagesized[1] == 308) {
+										the_post_thumbnail('big-post-thumb');
+									} else {
+										the_post_thumbnail('cat-post-thumb');
+									}
+								?>
 								<span class="category"><?php $category = get_the_category(); echo $category[0]->cat_name; ?></span>
 								<h3><?php the_title(); ?></h3>
 								<div class="intro">
@@ -58,109 +68,10 @@ get_header(); ?>
 					<?php endwhile; ?>
 					</div>
 				</div>
-
-				<div class="g one-third palm-one-whole">
-
-				<div class="gw">
-
-					<div class="g one-half palm-one-quarter mob-one-half">
-						<?php
-						if ( is_active_sidebar( 'category-page-advert-1' ) ) : ?>
-				        <?php dynamic_sidebar( 'category-page-advert-1' ); ?>
-						<?php endif; ?>
-					</div>
-
-					<div class="g one-half palm-one-quarter mob-one-half">
-						<?php
-						if ( is_active_sidebar( 'category-page-advert-2' ) ) : ?>
-						<?php dynamic_sidebar( 'category-page-advert-2' ); ?>
-						<?php endif; ?>
-					</div>
-
-					<div class="g one-half palm-one-quarter mob-one-half">
-						<?php
-						if ( is_active_sidebar( 'category-page-advert-3' ) ) : ?>
-				        <?php dynamic_sidebar( 'category-page-advert-3' ); ?>
-				        <?php endif; ?>
-				    </div>
-
-					<div class="g one-half palm-one-quarter mob-one-half">
-					 	<?php
-				        if ( is_active_sidebar( 'category-page-advert-4' ) ) : ?>
-                        <?php dynamic_sidebar( 'category-page-advert-4' ); ?>
-				        <?php endif; ?>
-					</div>
-
-					<div class="g one-half palm-one-quarter mob-one-half">
-						<?php
-						if ( is_active_sidebar( 'category-page-advert-5' ) ) : ?>
-				        <?php dynamic_sidebar( 'category-page-advert-5' ); ?>
-				        <?php endif; ?>
-				    </div>
-
-					<div class="g one-half palm-one-quarter mob-one-half">
-					 	<?php
-				        if ( is_active_sidebar( 'category-page-advert-6' ) ) : ?>
-                        <?php dynamic_sidebar( 'category-page-advert-6' ); ?>
-				        <?php endif; ?>
-					</div>
-
-					<div class="g one-half palm-one-quarter mob-one-half">
-						<?php
-						if ( is_active_sidebar( 'category-page-advert-7' ) ) : ?>
-				        <?php dynamic_sidebar( 'category-page-advert-7' ); ?>
-				        <?php endif; ?>
-				    </div>
-
-					<div class="g one-half palm-one-quarter mob-one-half">
-					 	<?php
-				        if ( is_active_sidebar( 'category-page-advert-8' ) ) : ?>
-                        <?php dynamic_sidebar( 'category-page-advert-8' ); ?>
-				        <?php endif; ?>
-					</div>
-
-					<div class="g one-half palm-one-quarter mob-one-half">
-						<?php
-						if ( is_active_sidebar( 'category-page-advert-9' ) ) : ?>
-				        <?php dynamic_sidebar( 'category-page-advert-9' ); ?>
-				        <?php endif; ?>
-				    </div>
-
-					<div class="g one-half palm-one-quarter mob-one-half">
-					 	<?php
-				        if ( is_active_sidebar( 'category-page-advert-10' ) ) : ?>
-                        <?php dynamic_sidebar( 'category-page-advert-10' ); ?>
-				        <?php endif; ?>
-					</div>
-
-				</div>
-
-					<!-- Connect CTAs -->
-					<aside class="connect">
-						<h5 class="sub-title">// Say hello&hellip;</h5>
-						<ul class="nav nav--banner  social">
-						<li>
-							<a class="btn-circle btn--secondary twitter" href="https://twitter.com/intent/user?screen_name=McrFinest" target="_blank" title="Follow on Twitter"><span aria-hidden="true" class="icon-twitter"></span><span class="accessibility">Twitter</span></a>
-						</li>
-						<li>
-							<a class="btn-circle btn--secondary instagram" href="https://www.instagram.com/mcrfinest/" target="_blank" title="Follow on Instagram"><span aria-hidden="true" class="icon-instagram"></span><span class="accessibility">Instagram</span></a>
-						</li>
-						<li>
-							<a class="btn-circle btn--secondary facebook" href="https://facebook.com/MCRfinest" target="_blank" title="Follow on Facebook"><span aria-hidden="true" class="icon-facebook"></span><span class="accessibility">Facebook page</span></a>
-						</li>
-					</ul>
-					</aside>
-
-				</div>
-
 			</div>
-
 		<?php else : ?>
 			<?php get_template_part( 'content', 'none' ); ?>
 		<?php endif; ?>
-
 		<?php wp_pagenavi(); ?>
 	</section><!-- #primary -->
-
-
 <?php get_footer(); ?>
