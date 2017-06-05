@@ -48,6 +48,13 @@
 	&noscript=1"/>
 </noscript>
 <!-- End Facebook Pixel Code -->
+<style>
+@media only screen and (max-width: 859px) {
+	.entry-content p {
+	    font-size: 16px !important;
+	}
+}
+</style>
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?> >
