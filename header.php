@@ -54,6 +54,11 @@
 	    font-size: 16px !important;
 	}
 }
+.g.g-9,
+.g.g-10 {
+	width: 100% !important;
+	padding-left: 0 !important;
+}
 </style>
 <?php wp_head(); ?>
 </head>

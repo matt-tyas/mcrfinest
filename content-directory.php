@@ -56,7 +56,14 @@
         				<div id="article-content" class="entry-content">
         	                <p class="lead"><?php echo nl2br(get_the_excerpt()) ?></p>
         	                <div class="directory-image">
-        						<?php echo wp_get_attachment_image( listing_image_get_meta('_listing_image_id'), 'full'); ?>
+                                <?php $hasSlider = get_post_meta( $post->ID, 'directory_slider_meta_box_class', true ); ?>
+
+                                <?php if(!($hasSlider == null || $hasSlider == '')){
+                                        echo do_shortcode( get_post_meta($post->ID, 'directory_slider_meta_box_class', true) );
+                                    }
+                                    else {
+                                        echo wp_get_attachment_image( listing_image_get_meta('_listing_image_id'), 'full');
+                                } ?>
         					</div>
         				</div>
         				<div class="gw row">
