@@ -1,6 +1,26 @@
 /*------------------------------------*\
     $Slider
 \*------------------------------------*/
+
+#new-royalslider-5 {
+	position: relative;
+  float: right;
+
+	.rsSlide {
+		h3 {
+			position: absolute;
+			left: 0;
+			top: 50px;
+		}
+
+	}
+}
+
+
+
+
+
+
 .rsUni,
 .rsUni .rsSlide,
 .rsUni .rsOverflow {

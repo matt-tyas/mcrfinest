@@ -29,7 +29,7 @@
 		<div class="featured-home">
 			<div class="gw row">
 	            <div class="g one-whole palm-one-whole">
-					<?php echo get_new_royalslider(2); ?>
+					<?php echo get_new_royalslider(5); ?>
 				</div>
 	        </div>
 		</div>
