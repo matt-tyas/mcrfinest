@@ -1321,12 +1321,6 @@ $image_id = get_post_meta ($post->ID, $value, true);
 }
 
 
-
-
-
-
-
-
 add_action( 'edit_form_after_title', 'move_excerpt_meta_box' );
 function move_excerpt_meta_box( $post ) {
     if ( post_type_supports( $post->post_type, 'excerpt' ) ) {
@@ -1346,7 +1340,7 @@ if( !function_exists('base_extended_editor_mce_buttons') ){
 	function base_extended_editor_mce_buttons($buttons) {
 		// The settings are returned in this array. Customize to suite your needs.
 		return array(
-			'formatselect', 'bullist', 'numlist', 'link', 'unlink', 'blockquote', 'charmap', 'removeformat', 'spellchecker', 'fullscreen', 'wp_more', 'wp_help'
+			'bold', 'italic', 'formatselect', 'bullist', 'numlist', 'link', 'unlink', 'blockquote', 'charmap', 'removeformat', 'spellchecker', 'fullscreen', 'wp_more', 'wp_help'
 		);
 		/* WordPress Default
 		return array(
@@ -1364,7 +1358,7 @@ if( !function_exists('base_extended_editor_mce_buttons') ){
 if( !function_exists('base_extended_editor_mce_buttons_2') ){
 	function base_extended_editor_mce_buttons_2($buttons) {
 		// The settings are returned in this array. Customize to suite your needs. An empty array is used here because I remove the second row of icons.
-		return array();
+		return array('underline','undo', 'redo', 'media');
 		/* WordPress Default
 		return array(
 			'formatselect', 'underline', 'justifyfull', 'forecolor', 'separator',
@@ -1382,3 +1376,15 @@ function wpa_45815($arr){
     return $arr;
   }
 add_filter('tiny_mce_before_init', 'wpa_45815');
+
+
+
+add_filter('tiny_mce_before_init', 'modify_formats');
+
+function modify_formats($settings){
+   $formats = array(
+     'bold' => array('inline' => 'b')
+    );
+    $settings['formats'] = json_encode( $formats );
+    return $settings;
+}

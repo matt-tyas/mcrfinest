@@ -22,19 +22,30 @@
  }
  ?>
 
-	<div class="g one-whole">
+<div class="g one-whole">
 	<div id="content">
         <h1 class="accessibility">Manchester's Finest and the Northern Quarter</h1>
         <h2 class="accessibility">Restaurants, Bars, Offers and Competitionss in Manchester</h2>
 		<div class="featured-home">
 			<div class="gw row">
-	            <div class="g one-whole palm-one-whole">
+	            <div class="g four-sixths lap-three-quarters palm-one-whole">
 					<?php echo get_new_royalslider(5); ?>
+				</div>
+                <div class="g one-sixth lap-one-quarter palm-one-half mob-one-half">
+					<?php
+						if ( is_active_sidebar( 'homepage-advert-1' ) ) : ?>
+						<?php dynamic_sidebar( 'homepage-advert-1' ); ?>
+					<?php endif; ?>
+				</div>
+				<div class="g one-sixth lap-one-quarter palm-one-quarter mob-one-half mob-fix">
+					<?php
+						if ( is_active_sidebar( 'homepage-advert-2' ) ) : ?>
+						<?php dynamic_sidebar( 'homepage-advert-2' ); ?>
+					<?php endif; ?>
 				</div>
 	        </div>
 		</div>
-
-		<main id="main" class="wrapper page">
+	<main id="main" class="wrapper page">
 		<div class="border-wrap">
 			<div class="gw">
 				<div class="g two-thirds lap-one-half palm-one-whole">
@@ -47,19 +58,6 @@
 						<?php endif; ?>
 						<a href="#" class="finder-close-trigger"><span aria-hidden="true" data-icon="&#x2612;"></span> Close </a>
 					</div>
-				</div>
-
-				<div class="g one-sixth lap-one-quarter palm-one-quarter mob-one-half">
-					<?php
-						if ( is_active_sidebar( 'homepage-advert-1' ) ) : ?>
-						<?php dynamic_sidebar( 'homepage-advert-1' ); ?>
-					<?php endif; ?>
-				</div>
-				<div class="g one-sixth lap-one-quarter palm-one-quarter mob-one-half mob-fix">
-					<?php
-						if ( is_active_sidebar( 'homepage-advert-2' ) ) : ?>
-						<?php dynamic_sidebar( 'homepage-advert-2' ); ?>
-					<?php endif; ?>
 				</div>
 			</div>
 		</div>
@@ -246,33 +244,33 @@
 		    			    <?php
 		    			       if ( $has_start !== '100' ) {
 		    			    ?>
-		    			            <div class="start-date">
-		    			                <div class="event-weekday">
-		    			                    <?php echo $startweekday; ?>
-		    			                </div>
-		    			                <div class="event-day">
-		    			                    <?php echo $startday; ?>
-		    			                </div>
-		    			                <div class="event-month">
-		    			                    <?php echo $startmonth; ?>
-		    			                </div>
-		    			            </div>
+	    			            <div class="start-date">
+	    			                <div class="event-weekday">
+	    			                    <?php echo $startweekday; ?>
+	    			                </div>
+	    			                <div class="event-day">
+	    			                    <?php echo $startday; ?>
+	    			                </div>
+	    			                <div class="event-month">
+	    			                    <?php echo $startmonth; ?>
+	    			                </div>
+	    			            </div>
 		    			    <?php
 		    			       }
 
 		    			        if ( $has_ending !== '100' ) {
 		    			    ?>
-		    			            <div class="end-date">
-		    			                <div class="event-weekday">
-		    			                <?php echo $endweekday; ?>
-		    			                </div>
-		    			                <div class="event-day">
-		    			                <?php echo $endday; ?>
-		    			                </div>
-		    			                <div class="event-month">
-		    			                <?php echo $endmonth; ?>
-		    			                </div>
-		    			            </div>
+	    			            <div class="end-date">
+	    			                <div class="event-weekday">
+	    			                <?php echo $endweekday; ?>
+	    			                </div>
+	    			                <div class="event-day">
+	    			                <?php echo $endday; ?>
+	    			                </div>
+	    			                <div class="event-month">
+	    			                <?php echo $endmonth; ?>
+	    			                </div>
+	    			            </div>
 		    			    <?php
 		    			        }
 		    			    ?>
@@ -317,77 +315,72 @@
 					<div class="gw">
 	 					<div class="g one-half palm-one-half mob-one-half">
 	 						<?php
-	 							 if ( is_active_sidebar( 'homepage-optional-1' ) ) : ?>
-	 						     <?php dynamic_sidebar( 'homepage-optional-1' ); ?>
+	 							if ( is_active_sidebar( 'homepage-optional-1' ) ) : ?>
+	 						    <?php dynamic_sidebar( 'homepage-optional-1' ); ?>
 	 						<?php endif; ?>
 	 					</div>
 	 					<div class="g one-half palm-one-half mob-one-half">
 	 						<h5 class="sub-title ad-title">Partners</h5>
 	 						<div class="gw">
 	 							<div class="g one-whole palm-one-half mob-one-whole">
-	 							<?php
-	 							    if ( is_active_sidebar( 'homepage-advert-3' ) ) : ?>
-	 								<?php dynamic_sidebar( 'homepage-advert-3' ); ?>
-	 							<?php endif; ?>
+	 								<?php
+	 							    	if ( is_active_sidebar( 'homepage-advert-3' ) ) : ?>
+	 									<?php dynamic_sidebar( 'homepage-advert-3' ); ?>
+	 								<?php endif; ?>
 	 							</div>
 	 							<div class="g one-whole palm-one-half mob-one-whole">
-	 							<?php
-	 							    if ( is_active_sidebar( 'homepage-advert-4' ) ) : ?>
-	 								<?php dynamic_sidebar( 'homepage-advert-4' ); ?>
-	 							<?php endif; ?>
+	 								<?php
+	 							    	if ( is_active_sidebar( 'homepage-advert-4' ) ) : ?>
+	 									<?php dynamic_sidebar( 'homepage-advert-4' ); ?>
+	 								<?php endif; ?>
 	 							</div>
 	 							<div class="g one-whole palm-one-half mob-one-whole">
-	 							<?php
-	 								 if ( is_active_sidebar( 'homepage-optional-2' ) ) : ?>
-	 								 <?php dynamic_sidebar( 'homepage-optional-2' ); ?>
-	 							<?php endif; ?>
-	               </div>
-	               <div class="g one-whole palm-one-half mob-one-whole">
-	 							<?php
-	 								 if ( is_active_sidebar( 'homepage-optional-3' ) ) : ?>
-	 								 <?php dynamic_sidebar( 'homepage-optional-3' ); ?>
-	 							<?php endif; ?>
-	              </div>
-	              <div class="g one-whole palm-one-half mob-one-whole">
-	 							<?php
-	 								 if ( is_active_sidebar( 'homepage-optional-4' ) ) : ?>
-	 								 <?php dynamic_sidebar( 'homepage-optional-4' ); ?>
-	 							<?php endif; ?>
-	              </div>
-	              <div class="g one-whole palm-one-half mob-one-whole">
-	 							<?php
-	 								 if ( is_active_sidebar( 'homepage-optional-5' ) ) : ?>
-	 								 <?php dynamic_sidebar( 'homepage-optional-5' ); ?>
-	 							<?php endif; ?>
-	              </div>
-
-	              <div class="g one-whole palm-one-half mob-one-whole">
-	 							<?php
-	 								 if ( is_active_sidebar( 'homepage-optional-6' ) ) : ?>
-	 								 <?php dynamic_sidebar( 'homepage-optional-6' ); ?>
-	 							<?php endif; ?>
-	              </div>
-
-	              <div class="g one-whole palm-one-half mob-one-whole">
-	 							<?php
-	 								 if ( is_active_sidebar( 'homepage-optional-7' ) ) : ?>
-	 								 <?php dynamic_sidebar( 'homepage-optional-7' ); ?>
-	 							<?php endif; ?>
-	              </div>
-
-	              <div class="g one-whole palm-one-half mob-one-whole">
-	 							<?php
-	 								 if ( is_active_sidebar( 'homepage-optional-8' ) ) : ?>
-	 								 <?php dynamic_sidebar( 'homepage-optional-8' ); ?>
-	 							<?php endif; ?>
-	              </div>
+	 								<?php
+	 								 	if ( is_active_sidebar( 'homepage-optional-2' ) ) : ?>
+	 								 	<?php dynamic_sidebar( 'homepage-optional-2' ); ?>
+	 								<?php endif; ?>
+	               				</div>
+	               				<div class="g one-whole palm-one-half mob-one-whole">
+	 								<?php
+	 								 	if ( is_active_sidebar( 'homepage-optional-3' ) ) : ?>
+	 								 	<?php dynamic_sidebar( 'homepage-optional-3' ); ?>
+	 								<?php endif; ?>
+	              				</div>
+	              				<div class="g one-whole palm-one-half mob-one-whole">
+	 								<?php
+	 								 	if ( is_active_sidebar( 'homepage-optional-4' ) ) : ?>
+	 								 	<?php dynamic_sidebar( 'homepage-optional-4' ); ?>
+	 								<?php endif; ?>
+	              				</div>
+	              				<div class="g one-whole palm-one-half mob-one-whole">
+	 								<?php
+	 								 	if ( is_active_sidebar( 'homepage-optional-5' ) ) : ?>
+	 								 	<?php dynamic_sidebar( 'homepage-optional-5' ); ?>
+	 								<?php endif; ?>
+	              				</div>
+	              				<div class="g one-whole palm-one-half mob-one-whole">
+	 								<?php
+	 								 	if ( is_active_sidebar( 'homepage-optional-6' ) ) : ?>
+	 								 	<?php dynamic_sidebar( 'homepage-optional-6' ); ?>
+	 								<?php endif; ?>
+	              				</div>
+	                			<div class="g one-whole palm-one-half mob-one-whole">
+		 							<?php
+		 								 if ( is_active_sidebar( 'homepage-optional-7' ) ) : ?>
+		 								 <?php dynamic_sidebar( 'homepage-optional-7' ); ?>
+		 							<?php endif; ?>
+	                			</div>
+					            <div class="g one-whole palm-one-half mob-one-whole">
+		 							<?php
+		 								 if ( is_active_sidebar( 'homepage-optional-8' ) ) : ?>
+		 								 <?php dynamic_sidebar( 'homepage-optional-8' ); ?>
+		 							<?php endif; ?>
+					            </div>
 	 						</div>
 	 					</div>
-
 	 				</div>
-
 	 				<div class="ad-sense">
-	 	        <h5 class="sub-title ad-title">Advert</h5>
+	 	        		<h5 class="sub-title ad-title">Advert</h5>
 	 					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	 					<!-- Home responsive 1 -->
 	 					<ins class="adsbygoogle"
@@ -399,9 +392,8 @@
 	 					(adsbygoogle = window.adsbygoogle || []).push({});
 	 					</script>
 	 				</div>
-
-	 				<div class="ad-sense">
-	 	        <h5 class="sub-title ad-title">Advert</h5>
+			 		<div class="ad-sense">
+			 	        <h5 class="sub-title ad-title">Advert</h5>
 	 					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	 					<!-- Home responsive 2 -->
 	 					<ins class="adsbygoogle"
@@ -412,31 +404,23 @@
 	 					<script>
 	 					(adsbygoogle = window.adsbygoogle || []).push({});
 	 					</script>
+			 		</div>
+	 				<div class="columnists">
+	 			  		<div class="ad-sense">
+		 					<h5 class="sub-title ad-title">Advert</h5>
+		 					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		 					<!-- Home responsive 3 -->
+		 					<ins class="adsbygoogle"
+		 					     style="display:block"
+		 					     data-ad-client="ca-pub-0654331869436657"
+		 					     data-ad-slot="3284229005"
+		 					     data-ad-format="auto"></ins>
+		 					<script>
+		 					(adsbygoogle = window.adsbygoogle || []).push({});
+		 					</script>
+	 					</div>
 	 				</div>
-	 			<div class="columnists">
-	 			  <div class="ad-sense">
-	 					<h5 class="sub-title ad-title">Advert</h5>
-	 					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	 					<!-- Home responsive 3 -->
-	 					<ins class="adsbygoogle"
-	 					     style="display:block"
-	 					     data-ad-client="ca-pub-0654331869436657"
-	 					     data-ad-slot="3284229005"
-	 					     data-ad-format="auto"></ins>
-	 					<script>
-	 					(adsbygoogle = window.adsbygoogle || []).push({});
-	 					</script>
-	 				</div>
-	 			</div>
 	 		</div><!-- End of second row -->
-
-
-
-				</div>
-
-
-
-
-
+		</div>
 	</div><!-- #content -->
 <?php get_footer(); ?>
