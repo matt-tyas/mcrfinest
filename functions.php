@@ -1175,6 +1175,100 @@ function directory_url_save_meta( $post_id, $post ) {
     delete_post_meta( $post_id, $meta_key, $meta_value );
 }
 
+
+
+/* BOOKING URL */
+
+/* Fire our meta box setup function on the post editor screen. */
+add_action( 'load-post.php', 'directory_urlbooking_setup' );
+add_action( 'load-post-new.php', 'directory_urlbooking_setup' );
+
+/* Meta box setup function. */
+function directory_urlbooking_setup() {
+
+  /* Add meta boxes on the 'add_meta_boxes' hook. */
+  add_action( 'add_meta_boxes', 'directory_urlbooking_meta_boxes' );
+
+  /* Save post meta on the 'save_post' hook. */
+  add_action( 'save_post', 'directory_urlbooking_save_meta', 10, 2 );
+}
+
+function directory_urlbooking_meta_boxes() {
+
+  add_meta_box(
+    'directory_urlbooking_meta_box_class',      // Unique ID
+    esc_html__( 'Booking url', 'example' ),    // Title
+    'directory_urlbooking_meta_box',   // Callback function
+    'directory',         // Admin page (or post type)
+    'side',         // Context
+    'default'         // Priority
+  );
+}
+
+/* Display the post meta box. */
+function directory_urlbooking_meta_box( $object, $box ) { ?>
+  <?php wp_nonce_field( basename( __FILE__ ), 'directory_urlbooking_meta_box_class_nonce' ); ?>
+  <p>
+    <label for="directory_urlbooking_meta_box_class"><?php _e( "Add a booking url for the listing", 'example' ); ?></label>
+    <br />
+	<input type="text" class="widefat" id="directory_urlbooking_meta_box_class" name="directory_urlbooking_meta_box_class" value="<?php echo get_post_meta( $object->ID, 'directory_urlbooking_meta_box_class', true ); ?>" />
+  </p>
+<?php }
+
+/* Save the meta box's post metadata. */
+function directory_urlbooking_save_meta( $post_id, $post ) {
+
+  /* Verify the nonce before proceeding. */
+  if ( !isset( $_POST['directory_urlbooking_meta_box_class_nonce'] ) || !wp_verify_nonce( $_POST['directory_urlbooking_meta_box_class_nonce'], basename( __FILE__ ) ) )
+    return $post_id;
+
+  /* Get the post type object. */
+  $post_type = get_post_type_object( $post->post_type );
+
+  /* Check if the current user has permission to edit the post. */
+  if ( !current_user_can( $post_type->cap->edit_post, $post_id ) )
+    return $post_id;
+
+  /* Get the posted data and sanitize it for use as an HTML class. */
+  $new_meta_value = ( isset( $_POST['directory_urlbooking_meta_box_class'] ) ? ( $_POST['directory_urlbooking_meta_box_class'] ) : '' );
+
+  /* Get the meta key. */
+  $meta_key = 'directory_urlbooking_meta_box_class';
+
+  /* Get the meta value of the custom field key. */
+  $meta_value = get_post_meta( $post_id, $meta_key, true );
+
+  /* If a new meta value was added and there was no previous value, add it. */
+  if ( $new_meta_value && '' == $meta_value )
+    add_post_meta( $post_id, $meta_key, $new_meta_value, true );
+
+  /* If the new meta value does not match the old value, update it. */
+  elseif ( $new_meta_value && $new_meta_value != $meta_value )
+    update_post_meta( $post_id, $meta_key, $new_meta_value );
+
+  /* If there is no new meta value but an old value exists, delete it. */
+  elseif ( '' == $new_meta_value && $meta_value )
+    delete_post_meta( $post_id, $meta_key, $meta_value );
+}
+
+
+/* BOOKING URL */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* SLIDER */
 
 /* Fire our meta box setup function on the post editor screen. */
@@ -1335,41 +1429,46 @@ function move_excerpt_meta_box( $post ) {
 
 remove_filter ('edit_form_after_title', 'wpautop');
 
+/* 
 // TinyMCE: First line toolbar customizations
 if( !function_exists('base_extended_editor_mce_buttons') ){
 	function base_extended_editor_mce_buttons($buttons) {
 		// The settings are returned in this array. Customize to suite your needs.
-		return array(
-			'bold', 'italic', 'formatselect', 'bullist', 'numlist', 'link', 'unlink', 'blockquote', 'charmap', 'removeformat', 'spellchecker', 'fullscreen', 'wp_more', 'wp_help'
+		/*
+return array(
+			'bold', 'italic', 'formatselect', 'bullist', 'numlist', 'link', 'unlink', 'blockquote', 'justifyleft', 'justifycenter', 'justifyright', 'charmap', 'removeformat', 'spellchecker', 'fullscreen', 'wp_more', 'wp_help'
 		);
-		/* WordPress Default
+
+		WordPress Default
 		return array(
 			'bold', 'italic', 'strikethrough', 'separator',
 			'bullist', 'numlist', 'blockquote', 'separator',
 			'justifyleft', 'justifycenter', 'justifyright', 'separator',
 			'link', 'unlink', 'wp_more', 'separator',
 			'spellchecker', 'fullscreen', 'wp_adv'
-		); */
+		);
 	}
 	add_filter("mce_buttons", "base_extended_editor_mce_buttons", 0);
 }
-
+ */
+/* 
 // TinyMCE: Second line toolbar customizations
 if( !function_exists('base_extended_editor_mce_buttons_2') ){
 	function base_extended_editor_mce_buttons_2($buttons) {
 		// The settings are returned in this array. Customize to suite your needs. An empty array is used here because I remove the second row of icons.
-		return array('underline','undo', 'redo', 'media');
-		/* WordPress Default
+		return array('underline', 'justifyfull', 'undo', 'redo', 'media');
+		WordPress Default
 		return array(
 			'formatselect', 'underline', 'justifyfull', 'forecolor', 'separator',
 			'pastetext', 'pasteword', 'removeformat', 'separator',
 			'media', 'charmap', 'separator',
 			'outdent', 'indent', 'separator',
 			'undo', 'redo', 'wp_help'
-		); */
+		); 
 	}
 	add_filter("mce_buttons_2", "base_extended_editor_mce_buttons_2", 0);
 }
+*/
 
 function wpa_45815($arr){
     $arr['block_formats'] = 'Paragraph=p;Heading 2=h2';

@@ -10,6 +10,9 @@
 .btn {
 	@include vendor(border-radius, 2px);
 	margin-bottom: $base-spacing-unit;
+  -webkit-transition: all 0.3s ease;
+         -moz-transition: all 0.3s ease;
+              transition: all 0.3s ease;
 }
 
 .btn-circle {
@@ -22,6 +25,7 @@
 	background: $brand-color;
 	color: white;
 	font-weight: bold;
+  text-align: center;
 	&:hover {
 		background: lighten($brand-color, 10%);
 		color: #fff !important;

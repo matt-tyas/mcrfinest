@@ -76,12 +76,30 @@
         							<?php $og_text = get_post_meta($post->ID, 'directory_address_meta_box_class', true);
         								echo wpautop( $og_text );
         							?>
-        							<a href="<?php echo get_post_meta($post->ID, 'directory_url_meta_box_class', true); ?>">
-        							<?php $og_text_2 = get_post_meta($post->ID, 'directory_url_meta_box_class', true);
-        								echo preg_replace("~^(?:f|ht)tps?://~i", '', $og_text_2);
-        							?>
-        							</a>
+                                    <p>
+            							<a href="<?php echo get_post_meta($post->ID, 'directory_url_meta_box_class', true); ?>">
+            							<?php $og_text_2 = get_post_meta($post->ID, 'directory_url_meta_box_class', true);
+            								echo preg_replace("~^(?:f|ht)tps?://~i", '', $og_text_2);
+            							?>
+            							</a>
+                                    </p>
+                                    <p>
+                                        <a href="https://www.google.com/maps?saddr=My+Location&daddr=<?php echo get_post_meta($post->ID, 'directory_address_meta_box_class', true); ?>">
+                                            Get directions
+                                        </a>
+                                    </p>
+
         						</div>
+                                <div class="directory__action">
+                                    <?php $booking_link = get_post_meta($post->ID, 'directory_urlbooking_meta_box_class', true); ?>
+                                    <?php if( empty( $booking_link) ) : ?>
+                                    <?php else : ?>
+                                    <a href="<?php echo get_post_meta($post->ID, 'directory_urlbooking_meta_box_class', true); ?>" class="btn btn--finest">
+                                        Make a booking
+                                    </a>
+                                    <?php endif; ?>
+
+                                </div>
         					</div>
         					<div class="g one-whole">
 

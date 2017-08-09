@@ -285,6 +285,7 @@ a[rel~="attachment"] {
 
 .directory__address {
 	 padding: $base-spacing-unit $half-spacing-unit;
+   margin-bottom: $base-spacing-unit;
 	 border-top: 3px solid #999;
 	 border-bottom: 3px solid #999;
 	 line-height: 1.4;
@@ -292,4 +293,10 @@ a[rel~="attachment"] {
 	 a {
 		 overflow-wrap: break-word;
 	 }
+}
+
+.directory__action {
+  .btn {
+    width: 100%;
+  }
 }

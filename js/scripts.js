@@ -17,6 +17,22 @@ $(document).ready(function(){
     return false;
   });
 
+
+  // 
+  // $( ".rsVideoFrameHolder" ).hasClass( "rsVideoActive" ){
+  //
+  //
+  //   return false;
+  // });
+  //
+  //
+  //
+  // $(".rsPlayBtnIcon").click(function() {
+  //
+  //
+  //   return false;
+  // });
+
 	/* Primary navigation interactions
 	---------------------------------- */
 
@@ -103,9 +119,9 @@ $(document).ready(function(){
 	    return false;
 	 });
 
-    /* PLaceholder Polyfill
+  /* PLaceholder Polyfill
 	---------------------------------- */
-    $('input, textarea').placeholder();
+  $('input, textarea').placeholder();
 
 
 	/* Article Sorting
@@ -170,6 +186,10 @@ $(document).ready(function(){
 	---------------------------------- */
 	$("#article-content").fitVids();
   $(".featured-home-media").fitVids();
+
+
+
+
 
 
 
