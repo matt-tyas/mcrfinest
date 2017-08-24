@@ -25,9 +25,65 @@
 <div class="g one-whole">
 	<div id="content">
         <h1 class="accessibility">Manchester's Finest and the Northern Quarter</h1>
-        <h2 class="accessibility">Restaurants, Bars, Offers and Competitionss in Manchester</h2>
-		<div class="featured-home">
-			<div class="gw row">
+        <h2 class="accessibility">Restaurants, Bars, Offers and Competitions in Manchester</h2>
+		<section class="featured-home">
+
+			<div class="gw">
+				<div class="g seven-twelfths palm-one-whole">
+					<article class="featured-home__super">
+						<div class="featured-home__image">
+							<img class="alignnone size-medium wp-image-25401" src="http://www.manchestersfinest.com/wp-content/uploads/2016/02/1-Eggs-Benedict-709x472.jpg" alt="1 Eggs Benedict" width="709" height="472" srcset="http://localhost:8888/manchestersfinest/wp-content/uploads/2016/02/1-Eggs-Benedict-709x472.jpg 709w, http://localhost:8888/manchestersfinest/wp-content/uploads/2016/02/1-Eggs-Benedict-624x416.jpg 624w, http://localhost:8888/manchestersfinest/wp-content/uploads/2016/02/1-Eggs-Benedict.jpg 710w" sizes="(max-width: 709px) 100vw, 709px">
+						</div>
+						<a href="">
+							<div class="featured-home__content">
+								<h3 class="alpha featured-home__title">The Lead Station celebrate 20 Years with cookery book</h3>
+								<p>Popular Chorlton eatery The Lead Station celebrated their 20th anniversary last year, and to honour 2 decades of serving South Manchester they’ve produced a lovely new cook book.</p>
+							</div>
+						</a>
+                    </article>
+				</div>
+                <div class="g five-twelfths palm-one-whole">
+
+					<div class="gw">
+						<div class="g one-whole palm-one-whole">
+							<div class="featured-home__greeting">
+								<div class="featured-home__greeting-content">
+									<h3>This week on finest. <a href="">Win a meal for 2 at Tattu</a> and find the <a href="">best bank holiday days out</a> as well as much&nbsp;more…</h3>
+								</div>
+								<div id="weather" class="featured-home__weather"></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="gw">
+						<div class="g one-half palm-one-half">
+							<article class="post-tile post-25377 post type-post status-publish format-standard has-post-thumbnail hentry category-eating-in-manchester category-restaurants tag-homepage-slider">
+							<a href="http://localhost:8888/manchestersfinest/eating-in-manchester/restaurants/starters-salads-and-splendid-wines/" rel="bookmark" title="Link to Starters, Salads and Splendid Wines">
+							<img width="172" height="88" src="http://localhost:8888/manchestersfinest/wp-content/uploads/2016/02/pork-belly-172x88.jpg" class="attachment-cat-post-thumb size-cat-post-thumb wp-post-image" alt="" srcset="http://localhost:8888/manchestersfinest/wp-content/uploads/2016/02/pork-belly-172x88.jpg 172w, http://localhost:8888/manchestersfinest/wp-content/uploads/2016/02/pork-belly-224x115.jpg 224w" sizes="(max-width: 172px) 100vw, 172px">
+							<h3>Starters, Salads and Splendid Wines</h3>
+							<div class="intro">
+								<p>After a non stop start to the year with their hugely successful January sale 2016 has finally arrived at Splendid Kitchen with the launch…</p>
+							</div>
+							</a>
+						</article>
+						</div>
+						<div class="g one-half palm-one-half">
+							<article class="post-tile post-25370 post type-post status-publish format-standard has-post-thumbnail hentry category-featured category-gigs category-music" >
+								<a href="http://localhost:8888/manchestersfinest/music/the-warehouse-project-host-the-sonarlab-at-sonar-by-night/" rel="bookmark" title="Link to The Warehouse Project host The SonarLab at Sónar By Night">
+								<img width="172" height="88" src="http://localhost:8888/manchestersfinest/wp-content/uploads/2016/02/sonarlab-172x88.jpg" class="attachment-cat-post-thumb size-cat-post-thumb wp-post-image" alt="" srcset="http://localhost:8888/manchestersfinest/wp-content/uploads/2016/02/sonarlab-172x88.jpg 172w, http://localhost:8888/manchestersfinest/wp-content/uploads/2016/02/sonarlab-224x115.jpg 224w" sizes="(max-width: 172px) 100vw, 172px">
+								<h3>The Warehouse Project host The SonarLab at Sónar By Night</h3>
+								<div class="intro">
+									<p>This June, The Warehouse Project join forces with one of Europe's most-respected electronic music events Sónar, to host the SonarLab at…</p>
+								</div>
+								</a>
+							</article>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<!-- <div class="gw row">
 	            <div class="g four-sixths lap-three-quarters palm-one-whole">
 					<?php echo get_new_royalslider(5); ?>
 				</div>
@@ -43,8 +99,8 @@
 						<?php dynamic_sidebar( 'homepage-advert-2' ); ?>
 					<?php endif; ?>
 				</div>
-	        </div>
-		</div>
+	        </div> -->
+		</section>
 	<main id="main" class="wrapper page">
 		<div class="border-wrap">
 			<div class="gw">
@@ -59,6 +115,22 @@
 						<a href="#" class="finder-close-trigger"><span aria-hidden="true" data-icon="&#x2612;"></span> Close </a>
 					</div>
 				</div>
+                <div class="g one-third lap-one-half palm-one-whole">
+                    <div class="gw">
+                        <div class="g one-half lap-one-quarter palm-one-half mob-one-half">
+        					<?php
+        						if ( is_active_sidebar( 'homepage-advert-1' ) ) : ?>
+        						<?php dynamic_sidebar( 'homepage-advert-1' ); ?>
+        					<?php endif; ?>
+        				</div>
+        				<div class="g one-half lap-one-quarter palm-one-quarter mob-one-half mob-fix">
+        					<?php
+        						if ( is_active_sidebar( 'homepage-advert-2' ) ) : ?>
+        						<?php dynamic_sidebar( 'homepage-advert-2' ); ?>
+        					<?php endif; ?>
+        				</div>
+                    </div>
+                </div>
 			</div>
 		</div>
 		<div class="gw">

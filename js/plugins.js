@@ -20,6 +20,8 @@
         }
     }
 }());
+/*! simpleWeather v3.1.0 - http://simpleweatherjs.com */
+!function(t){"use strict";function e(t,e){return"f"===t?Math.round(5/9*(e-32)):Math.round(1.8*e+32)}t.extend({simpleWeather:function(i){i=t.extend({location:"",woeid:"",unit:"f",success:function(t){},error:function(t){}},i);var o=new Date,n="https://query.yahooapis.com/v1/public/yql?format=json&rnd="+o.getFullYear()+o.getMonth()+o.getDay()+o.getHours()+"&diagnostics=true&callback=?&q=";if(""!==i.location){var r="";r=/^(\-?\d+(\.\d+)?),\s*(\-?\d+(\.\d+)?)$/.test(i.location)?"("+i.location+")":i.location,n+='select * from weather.forecast where woeid in (select woeid from geo.places(1) where text="'+r+'") and u="'+i.unit+'"'}else{if(""===i.woeid)return i.error("Could not retrieve weather due to an invalid location."),!1;n+="select * from weather.forecast where woeid="+i.woeid+' and u="'+i.unit+'"'}return t.getJSON(encodeURI(n),function(t){if(null!==t&&null!==t.query&&null!==t.query.results&&"Yahoo! Weather Error"!==t.query.results.channel.description){var o,n=t.query.results.channel,r={},s=["N","NNE","NE","ENE","E","ESE","SE","SSE","S","SSW","SW","WSW","W","WNW","NW","NNW","N"],a="https://s.yimg.com/os/mit/media/m/weather/images/icons/l/44d-100567.png";r.title=n.item.title,r.temp=n.item.condition.temp,r.code=n.item.condition.code,r.todayCode=n.item.forecast[0].code,r.currently=n.item.condition.text,r.high=n.item.forecast[0].high,r.low=n.item.forecast[0].low,r.text=n.item.forecast[0].text,r.humidity=n.atmosphere.humidity,r.pressure=n.atmosphere.pressure,r.rising=n.atmosphere.rising,r.visibility=n.atmosphere.visibility,r.sunrise=n.astronomy.sunrise,r.sunset=n.astronomy.sunset,r.description=n.item.description,r.city=n.location.city,r.country=n.location.country,r.region=n.location.region,r.updated=n.item.pubDate,r.link=n.item.link,r.units={temp:n.units.temperature,distance:n.units.distance,pressure:n.units.pressure,speed:n.units.speed},r.wind={chill:n.wind.chill,direction:s[Math.round(n.wind.direction/22.5)],speed:n.wind.speed},n.item.condition.temp<80&&n.atmosphere.humidity<40?r.heatindex=-42.379+2.04901523*n.item.condition.temp+10.14333127*n.atmosphere.humidity-.22475541*n.item.condition.temp*n.atmosphere.humidity-6.83783*Math.pow(10,-3)*Math.pow(n.item.condition.temp,2)-5.481717*Math.pow(10,-2)*Math.pow(n.atmosphere.humidity,2)+1.22874*Math.pow(10,-3)*Math.pow(n.item.condition.temp,2)*n.atmosphere.humidity+8.5282*Math.pow(10,-4)*n.item.condition.temp*Math.pow(n.atmosphere.humidity,2)-1.99*Math.pow(10,-6)*Math.pow(n.item.condition.temp,2)*Math.pow(n.atmosphere.humidity,2):r.heatindex=n.item.condition.temp,"3200"==n.item.condition.code?(r.thumbnail=a,r.image=a):(r.thumbnail="https://s.yimg.com/zz/combo?a/i/us/nws/weather/gr/"+n.item.condition.code+"ds.png",r.image="https://s.yimg.com/zz/combo?a/i/us/nws/weather/gr/"+n.item.condition.code+"d.png"),r.alt={temp:e(i.unit,n.item.condition.temp),high:e(i.unit,n.item.forecast[0].high),low:e(i.unit,n.item.forecast[0].low)},"f"===i.unit?r.alt.unit="c":r.alt.unit="f",r.forecast=[];for(var m=0;m<n.item.forecast.length;m++)o=n.item.forecast[m],o.alt={high:e(i.unit,n.item.forecast[m].high),low:e(i.unit,n.item.forecast[m].low)},"3200"==n.item.forecast[m].code?(o.thumbnail=a,o.image=a):(o.thumbnail="https://s.yimg.com/zz/combo?a/i/us/nws/weather/gr/"+n.item.forecast[m].code+"ds.png",o.image="https://s.yimg.com/zz/combo?a/i/us/nws/weather/gr/"+n.item.forecast[m].code+"d.png"),r.forecast.push(o);i.success(r)}else i.error("There was a problem retrieving the latest weather information.")}),this}})}(jQuery);
 /**
  * Isotope v1.5.25
  * An exquisite jQuery plugin for magical layouts
@@ -256,33 +258,33 @@ a.slides.eq(b).remove();a.doMath();a.update(e,"remove");a.slides=d(c.selector+":
 keyboard:!0,multipleKeyboard:!1,mousewheel:!1,pausePlay:!1,pauseText:"Pause",playText:"Play",controlsContainer:"",manualControls:"",sync:"",asNavFor:"",itemWidth:0,itemMargin:0,minItems:0,maxItems:0,move:0,start:function(){},before:function(){},after:function(){},end:function(){},added:function(){},removed:function(){}};d.fn.flexslider=function(j){void 0===j&&(j={});if("object"===typeof j)return this.each(function(){var a=d(this),c=a.find(j.selector?j.selector:".slides > li");1===c.length?(c.fadeIn(400),
 j.start&&j.start(a)):void 0==a.data("flexslider")&&new d.flexslider(this,j)});var l=d(this).data("flexslider");switch(j){case "play":l.play();break;case "pause":l.pause();break;case "next":l.flexAnimate(l.getTarget("next"),!0);break;case "prev":case "previous":l.flexAnimate(l.getTarget("prev"),!0);break;default:"number"===typeof j&&l.flexAnimate(j,!0)}}})(jQuery);
 /*global jQuery */
-/*!	
+/*!
 * FitText.js 1.0
 *
 * Copyright 2011, Dave Rupert http://daverupert.com
-* Released under the WTFPL license 
+* Released under the WTFPL license
 * http://sam.zoy.org/wtfpl/
 *
 * Date: Thu May 05 14:23:00 2011 -0600
 */
 
 (function( $ ){
-	
+
 	$.fn.fitText = function( kompressor, options ) {
-	    
+
 	    var settings = {
         'minFontSize' : Number.NEGATIVE_INFINITY,
         'maxFontSize' : Number.POSITIVE_INFINITY
       };
-	
+
 			return this.each(function(){
 				var $this = $(this);              // store the object
 				var compressor = kompressor || 1; // set the compressor
-        
-        if ( options ) { 
+
+        if ( options ) {
           $.extend( settings, options );
         }
-        
+
         // Resizer() resizes items based on the object width divided by the compressor * 10
 				var resizer = function () {
 					$this.css('font-size', Math.max(Math.min($this.width() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
@@ -290,10 +292,10 @@ j.start&&j.start(a)):void 0==a.data("flexslider")&&new d.flexslider(this,j)});va
 
 				// Call once to set.
 				resizer();
-				
-				// Call on resize. Opera debounces their resize by default. 
+
+				// Call on resize. Opera debounces their resize by default.
       	        $(window).resize(resizer);
-      	
+
 			});
 
 	};
@@ -415,12 +417,12 @@ j.start&&j.start(a)):void 0==a.data("flexslider")&&new d.flexslider(this,j)});va
           , image_size: null
           , photoLink: true
         };
-        
+
     options && $.extend(settings, options);
-    
+
     function createPhotoElement(photo) {
       var image_url = photo.images.thumbnail.url;
-      
+
       if (settings.image_size == 'low_resolution') {
         image_url = photo.images.low_resolution.url;
       }
@@ -447,19 +449,19 @@ j.start&&j.start(a)):void 0==a.data("flexslider")&&new d.flexslider(this,j)});va
         .attr('id', photo.id)
         .append(innerHtml);
     }
-    
+
     function createEmptyElement() {
       return $('<div>')
         .addClass('instagram-placeholder')
         .attr('id', 'empty')
         .append($('<p>').html('No photos for this query'));
     }
-    
+
     function composeRequestURL() {
 
       var url = apiEndpoint,
           params = {};
-      
+
       if (settings.next_url != null) {
         return settings.next_url;
       }
@@ -484,7 +486,7 @@ j.start&&j.start(a)):void 0==a.data("flexslider")&&new d.flexslider(this,j)});va
       else {
         url += "/media/popular";
       }
-      
+
       settings.accessToken != null && (params.access_token = settings.accessToken);
       settings.clientId != null && (params.client_id = settings.clientId);
       settings.minId != null && (params.min_id = settings.minId);
@@ -492,12 +494,12 @@ j.start&&j.start(a)):void 0==a.data("flexslider")&&new d.flexslider(this,j)});va
       settings.show != null && (params.count = settings.show);
 
       url += "?" + $.param(params)
-      
+
       return url;
     }
-    
+
     settings.onLoad != null && typeof settings.onLoad == 'function' && settings.onLoad();
-    
+
     $.ajax({
       type: "GET",
       dataType: "jsonp",
@@ -506,7 +508,7 @@ j.start&&j.start(a)):void 0==a.data("flexslider")&&new d.flexslider(this,j)});va
       success: function (res) {
         var length = typeof res.data != 'undefined' ? res.data.length : 0;
         var limit = settings.show != null && settings.show < length ? settings.show : length;
-        
+
         if (limit > 0) {
           for (var i = 0; i < limit; i++) {
             that.append(createPhotoElement(res.data[i]));
@@ -519,7 +521,7 @@ j.start&&j.start(a)):void 0==a.data("flexslider")&&new d.flexslider(this,j)});va
         settings.onComplete != null && typeof settings.onComplete == 'function' && settings.onComplete(res.data, res);
       }
     });
-    
+
     return this;
   };
 })(jQuery);

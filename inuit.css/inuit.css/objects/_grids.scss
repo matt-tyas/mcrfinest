@@ -32,6 +32,18 @@
  *
  */
 
+ .grid {
+  background: #DDD;
+  max-width: 1200px;
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
 
 /**
  * Grid wrapper

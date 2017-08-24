@@ -18,7 +18,7 @@ $(document).ready(function(){
   });
 
 
-  // 
+  //
   // $( ".rsVideoFrameHolder" ).hasClass( "rsVideoActive" ){
   //
   //
@@ -187,7 +187,22 @@ $(document).ready(function(){
 	$("#article-content").fitVids();
   $(".featured-home-media").fitVids();
 
+$.simpleWeather({
+  location: 'manchester, united kingdom',
+	// zipcode: 'london, united kingdom',
+	unit: 'c',
+	success: function(weather) {
+		html = '';
+		html += '<i class="icon-'+weather.code+'"></i>';
+		html += '<p>'+weather.temp+'&deg; '+weather.units.temp+'</p>';
+		// html += '<a href="'+weather.link+'">View Forecast &raquo;</a>';
 
+		$("#weather").html(html);
+	},
+	error: function(error) {
+		$("#weather").html("<p>"+error+"</p>");
+	}
+});
 
 
 

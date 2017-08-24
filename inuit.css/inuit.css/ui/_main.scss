@@ -51,17 +51,10 @@ a {
 	}
 }
 
-.featured-home {
-	@extend .cf;
-	max-width: 1400px;
-	margin: $half-spacing-unit auto $half-spacing-unit auto;
-	padding: 0;
-  @include media-query(lap) {
-		margin: 0 auto $half-spacing-unit auto;
-	}
-	@include media-query(palm) {
-		margin: 0 auto $half-spacing-unit auto;
-	}
+.greybox {
+	background: #ccc;
+	min-height: 240px;
+	width: 100%;
 }
 
 .page-template-default .wrapper.page {
@@ -114,18 +107,19 @@ a {
 }
 
 .home .page-bg {
-	background: #F3F3F3 !important;
-	@include media-query(lap) {
-		padding-top: 0;
-	}
-	@include media-query(palm) {
-		padding-top: 0;
-	}
+  padding: 0;
+	// background: #F3F3F3 !important;
+	// @include media-query(lap) {
+	// 	padding-top: 0;
+	// }
+	// @include media-query(palm) {
+	// 	padding-top: 0;
+	// }
 }
 
 .page-bg {
 	padding: $half-spacing-unit 0;
-	background: #F3F3F3;
+	// background: #F3F3F3;
 	@include media-query(palm) {
 		padding: $half-spacing-unit/2 0;
 	}
