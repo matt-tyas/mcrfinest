@@ -58,8 +58,8 @@
 					<div class="gw">
 						<div class="g one-half palm-one-half">
 							<article class="post-tile post-25377 post type-post status-publish format-standard has-post-thumbnail hentry category-eating-in-manchester category-restaurants tag-homepage-slider">
-							<a href="http://localhost:8888/manchestersfinest/eating-in-manchester/restaurants/starters-salads-and-splendid-wines/" rel="bookmark" title="Link to Starters, Salads and Splendid Wines">
-							<img width="172" height="88" src="http://localhost:8888/manchestersfinest/wp-content/uploads/2016/02/pork-belly-172x88.jpg" class="attachment-cat-post-thumb size-cat-post-thumb wp-post-image" alt="" srcset="http://localhost:8888/manchestersfinest/wp-content/uploads/2016/02/pork-belly-172x88.jpg 172w, http://localhost:8888/manchestersfinest/wp-content/uploads/2016/02/pork-belly-224x115.jpg 224w" sizes="(max-width: 172px) 100vw, 172px">
+							<a href="http://www.manchestersfinest.com/manchestersfinest/eating-in-manchester/restaurants/starters-salads-and-splendid-wines/" rel="bookmark" title="Link to Starters, Salads and Splendid Wines">
+							<img width="172" height="88" src="http://www.manchestersfinest.com/manchestersfinest/wp-content/uploads/2016/02/pork-belly-172x88.jpg" class="attachment-cat-post-thumb size-cat-post-thumb wp-post-image" alt="" srcset="http://www.manchestersfinest.com/manchestersfinest/wp-content/uploads/2016/02/pork-belly-172x88.jpg 172w, http://www.manchestersfinest.com/manchestersfinest/wp-content/uploads/2016/02/pork-belly-224x115.jpg 224w" sizes="(max-width: 172px) 100vw, 172px">
 							<h3>Starters, Salads and Splendid Wines</h3>
 							<div class="intro">
 								<p>After a non stop start to the year with their hugely successful January sale 2016 has finally arrived at Splendid Kitchen with the launch…</p>
@@ -69,8 +69,8 @@
 						</div>
 						<div class="g one-half palm-one-half">
 							<article class="post-tile post-25370 post type-post status-publish format-standard has-post-thumbnail hentry category-featured category-gigs category-music" >
-								<a href="http://localhost:8888/manchestersfinest/music/the-warehouse-project-host-the-sonarlab-at-sonar-by-night/" rel="bookmark" title="Link to The Warehouse Project host The SonarLab at Sónar By Night">
-								<img width="172" height="88" src="http://localhost:8888/manchestersfinest/wp-content/uploads/2016/02/sonarlab-172x88.jpg" class="attachment-cat-post-thumb size-cat-post-thumb wp-post-image" alt="" srcset="http://localhost:8888/manchestersfinest/wp-content/uploads/2016/02/sonarlab-172x88.jpg 172w, http://localhost:8888/manchestersfinest/wp-content/uploads/2016/02/sonarlab-224x115.jpg 224w" sizes="(max-width: 172px) 100vw, 172px">
+								<a href="http://www.manchestersfinest.com/manchestersfinest/music/the-warehouse-project-host-the-sonarlab-at-sonar-by-night/" rel="bookmark" title="Link to The Warehouse Project host The SonarLab at Sónar By Night">
+								<img width="172" height="88" src="http://www.manchestersfinest.com/manchestersfinest/wp-content/uploads/2016/02/sonarlab-172x88.jpg" class="attachment-cat-post-thumb size-cat-post-thumb wp-post-image" alt="" srcset="http://www.manchestersfinest.com/manchestersfinest/wp-content/uploads/2016/02/sonarlab-172x88.jpg 172w, http://www.manchestersfinest.com/manchestersfinest/wp-content/uploads/2016/02/sonarlab-224x115.jpg 224w" sizes="(max-width: 172px) 100vw, 172px">
 								<h3>The Warehouse Project host The SonarLab at Sónar By Night</h3>
 								<div class="intro">
 									<p>This June, The Warehouse Project join forces with one of Europe's most-respected electronic music events Sónar, to host the SonarLab at…</p>
