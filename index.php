@@ -32,7 +32,7 @@
 				<div class="g seven-twelfths palm-one-whole">
 					<article class="featured-home__super">
 						<div class="featured-home__image">
-							<img class="alignnone size-medium wp-image-25401" src="http://www.manchestersfinest.com/wp-content/uploads/2016/02/1-Eggs-Benedict-709x472.jpg" alt="1 Eggs Benedict" width="709" height="472" srcset="http://localhost:8888/manchestersfinest/wp-content/uploads/2016/02/1-Eggs-Benedict-709x472.jpg 709w, http://localhost:8888/manchestersfinest/wp-content/uploads/2016/02/1-Eggs-Benedict-624x416.jpg 624w, http://localhost:8888/manchestersfinest/wp-content/uploads/2016/02/1-Eggs-Benedict.jpg 710w" sizes="(max-width: 709px) 100vw, 709px">
+							<img class="alignnone size-medium wp-image-25401" src="http://www.manchestersfinest.com/wp-content/uploads/2016/02/1-Eggs-Benedict-709x472.jpg" alt="1 Eggs Benedict" width="709" height="472" srcset="http://www.manchestersfinest.com/wp-content/uploads/2016/02/1-Eggs-Benedict-709x472.jpg 709w, http://www.manchestersfinest.com/wp-content/uploads/2016/02/1-Eggs-Benedict-709x472.jpg 624w, http://www.manchestersfinest.com/wp-content/uploads/2016/02/1-Eggs-Benedict-709x472.jpg 710w" sizes="(max-width: 709px) 100vw, 709px">
 						</div>
 						<a href="">
 							<div class="featured-home__content">
