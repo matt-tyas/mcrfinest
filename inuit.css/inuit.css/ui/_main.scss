@@ -6,7 +6,8 @@
  body {
 	 font-family: $body-face;
 	 -webkit-font-smoothing: antialiased;
-	 background: #fff;
+	 // background: #fff;
+	 background: #F3F3F3 !important;
  }
 
 a {
@@ -49,6 +50,10 @@ a {
 	@include media-query(palm) {
 		padding: 0 $half-spacing-unit/2;
 	}
+}
+
+#content {
+background: #F3F3F3 !important;
 }
 
 .greybox {
@@ -107,8 +112,8 @@ a {
 }
 
 .home .page-bg {
-  padding: 0;
-	// background: #F3F3F3 !important;
+  padding: $half-spacing-unit 0;
+	background: #F3F3F3 !important;
 	// @include media-query(lap) {
 	// 	padding-top: 0;
 	// }
@@ -119,7 +124,7 @@ a {
 
 .page-bg {
 	padding: $half-spacing-unit 0;
-	// background: #F3F3F3;
+	background: #F3F3F3;
 	@include media-query(palm) {
 		padding: $half-spacing-unit/2 0;
 	}

@@ -11,14 +11,13 @@ get_header(); ?>
 
 	<div class="site-content">
 
-
 		<div class="gw">
 
             <div class="g one-tenth lap-one-fifth palm-one-whole">
 				<div class="social-wrap">
-					<aside class="social-links">
+					<aside class="social-links is--sticky">
 						<h5 class="sub-title">Share this</h5>
-						<ul class="nav social social-share">
+						<ul class="social social-share">
 							<li>
 								<a class="btn-circle btn--secondary twitter" href="https://twitter.com/intent/tweet?original_referer=<?php the_permalink(); ?>source=tweetbutton&amp;text=<?php the_title(); ?> <?php the_permalink(); ?>&amp;<?php the_permalink(); ?>" target="_blank" rel="nofollow"><span aria-hidden="true" class="icon-twitter"></span><span class="accessibility">Share article on Twitter</span></a>
 							</li>
@@ -34,7 +33,7 @@ get_header(); ?>
 			</div>
 
 			<div class="g six-tenths lap-four-fifths palm-one-whole f-article">
-                
+
 				<?php
 					global $post;
 					$compare_date = strtotime( "2017-04-26" );
@@ -203,6 +202,25 @@ get_header(); ?>
                         <?php dynamic_sidebar( 'category-page-advert-10' ); ?>
 				        <?php endif; ?>
 					</div>
+
+					<div class="g one-whole lap-one-half palm-one-half mob-one-half">
+						<div class="sticky-spacer">
+							<div class="ad-sense ad--sticky">
+			 	        		<h5 class="sub-title ad-title">Advert</h5>
+			 					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			 					<!-- Home responsive 1 -->
+			 					<ins class="adsbygoogle"
+			 					     style="display:block"
+			 					     data-ad-client="ca-pub-0654331869436657"
+			 					     data-ad-slot="6377296206"
+			 					     data-ad-format="auto"></ins>
+			 					<script>
+			 					(adsbygoogle = window.adsbygoogle || []).push({});
+			 					</script>
+			 				</div>
+						</div>
+					</div>
+
 
 				</div>
 			</div>

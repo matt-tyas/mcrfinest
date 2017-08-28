@@ -438,7 +438,7 @@
 	 						</div>
 	 					</div>
 	 				</div>
-	 				<div class="ad-sense">
+	 				<div id="ad-sticky" class="ad-sense">
 	 	        		<h5 class="sub-title ad-title">Advert</h5>
 	 					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	 					<!-- Home responsive 1 -->

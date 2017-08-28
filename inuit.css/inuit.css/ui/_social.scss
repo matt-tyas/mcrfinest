@@ -73,6 +73,24 @@
 	}
 }
 
+.home .social {
+	margin-top: $half-spacing-unit;
+	.btn-circle {
+		margin-right: 20px;
+		font-size: .6em;
+		display: inline-block;
+    .icon-twitter,
+		.icon-facebook,
+		.icon-instagram {
+			position: relative;
+			top: 10px;
+		}
+		.icon-instagram {
+			color: #4C68D7;
+		}
+	}
+}
+
 .social-wrap {
 	height: 64px;
 	width: 105px;
@@ -83,12 +101,14 @@
 }
 
 .social-links {
-
-	position: absolute;
+	list-style-type: none;
+	margin-left: 0;
+	margin-bottom: $base-spacing-unit;
+	text-align: center;
 	h5 {
 		font-size: 16px;
 		margin-top: 2px;
-		margin-bottom: 0;
+		margin-bottom: $half-spacing-unit;
 		padding-bottom: 0;
 		border-bottom: 0;
 	}
@@ -100,18 +120,28 @@
 }
 
 .social-share {
-		.btn-circle {
-			font-size: .4em;
-	    padding: 8px 10px 0px 0px;
-			color: #999;
-			margin-bottom: 0;
-		}
+	list-style-type: none;
+	margin-left: 0;
+	margin-bottom: $base-spacing-unit;
+	text-align: center;
 
-		.icon-envelope {
-			font-size: 3em;
-			&:before{
-				position: relative;
-				top: 1px;
-			}
+	.btn-circle {
+		font-size: .6em;
+		display: inline-block;
+	}
+
+  .icon-twitter,
+	.icon-facebook,
+	.icon-envelope {
+		font-size: 3em;
+		&:before{
+			position: relative;
+			top: 10px;
 		}
+	}
+	.icon-envelope {
+		&:before{
+			top: 12px;
+		}
+	}
 }

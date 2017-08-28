@@ -5,6 +5,21 @@ $(window).load(function() {
 
 $(document).ready(function(){
 
+  /* Sticky elements
+  ---------------------------------- */
+  if ( $('.is--sticky').length ) {
+    $('.is--sticky').stick_in_parent({
+      parent: ".site-content", 
+    });
+  }
+
+  if ( $('.ad--sticky').length ) {
+    $('.ad--sticky').stick_in_parent({
+      parent: ".site-content",
+      spacer: ".sticky-spacer",
+    });
+  }
+
   $(".finder-trigger").click(function() {
     $(this).toggleClass("is--pressed");
     $(".mf-directory-search-home").addClass("is--open");
@@ -16,22 +31,6 @@ $(document).ready(function(){
     $(".mf-directory-search-home").removeClass("is--open");
     return false;
   });
-
-
-  //
-  // $( ".rsVideoFrameHolder" ).hasClass( "rsVideoActive" ){
-  //
-  //
-  //   return false;
-  // });
-  //
-  //
-  //
-  // $(".rsPlayBtnIcon").click(function() {
-  //
-  //
-  //   return false;
-  // });
 
 	/* Primary navigation interactions
 	---------------------------------- */
@@ -187,24 +186,24 @@ $(document).ready(function(){
 	$("#article-content").fitVids();
   $(".featured-home-media").fitVids();
 
-$.simpleWeather({
-  location: 'manchester, united kingdom',
-	// zipcode: 'london, united kingdom',
-	unit: 'c',
-	success: function(weather) {
-		html = '';
-		html += '<i class="icon-'+weather.code+'"></i>';
-		html += '<p>'+weather.temp+'&deg; '+weather.units.temp+'</p>';
-		// html += '<a href="'+weather.link+'">View Forecast &raquo;</a>';
-
-		$("#weather").html(html);
-	},
-	error: function(error) {
-		$("#weather").html("<p>"+error+"</p>");
-	}
-});
-
-
+  /* Weather
+	---------------------------------- */
+// $.simpleWeather({
+//   location: 'manchester, united kingdom',
+// 	// zipcode: 'london, united kingdom',
+// 	unit: 'c',
+// 	success: function(weather) {
+// 		html = '';
+// 		html += '<i class="icon-'+weather.code+'"></i>';
+// 		html += '<p>'+weather.temp+'&deg; '+weather.units.temp+'</p>';
+// 		// html += '<a href="'+weather.link+'">View Forecast &raquo;</a>';
+//
+// 		$("#weather").html(html);
+// 	},
+// 	error: function(error) {
+// 		$("#weather").html("<p>"+error+"</p>");
+// 	}
+// });
 
 
 

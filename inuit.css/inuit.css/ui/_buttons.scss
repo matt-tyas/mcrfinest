@@ -2,11 +2,6 @@
     $Buttons
 \*------------------------------------*/
 
-
-.social-links {
-	margin-bottom: $base-spacing-unit;
-}
-
 .btn {
 	@include vendor(border-radius, 2px);
 	margin-bottom: $base-spacing-unit;
@@ -17,8 +12,16 @@
 
 .btn-circle {
 	@include font-size($h2-size);
-	margin-bottom: $base-spacing-unit;
-	padding: $half-spacing-unit;
+	margin-bottom: $half-spacing-unit;
+	border: 1px solid #999;
+	border-radius: 50%;
+  height: 64px;
+  width: 64px;
+  display: block;
+	text-align: center;
+	&:focus {
+		border-radius: 50%;
+	}
 }
 
 .btn--finest {
@@ -46,68 +49,37 @@
 // }
 
 .btn--secondary.twitter {
-	width: 100%;
 	color: #00aced;
 	font-weight: bold;
-	border: 0;
 	.icon-twitter {
-		font-size: 3em;
-		// -webkit-transition: scale 0.3s ease;
-	  //      -moz-transition: scale 0.3s ease;
-	  //           transition: scale 0.3s ease;
+		font-size: 3.5em;
 	}
 	&:hover {
-		color: darken(#00aced, 20%);
-		// -webkit-transform: scale(1.1);
-    //        -moz-transform: scale(1.1);
-    //         -ms-transform: scale(1.1);
-    //          -o-transform: scale(1.1);
-    //             transform: scale(1.1);
+		border: 1px solid darken(#999, 20%);
 	}
 }
 
 .btn--secondary.instagram {
-	width: 100%;
-	color: #4B789E;
+	color: #886808;
 	font-weight: bold;
-	border: 0;
 	.icon-instagram {
-		font-size: 3em;
-		// -webkit-transition: scale 0.3s ease;
-	  //      -moz-transition: scale 0.3s ease;
-	  //           transition: scale 0.3s ease;
+		font-size: 3.5em;
 	}
 	&:hover {
-		color: darken(#4B789E, 20%);
-		// -webkit-transform: scale(1.1);
-    //        -moz-transform: scale(1.1);
-    //         -ms-transform: scale(1.1);
-    //          -o-transform: scale(1.1);
-    //             transform: scale(1.1);
-		}
+		border: 1px solid darken(#999, 20%);
+	}
 }
 
 
 .btn--secondary.facebook {
-	width: 100%;
 	color: #3B5998;
 	font-weight: bold;
-	border: 0;
-	padding: $half-spacing-unit $base-spacing-unit;
 	.icon-facebook {
-		font-size: 3em;
-		// -webkit-transition: scale 0.3s ease;
-	  //      -moz-transition: scale 0.3s ease;
-	  //           transition: scale 0.3s ease;
-						}
+		  font-size: 3.5em;
+		}
 		&:hover {
-			color: darken(#3B5998, 20%);
-			// -webkit-transform: scale(1.1);
-	    //        -moz-transform: scale(1.1);
-	    //         -ms-transform: scale(1.1);
-	    //          -o-transform: scale(1.1);
-	    //             transform: scale(1.1);
-			}
+			border: 1px solid darken(#999, 20%);
+		}
 	}
 
 
