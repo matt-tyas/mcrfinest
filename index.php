@@ -24,10 +24,9 @@
 
 <div class="g one-whole">
 	<div id="content">
-        <h1 class="accessibility">Test deploy 2 Manchester's Finest and the Northern Quarter</h1>
+        <h1 class="accessibility">Manchester's Finest and the Northern Quarter</h1>
         <h2 class="accessibility">Restaurants, Bars, Offers and Competitions in Manchester</h2>
 		<section class="featured-home">
-
 			<div class="gw">
 				<div class="g seven-twelfths palm-one-whole">
 					<article class="featured-home__super">
@@ -79,60 +78,48 @@
 							</article>
 						</div>
 					</div>
-
 				</div>
 			</div>
-
-			<!-- <div class="gw row">
-	            <div class="g four-sixths lap-three-quarters palm-one-whole">
-					<?php echo get_new_royalslider(5); ?>
-				</div>
-                <div class="g one-sixth lap-one-quarter palm-one-half mob-one-half">
-					<?php
-						if ( is_active_sidebar( 'homepage-advert-1' ) ) : ?>
-						<?php dynamic_sidebar( 'homepage-advert-1' ); ?>
-					<?php endif; ?>
-				</div>
-				<div class="g one-sixth lap-one-quarter palm-one-quarter mob-one-half mob-fix">
-					<?php
-						if ( is_active_sidebar( 'homepage-advert-2' ) ) : ?>
-						<?php dynamic_sidebar( 'homepage-advert-2' ); ?>
-					<?php endif; ?>
-				</div>
-	        </div> -->
 		</section>
-	<main id="main" class="wrapper page">
-		<div class="border-wrap">
-			<div class="gw">
-				<div class="g two-thirds lap-one-half palm-one-whole">
-					<a href="#" class="finder-trigger"><span aria-hidden="true" data-icon="&#x260c;"></span> Find things to do in&nbsp;Manchester</a>
-					<div class="mf-directory-search-home">
-						<h3 class="beta">Find things to do in Manchester</h3>
-						<?php
-							if ( is_active_sidebar( 'directory-search' ) ) : ?>
-							<?php dynamic_sidebar( 'directory-search' ); ?>
-						<?php endif; ?>
-						<a href="#" class="finder-close-trigger"><span aria-hidden="true" data-icon="&#x2612;"></span> Close </a>
-					</div>
-				</div>
-                <div class="g one-third lap-one-half palm-one-whole">
-                    <div class="gw">
-                        <div class="g one-half lap-one-quarter palm-one-half mob-one-half">
-        					<?php
-        						if ( is_active_sidebar( 'homepage-advert-1' ) ) : ?>
-        						<?php dynamic_sidebar( 'homepage-advert-1' ); ?>
-        					<?php endif; ?>
-        				</div>
-        				<div class="g one-half lap-one-quarter palm-one-quarter mob-one-half mob-fix">
-        					<?php
-        						if ( is_active_sidebar( 'homepage-advert-2' ) ) : ?>
-        						<?php dynamic_sidebar( 'homepage-advert-2' ); ?>
-        					<?php endif; ?>
-        				</div>
+
+
+	    <div id="main" class="wrapper page">
+
+
+    		<section class="border-wrap">
+    			<div class="gw">
+    				<div class="g two-thirds lap-one-half palm-one-whole">
+    					<a href="#" class="finder-trigger"><span aria-hidden="true" data-icon="&#x260c;"></span> Find things to do in&nbsp;Manchester</a>
+    					<div class="mf-directory-search-home">
+    						<h3 class="beta">Find things to do in Manchester</h3>
+    						<?php
+    							if ( is_active_sidebar( 'directory-search' ) ) : ?>
+    							<?php dynamic_sidebar( 'directory-search' ); ?>
+    						<?php endif; ?>
+    						<a href="#" class="finder-close-trigger"><span aria-hidden="true" data-icon="&#x2612;"></span> Close</a>
+    					</div>
+    				</div>
+                    <div class="g one-third lap-one-half palm-one-whole">
+                        <div class="gw">
+                            <div class="g one-half lap-one-quarter palm-one-half mob-one-half">
+            					<?php
+            						if ( is_active_sidebar( 'homepage-advert-1' ) ) : ?>
+            						<?php dynamic_sidebar( 'homepage-advert-1' ); ?>
+            					<?php endif; ?>
+            				</div>
+            				<div class="g one-half lap-one-quarter palm-one-quarter mob-one-half mob-fix">
+            					<?php
+            						if ( is_active_sidebar( 'homepage-advert-2' ) ) : ?>
+            						<?php dynamic_sidebar( 'homepage-advert-2' ); ?>
+            					<?php endif; ?>
+            				</div>
+                        </div>
                     </div>
-                </div>
-			</div>
-		</div>
+    			</div>
+    		</section>
+
+
+
 		<div class="gw">
 			<div class="g two-thirds palm-one-whole">
 			<div id="sort-container">
@@ -199,7 +186,7 @@
 								</div>
 							</form>
 						</div>
-							<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='MMERGE3';ftypes[3]='text';fnames[4]='MMERGE4';ftypes[4]='text';fnames[5]='MMERGE5';ftypes[5]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+						<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='MMERGE3';ftypes[3]='text';fnames[4]='MMERGE4';ftypes[4]='text';fnames[5]='MMERGE5';ftypes[5]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
 					<!-- Events -->
 		            <div class="events">
 		               <h5 class="sub-title">Upcoming</h5>
@@ -477,21 +464,21 @@
 	 					(adsbygoogle = window.adsbygoogle || []).push({});
 	 					</script>
 			 		</div>
-	 				<div class="columnists">
-	 			  		<div class="ad-sense">
-		 					<h5 class="sub-title ad-title">Advert</h5>
-		 					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-		 					<!-- Home responsive 3 -->
-		 					<ins class="adsbygoogle"
-		 					     style="display:block"
-		 					     data-ad-client="ca-pub-0654331869436657"
-		 					     data-ad-slot="3284229005"
-		 					     data-ad-format="auto"></ins>
-		 					<script>
-		 					(adsbygoogle = window.adsbygoogle || []).push({});
-		 					</script>
-	 					</div>
-	 				</div>
+
+ 			  		<div class="ad-sense">
+	 					<h5 class="sub-title ad-title">Advert</h5>
+	 					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	 					<!-- Home responsive 3 -->
+	 					<ins class="adsbygoogle"
+	 					     style="display:block"
+	 					     data-ad-client="ca-pub-0654331869436657"
+	 					     data-ad-slot="3284229005"
+	 					     data-ad-format="auto"></ins>
+	 					<script>
+	 					(adsbygoogle = window.adsbygoogle || []).push({});
+	 					</script>
+ 					</div>
+
 	 		</div><!-- End of second row -->
 		</div>
 	</div><!-- #content -->
