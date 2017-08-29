@@ -183,32 +183,14 @@ $(document).ready(function(){
 
 	/* Fit Vid
 	---------------------------------- */
-  $(".featured-home__video").fitVids();
+  $("#featured-home__video").fitVids();
 	$("#article-content").fitVids();
   $(".featured-home-media").fitVids();
-
-  $(".featured-home__video iframe").click(function() {
-    $('.featured-home__content').toggleClass('is--hidden');
-    alert('hello');
-    return false;
-  });
-
-  $(window).click(function(event){
-    console.log(event.target);
-    if($('.featured-home__video iframe').is(':focus')){
-        //clicked inside iframe
-        console.log('test');
-    }
-    console.log('document.activeElement is:');
-    console.log(document.activeElement);
-    console.log('\n');
-});
 
   /* Weather
 	---------------------------------- */
   $.simpleWeather({
     location: 'manchester, united kingdom',
-  	// zipcode: 'london, united kingdom',
   	unit: 'c',
   	success: function(weather) {
   		html = '';

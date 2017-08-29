@@ -390,28 +390,28 @@
 	}
 
   .post-tile--white {
-    background-color: #ffffff;
+    background-color: #ffffff !important;
   }
   .post-tile--pink {
-    background-color: #F5EBF6;
+    background-color: #F5EBF6 !important;
   }
   .post-tile--peach {
-		background-color: #F3E9EB;
+		background-color: #F3E9EB !important;
   }
   .post-tile--green {
-		background-color: #DFE7E0;
+		background-color: #DFE7E0 !important;
   }
   .post-tile--lilac {
-		background-color: #ECE4F4; 
+		background-color: #ECE4F4 !important;
   }
   .post-tile--yellow {
-		background-color: #FCFCEE;
+		background-color: #FCFCEE !important;
   }
   .post-tile--blue {
-		background-color: #DCEFF5;
+		background-color: #DCEFF5 !important;
   }
   .post-tile--grey {
-		background-color: #F3F3F3;
+		background-color: #F3F3F3 !important;
   }
 
   .featured-home__super {}
@@ -419,6 +419,16 @@
 		img {
 			width: 100%;
 		}
+	}
+
+	// .featured-home__super--video {
+	// 	.featured-home__content {
+	// 		margin: -10px 0 0 46px;
+	// 	}
+	// }
+
+	.is--hidden {
+		display: none;
 	}
 
 	.featured-home__content {
