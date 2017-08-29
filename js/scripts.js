@@ -9,7 +9,7 @@ $(document).ready(function(){
   ---------------------------------- */
   if ( $('.is--sticky').length ) {
     $('.is--sticky').stick_in_parent({
-      parent: ".site-content", 
+      parent: ".site-content",
     });
   }
 
@@ -183,27 +183,45 @@ $(document).ready(function(){
 
 	/* Fit Vid
 	---------------------------------- */
+  $(".featured-home__video").fitVids();
 	$("#article-content").fitVids();
   $(".featured-home-media").fitVids();
 
+  $(".featured-home__video iframe").click(function() {
+    $('.featured-home__content').toggleClass('is--hidden');
+    alert('hello');
+    return false;
+  });
+
+  $(window).click(function(event){
+    console.log(event.target);
+    if($('.featured-home__video iframe').is(':focus')){
+        //clicked inside iframe
+        console.log('test');
+    }
+    console.log('document.activeElement is:');
+    console.log(document.activeElement);
+    console.log('\n');
+});
+
   /* Weather
 	---------------------------------- */
-// $.simpleWeather({
-//   location: 'manchester, united kingdom',
-// 	// zipcode: 'london, united kingdom',
-// 	unit: 'c',
-// 	success: function(weather) {
-// 		html = '';
-// 		html += '<i class="icon-'+weather.code+'"></i>';
-// 		html += '<p>'+weather.temp+'&deg; '+weather.units.temp+'</p>';
-// 		// html += '<a href="'+weather.link+'">View Forecast &raquo;</a>';
-//
-// 		$("#weather").html(html);
-// 	},
-// 	error: function(error) {
-// 		$("#weather").html("<p>"+error+"</p>");
-// 	}
-// });
+  $.simpleWeather({
+    location: 'manchester, united kingdom',
+  	// zipcode: 'london, united kingdom',
+  	unit: 'c',
+  	success: function(weather) {
+  		html = '';
+  		html += '<i class="icon-'+weather.code+'"></i>';
+  		html += '<p>'+weather.temp+'&deg; '+weather.units.temp+'</p>';
+  		// html += '<a href="'+weather.link+'">View Forecast &raquo;</a>';
+
+  		$("#weather").html(html);
+  	},
+  	error: function(error) {
+  		$("#weather").html("<p>"+error+"</p>");
+  	}
+  });
 
 
 

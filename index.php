@@ -30,50 +30,66 @@
 			<div class="gw">
 				<div class="g seven-twelfths palm-one-whole">
 					<article class="featured-home__super">
-						<div class="featured-home__image">
-							<img class="alignnone size-medium wp-image-25401" src="http://www.manchestersfinest.com/wp-content/uploads/2016/02/1-Eggs-Benedict-709x472.jpg" alt="1 Eggs Benedict" width="709" height="472" srcset="http://www.manchestersfinest.com/wp-content/uploads/2016/02/1-Eggs-Benedict-709x472.jpg 709w, http://www.manchestersfinest.com/wp-content/uploads/2016/02/1-Eggs-Benedict-709x472.jpg 624w, http://www.manchestersfinest.com/wp-content/uploads/2016/02/1-Eggs-Benedict-709x472.jpg 710w" sizes="(max-width: 709px) 100vw, 709px">
-						</div>
-						<a href="">
-							<div class="featured-home__content">
-								<h3 class="alpha featured-home__title">The Lead Station celebrate 20 Years with cookery book</h3>
-								<p>Popular Chorlton eatery The Lead Station celebrated their 20th anniversary last year, and to honour 2 decades of serving South Manchester they’ve produced a lovely new cook book.</p>
+						<?php if( get_field('main_video', 'option') ): ?>
+							<div class="featured-home__video">
+								<?php the_field('main_video', 'option'); ?>
+							</div>
+						<?php else : ?>
+							<div class="featured-home__image">
+								<img src="<?php the_field('main_article_image', 'option'); ?>">
+							</div>
+						<?php endif; ?>
+						<a href="<?php the_field('main_article_url', 'option'); ?>">
+							<div class="featured-home__content <?php the_field('main_article_colour', 'option'); ?>">
+								<h3 class="alpha featured-home__title"><?php the_field('main_article_title', 'option'); ?></h3>
+								<p><?php the_field('main_article_introduction', 'option'); ?></p>
 							</div>
 						</a>
                     </article>
 				</div>
                 <div class="g five-twelfths palm-one-whole">
-
 					<div class="gw">
 						<div class="g one-whole palm-one-whole">
 							<div class="featured-home__greeting">
 								<div class="featured-home__greeting-content">
-									<h3>This week on finest. <a href="">Win a meal for 2 at Tattu</a> and find the <a href="">best bank holiday days out</a> as well as much&nbsp;more…</h3>
+                                    <h3><?php the_field('welcome_message', 'option'); ?></h3>
 								</div>
 								<div id="weather" class="featured-home__weather"></div>
 							</div>
 						</div>
 					</div>
-
 					<div class="gw">
 						<div class="g one-half palm-one-half">
-							<article class="post-tile post-25377 post type-post status-publish format-standard has-post-thumbnail hentry category-eating-in-manchester category-restaurants tag-homepage-slider">
-							<a href="http://www.manchestersfinest.com/manchestersfinest/eating-in-manchester/restaurants/starters-salads-and-splendid-wines/" rel="bookmark" title="Link to Starters, Salads and Splendid Wines">
-							<img width="172" height="88" src="http://www.manchestersfinest.com/manchestersfinest/wp-content/uploads/2016/02/pork-belly-172x88.jpg" class="attachment-cat-post-thumb size-cat-post-thumb wp-post-image" alt="" srcset="http://www.manchestersfinest.com/manchestersfinest/wp-content/uploads/2016/02/pork-belly-172x88.jpg 172w, http://www.manchestersfinest.com/manchestersfinest/wp-content/uploads/2016/02/pork-belly-224x115.jpg 224w" sizes="(max-width: 172px) 100vw, 172px">
-							<h3>Starters, Salads and Splendid Wines</h3>
-							<div class="intro">
-								<p>After a non stop start to the year with their hugely successful January sale 2016 has finally arrived at Splendid Kitchen with the launch…</p>
-							</div>
-							</a>
-						</article>
+							<article class="post-tile <?php the_field('sub_article_colour', 'option'); ?>">
+								<a href="<?php the_field('sub_article_url', 'option'); ?>">
+									<?php
+										$image = get_field('sub_article_image', 'option');
+										$size = 'thumbnail'; // (thumbnail, medium, large, full or custom size)
+										if( $image ) {
+											echo wp_get_attachment_image( $image, $size );
+										}
+									?>
+									<h3><?php the_field('sub_article_title', 'option'); ?></h3>
+									<div class="intro">
+										<p><?php the_field('sub_article_introduction', 'option'); ?></p>
+									</div>
+								</a>
+							</article>
 						</div>
 						<div class="g one-half palm-one-half">
-							<article class="post-tile post-25370 post type-post status-publish format-standard has-post-thumbnail hentry category-featured category-gigs category-music" >
-								<a href="http://www.manchestersfinest.com/manchestersfinest/music/the-warehouse-project-host-the-sonarlab-at-sonar-by-night/" rel="bookmark" title="Link to The Warehouse Project host The SonarLab at Sónar By Night">
-								<img width="172" height="88" src="http://www.manchestersfinest.com/manchestersfinest/wp-content/uploads/2016/02/sonarlab-172x88.jpg" class="attachment-cat-post-thumb size-cat-post-thumb wp-post-image" alt="" srcset="http://www.manchestersfinest.com/manchestersfinest/wp-content/uploads/2016/02/sonarlab-172x88.jpg 172w, http://www.manchestersfinest.com/manchestersfinest/wp-content/uploads/2016/02/sonarlab-224x115.jpg 224w" sizes="(max-width: 172px) 100vw, 172px">
-								<h3>The Warehouse Project host The SonarLab at Sónar By Night</h3>
-								<div class="intro">
-									<p>This June, The Warehouse Project join forces with one of Europe's most-respected electronic music events Sónar, to host the SonarLab at…</p>
-								</div>
+							<article class="post-tile <?php the_field('sub_article_two_colour', 'option'); ?>">
+								<a href="<?php the_field('sub_article_two_url', 'option'); ?>">
+									<?php
+										$image = get_field('sub_article_two_image', 'option');
+										$size = 'thumbnail'; // (thumbnail, medium, large, full or custom size)
+										if( $image ) {
+											echo wp_get_attachment_image( $image, $size );
+										}
+									?>
+									<h3><?php the_field('sub_article_two_title', 'option'); ?></h3>
+									<div class="intro">
+										<p><?php the_field('sub_article_two_introduction', 'option'); ?></p>
+									</div>
 								</a>
 							</article>
 						</div>
@@ -81,11 +97,7 @@
 				</div>
 			</div>
 		</section>
-
-
 	    <div id="main" class="wrapper page">
-
-
     		<section class="border-wrap">
     			<div class="gw">
     				<div class="g two-thirds lap-one-half palm-one-whole">
