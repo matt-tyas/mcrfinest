@@ -44,7 +44,7 @@ a {
 #page,
 .page {
 	@extend .cf;
-	max-width: 1280px;
+	max-width: 1340px;
 	margin: 0 auto;
 	padding: 0 $half-spacing-unit;
 	@include media-query(palm) {
@@ -93,7 +93,7 @@ a {
 		margin-bottom: 0;
 	}
 }
- 
+
 .static .page,
 .page.type-page,
 .page.type-page .breadcrumbs {
