@@ -44,9 +44,9 @@ a {
 #page,
 .page {
 	@extend .cf;
-	max-width: 1340px;
+	max-width: 1440px;
 	margin: 0 auto;
-	padding: 0 $half-spacing-unit;
+	padding: 0 4px;
 	@include media-query(palm) {
 		padding: 0 $half-spacing-unit/2;
 	}
@@ -87,8 +87,8 @@ a {
 .border-wrap {
 	padding: $base-spacing-unit 0 $half-spacing-unit 0;
 	margin-bottom: $base-spacing-unit;
-	border-top: 1px solid #999;
-	border-bottom: 1px solid #999;
+	// border-top: 1px solid #999;
+	// border-bottom: 1px solid #999;
 	.ad-sq {
 		margin-bottom: 0;
 	}

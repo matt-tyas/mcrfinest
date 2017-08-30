@@ -110,13 +110,11 @@
     				<div class="g one-whole lap-one-half palm-one-whole">
     					<a href="#" class="finder-trigger"><span aria-hidden="true" data-icon="&#x260c;"></span> Find things to do in&nbsp;Manchester</a>
     					<div class="mf-directory-search-home">
-							<p class="mf-directory-search-label">Find something in Manchester</p>
-    						<h3 class="mf-directory-search">Find italian food in Manchester</h3>
-
-    						<!-- <?php
+							<h3 class="mf-directory-search-label"><span class="icon icon-marker"></span> Find something in Manchester</h3>
+    						<?php
     							if ( is_active_sidebar( 'directory-search' ) ) : ?>
     							<?php dynamic_sidebar( 'directory-search' ); ?>
-    						<?php endif; ?> -->
+    						<?php endif; ?>
     						<a href="#" class="finder-close-trigger"><span aria-hidden="true" data-icon="&#x2612;"></span> Close</a>
     					</div>
     				</div>

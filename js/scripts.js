@@ -3,6 +3,16 @@ $(window).load(function() {
   $('<style> .category-northern-quarter:before { display: block !important; } </style>').appendTo('head');
 });
 
+$(window).scroll(function() {
+  var scroll = $(window).scrollTop();
+
+  if (scroll >= 110) {
+      $(".site-title--srcoll").addClass("is--shown");
+  } else {
+      $(".site-title--srcoll").removeClass("is--shown");
+  }
+});
+
 $(document).ready(function(){
 
   /* Sticky elements
@@ -26,6 +36,24 @@ $(document).ready(function(){
     });
   }
 
+  var $window = $(window);
+
+  function checkWidth() {
+      var windowsize = $window.width();
+      if (windowsize < 860) {
+
+        if ( $('.site-title').length ) {
+          $('.site-title').stick_in_parent({
+            parent: ".site",
+          });
+        }
+      }
+  }
+  // Execute on load
+  checkWidth();
+  // Bind event listener
+  $(window).resize(checkWidth);
+
   $(".finder-trigger").click(function() {
     $(this).toggleClass("is--pressed");
     $(".mf-directory-search-home").addClass("is--open");
@@ -35,6 +63,11 @@ $(document).ready(function(){
   $(".finder-close-trigger").click(function() {
     $(this).toggleClass("is--pressed");
     $(".mf-directory-search-home").removeClass("is--open");
+    return false;
+  });
+
+  $(".search-close-trigger").click(function() {
+    $("#main-search-reveal").removeClass("is-open");
     return false;
   });
 
@@ -100,6 +133,8 @@ $(document).ready(function(){
 
     $('#menu-toggle__target').click(function(){
 	    $(this).toggleClass('is-pressed');
+      $(this).toggleClass('toggle-position');
+      $('#search-toggle').toggleClass('toggle-position-search');
     });
 
 	// Slide out side menu
@@ -192,6 +227,7 @@ $(document).ready(function(){
   $("#featured-home__video").fitVids();
 	$("#article-content").fitVids();
   $(".featured-home-media").fitVids();
+  $(".site-content").fitVids();
 
   /* Weather
 	---------------------------------- */

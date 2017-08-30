@@ -36,7 +36,7 @@ get_header(); ?>
 
 				<?php
 					global $post;
-					$compare_date = strtotime( "2017-04-26" );
+					$compare_date = strtotime( "2017-08-29" );
 					$post_date    = strtotime( $post->post_date );
 
 					if ( $compare_date > $post_date  ) {
