@@ -416,9 +416,52 @@
 
   .featured-home__super {}
 	.featured-home__image {
+		position: relative;
 		img {
 			width: 100%;
 		}
+
+		a {
+			border-bottom: 0;
+		}
+
+		.featured-home__image-link {
+			position: absolute;
+			background: rgba(255,255,255,0.6);
+			border-radius: 50%;
+			width: 150px;
+			height: 150px;
+			display: block;
+			top: 50%;
+			margin: auto;
+  		top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			@include media-query(mob) {
+				width: 100px;
+				height: 100px;
+			}
+			&:after {
+				position: absolute;
+				display: block;
+				content: '';
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 25px 0 25px 43.3px;
+				border-color: transparent transparent transparent #000000;
+				margin: auto;
+	  		top: 0;
+				left: 10px;
+				bottom: 0;
+				right: 0;
+				@include media-query(mob) {
+					border-width: 17.5px 0 17.5px 30.3px;
+				}
+			}
+		}
+
 	}
 
 	// .featured-home__super--video {

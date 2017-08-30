@@ -2,6 +2,16 @@
  * $finest nav
  */
 
+#navigation {
+  background: #fff;
+}
+
+#navigation.is_stuck {
+	width: 100% !important;
+	left: 0;
+	z-index: 9999;
+}
+
 .primary #menu-main-navigation .menu-item-object-category.current-menu-item .sub-menu a {
 	background: lighten($darkgrey, 10%);
  	&:hover {
@@ -10,7 +20,7 @@
 }
 
 .primary .current-menu-item a:hover {
-	border-bottom: 0;
+	border-bottom: 0;  
 }
 
 .primary {

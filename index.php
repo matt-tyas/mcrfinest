@@ -29,13 +29,19 @@
 		<section class="featured-home">
 			<div class="gw">
 				<div class="g seven-twelfths palm-one-whole">
+					<article class="featured-home__super">
 						<?php if( get_field('main_video', 'option') ): ?>
-						<article class="featured-home__super featured-home__super--video">
-							<div id="featured-home__video" class="featured-home__video">
-								<?php the_field('main_video', 'option'); ?>
+							<div class="featured-home__image">
+								<?php
+									$video = get_field('main_video', 'option'); // Embed Code
+								    $video_url = get_field('main_video', 'option', FALSE, FALSE); // URL
+							  	    $video_thumb_url = get_video_thumbnail_uri($video_url);
+								?>
+								<a data-fancybox="gallery" href="<?php echo $video_url; ?>"><img src="<?php echo $video_thumb_url; ?>"/>
+									<span class="featured-home__image-link"></span>
+								</a>
 							</div>
 						<?php else : ?>
-						<article class="featured-home__super">
 							<div class="featured-home__image">
 								<img src="<?php the_field('main_article_image', 'option'); ?>">
 							</div>

@@ -20,6 +20,12 @@ $(document).ready(function(){
     });
   }
 
+  if ( $('#navigation').length ) {
+    $('#navigation').stick_in_parent({
+      parent: ".site",
+    });
+  }
+
   $(".finder-trigger").click(function() {
     $(this).toggleClass("is--pressed");
     $(".mf-directory-search-home").addClass("is--open");

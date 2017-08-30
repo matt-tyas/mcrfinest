@@ -48,6 +48,7 @@
 	&noscript=1"/>
 </noscript>
 <!-- End Facebook Pixel Code -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.css" />
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?> >
