@@ -107,18 +107,20 @@
 	    <div id="main" class="wrapper page">
     		<section class="border-wrap">
     			<div class="gw">
-    				<div class="g two-thirds lap-one-half palm-one-whole">
+    				<div class="g one-whole lap-one-half palm-one-whole">
     					<a href="#" class="finder-trigger"><span aria-hidden="true" data-icon="&#x260c;"></span> Find things to do in&nbsp;Manchester</a>
     					<div class="mf-directory-search-home">
-    						<h3 class="beta">Find things to do in Manchester</h3>
-    						<?php
+							<p class="mf-directory-search-label">Find something in Manchester</p>
+    						<h3 class="mf-directory-search">Find italian food in Manchester</h3>
+
+    						<!-- <?php
     							if ( is_active_sidebar( 'directory-search' ) ) : ?>
     							<?php dynamic_sidebar( 'directory-search' ); ?>
-    						<?php endif; ?>
+    						<?php endif; ?> -->
     						<a href="#" class="finder-close-trigger"><span aria-hidden="true" data-icon="&#x2612;"></span> Close</a>
     					</div>
     				</div>
-                    <div class="g one-third lap-one-half palm-one-whole">
+                    <!-- <div class="g one-third lap-one-half palm-one-whole">
                         <div class="gw">
                             <div class="g one-half lap-one-quarter palm-one-half mob-one-half">
             					<?php
@@ -133,7 +135,7 @@
             					<?php endif; ?>
             				</div>
                         </div>
-                    </div>
+                    </div> -->
     			</div>
     		</section>
 
