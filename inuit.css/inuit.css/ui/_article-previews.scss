@@ -268,18 +268,18 @@
 	display: block;
 	height: auto;
 	border-bottom: 0;
-	-webkit-transition:all 150ms ease-in;
-      -moz-transition:all 150ms ease-in;
-         -o-transition:all 150ms ease-in;
-            transition:all 150ms ease-in;
+	-webkit-transition: opacity 150ms ease-in;
+      -moz-transition: opacity  150ms ease-in;
+         -o-transition: opacity  150ms ease-in;
+            transition: opacity  150ms ease-in;
 		&:hover {
 			text-decoration: none;
-			h3 {
-				color: $brand-color;
-		    }
-		    span {
-			    color: $brand-color;
-		    }
+		  h3 {
+				text-decoration: underline;
+	    }
+	    span {
+		    text-decoration: underline;
+	    }
 		}
     &:focus {
 			outline: 3px solid $brand-color;
@@ -438,6 +438,10 @@
 			left: 0;
 			bottom: 0;
 			right: 0;
+			-webkit-transition:all 150ms ease-in;
+	       -moz-transition:all 150ms ease-in;
+	         -o-transition:all 150ms ease-in;
+	            transition:all 150ms ease-in;
 			@include media-query(mob) {
 				width: 100px;
 				height: 100px;
@@ -460,18 +464,19 @@
 					border-width: 17.5px 0 17.5px 30.3px;
 				}
 			}
+			&:hover {
+				background: rgba(255,255,255,.8);
+			}
 		}
 
 	}
 
-	// .featured-home__super--video {
-	// 	.featured-home__content {
-	// 		margin: -10px 0 0 46px;
-	// 	}
-	// }
-
-	.is--hidden {
-		display: none;
+	.featured-home__link {
+		&:hover {
+			h3 {
+				text-decoration: underline;
+			}
+		}
 	}
 
 	.featured-home__content {
@@ -503,6 +508,7 @@
 	}
 
 	.featured-home__greeting {
+		position: relative;
 		@extend .cf;
 		padding: $half-spacing-unit;
 		background-color: #fff;
@@ -514,20 +520,53 @@
 		}
 
 		.featured-home__greeting-content {
-			width: 80%;
+			width: 75%;
 			float: left;
 		}
 
 		.featured-home__weather {
-			width: 20%;
-			height: 100px;
-			float: right;
+			position: absolute;
+			top: 0px;
+			right: 0;
+			//width: 20%;
+			height: auto;
+			margin-left: 10px;
 			text-align: center;
 			font-weight: 700;
+			@include media-query(desk) {
+				right: 20px;
+			}
+			@include media-query(portable) {
+				// right: 10px;
+				// width: 15%;
+				// font-size: 100px;
+			}
+			@include media-query(lap) {
+				right: 10px;
+				// width: 15%;
+				// font-size: 100px;
+			}
 			p {
 				margin-bottom: 0;
 				position: relative;
 				top: -20px;
+				@include media-query(portable) {
+			    font-size: 16px;
+			  }
+				@include media-query(lap) {
+			    font-size: 16px;
+			  }
+			}
+			i {
+				@media only screen and (max-width: 600px)  {
+					font-size: 140px;
+				}
+				@include media-query(desk) {
+        	font-size: 140px;
+				}
+				@include media-query(lap) {
+			    font-size: 110px;
+			  }
 			}
 		}
 	}

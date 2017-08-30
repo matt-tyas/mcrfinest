@@ -46,7 +46,7 @@
 								<img src="<?php the_field('main_article_image', 'option'); ?>">
 							</div>
 						<?php endif; ?>
-						<a href="<?php the_field('main_article_url', 'option'); ?>">
+						<a href="<?php the_field('main_article_url', 'option'); ?>" class="featured-home__link">
 							<div class="featured-home__content <?php the_field('main_article_colour', 'option'); ?>">
 								<h3 class="alpha featured-home__title"><?php the_field('main_article_title', 'option'); ?></h3>
 								<p><?php the_field('main_article_introduction', 'option'); ?></p>
