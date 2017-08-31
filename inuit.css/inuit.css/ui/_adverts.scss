@@ -12,6 +12,24 @@
 	width: 100%;
 }
 
+.mf-offset {
+  position: relative;
+}
+
+.mf-offset__position {
+  position: absolute;
+}
+
+.mf-offset__position--right {
+	right: 32px;
+	top: -125px
+}
+
+.mf-offset__position--left {
+  left: 32px;
+	top: -100px;
+}
+
 .ad-horz {
 	.g {
 		float: none;

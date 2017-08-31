@@ -1,7 +1,51 @@
-$(window).load(function() {
-	/* This avoids the flags loading in the top left of the browser whilst witing for JS to finish */
-  $('<style> .category-northern-quarter:before { display: block !important; } </style>').appendTo('head');
+$(".mf-loading").fadeOut("fast");
+
+new WOW().init();
+
+/* Weather
+---------------------------------- */
+$.simpleWeather({
+  location: 'manchester, united kingdom',
+  unit: 'c',
+  success: function(weather) {
+    html = '';
+    html += '<i class="icon-'+weather.code+'"></i>';
+    html += '<p>'+weather.temp+'&deg; '+weather.units.temp+'</p>';
+    // html += '<a href="'+weather.link+'">View Forecast &raquo;</a>';
+
+    $("#weather").html(html);
+  },
+  error: function(error) {
+    $("#weather").html("<p>"+error+"</p>");
+  }
 });
+
+$('.owl-carousel').owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: true,
+    responsiveClass: true,
+    responsive:{
+        0:{
+            items:1,
+            nav:true
+        },
+        600:{
+            items:3,
+            nav:true
+        },
+        1100:{
+            items:4,
+            nav:true
+        }
+    }
+  })
+
+
+// $(window).load(function() {
+// 	/* This avoids the flags loading in the top left of the browser whilst witing for JS to finish */
+//   $('<style> .category-northern-quarter:before { display: block !important; } </style>').appendTo('head');
+// });
 
 $(window).scroll(function() {
   var scroll = $(window).scrollTop();
@@ -229,23 +273,6 @@ $(document).ready(function(){
   $(".featured-home-media").fitVids();
   $(".site-content").fitVids();
 
-  /* Weather
-	---------------------------------- */
-  $.simpleWeather({
-    location: 'manchester, united kingdom',
-  	unit: 'c',
-  	success: function(weather) {
-  		html = '';
-  		html += '<i class="icon-'+weather.code+'"></i>';
-  		html += '<p>'+weather.temp+'&deg; '+weather.units.temp+'</p>';
-  		// html += '<a href="'+weather.link+'">View Forecast &raquo;</a>';
-
-  		$("#weather").html(html);
-  	},
-  	error: function(error) {
-  		$("#weather").html("<p>"+error+"</p>");
-  	}
-  });
 
 
 

@@ -52,6 +52,7 @@
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?> >
+<div class="mf-loading"></div>
 <nav class="skip-nav">
 	<ul>
 		<li><a href="#navigation">Skip to main navigation</a></li>

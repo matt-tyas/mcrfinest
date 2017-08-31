@@ -2,20 +2,65 @@
     $Homepage
 \*------------------------------------*/
 
+.test-bugger {
+	color: #000;
+}
+
+.mf-section {
+  @extend .cf;
+	padding: $base-spacing-unit*2 $half-spacing-unit $base-spacing-unit*2 $half-spacing-unit;
+	text-align: center;
+
+	.mf-label {
+		position: relative;
+		top: -85px;
+		border: 1px solid #000;
+		display: inline-block;
+		background: #fff;
+		padding: 8px 25px;
+		margin: 0 auto $base-spacing-unit 0;
+	}
+}
+
+.mf-section--white {
+	.mf-label {
+		top: 0px;
+	}
+}
+
+.post-tile--grid {
+	float: none !important;
+	width: 100% !important;
+  margin-right: 0 !important;
+	&:nth-of-type(3n) {
+		margin-right: 0 !important;
+	}
+  &:nth-of-type(4n) {
+		margin-right: 0 !important;
+	}
+}
+
+.mf-sand {
+	background: $sand;
+}
+
+.mf-label {
+	font-size: 20px;
+	text-align: center;
+	color: #000;
+	margin-bottom: 0;
+	font-weight: 400;
+}
+
 .mf-directory-search-home {
 	@extend .cf;
-	padding: $base-spacing-unit*2.5 $half-spacing-unit $base-spacing-unit*3.5 $half-spacing-unit;
+	background: #F3F3F3;
+	padding: $base-spacing-unit*2 $half-spacing-unit $base-spacing-unit*2 $half-spacing-unit;
 	ul {
 		margin: 0;
 	}
 
-	.mf-directory-search-label {
-		font-size: 20px;
-		text-align: center;
-		color: #666;
-		margin-bottom: 0;
-		font-weight: 400;
-	}
+
 
 	.mf-directory-search {
 		font-size: 60px;
@@ -42,10 +87,13 @@
 		  }
 		}
 		ul li.sf-field-submit {
+			display: block !important;
 			width: 9% !important;
+			text-align: center !important;
+			margin: 0 auto !important;
 			@include media-query(palm) {
 				width: 100% !important;
-		    //display: block !important;
+		    display: block !important;
 		  }
 		}
 		h4 {
@@ -66,7 +114,7 @@
     border-bottom: 5px solid #000;
     width: 350px;
     overflow: hidden;
-    background-color: #fff;
+    background-color: transparent;
 		select {
 		  font-weight: 700;
 	    padding: 0px 8px 0px 0;
@@ -91,14 +139,18 @@
 	}
 	input[type=submit] {
 		position: relative;
-		top: -3px;
-		padding: 3px 5px;
-		//border-top: 0;
-		//border-left: 0;
+		font-size: 40px;
+		padding: 5px 5px;
+		text-align: center;
 		border: 5px solid #000;
-		//border-right: 0;
 		color: #000;
 		font-weight: 700;
+		background: transparent;
+		&:hover,
+   &:focus {
+     border-color: $brand-color;
+     color: $brand-color;
+   }
 	}
 	.beta {
 		@include media-query(palm) {
@@ -296,6 +348,8 @@
 		}
 	}
 }
+
+
 
 .category .mf-directory-articles .post-tile,
 .post-tile {
@@ -594,7 +648,7 @@
 			p {
 				margin-bottom: 0;
 				position: relative;
-				top: -20px;
+				top: -5px;
 				@include media-query(portable) {
 			    font-size: 16px;
 			  }

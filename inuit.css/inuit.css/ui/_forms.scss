@@ -196,10 +196,9 @@ textarea:focus, input:focus{
 }
 
 .home .post .newscta {
-	min-height: 227px;
-	// border-top: 1px solid #999;
-	padding-top: $base-spacing-unit;
-	padding-bottom: $half-spacing-unit;
+  width: 400px;
+	background: $baby-blue;
+	padding: $base-spacing-unit;
 	#fit-brand {
 		margin-bottom: $half-spacing-unit/4;
 		@include media-query(palm) {
@@ -296,11 +295,19 @@ span.wpcf7-not-valid-tip {
 }
 
 #mc_embed_signup .mc-field-group input.button {
-	padding: 4px 8px;
-	height: auto;
-  line-height: auto;
-	display: inline !important;
-	width: 30% !important;
+	@include mf-button();
+	width: 28% !important;
+	border-radius: 0 !important;
+	height: 48px !important;
+	line-height: 0 !important;
+	position: relative;
+	top: 1px;
+}
+
+#mc_embed_signup .mc-field-group input {
+	border: 5px solid #000 !important;
+  color: #000 !important;
+	border-radius: 0 !important;
 }
 
 
