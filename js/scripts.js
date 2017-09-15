@@ -20,26 +20,68 @@ $.simpleWeather({
   }
 });
 
-$('.owl-carousel').owlCarousel({
-    loop: true,
-    margin: 10,
-    nav: true,
-    responsiveClass: true,
-    responsive:{
-        0:{
-            items:1,
-            nav:true
-        },
-        600:{
-            items:3,
-            nav:true
-        },
-        1100:{
-            items:4,
-            nav:true
-        }
-    }
-  })
+$('#owl-videos').owlCarousel({
+  loop: true,
+  margin: 10,
+  nav: true,
+  responsiveClass: true,
+  responsive:{
+      0:{
+          items:1,
+          nav:true
+      },
+      600:{
+          items:3,
+          nav:true
+      },
+      1100:{
+          items:4,
+          nav:true
+      }
+  }
+})
+
+$('#owl-events').owlCarousel({
+  loop: true,
+  margin: 10,
+  nav: true,
+  responsiveClass: true,
+  responsive:{
+      0:{
+          items:1,
+          nav:true
+      },
+      600:{
+          items:3,
+          nav:true
+      },
+      1100:{
+          items:4,
+          nav:true
+      }
+  }
+})
+
+$('#owl-instagram').owlCarousel({
+  loop: true,
+  margin: 32,
+  nav: true,
+  responsiveClass: true,
+  responsive:{
+      0:{
+          items:2,
+          nav:true
+      },
+      600:{
+          items:4,
+          nav:true
+      },
+      1100:{
+          items:6,
+          nav:true
+      }
+  }
+})
 
 
 // $(window).load(function() {

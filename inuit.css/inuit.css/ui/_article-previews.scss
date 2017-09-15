@@ -8,19 +8,42 @@
 
 .mf-section {
   @extend .cf;
-	padding: $base-spacing-unit*2 $half-spacing-unit $base-spacing-unit*2 $half-spacing-unit;
+	padding: $base-spacing-unit*2 $base-spacing-unit $base-spacing-unit*2 $base-spacing-unit;
 	text-align: center;
+  position: relative;
 
 	.mf-label {
-		position: relative;
-		top: -85px;
-		border: 1px solid #000;
-		display: inline-block;
-		background: #fff;
+		position: absolute;
+	  transform: translateX(-50%);
+		top: -25px;
+		left: 50%;
+	  right: 0;
+	  margin: 0 auto $base-spacing-unit 0;
 		padding: 8px 25px;
-		margin: 0 auto $base-spacing-unit 0;
+		border: 1px solid #000;
+		background: #fff;
+		width: 350px;
 	}
+
+	.mf-label--push {
+		top: 75px;
+	}
+
+	.mf-label__link {
+		display: block;
+		border-bottom: 0;
+	}
+
+  .post-tile {
+    text-align: left;
+  }
 }
+
+.mf-articles {
+	padding-top: $base-spacing-unit*3;
+}
+
+
 
 .mf-section--white {
 	.mf-label {
@@ -42,6 +65,30 @@
 
 .mf-sand {
 	background: $sand;
+}
+
+.mf-peach {
+	background: $peach;
+}
+
+.mf-mint-green {
+	background: $mint-green;
+}
+
+.mf-baby-blue {
+	background: $baby-blue;
+}
+
+.mf-lilac {
+	background: $lilac;
+}
+
+.mf-pink {
+	background: $pink;
+}
+
+.mf-grey {
+	background: $bg-grey;
 }
 
 .mf-label {

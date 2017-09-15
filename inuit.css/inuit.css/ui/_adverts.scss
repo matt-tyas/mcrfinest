@@ -18,16 +18,21 @@
 
 .mf-offset__position {
   position: absolute;
+  z-index: 500;
 }
 
 .mf-offset__position--right {
 	right: 32px;
-	top: -125px
+	top: -100px
 }
 
 .mf-offset__position--left {
   left: 32px;
 	top: -100px;
+}
+
+.mf-offset__width-med {
+  width: 400px;
 }
 
 .ad-horz {

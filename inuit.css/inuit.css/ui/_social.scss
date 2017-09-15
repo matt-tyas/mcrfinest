@@ -2,15 +2,32 @@
     $Social
 \*------------------------------------*/
 
+
+.mf-twitter {
+	padding: $base-spacing-unit;
+	background: #1DA1F3;
+	.sub-title-link a {
+		border: 5px solid #fff;
+		color: #fff;
+		padding: 8px 8px;
+		display: inline-block;
+		margin-bottom: 15px;
+	}
+}
+
 .twitter-stream {
 	p {
-		padding: $half-spacing-unit 0;
+    color: #fff;
 		margin-bottom: $half-spacing-unit;
 		@include font-size($body-size);
 		line-height: 1.4;
 	}
 	.profile-link {
 		display: none;
+	}
+	a {
+		color: #fff;
+		border-bottom-color: #fff;
 	}
 }
 
@@ -20,11 +37,13 @@
 	margin-right: 0;
 	height: auto;
 	list-style-type: none;
-		@include media-query(palm) {
-			width: 100% !important;
-			height: auto !important;
-			}
-	img {
+
+	@include media-query(palm) {
+		width: 100% !important;
+		height: auto !important;
+	}
+
+  img {
 		display: block;
 		margin-top: $base-spacing-unit;
 		@include media-query(palm) {
@@ -43,34 +62,50 @@
 	}
 }
 
-.instagram-pics {
-	@extend .cf;
-	margin-left: 0;
-	margin-right: 0;
-	margin-top: $base-spacing-unit;
-	height: auto;
-	list-style-type: none;
-		@include media-query(palm) {
-			width: 100% !important;
-			height: auto !important;
-			}
-	img {
-		display: block;
-		margin-bottom: 26px;
-		@include media-query(palm) {
-			width: 50%;
-			height: auto;
-			float: left;
-			&:last-of-type(2) img {
-				margin-right: $base-spacing-unit !important;
-			}
-		}
-		@include media-query(mob) {
-			width: 100%;
-			height: auto;
-			float: none;
-		}
+// .instagram-pics {
+// 	@extend .cf;
+// 	margin-left: 0;
+// 	margin-right: 0;
+// 	margin-top: $base-spacing-unit;
+// 	height: auto;
+// 	list-style-type: none;
+// 		@include media-query(palm) {
+// 			width: 100% !important;
+// 			height: auto !important;
+// 			}
+// 	img {
+// 		display: block;
+// 		margin-bottom: 26px;
+// 		@include media-query(palm) {
+// 			width: 50%;
+// 			height: auto;
+// 			float: left;
+// 			&:last-of-type(2) img {
+// 				margin-right: $base-spacing-unit !important;
+// 			}
+// 		}
+// 		@include media-query(mob) {
+// 			width: 100%;
+// 			height: auto;
+// 			float: none;
+// 		}
+// 	}
+// }
+
+.mf-connect {
+	padding: $base-spacing-unit;
+	background: #fff;
+
+	.sub-title {
+		color: #000;
+		border-bottom: 0;
 	}
+
+	.social {
+		margin-bottom: 0;
+		margin-top: 0;
+	}
+
 }
 
 .home .social {

@@ -5,7 +5,6 @@
 // Homepage
 
 .events {
-	// margin-top: -17px;
 	margin-bottom: $base-spacing-unit;
 	@include media-query(palm) {
 		margin-top: 0;
@@ -26,18 +25,21 @@
 	clear: both;
 	overflow: hidden;
 	margin-bottom: 0;
-    border-bottom: 1px solid $keylinegrey;
+	margin-right: 20px;
 	&:last-of-type {
 		border-bottom: 0;
 	}
-	h6  {
-		margin-bottom: $half-spacing-unit /2;
+	h3 {
+		margin-top: $half-spacing-unit;
+		margin-bottom: 0;
 	}
 	.time-location {
 		@include font-size(16px);
 	}
 	.event-link {
-		padding: $half-spacing-unit;
+		margin-top: $base-spacing-unit;
+		padding: $half-spacing-unit 0 $half-spacing-unit 0;
+		text-align: left;
 		display: block;
 		min-height: 115px;
 		border: 0;
@@ -45,39 +47,24 @@
        -moz-transition:all 150ms ease-in;
 	       -o-transition:all 150ms ease-in;
 	          transition:all 150ms ease-in;
-	    &:hover {
-				background-color: #fff;
-				text-decoration: none;
-				.start-date {
-					background-color: #f3f3f3;
-				}
-				.end-date {
-					background-color: #f3f3f3;
-				}
-		  }
+    &:hover {
+			text-decoration: underline;
+	  }
 	}
 }
 
 .event-date {
 	white-space: nowrap;
-	float: right !important;
-	margin-bottom: 0em !important;
-}
-
-.multi-date {
-	margin-left: $half-spacing-unit;
+	@extend .cf;
 }
 
 .start-date,
 .end-date {
-	width: 3.2em;
-	border-radius: 5px;
-	background-color: #fff;
-	text-align: center;
-	overflow: hidden;
+
 }
 
-.start-date {
+.start-date,
+.end-date {
 	float: left;
 }
 
@@ -87,26 +74,22 @@
 
 .event-weekday {
 	padding: $half-spacing-unit/4 0 0 0;
-	@include font-size(12px);
+	@include font-size(16px);
 	line-height: 1.6;
-	text-transform: uppercase;
-	background: $brand-color;
-	color: #fff;
+	color: #000;
 }
 
 .event-day {
-	padding: $half-spacing-unit/2 0 $half-spacing-unit/4 0;
-	font-size: 1.3em;
+	padding: 0;
+	font-size: 4em;
 	font-weight: bold;
-	line-height: 1em;
-	margin-bottom: -0.3em !important;
+	line-height: 0.8em;
 	color: #000 !important;
 }
 
 .event-month {
 	padding: $half-spacing-unit/2 0 $half-spacing-unit/2 0 !important;
-	text-transform: uppercase;
-	@include font-size($milli-size);
+	@include font-size(16px);
 	line-height: 1em;
 	color: #000 !important;
 }

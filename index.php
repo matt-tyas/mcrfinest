@@ -120,7 +120,6 @@
     				</div>
     			</div>
     		</section>
-
 			<div class="mf-offset">
 				<div class="mf-offset__position mf-offset__position--right">
 					<div class="gw">
@@ -139,7 +138,6 @@
 					</div>
 				</div>
 			</div>
-
 			<section class="border-wrap">
     			<div class="gw">
     				<div class="g one-whole lap-one-half palm-one-whole">
@@ -148,7 +146,7 @@
 							<?php
 							// check if the repeater field has rows of data
 							if( have_rows('video_slider', 'options') ):
-								echo '<div class="owl-carousel">';
+								echo '<div id="owl-videos" class="owl-carousel">';
 							 	// loop through the rows of data
 							    while ( have_rows('video_slider', 'options') ) : the_row();
 							        // display a sub field value
@@ -163,52 +161,58 @@
     				</div>
     			</div>
     		</section>
-
 			<div class="mf-offset mf-offset--wide">
 				<div class="mf-offset__position mf-offset__position--left">
 					<div class="newscta">
-							<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
-							<style type="text/css">
-							#mce-responses { margin: 0 auto; }
-							#mc_embed_signup div.response { width: 100%; text-align: left;  padding: 12px; font-size: 18px; margin: 0 auto 16px auto;}
-							#mc_embed_signup div#mce-responses { margin: 0 auto 0px auto; width: 100%; padding:0;}
-							#mc_embed_signup #mce-success-response { background: #529214; color: #fff;}
-							#mc_embed_signup #mce-error-response { background: #CE0000; color: #fff;}
-							#mc_embed_signup div#mce-responses { z-index:9999; }
-							#mc_embed_signup #mc-embedded-subscribe-form input.mce_inline_error { border: 1px solid #e85c41; }
-							#mc_embed_signup .mc-field-group input { opacity: 1;}
-							#mc_embed_signup .button { background: #886808; font-size: 20px; }
-							#mc_embed_signup .button:hover { background: #b88d0b; }
-							#mc_embed_signup .mc-field-group { min-height:60px; }
-							#mc_embed_signup form {padding: 0;}
-							#mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {background: #CE0000; color: #fff; font-weight: bold; font-size: 18px; border-radius: 0; width: 100%;}
-							</style>
-							<div id="mc_embed_signup">
-							<form action="//ManchestersFinest.us2.list-manage.com/subscribe/post?u=80f2869a6d1828e3a9de6548f&amp;id=3b2131b21e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-								<div id="mc_embed_signup_scroll">
+					<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+					<style type="text/css">
+						#mce-responses { margin: 0 auto; }
+						#mc_embed_signup div.response { width: 100%; text-align: left;  padding: 12px; font-size: 18px; margin: 0 auto 16px auto;}
+						#mc_embed_signup div#mce-responses { margin: 0 auto 0px auto; width: 100%; padding:0;}
+						#mc_embed_signup #mce-success-response { background: #529214; color: #fff;}
+						#mc_embed_signup #mce-error-response { background: #CE0000; color: #fff;}
+						#mc_embed_signup div#mce-responses { z-index:9999; }
+						#mc_embed_signup #mc-embedded-subscribe-form input.mce_inline_error { border: 1px solid #e85c41; }
+						#mc_embed_signup .mc-field-group input { opacity: 1;}
+						#mc_embed_signup .button { background: #886808; font-size: 20px; }
+						#mc_embed_signup .button:hover { background: #b88d0b; }
+						#mc_embed_signup .mc-field-group { min-height:60px; }
+						#mc_embed_signup form {padding: 0;}
+						#mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {background: #CE0000; color: #fff; font-weight: bold; font-size: 18px; border-radius: 0; width: 100%;}
+					</style>
+					<div id="mc_embed_signup">
+						<form action="//ManchestersFinest.us2.list-manage.com/subscribe/post?u=80f2869a6d1828e3a9de6548f&amp;id=3b2131b21e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+							<div id="mc_embed_signup_scroll">
 								<div class="mc-field-group">
 									<h4 role="label" for="mce-EMAIL" id="fit-brand" class="gamma">GET THE NEWSLETTER</h4>
 									<p>Offers, competitions and Mcr news</p>
 									<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Enter your email">
-									<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_80f2869a6d1828e3a9de6548f_3b2131b21e" tabindex="-1" value=""></div>
+									<div style="position: absolute; left: -5000px;" aria-hidden="true">
+										<input type="text" name="b_80f2869a6d1828e3a9de6548f_3b2131b21e" tabindex="-1" value="">
+									</div>
 								   <input type="submit" value="Sign up" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
 								</div>
-									<div id="mce-responses" class="clear">
-										<div class="response" id="mce-error-response" style="display:none"></div>
-										<div class="response" id="mce-success-response" style="display:none"></div>
-									</div>
+								<div id="mce-responses" class="clear">
+									<div class="response" id="mce-error-response" style="display:none"></div>
+									<div class="response" id="mce-success-response" style="display:none"></div>
 								</div>
-							</form>
-						</div>
-						<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='MMERGE3';ftypes[3]='text';fnames[4]='MMERGE4';ftypes[4]='text';fnames[5]='MMERGE5';ftypes[5]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+							</div>
+						</form>
+					</div>
+					<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='MMERGE3';ftypes[3]='text';fnames[4]='MMERGE4';ftypes[4]='text';fnames[5]='MMERGE5';ftypes[5]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
 				</div>
 			</div>
-
 			<section class="border-wrap">
     			<div class="gw">
     				<div class="g one-whole lap-one-half palm-one-whole">
-						<div class="mf-section mf-sand">
-							<h3 class="mf-label"><span class="icon icon-food"></span> Eating and Drinking</h3>
+						<div class="mf-section mf-articles mf-sand">
+							<?php
+							    // Get the ID of a given category
+							    $category_id = get_cat_ID( 'Eat' );
+							    // Get the URL of this category
+							    $category_link = get_category_link( $category_id );
+							?>
+							<h3 class="mf-label"><a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link"><span class="icon icon-food"></span> Eating and Drinking</a></h3>
 							<div class="gw">
 							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => array(20, 15));
 					            $myposts1 = get_posts( $args1 );
@@ -239,373 +243,551 @@
 					</div>
 				</div>
 			</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		<div class="g one-third palm-one-whole">
-					<div class="newscta">
-							<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
-							<style type="text/css">
-							#mce-responses { margin: 0 auto; }
-							#mc_embed_signup div.response { width: 100%; text-align: left;  padding: 12px; font-size: 18px; margin: 0 auto 16px auto;}
-							#mc_embed_signup div#mce-responses { margin: 0 auto 0px auto; width: 100%; padding:0;}
-							#mc_embed_signup #mce-success-response { background: #529214; color: #fff;}
-							#mc_embed_signup #mce-error-response { background: #CE0000; color: #fff;}
-							#mc_embed_signup div#mce-responses { z-index:9999; }
-							#mc_embed_signup #mc-embedded-subscribe-form input.mce_inline_error { border: 1px solid #e85c41; }
-							#mc_embed_signup .mc-field-group input { opacity: 1;}
-							#mc_embed_signup .button { background: transparent; font-size: 20px; }
-							#mc_embed_signup .button:hover { background: transparent;; }
-							#mc_embed_signup .mc-field-group { min-height:60px; }
-							#mc_embed_signup form {padding: 0;}
-							#mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {background: #CE0000; color: #fff; font-weight: bold; font-size: 18px; border-radius: 0; width: 100%;}
-							</style>
-							<div id="mc_embed_signup">
-							<form action="//ManchestersFinest.us2.list-manage.com/subscribe/post?u=80f2869a6d1828e3a9de6548f&amp;id=3b2131b21e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-								<div id="mc_embed_signup_scroll">
-								<div class="mc-field-group">
-									<h4 role="label" for="mce-EMAIL" id="fit-brand" class="brandface-title">GET THE NEWSLETTER</h4>
-									<p>Offers, competitions and Mcr news</p>
-									<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Enter your email">
-									<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_80f2869a6d1828e3a9de6548f_3b2131b21e" tabindex="-1" value=""></div>
-								   <input type="submit" value="Sign up" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-								</div>
-									<div id="mce-responses" class="clear">
-										<div class="response" id="mce-error-response" style="display:none"></div>
-										<div class="response" id="mce-success-response" style="display:none"></div>
-									</div>
-								</div>
-							</form>
-						</div>
-						<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='MMERGE3';ftypes[3]='text';fnames[4]='MMERGE4';ftypes[4]='text';fnames[5]='MMERGE5';ftypes[5]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-					<!-- Events -->
-		            <div class="events">
-		               <h5 class="sub-title">Upcoming</h5>
-		               <?php
-		    			// http://codex.wordpress.org/Function_Reference/current_time
-		    			$current_time = current_time('mysql');
-		    			list( $today_year, $today_month, $today_day, $hour, $minute, $second ) = preg_split( '([^0-9])', $current_time );
-
-		    			// Set the hour and minute to midnight so events today that started between midnight and now are still pulled in
-		    			$midnight_today = $today_year . $today_month . $today_day . '0000';
-
-		    			$current_endtimestamp = $today_year . $today_month . $today_day . $hour . $minute;
-
-		    			// To pull in events that start later than midnight today
-		    			$meta_query = array(
-		    			  'relation'=>'AND',
-		    			   array(
-		    			       'key' => '_start_eventtimestamp',
-		    			       'value' => $midnight_today,
-		    			       'compare' => '>'
-		    			   )
-		    			);
-
-		    			/* To pull in events that end later than now - beta,
-		    			you may not want this and/or it may not work properly which is why I've not done a pull request yet */
-		    			$meta_query_two = array(
-		    			   'relation'=>'AND',
-		    			   array(
-		    			       'key' => '_end_eventtimestamp',
-		    			       'value' => $current_endtimestamp,
-		    			       'compare' => '>'
-		    			   ),
-		    			   array(
-		    			      'key' => '_start_eventtimestamp',
-		    			       'value' => $midnight_today,
-		    			       'compare' => '<'
-		    			       )
-		    			);
-
-		    			// Do first query
-		    			$args = array(
-		    			   'post_type' => 'post',
-		    			   'meta_key' => '_start_eventtimestamp',
-		    			   'orderby'=> 'meta_value_num',
-		    			   'order' => 'ASC',
-		    			   'meta_query' => $meta_query,
-		    			   'posts_per_page' => 6
-		    			   );
-
-		    			$events = new WP_Query( $args );
-
-		    			// Do second query - beta
-		    			$args = array(
-		    			   'post_type' => 'post',
-		    			   'meta_key' => '_start_eventtimestamp',
-		    			   'orderby'=> 'meta_value_num',
-		    			   'order' => 'ASC',
-		    			   'meta_query' => $meta_query_two,
-		    			   'posts_per_page' => 8
-		    			   );
-		    			$events_end = new WP_Query( $args );
-
-		    			// Merge posts into new object, removing duplicates (beta)
-		    			// This will put events that [started before today and end later than now] first
-		    			$merged = new WP_Query();
-		    			$merged->posts =  array_unique(array_merge((array)$events_end->posts, (array)$events->posts), SORT_REGULAR);
-		    			$merged->post_count = count( $merged->posts );
-		    			//print_r($merged);
-		    			$events = $merged;
-
-		    			if ( $events->have_posts() ) :
-
-		    			while ( $events->have_posts() ) : $events->the_post();
-		    			// Single event
-
-		    			// Start
-		    			// Get start date to display
-		    			$str = date('D d M H i', strtotime('' . get_post_meta($post->ID, '_start_eventtimestamp', true) .''));
-		    			list($startweekday,$startday,$startmonth,$starthour,$startminute) = preg_split('/[ ,]/',$str,false,PREG_SPLIT_NO_EMPTY);
-
-		    			// Get start time for calculation
-		    			$calc_start = strtotime('' . get_post_meta($post->ID, '_start_eventtimestamp', true) .'');
-
-		    			// Setting month to "None" gives it a value of 100 which we get separately
-		    			$has_start = get_post_meta($post->ID, '_start_month', true);
-
-		    			// End
-		    			// Get end date to display
-		    			$str = date('D d M', strtotime('' . get_post_meta($post->ID, '_end_eventtimestamp', true) .''));
-		    			list($endweekday,$endday,$endmonth) = preg_split('/[ ,]/',$str,false,PREG_SPLIT_NO_EMPTY);
-
-		    			// Get end date for calculation
-		    			$calc_end = strtotime('' . get_post_meta($post->ID, '_end_eventtimestamp', true) .'');
-
-		    			// Setting month to "None" gives it a value of 100 which we get separately
-		    			$has_ending = get_post_meta($post->ID, '_end_month', true);
-
-		    			// Don't display the event at all if
-	    			    // (Start AND End are set to none) OR
-	    			    // (End is NOT none AND End before midnight today) OR
-	    			    // (End is none AND Start before midnight today)
-
-		    			// This is a terrible way to do it but at least it's quite easy to see what's going on
-		    			if (!(
-		    			      ($has_ending == '100' && $has_start == '100') ||
-		    			      ($has_ending != '100' && $calc_end < strtotime('midnight')) ||
-		    			      ($has_ending == '100' && $calc_start < strtotime('midnight'))
-		    			      )) {
-
-		    			    echo '<article class="media event">';
-		    			    echo '<a class="event-link" href="' . get_permalink() . '">';
-		    			    ?>
-		    			        <div class="event-date multi-date">
-		    			    <?php
-		    			       if ( $has_start !== '100' ) {
-		    			    ?>
-	    			            <div class="start-date">
-	    			                <div class="event-weekday">
-	    			                    <?php echo $startweekday; ?>
-	    			                </div>
-	    			                <div class="event-day">
-	    			                    <?php echo $startday; ?>
-	    			                </div>
-	    			                <div class="event-month">
-	    			                    <?php echo $startmonth; ?>
-	    			                </div>
-	    			            </div>
-		    			    <?php
-		    			       }
-
-		    			        if ( $has_ending !== '100' ) {
-		    			    ?>
-	    			            <div class="end-date">
-	    			                <div class="event-weekday">
-	    			                <?php echo $endweekday; ?>
-	    			                </div>
-	    			                <div class="event-day">
-	    			                <?php echo $endday; ?>
-	    			                </div>
-	    			                <div class="event-month">
-	    			                <?php echo $endmonth; ?>
-	    			                </div>
-	    			            </div>
-		    			    <?php
-		    			        }
-		    			    ?>
-		    			       </div>
-		    			    <?php
-		    			       // Title
-		    			       echo '<h5 class="delta">' . get_the_title() . '</h5>';
-		    			       // Time and location
-		    			       echo '<span class="time-location">';
-		    			       echo $starthour . ':' . $startminute;
-		    			       echo ' ' . get_post_meta($post->ID, '_event_location', true) . '';
-		    			       echo '</span>';
-		    			       echo '</a>';
-		    			       echo '</article>';
-		    			}
-		    			   endwhile;
-		    			endif; ?>
-		           </div><!-- .events -->
-				   <?php
-					   if ( is_active_sidebar( 'twitter-stream' ) ) : ?>
-					   <?php dynamic_sidebar( 'twitter-stream' ); ?>
-				   <?php endif; ?>
-				   <div class="gw">
-					   <div class="g one-whole">
-		   					<!-- Connect CTAs -->
-		   					<aside class="connect">
-		   						<h5 class="sub-title">Say hello&hellip;</h5>
-		   						<ul class="nav nav--banner  social">
-		   							<li>
-		   								<a class="btn-circle btn--secondary twitter" href="https://twitter.com/intent/user?screen_name=McrFinest" target="_blank" title="Follow on Twitter"><span aria-hidden="true" class="icon-twitter"></span><span class="accessibility">Twitter</span></a>
-		   							</li>
-		   							<li>
-		   								<a class="btn-circle btn--secondary instagram" href="https://www.instagram.com/mcrfinest/" target="_blank" title="Follow on Instagram"><span aria-hidden="true" class="icon-instagram"></span><span class="accessibility">Instagram</span></a>
-		   							</li>
-		   							<li>
-		   								<a class="btn-circle btn--secondary facebook" href="https://facebook.com/MCRfinest" target="_blank" title="Follow on Facebook"><span aria-hidden="true" class="icon-facebook"></span><span class="accessibility">Facebook page</span></a>
-		   							</li>
-		   						</ul>
-		   					</aside>
-		   				</div>
+			<div class="mf-offset">
+				<div class="mf-offset__position mf-offset__position--right mf-offset__width-med">
+					<div class="mf-twitter">
+						<?php
+	 					   if ( is_active_sidebar( 'twitter-stream' ) ) : ?>
+	 					   <?php dynamic_sidebar( 'twitter-stream' ); ?>
+	 				    <?php endif; ?>
 					</div>
+				</div>
+			</div>
+			<section class="border-wrap">
+    			<div class="gw">
+    				<div class="g one-whole lap-one-half palm-one-whole">
+						<div class="mf-section mf-articles">
+							<h3 class="mf-label mf-label--push"><span class="icon icon-calendar"></span> Upcoming events</h3>
+							<div id="owl-events" class="owl-carousel">
+								<?php
+		 		    			// http://codex.wordpress.org/Function_Reference/current_time
+		 		    			$current_time = current_time('mysql');
+		 		    			list( $today_year, $today_month, $today_day, $hour, $minute, $second ) = preg_split( '([^0-9])', $current_time );
+
+		 		    			// Set the hour and minute to midnight so events today that started between midnight and now are still pulled in
+		 		    			$midnight_today = $today_year . $today_month . $today_day . '0000';
+
+		 		    			$current_endtimestamp = $today_year . $today_month . $today_day . $hour . $minute;
+
+		 		    			// To pull in events that start later than midnight today
+		 		    			$meta_query = array(
+		 		    			  'relation'=>'AND',
+		 		    			   array(
+		 		    			       'key' => '_start_eventtimestamp',
+		 		    			       'value' => $midnight_today,
+		 		    			       'compare' => '>'
+		 		    			   )
+		 		    			);
+
+		 		    			/* To pull in events that end later than now - beta,
+		 		    			you may not want this and/or it may not work properly which is why I've not done a pull request yet */
+		 		    			$meta_query_two = array(
+		 		    			   'relation'=>'AND',
+		 		    			   array(
+		 		    			       'key' => '_end_eventtimestamp',
+		 		    			       'value' => $current_endtimestamp,
+		 		    			       'compare' => '>'
+		 		    			   ),
+		 		    			   array(
+		 		    			      'key' => '_start_eventtimestamp',
+		 		    			       'value' => $midnight_today,
+		 		    			       'compare' => '<'
+		 		    			       )
+		 		    			);
+
+		 		    			// Do first query
+		 		    			$args = array(
+		 		    			   'post_type' => 'post',
+		 		    			   'meta_key' => '_start_eventtimestamp',
+		 		    			   'orderby'=> 'meta_value_num',
+		 		    			   'order' => 'ASC',
+		 		    			   'meta_query' => $meta_query,
+		 		    			   'posts_per_page' => 6
+		 		    			   );
+
+		 		    			$events = new WP_Query( $args );
+
+		 		    			// Do second query - beta
+		 		    			$args = array(
+		 		    			   'post_type' => 'post',
+		 		    			   'meta_key' => '_start_eventtimestamp',
+		 		    			   'orderby'=> 'meta_value_num',
+		 		    			   'order' => 'ASC',
+		 		    			   'meta_query' => $meta_query_two,
+		 		    			   'posts_per_page' => 8
+		 		    			   );
+		 		    			$events_end = new WP_Query( $args );
+
+		 		    			// Merge posts into new object, removing duplicates (beta)
+		 		    			// This will put events that [started before today and end later than now] first
+		 		    			$merged = new WP_Query();
+		 		    			$merged->posts =  array_unique(array_merge((array)$events_end->posts, (array)$events->posts), SORT_REGULAR);
+		 		    			$merged->post_count = count( $merged->posts );
+		 		    			//print_r($merged);
+		 		    			$events = $merged;
+
+		 		    			if ( $events->have_posts() ) :
+
+		 		    			while ( $events->have_posts() ) : $events->the_post();
+		 		    			// Single event
+
+		 		    			// Start
+		 		    			// Get start date to display
+		 		    			$str = date('l d F H i', strtotime('' . get_post_meta($post->ID, '_start_eventtimestamp', true) .''));
+		 		    			list($startweekday,$startday,$startmonth,$starthour,$startminute) = preg_split('/[ ,]/',$str,false,PREG_SPLIT_NO_EMPTY);
+
+		 		    			// Get start time for calculation
+		 		    			$calc_start = strtotime('' . get_post_meta($post->ID, '_start_eventtimestamp', true) .'');
+
+		 		    			// Setting month to "None" gives it a value of 100 which we get separately
+		 		    			$has_start = get_post_meta($post->ID, '_start_month', true);
+
+		 		    			// End
+		 		    			// Get end date to display
+		 		    			$str = date('l d F', strtotime('' . get_post_meta($post->ID, '_end_eventtimestamp', true) .''));
+		 		    			list($endweekday,$endday,$endmonth) = preg_split('/[ ,]/',$str,false,PREG_SPLIT_NO_EMPTY);
+
+		 		    			// Get end date for calculation
+		 		    			$calc_end = strtotime('' . get_post_meta($post->ID, '_end_eventtimestamp', true) .'');
+
+		 		    			// Setting month to "None" gives it a value of 100 which we get separately
+		 		    			$has_ending = get_post_meta($post->ID, '_end_month', true);
+
+		 		    			// Don't display the event at all if
+		 	    			    // (Start AND End are set to none) OR
+		 	    			    // (End is NOT none AND End before midnight today) OR
+		 	    			    // (End is none AND Start before midnight today)
+
+		 		    			// This is a terrible way to do it but at least it's quite easy to see what's going on
+		 		    			if (!(
+		 		    			      ($has_ending == '100' && $has_start == '100') ||
+		 		    			      ($has_ending != '100' && $calc_end < strtotime('midnight')) ||
+		 		    			      ($has_ending == '100' && $calc_start < strtotime('midnight'))
+		 		    			      )) {
+
+		 		    			    echo '<article class="media event">';
+		 		    			    echo '<a class="event-link" href="' . get_permalink() . '">';
+		 		    			    ?>
+		 		    			        <div class="event-date multi-date">
+		 		    			    <?php
+		 		    			       if ( $has_start !== '100' ) {
+		 		    			    ?>
+		 	    			            <div class="start-date">
+		 	    			                <div class="event-weekday">
+		 	    			                    <?php echo $startweekday; ?>
+		 	    			                </div>
+		 	    			                <div class="event-day">
+		 	    			                    <?php echo $startday; ?>
+		 	    			                </div>
+		 	    			                <div class="event-month">
+		 	    			                    <?php echo $startmonth; ?>
+		 	    			                </div>
+		 	    			            </div>
+		 		    			    <?php
+		 		    			       }
+
+		 		    			        if ( $has_ending !== '100' ) {
+		 		    			    ?>
+		 	    			            <div class="end-date">
+		 	    			                <div class="event-weekday">
+		 	    			                <?php echo $endweekday; ?>
+		 	    			                </div>
+		 	    			                <div class="event-day">
+		 	    			                <?php echo $endday; ?>
+		 	    			                </div>
+		 	    			                <div class="event-month">
+		 	    			                <?php echo $endmonth; ?>
+		 	    			                </div>
+		 	    			            </div>
+		 		    			    <?php
+		 		    			        }
+		 		    			    ?>
+		 		    			       </div>
+		 		    			    <?php
+		 		    			       // Title
+		 		    			       echo '<h3>' . get_the_title() . '</h3>';
+		 		    			       // Time and location
+		 		    			       echo '<span class="time-location">';
+		 		    			       echo $starthour . ':' . $startminute;
+		 		    			       echo ' ' . get_post_meta($post->ID, '_event_location', true) . '';
+		 		    			       echo '</span>';
+		 		    			       echo '</a>';
+		 		    			       echo '</article>';
+		 		    				}
+		 		    			   endwhile;
+		 		    			endif; ?>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="mf-offset mf-offset--wide">
+				<div class="mf-offset__position mf-offset__position--left">
 					<div class="gw">
-	 					<div class="g one-half palm-one-half mob-one-half">
-	 						<?php
-	 							if ( is_active_sidebar( 'homepage-optional-1' ) ) : ?>
-	 						    <?php dynamic_sidebar( 'homepage-optional-1' ); ?>
-	 						<?php endif; ?>
-	 					</div>
-	 					<div class="g one-half palm-one-half mob-one-half">
-	 						<h5 class="sub-title ad-title">Partners</h5>
-	 						<div class="gw">
-	 							<div class="g one-whole palm-one-half mob-one-whole">
-	 								<?php
-	 							    	if ( is_active_sidebar( 'homepage-advert-3' ) ) : ?>
-	 									<?php dynamic_sidebar( 'homepage-advert-3' ); ?>
-	 								<?php endif; ?>
-	 							</div>
-	 							<div class="g one-whole palm-one-half mob-one-whole">
-	 								<?php
-	 							    	if ( is_active_sidebar( 'homepage-advert-4' ) ) : ?>
-	 									<?php dynamic_sidebar( 'homepage-advert-4' ); ?>
-	 								<?php endif; ?>
-	 							</div>
-	 							<div class="g one-whole palm-one-half mob-one-whole">
-	 								<?php
-	 								 	if ( is_active_sidebar( 'homepage-optional-2' ) ) : ?>
-	 								 	<?php dynamic_sidebar( 'homepage-optional-2' ); ?>
-	 								<?php endif; ?>
-	               				</div>
-	               				<div class="g one-whole palm-one-half mob-one-whole">
-	 								<?php
-	 								 	if ( is_active_sidebar( 'homepage-optional-3' ) ) : ?>
-	 								 	<?php dynamic_sidebar( 'homepage-optional-3' ); ?>
-	 								<?php endif; ?>
-	              				</div>
-	              				<div class="g one-whole palm-one-half mob-one-whole">
-	 								<?php
-	 								 	if ( is_active_sidebar( 'homepage-optional-4' ) ) : ?>
-	 								 	<?php dynamic_sidebar( 'homepage-optional-4' ); ?>
-	 								<?php endif; ?>
-	              				</div>
-	              				<div class="g one-whole palm-one-half mob-one-whole">
-	 								<?php
-	 								 	if ( is_active_sidebar( 'homepage-optional-5' ) ) : ?>
-	 								 	<?php dynamic_sidebar( 'homepage-optional-5' ); ?>
-	 								<?php endif; ?>
-	              				</div>
-	              				<div class="g one-whole palm-one-half mob-one-whole">
-	 								<?php
-	 								 	if ( is_active_sidebar( 'homepage-optional-6' ) ) : ?>
-	 								 	<?php dynamic_sidebar( 'homepage-optional-6' ); ?>
-	 								<?php endif; ?>
-	              				</div>
-	                			<div class="g one-whole palm-one-half mob-one-whole">
-		 							<?php
-		 								 if ( is_active_sidebar( 'homepage-optional-7' ) ) : ?>
-		 								 <?php dynamic_sidebar( 'homepage-optional-7' ); ?>
-		 							<?php endif; ?>
-	                			</div>
-					            <div class="g one-whole palm-one-half mob-one-whole">
-		 							<?php
-		 								 if ( is_active_sidebar( 'homepage-optional-8' ) ) : ?>
-		 								 <?php dynamic_sidebar( 'homepage-optional-8' ); ?>
-		 							<?php endif; ?>
-					            </div>
-	 						</div>
-	 					</div>
-	 				</div>
-	 				<div id="ad-sticky" class="ad-sense">
-	 	        		<h5 class="sub-title ad-title">Advert</h5>
-	 					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	 					<!-- Home responsive 1 -->
-	 					<ins class="adsbygoogle"
-	 					     style="display:block"
-	 					     data-ad-client="ca-pub-0654331869436657"
-	 					     data-ad-slot="6377296206"
-	 					     data-ad-format="auto"></ins>
-	 					<script>
-	 					(adsbygoogle = window.adsbygoogle || []).push({});
-	 					</script>
-	 				</div>
-			 		<div class="ad-sense">
-			 	        <h5 class="sub-title ad-title">Advert</h5>
-	 					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	 					<!-- Home responsive 2 -->
-	 					<ins class="adsbygoogle"
-	 					     style="display:block"
-	 					     data-ad-client="ca-pub-0654331869436657"
-	 					     data-ad-slot="7854029405"
-	 					     data-ad-format="auto"></ins>
-	 					<script>
-	 					(adsbygoogle = window.adsbygoogle || []).push({});
-	 					</script>
-			 		</div>
-
- 			  		<div class="ad-sense">
-	 					<h5 class="sub-title ad-title">Advert</h5>
-	 					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	 					<!-- Home responsive 3 -->
-	 					<ins class="adsbygoogle"
-	 					     style="display:block"
-	 					     data-ad-client="ca-pub-0654331869436657"
-	 					     data-ad-slot="3284229005"
-	 					     data-ad-format="auto"></ins>
-	 					<script>
-	 					(adsbygoogle = window.adsbygoogle || []).push({});
-	 					</script>
- 					</div>
-
+						<div class="g one-half">
+							<?php
+								if ( is_active_sidebar( 'homepage-optional-2' ) ) : ?>
+								<?php dynamic_sidebar( 'homepage-optional-2' ); ?>
+							<?php endif; ?>
+						</div>
+						<div class="g one-half">
+							<?php
+								if ( is_active_sidebar( 'homepage-optional-2' ) ) : ?>
+								<?php dynamic_sidebar( 'homepage-optional-2' ); ?>
+							<?php endif; ?>
+						</div>
+					</div>
+				</div>
+			</div>
+			<section class="border-wrap">
+    			<div class="gw">
+    				<div class="g one-whole lap-one-half palm-one-whole">
+						<div class="mf-section mf-articles mf-peach">
+							<?php
+							    // Get the ID of a given category
+							    $category_id = get_cat_ID( 'arts' );
+							    // Get the URL of this category
+							    $category_link = get_category_link( $category_id );
+							?>
+							<h3 class="mf-label"><a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link"><span class="icon icon-brush"></span> Arts &amp; Culture</a></h3>
+							<div class="gw">
+							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => 27);
+					            $myposts1 = get_posts( $args1 );
+					            foreach ( $myposts1 as $post ) : setup_postdata( $post ); ?>
+				    			<div class="g one-quarter lap-one-half palm-one-half">
+									<article <?php post_class('post-tile post-tile--grid wow fadeInUp'); ?>>
+					                    <a href="<?php the_permalink() ?>" rel="bookmark">
+					                    <?php
+					                        $post_thumbnail_id = get_post_thumbnail_id( );
+					                        $imagesized = wp_get_attachment_image_src( $post_thumbnail_id, 'big-post-thumb');
+					                        if ($imagesized[1] == 224) {
+					                            the_post_thumbnail('big-post-thumb');
+					                        } else {
+					                            the_post_thumbnail('cat-post-thumb');
+					                        }
+					                    ?>
+					                    <h3><?php the_title(); ?></h3>
+					                    <div class="intro">
+					                        <?php the_excerpt(); ?>
+					                    </div>
+					                    </a>
+					                </article>
+								</div>
+					        <?php endforeach;
+					        wp_reset_postdata();?>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="mf-offset mf-offset--wide">
+				<div class="mf-offset__position mf-offset__position--right">
+					<div class="gw">
+						<div class="g one-half">
+							<?php
+								if ( is_active_sidebar( 'homepage-optional-2' ) ) : ?>
+								<?php dynamic_sidebar( 'homepage-optional-2' ); ?>
+							<?php endif; ?>
+						</div>
+						<div class="g one-half">
+							<?php
+								if ( is_active_sidebar( 'homepage-optional-2' ) ) : ?>
+								<?php dynamic_sidebar( 'homepage-optional-2' ); ?>
+							<?php endif; ?>
+						</div>
+					</div>
+				</div>
+			</div>
+			<section class="border-wrap">
+    			<div class="gw">
+    				<div class="g one-whole lap-one-half palm-one-whole">
+						<div class="mf-section mf-articles mf-grey">
+							<?php
+							    // Get the ID of a given category
+							    $category_id = get_cat_ID( 'Articles' );
+							    // Get the URL of this category
+							    $category_link = get_category_link( $category_id );
+							?>
+							<h3 class="mf-label"><a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link"><span class="icon icon-newspaper"></span> Articles &amp; reviews</a></h3>
+							<div class="gw">
+							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => array(415, 15));
+					            $myposts1 = get_posts( $args1 );
+					            foreach ( $myposts1 as $post ) : setup_postdata( $post ); ?>
+				    			<div class="g one-quarter lap-one-half palm-one-half">
+									<article <?php post_class('post-tile post-tile--grid wow fadeInUp'); ?>>
+					                    <a href="<?php the_permalink() ?>" rel="bookmark">
+					                    <?php
+					                        $post_thumbnail_id = get_post_thumbnail_id( );
+					                        $imagesized = wp_get_attachment_image_src( $post_thumbnail_id, 'big-post-thumb');
+					                        if ($imagesized[1] == 224) {
+					                            the_post_thumbnail('big-post-thumb');
+					                        } else {
+					                            the_post_thumbnail('cat-post-thumb');
+					                        }
+					                    ?>
+					                    <h3><?php the_title(); ?></h3>
+					                    <div class="intro">
+					                        <?php the_excerpt(); ?>
+					                    </div>
+					                    </a>
+					                </article>
+								</div>
+					        <?php endforeach;
+					        wp_reset_postdata();?>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="border-wrap">
+    			<div class="gw">
+    				<div class="g one-whole lap-one-half palm-one-whole">
+						<div class="mf-section mf-section--white">
+						<h3 class="mf-label"><a href="https://www.instagram.com/mcrfinest/" class="mf-label__link"><span class="icon icon-instagram"></span> instagram.com/mcrfinest</a></h3>
+							<?php
+								if ( is_active_sidebar( 'homepage-optional-1' ) ) : ?>
+								<?php dynamic_sidebar( 'homepage-optional-1' ); ?>
+							<?php endif; ?>
+						</div>
+    				</div>
+    			</div>
+    		</section>
+			<div class="mf-offset mf-offset--wide">
+				<div class="mf-offset__position mf-offset__position--left">
+					<div class="gw">
+						<div class="g one-half">
+							<?php
+								if ( is_active_sidebar( 'homepage-optional-2' ) ) : ?>
+								<?php dynamic_sidebar( 'homepage-optional-2' ); ?>
+							<?php endif; ?>
+						</div>
+						<div class="g one-half">
+							<?php
+								if ( is_active_sidebar( 'homepage-optional-2' ) ) : ?>
+								<?php dynamic_sidebar( 'homepage-optional-2' ); ?>
+							<?php endif; ?>
+						</div>
+					</div>
+				</div>
+			</div>
+			<section class="border-wrap">
+    			<div class="gw">
+    				<div class="g one-whole lap-one-half palm-one-whole">
+						<div class="mf-section mf-articles mf-baby-blue">
+							<?php
+							    // Get the ID of a given category
+							    $category_id = get_cat_ID( 'From Mcr to' );
+							    // Get the URL of this category
+							    $category_link = get_category_link( $category_id );
+							?>
+							<h3 class="mf-label"><a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link"><span class="icon icon-ticket"></span> From Mcr to</a></h3>
+							<div class="gw">
+							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => 893);
+					            $myposts1 = get_posts( $args1 );
+					            foreach ( $myposts1 as $post ) : setup_postdata( $post ); ?>
+				    			<div class="g one-quarter lap-one-half palm-one-half">
+									<article <?php post_class('post-tile post-tile--grid wow fadeInUp'); ?>>
+					                    <a href="<?php the_permalink() ?>" rel="bookmark">
+					                    <?php
+					                        $post_thumbnail_id = get_post_thumbnail_id( );
+					                        $imagesized = wp_get_attachment_image_src( $post_thumbnail_id, 'big-post-thumb');
+					                        if ($imagesized[1] == 224) {
+					                            the_post_thumbnail('big-post-thumb');
+					                        } else {
+					                            the_post_thumbnail('cat-post-thumb');
+					                        }
+					                    ?>
+					                    <h3><?php the_title(); ?></h3>
+					                    <div class="intro">
+					                        <?php the_excerpt(); ?>
+					                    </div>
+					                    </a>
+					                </article>
+								</div>
+					        <?php endforeach;
+					        wp_reset_postdata();?>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="mf-offset mf-offset--wide">
+				<div class="mf-offset__position mf-offset__position--right">
+   					<aside class="mf-connect">
+   						<h5 class="sub-title">Keep up to date</h5>
+   						<ul class="nav nav--banner  social">
+   							<li>
+   								<a class="btn-circle btn--secondary twitter" href="https://twitter.com/intent/user?screen_name=McrFinest" target="_blank" title="Follow on Twitter"><span aria-hidden="true" class="icon-twitter"></span><span class="accessibility">Twitter</span></a>
+   							</li>
+   							<li>
+   								<a class="btn-circle btn--secondary instagram" href="https://www.instagram.com/mcrfinest/" target="_blank" title="Follow on Instagram"><span aria-hidden="true" class="icon-instagram"></span><span class="accessibility">Instagram</span></a>
+   							</li>
+   							<li>
+   								<a class="btn-circle btn--secondary facebook" href="https://facebook.com/MCRfinest" target="_blank" title="Follow on Facebook"><span aria-hidden="true" class="icon-facebook"></span><span class="accessibility">Facebook page</span></a>
+   							</li>
+   						</ul>
+   					</aside>
+				</div>
+			</div>
+			<section class="border-wrap">
+    			<div class="gw">
+    				<div class="g one-whole lap-one-half palm-one-whole">
+						<div class="mf-section mf-articles mf-lilac">
+							<?php
+							    // Get the ID of a given category
+							    $category_id = get_cat_ID( 'Lifestyle' );
+							    // Get the URL of this category
+							    $category_link = get_category_link( $category_id );
+							?>
+							<h3 class="mf-label"><a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link"><span class="icon icon-bag"></span> Lifestyle</a></h3>
+							<div class="gw">
+							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => 10);
+					            $myposts1 = get_posts( $args1 );
+					            foreach ( $myposts1 as $post ) : setup_postdata( $post ); ?>
+				    			<div class="g one-quarter lap-one-half palm-one-half">
+									<article <?php post_class('post-tile post-tile--grid wow fadeInUp'); ?>>
+					                    <a href="<?php the_permalink() ?>" rel="bookmark">
+					                    <?php
+					                        $post_thumbnail_id = get_post_thumbnail_id( );
+					                        $imagesized = wp_get_attachment_image_src( $post_thumbnail_id, 'big-post-thumb');
+					                        if ($imagesized[1] == 224) {
+					                            the_post_thumbnail('big-post-thumb');
+					                        } else {
+					                            the_post_thumbnail('cat-post-thumb');
+					                        }
+					                    ?>
+					                    <h3><?php the_title(); ?></h3>
+					                    <div class="intro">
+					                        <?php the_excerpt(); ?>
+					                    </div>
+					                    </a>
+					                </article>
+								</div>
+					        <?php endforeach;
+					        wp_reset_postdata();?>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="mf-offset mf-offset--wide">
+				<div class="mf-offset__position mf-offset__position--left">
+					<div class="gw">
+						<div class="g one-half">
+							<?php
+								if ( is_active_sidebar( 'homepage-optional-2' ) ) : ?>
+								<?php dynamic_sidebar( 'homepage-optional-2' ); ?>
+							<?php endif; ?>
+						</div>
+						<div class="g one-half">
+							<?php
+								if ( is_active_sidebar( 'homepage-optional-2' ) ) : ?>
+								<?php dynamic_sidebar( 'homepage-optional-2' ); ?>
+							<?php endif; ?>
+						</div>
+					</div>
+				</div>
+			</div>
+			<section class="border-wrap">
+    			<div class="gw">
+    				<div class="g one-whole lap-one-half palm-one-whole">
+						<div class="mf-section mf-articles mf-pink">
+							<?php
+							    // Get the ID of a given category
+							    $category_id = get_cat_ID( 'Events' );
+							    // Get the URL of this category
+							    $category_link = get_category_link( $category_id );
+							?>
+							<h3 class="mf-label"><a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link"><span class="icon icon-calendar-2"></span> Events</a></h3>
+							<div class="gw">
+							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => 12);
+					            $myposts1 = get_posts( $args1 );
+					            foreach ( $myposts1 as $post ) : setup_postdata( $post ); ?>
+				    			<div class="g one-quarter lap-one-half palm-one-half">
+									<article <?php post_class('post-tile post-tile--grid wow fadeInUp'); ?>>
+					                    <a href="<?php the_permalink() ?>" rel="bookmark">
+					                    <?php
+					                        $post_thumbnail_id = get_post_thumbnail_id( );
+					                        $imagesized = wp_get_attachment_image_src( $post_thumbnail_id, 'big-post-thumb');
+					                        if ($imagesized[1] == 224) {
+					                            the_post_thumbnail('big-post-thumb');
+					                        } else {
+					                            the_post_thumbnail('cat-post-thumb');
+					                        }
+					                    ?>
+					                    <h3><?php the_title(); ?></h3>
+					                    <div class="intro">
+					                        <?php the_excerpt(); ?>
+					                    </div>
+					                    </a>
+					                </article>
+								</div>
+					        <?php endforeach;
+					        wp_reset_postdata();?>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="mf-offset mf-offset--wide">
+				<div class="mf-offset__position mf-offset__position--right">
+					<div class="gw">
+						<div class="g one-half">
+							<?php
+								if ( is_active_sidebar( 'homepage-optional-2' ) ) : ?>
+								<?php dynamic_sidebar( 'homepage-optional-2' ); ?>
+							<?php endif; ?>
+						</div>
+						<div class="g one-half">
+							<?php
+								if ( is_active_sidebar( 'homepage-optional-2' ) ) : ?>
+								<?php dynamic_sidebar( 'homepage-optional-2' ); ?>
+							<?php endif; ?>
+						</div>
+					</div>
+				</div>
+			</div>
+			<section class="border-wrap">
+    			<div class="gw">
+    				<div class="g one-whole lap-one-half palm-one-whole">
+						<div class="mf-section mf-articles mf-mint-green">
+							<?php
+							    // Get the ID of a given category
+							    $category_id = get_cat_ID( 'Music' );
+							    // Get the URL of this category
+							    $category_link = get_category_link( $category_id );
+							?>
+							<h3 class="mf-label"><a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link"><span class="icon icon-music-2"></span> Music</a></h3>
+							<div class="gw">
+							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => 7);
+					            $myposts1 = get_posts( $args1 );
+					            foreach ( $myposts1 as $post ) : setup_postdata( $post ); ?>
+				    			<div class="g one-quarter lap-one-half palm-one-half">
+									<article <?php post_class('post-tile post-tile--grid wow fadeInUp'); ?>>
+					                    <a href="<?php the_permalink() ?>" rel="bookmark">
+					                    <?php
+					                        $post_thumbnail_id = get_post_thumbnail_id( );
+					                        $imagesized = wp_get_attachment_image_src( $post_thumbnail_id, 'big-post-thumb');
+					                        if ($imagesized[1] == 224) {
+					                            the_post_thumbnail('big-post-thumb');
+					                        } else {
+					                            the_post_thumbnail('cat-post-thumb');
+					                        }
+					                    ?>
+					                    <h3><?php the_title(); ?></h3>
+					                    <div class="intro">
+					                        <?php the_excerpt(); ?>
+					                    </div>
+					                    </a>
+					                </article>
+								</div>
+					        <?php endforeach;
+					        wp_reset_postdata();?>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 	 		</div><!-- End of second row -->
 		</div>
 	</div><!-- #content -->
