@@ -40,12 +40,6 @@
 			margin-right: 6px;
 			float: left;
 		}
-		// &.is-pressed:before {
-		// 	content: "\2612";
-		// 	display: inline-block;
-		// 	margin-right: 6px;
-		// 	float: left;
-		// }
 		span {
 			float: left;
 		}
@@ -53,6 +47,10 @@
 	.is-pressed {
 		border-bottom: 3px solid $brand-color;
 	}
+}
+
+.search-close-trigger {
+	float: right;
 }
 
 #sidr-id-search-toggle {
@@ -64,15 +62,18 @@
 #main-search-reveal {
 	position: fixed;
 	height: 100%;
-	width: 105%;
+	width: 100%;
 	z-index: 9999;
 	bottom: 0px;
 	left: -5px;
 	background: #fff;
-	padding: $half-spacing-unit;
+	padding: $base-spacing-unit;
 	transition: all 0.2s ease-in-out;
 	opacity: 0;
 	visibility: hidden;
+	@include media-query(palm) {
+		padding: $half-spacing-unit;
+	}
 }
 
 .main-search {
@@ -81,44 +82,40 @@
 
 .is-open {
 	opacity: 1 !important;
-  visibility: visible !important; 
+  visibility: visible !important;
 }
 
-.main-search /* In header */ {
-	//float: right;
+.main-search {
 	label {
-
+		font-size: 3rem;
+		font-weight: 700;
+		line-height: 1;
 	}
 	#s {
-		display: inline-block;
-		width: 60%;
-		padding: $half-spacing-unit;
-		//border: 0;
-		&:before {
-	       padding-right: $half-spacing-unit;
-	    }
-	    &:focus {
-			border: 1px solid $brand-color;
-		}
-	    @include media-query(palm) {
-	   		//width: 75px;
-	    }
+    border-bottom: 5px solid #000;
+		border-top: 0;
+		border-left: 0;
+		border-right: 0;
+		width: 90%;
+		padding-left: 0;
+		margin-bottom: $base-spacing-unit;
+		font-size: 3rem;
 	}
 	#searchsubmit {
-		padding: $half-spacing-unit+2;
-		background: $brand-color;
-		border:0;
-		color: #fff;
-		@include vendor(border-radius, 4px);
-		&:hover {
-			background: lighten($brand-color, 10%);
-		}
-
+		position: relative;
+		font-size: 40px;
+		padding: 5px 5px;
+		text-align: center;
+		border: 5px solid #000;
+		color: #000;
+		font-weight: 700;
+		background: transparent;
+		&:hover,
+    &:focus {
+     border-color: $brand-color;
+     color: $brand-color;
+   }
 	}
-	// @include media-query(palm) {
-	//    	display: none;
-	// }
-
 }
 
 .search {

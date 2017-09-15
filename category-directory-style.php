@@ -30,7 +30,7 @@ get_header(); ?>
 
     <div class="g two-fifths palm-one-whole">
         <div class="mf-directory-picks">
-            <h2>Finest picks</h2>
+            <h2><?php single_cat_title(); ?> directory</h2>
 
             <?php // The Query
 
@@ -57,7 +57,7 @@ get_header(); ?>
 
                 $new_query = new WP_Query($args);
             ?>
-            
+
             <?php while ( $new_query->have_posts()) : $new_query->the_post(); ?>
             <article <?php post_class('post-tile'); ?>>
                 <a href="<?php the_permalink() ?>" rel="bookmark">

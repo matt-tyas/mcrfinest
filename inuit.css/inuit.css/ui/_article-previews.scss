@@ -65,30 +65,58 @@
 
 .mf-sand {
 	background: $sand;
+
+	.mf-label {
+		border-color: $sand;
+	}
 }
 
 .mf-peach {
 	background: $peach;
+
+	.mf-label {
+		border-color: $peach;
+	}
 }
 
 .mf-mint-green {
 	background: $mint-green;
+
+	.mf-label {
+		border-color: $mint-green;
+	}
 }
 
 .mf-baby-blue {
 	background: $baby-blue;
+
+	.mf-label {
+		border-color: $baby-blue;
+	}
 }
 
 .mf-lilac {
 	background: $lilac;
+
+	.mf-label {
+		border-color: $lilac;
+	}
 }
 
 .mf-pink {
 	background: $pink;
+
+	.mf-label {
+		border-color: $pink;
+	}
 }
 
 .mf-grey {
 	background: $bg-grey;
+
+	.mf-label {
+		border-color: $bg-grey;
+	}
 }
 
 .mf-label {
@@ -198,7 +226,7 @@
 		font-weight: 700;
 		background: transparent;
 		&:hover,
-   &:focus {
+    &:focus {
      border-color: $brand-color;
      color: $brand-color;
    }

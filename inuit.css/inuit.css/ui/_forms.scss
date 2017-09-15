@@ -197,13 +197,18 @@ textarea:focus, input:focus{
 
 .home .post .newscta {
   width: 400px;
-	background: $baby-blue;
+	background: $darkgrey;
 	padding: $base-spacing-unit;
+	color: #fff;
+	margin-top: -30px;
 	#fit-brand {
 		margin-bottom: $half-spacing-unit/4;
 		@include media-query(palm) {
 			font-size: 35px;
 		}
+	}
+	#mc_embed_signup .mc-field-group input.button {
+		color: #fff !important;
 	}
 	p {
 		margin-bottom: $half-spacing-unit;
