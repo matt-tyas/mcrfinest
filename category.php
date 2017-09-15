@@ -59,7 +59,7 @@ get_header(); ?>
             ?>
 
             <?php while ( $new_query->have_posts()) : $new_query->the_post(); ?>
-            <article <?php post_class('post-tile'); ?>>
+            <article <?php post_class('post-tile post-tile--horz'); ?>>
                 <a href="<?php the_permalink() ?>" rel="bookmark">
                 <?php
                     $post_thumbnail_id = get_post_thumbnail_id( );

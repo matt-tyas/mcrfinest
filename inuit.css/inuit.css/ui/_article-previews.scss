@@ -378,10 +378,24 @@
   padding: $half-spacing-unit;
 }
 
+.post-tile.post-tile--horz {
+
+}
+
+.post-tile.post-tile--horz img {
+	float: left;
+	width: 37% !important;
+}
+.post-tile.post-tile--horz {
+	h3,
+	.intro {
+		margin-left: 200px;
+	}
+}
 .category .mf-directory-picks .post-tile {
 	@extend .cf;
 	float: left;
-	width: 47%;
+	width: 100%;
   margin-right: 5.5%;
 	&:nth-of-type(2n) {
 		margin-right: 0;

@@ -210,7 +210,7 @@ textarea:focus, input:focus{
 		margin-bottom: $half-spacing-unit;
 	}
 	@include media-query(desk) {
-		width: 100%;
+		width: 400px;
 		margin-bottom: $half-spacing-unit;
 	}
 	#fit-brand {

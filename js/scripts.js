@@ -52,7 +52,7 @@ $('#owl-events').owlCarousel({
           nav:true
       },
       750:{
-          items:3, 
+          items:3,
           nav:true
       },
       1100:{
@@ -106,6 +106,7 @@ $(document).ready(function(){
   if ( $('.is--sticky').length ) {
     $('.is--sticky').stick_in_parent({
       parent: ".site-content",
+      offset_top: 75
     });
   }
 
