@@ -105,10 +105,10 @@
 			</div>
 		</section>
 	    <div id="main" class="wrapper page">
+			<a href="#" class="finder-trigger"><span aria-hidden="true" data-icon="&#x260c;"></span> Find things to do in&nbsp;Manchester</a>
     		<section class="border-wrap">
     			<div class="gw">
-    				<div class="g one-whole lap-one-half palm-one-whole">
-    					<a href="#" class="finder-trigger"><span aria-hidden="true" data-icon="&#x260c;"></span> Find things to do in&nbsp;Manchester</a>
+    				<div class="g one-whole lap-one-whole palm-one-whole">
     					<div class="mf-section mf-directory-search-home">
 							<h3 class="mf-label"><span class="icon icon-marker"></span> Find something in Manchester</h3>
     						<?php
@@ -140,7 +140,7 @@
 			</div>
 			<section class="border-wrap">
     			<div class="gw">
-    				<div class="g one-whole lap-one-half palm-one-whole">
+    				<div class="g one-whole lap-one-whole palm-one-whole">
 						<div class="mf-section mf-section--white">
 						<h3 class="mf-label"><span class="icon icon-film-2"></span> Video series and features</h3>
 							<?php
@@ -204,7 +204,7 @@
 			</div>
 			<section class="border-wrap">
     			<div class="gw">
-    				<div class="g one-whole lap-one-half palm-one-whole">
+    				<div class="g one-whole lap-one-whole palm-one-whole">
 						<div class="mf-section mf-articles mf-sand">
 							<?php
 							    // Get the ID of a given category
@@ -217,7 +217,7 @@
 							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => 968);
 					            $myposts1 = get_posts( $args1 );
 					            foreach ( $myposts1 as $post ) : setup_postdata( $post ); ?>
-				    			<div class="g one-quarter lap-one-half palm-one-half">
+				    			<div class="g one-quarter lap-one-half palm-one-whole">
 									<article <?php post_class('post-tile post-tile--grid wow fadeInUp'); ?>>
 					                    <a href="<?php the_permalink() ?>" rel="bookmark">
 					                    <?php
@@ -255,7 +255,7 @@
 			</div>
 			<section class="border-wrap">
     			<div class="gw">
-    				<div class="g one-whole lap-one-half palm-one-whole">
+    				<div class="g one-whole lap-one-whole palm-one-whole">
 						<div class="mf-section mf-articles">
 							<h3 class="mf-label mf-label--push"><span class="icon icon-calendar"></span> Upcoming events</h3>
 							<div id="owl-events" class="owl-carousel">
@@ -441,7 +441,7 @@
 			</div>
 			<section class="border-wrap">
     			<div class="gw">
-    				<div class="g one-whole lap-one-half palm-one-whole">
+    				<div class="g one-whole lap-one-whole palm-one-whole">
 						<div class="mf-section mf-articles mf-peach">
 							<?php
 							    // Get the ID of a given category
@@ -454,7 +454,7 @@
 							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => 27);
 					            $myposts1 = get_posts( $args1 );
 					            foreach ( $myposts1 as $post ) : setup_postdata( $post ); ?>
-				    			<div class="g one-quarter lap-one-half palm-one-half">
+				    			<div class="g one-quarter lap-one-half palm-one-whole">
 									<article <?php post_class('post-tile post-tile--grid wow fadeInUp'); ?>>
 					                    <a href="<?php the_permalink() ?>" rel="bookmark">
 					                    <?php
@@ -500,7 +500,7 @@
 			</div>
 			<section class="border-wrap">
     			<div class="gw">
-    				<div class="g one-whole lap-one-half palm-one-whole">
+    				<div class="g one-whole lap-one-whole palm-one-whole">
 						<div class="mf-section mf-articles mf-grey">
 							<?php
 							    // Get the ID of a given category
@@ -513,7 +513,7 @@
 							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => array(415, 15));
 					            $myposts1 = get_posts( $args1 );
 					            foreach ( $myposts1 as $post ) : setup_postdata( $post ); ?>
-				    			<div class="g one-quarter lap-one-half palm-one-half">
+				    				<div class="g one-quarter lap-one-half palm-one-whole">
 									<article <?php post_class('post-tile post-tile--grid wow fadeInUp'); ?>>
 					                    <a href="<?php the_permalink() ?>" rel="bookmark">
 					                    <?php
@@ -541,9 +541,9 @@
 			</section>
 			<section class="border-wrap">
     			<div class="gw">
-    				<div class="g one-whole lap-one-half palm-one-whole">
+    				<div class="g one-whole lap-one-whole palm-one-whole">
 						<div class="mf-section mf-section--white">
-						<h3 class="mf-label"><a href="https://www.instagram.com/mcrfinest/" class="mf-label__link"><span class="icon icon-instagram"></span> instagram.com/mcrfinest</a></h3>
+						<h3 class="mf-label"><a href="https://www.instagram.com/mcrfinest/" class="mf-label__link"><span class="icon icon-instagram"></span> mcrfinest</a></h3>
 							<?php
 								if ( is_active_sidebar( 'homepage-optional-1' ) ) : ?>
 								<?php dynamic_sidebar( 'homepage-optional-1' ); ?>
@@ -572,7 +572,7 @@
 			</div>
 			<section class="border-wrap">
     			<div class="gw">
-    				<div class="g one-whole lap-one-half palm-one-whole">
+    				<div class="g one-whole lap-one-whole palm-one-whole">
 						<div class="mf-section mf-articles mf-baby-blue">
 							<?php
 							    // Get the ID of a given category
@@ -585,7 +585,7 @@
 							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => 893);
 					            $myposts1 = get_posts( $args1 );
 					            foreach ( $myposts1 as $post ) : setup_postdata( $post ); ?>
-				    			<div class="g one-quarter lap-one-half palm-one-half">
+				    				<div class="g one-quarter lap-one-half palm-one-whole">
 									<article <?php post_class('post-tile post-tile--grid wow fadeInUp'); ?>>
 					                    <a href="<?php the_permalink() ?>" rel="bookmark">
 					                    <?php
@@ -631,7 +631,7 @@
 			</div>
 			<section class="border-wrap">
     			<div class="gw">
-    				<div class="g one-whole lap-one-half palm-one-whole">
+    				<div class="g one-whole lap-one-whole palm-one-whole">
 						<div class="mf-section mf-articles mf-lilac">
 							<?php
 							    // Get the ID of a given category
@@ -644,7 +644,7 @@
 							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => 10);
 					            $myposts1 = get_posts( $args1 );
 					            foreach ( $myposts1 as $post ) : setup_postdata( $post ); ?>
-				    			<div class="g one-quarter lap-one-half palm-one-half">
+				    			<div class="g one-quarter lap-one-half palm-one-whole">
 									<article <?php post_class('post-tile post-tile--grid wow fadeInUp'); ?>>
 					                    <a href="<?php the_permalink() ?>" rel="bookmark">
 					                    <?php
@@ -690,7 +690,7 @@
 			</div>
 			<section class="border-wrap">
     			<div class="gw">
-    				<div class="g one-whole lap-one-half palm-one-whole">
+    				<div class="g one-whole lap-one-whole palm-one-whole">
 						<div class="mf-section mf-articles mf-pink">
 							<?php
 							    // Get the ID of a given category
@@ -703,7 +703,7 @@
 							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => 12);
 					            $myposts1 = get_posts( $args1 );
 					            foreach ( $myposts1 as $post ) : setup_postdata( $post ); ?>
-				    			<div class="g one-quarter lap-one-half palm-one-half">
+				    			<div class="g one-quarter lap-one-half palm-one-whole">
 									<article <?php post_class('post-tile post-tile--grid wow fadeInUp'); ?>>
 					                    <a href="<?php the_permalink() ?>" rel="bookmark">
 					                    <?php
@@ -749,7 +749,7 @@
 			</div>
 			<section class="border-wrap">
     			<div class="gw">
-    				<div class="g one-whole lap-one-half palm-one-whole">
+    				<div class="g one-whole lap-one-whole palm-one-whole">
 						<div class="mf-section mf-articles mf-mint-green">
 							<?php
 							    // Get the ID of a given category
@@ -762,7 +762,7 @@
 							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => 7);
 					            $myposts1 = get_posts( $args1 );
 					            foreach ( $myposts1 as $post ) : setup_postdata( $post ); ?>
-				    			<div class="g one-quarter lap-one-half palm-one-half">
+				    			<div class="g one-quarter lap-one-half palm-one-whole">
 									<article <?php post_class('post-tile post-tile--grid wow fadeInUp'); ?>>
 					                    <a href="<?php the_permalink() ?>" rel="bookmark">
 					                    <?php

@@ -19,6 +19,12 @@
 .mf-offset__position {
   position: absolute;
   z-index: 500;
+	@include media-query(lap) {
+    position: static;
+  }
+	@include media-query(palm) {
+    position: static;
+  }
 }
 
 .mf-offset__position--right {
@@ -33,6 +39,15 @@
 
 .mf-offset__width-med {
   width: 400px;
+	@include media-query(lap) {
+    width: 100%;
+  }
+	@include media-query(palm) {
+    width: 100%;
+  }
+	@include media-query(mob) {
+    width: 100%;
+  }
 }
 
 .ad-horz {
