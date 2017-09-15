@@ -142,7 +142,7 @@
     			<div class="gw">
     				<div class="g one-whole lap-one-half palm-one-whole">
 						<div class="mf-section mf-section--white">
-						<h3 class="mf-label"><span class="icon icon-film-2"></span> Video reviews and features</h3>
+						<h3 class="mf-label"><span class="icon icon-film-2"></span> Video series and features</h3>
 							<?php
 							// check if the repeater field has rows of data
 							if( have_rows('video_slider', 'options') ):
