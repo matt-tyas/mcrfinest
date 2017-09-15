@@ -208,13 +208,13 @@
 						<div class="mf-section mf-articles mf-sand">
 							<?php
 							    // Get the ID of a given category
-							    $category_id = get_cat_ID( 'Eat' );
+							    $category_id = get_cat_ID( 'Eating & Drinking' );
 							    // Get the URL of this category
 							    $category_link = get_category_link( $category_id );
 							?>
 							<h3 class="mf-label"><a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link"><span class="icon icon-food"></span> Eating and Drinking</a></h3>
 							<div class="gw">
-							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => array(20, 15));
+							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => 968);
 					            $myposts1 = get_posts( $args1 );
 					            foreach ( $myposts1 as $post ) : setup_postdata( $post ); ?>
 				    			<div class="g one-quarter lap-one-half palm-one-half">

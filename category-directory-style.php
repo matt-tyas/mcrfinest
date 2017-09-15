@@ -30,7 +30,7 @@ get_header(); ?>
 
     <div class="g two-fifths palm-one-whole">
         <div class="mf-directory-picks">
-            <h2><?php single_cat_title(); ?> directory</h2>
+            <h2>Directory picks</h2>
 
             <?php // The Query
 
