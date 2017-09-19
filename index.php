@@ -65,7 +65,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="gw">
+					<div class="gw featured-subs">
 						<div class="g one-half palm-one-half">
 							<article class="post-tile <?php the_field('sub_article_colour', 'option'); ?>">
 								<a href="<?php the_field('sub_article_url', 'option'); ?>">

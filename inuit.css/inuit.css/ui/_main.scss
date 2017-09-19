@@ -112,8 +112,10 @@ a {
 .border-wrap {
 	padding: $base-spacing-unit 0 $half-spacing-unit 0;
 	margin-bottom: $base-spacing-unit;
-	// border-top: 1px solid #999;
-	// border-bottom: 1px solid #999;
+  @include media-query(palm) {
+    padding: $half-spacing-unit 0 $half-spacing-unit/2 0;
+  	margin-bottom: $half-spacing-unit;
+	}
 	.ad-sq {
 		margin-bottom: 0;
 	}

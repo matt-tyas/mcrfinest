@@ -15,7 +15,7 @@ get_header(); ?>
 
             <div class="g one-tenth lap-one-fifth palm-one-whole">
 				<div class="social-wrap">
-					<aside class="social-links is--sticky">
+					<aside class="social-links is--sticky"> 
 						<h5 class="sub-title">Share this</h5>
 						<ul class="social social-share">
 							<li>

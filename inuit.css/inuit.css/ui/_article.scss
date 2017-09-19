@@ -283,6 +283,8 @@ a[rel~="attachment"] {
 	margin-bottom: $base-spacing-unit
 }
 
+
+
 .directory__address {
 	 padding: $base-spacing-unit $half-spacing-unit;
    margin-bottom: $base-spacing-unit;
@@ -295,8 +297,10 @@ a[rel~="attachment"] {
 	 }
 }
 
-.directory__action {
+.directory__actions {
   .btn {
+		@include mf-button();
     width: 100%;
+		margin-bottom: 10px;
   }
 }

@@ -83,6 +83,26 @@ $('#owl-instagram').owlCarousel({
   }
 })
 
+$('#owl-directory-videos').owlCarousel({
+  loop: true,
+  margin: 10,
+  nav: true,
+  responsiveClass: true,
+  responsive:{
+      0:{
+          items:1,
+          nav:true
+      },
+      600:{
+          items:1,
+          nav:true
+      },
+      1100:{
+          items:1,
+          nav:true
+      }
+  }
+})
 
 // $(window).load(function() {
 // 	/* This avoids the flags loading in the top left of the browser whilst witing for JS to finish */

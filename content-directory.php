@@ -10,7 +10,7 @@
 <div class="gw row">
     <div class="g one-tenth lap-one-fifth palm-one-whole">
         <div class="social-wrap">
-            <aside class="social-links">
+            <aside class="social-links is--sticky">
                 <h5 class="sub-title">Share this</h5>
                 <ul class="nav social social-share">
                     <li>
@@ -55,14 +55,30 @@
         				<div id="article-content" class="entry-content">
         	                <p class="lead"><?php echo nl2br(get_the_excerpt()) ?></p>
         	                <div class="directory-image">
-                                <?php $hasSlider = get_post_meta( $post->ID, 'directory_slider_meta_box_class', true ); ?>
+                                <?php
+    							// check if the repeater field has rows of data
+    							if( have_rows('directory_slider') ):
+                                    the_sub_field('diretory_slider_image');
+    								echo '<div id="owl-directory-videos" class="owl-carousel">';
 
-                                <?php if(!($hasSlider == null || $hasSlider == '')){
-                                        echo do_shortcode( get_post_meta($post->ID, 'directory_slider_meta_box_class', true) );
-                                    }
-                                    else {
-                                        echo wp_get_attachment_image( listing_image_get_meta('_listing_image_id'), 'full');
-                                } ?>
+    							    while ( have_rows('directory_slider') ) : the_row();
+    							        // display a sub field value
+    							        the_sub_field('video');
+
+    							    endwhile;
+                                    // loop through the rows of data
+    							    while ( have_rows('directory_slider') ) : the_row();
+    							        // display a sub field value
+                                        echo '<img src="';
+                                        the_sub_field('image');
+                                        echo '" />';
+
+    							    endwhile;
+    								echo '</div>';
+    							else :
+    							    echo wp_get_attachment_image( listing_image_get_meta('_listing_image_id'), 'full');
+    							endif;
+    							?>
         					</div>
         				</div>
         				<div class="gw row">
@@ -92,12 +108,12 @@
                 							</a>
                                         </li>
                                         <li>
-                                            <a href="<?php echo get_post_meta($post->ID, 'directory_url_meta_box_class', true); ?>">
+                                            <a href="<?php echo get_post_meta($post->ID, 'directory_url_meta_box_class', true); ?>" class="btn">
                 							    Visit website
                 							</a>
                                         </li>
                                         <li>
-                                            <a href="https://www.google.com/maps?saddr=My+Location&daddr=<?php echo get_post_meta($post->ID, 'directory_address_meta_box_class', true); ?>">
+                                            <a href="https://www.google.com/maps?saddr=My+Location&daddr=<?php echo get_post_meta($post->ID, 'directory_address_meta_box_class', true); ?>" class="btn">
                                                 Get directions
                                             </a>
                                         </li>
@@ -216,7 +232,7 @@
                 					<?php endif; ?>
                 				</div>
             				</div>
-                            <div class="ad-sense">
+                            <div class="ad-sense is--sticky">
             					<h5 class="sub-title ad-title">Advert</h5>
             					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
             					<!-- Article Custom size 2 -->
