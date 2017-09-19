@@ -88,6 +88,7 @@ $('#owl-directory-videos').owlCarousel({
   margin: 10,
   nav: true,
   responsiveClass: true,
+  autoHeight:true,
   responsive:{
       0:{
           items:1,

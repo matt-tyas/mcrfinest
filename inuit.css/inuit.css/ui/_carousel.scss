@@ -2,6 +2,8 @@
     $Carousel
 \*------------------------------------*/
 
+
+
 .carousel-article {
 	min-height: 360px;
 	overflow: hidden;
@@ -53,7 +55,7 @@
              -o-transition:all 150ms ease-in;
                 transition:all 150ms ease-in;
 	}
-	img { 
+	img {
 		width: 100% !important;
 		height: auto;
 	}
@@ -135,7 +137,7 @@
 		background: transparent !important;
 		color: lighten($brand-color, 20%);
 	}
-	p { 
+	p {
 		color: #fff;
 		padding-top: $half-spacing-unit;
 		background: darken($darkgrey, 5%);
@@ -148,7 +150,7 @@
 			color: lighten($brand-color, 20%);
 		}
 		a {
-			color: #fff;			
+			color: #fff;
 			&:hover {
 				color: lighten($brand-color, 20%);
 			}
@@ -205,7 +207,7 @@
  * Contributing author: Tyler Smith (@mbmufffin)
  */
 
- 
+
 /* Browser Resets */
 .flex-container a:active,
 .flexslider a:active,
@@ -213,18 +215,18 @@
 .flexslider a:focus  {outline: none;}
 .slides,
 .flex-control-nav,
-.flex-direction-nav {margin: 0; padding: 0; list-style: none;} 
+.flex-direction-nav {margin: 0; padding: 0; list-style: none;}
 
 /* FlexSlider Necessary Styles
-*********************************/ 
+*********************************/
 .flexslider {margin: 0 0 0 0; padding: 0;}
 .flexslider .slides > li {display: none; -webkit-backface-visibility: hidden;} /* Hide the slides before the JS is loaded. Avoids image jumping */
 .flexslider .slides img {width: 100%; display: block;}
 .flex-pauseplay span {text-transform: capitalize;}
 
 /* Clearfix for the .slides element */
-.slides:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;} 
-html[xmlns] .slides {display: block;} 
+.slides:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;}
+html[xmlns] .slides {display: block;}
 * html .slides {height: 1%;}
 
 /* No JavaScript Fallback */
@@ -270,6 +272,3 @@ html[xmlns] .slides {display: block;}
   .flex-direction-nav .flex-prev {opacity: 1; left: 0;}
   .flex-direction-nav .flex-next {opacity: 1; right: 0;}
 }
-
-
-
