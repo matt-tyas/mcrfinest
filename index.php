@@ -65,7 +65,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="gw featured-subs">
+					<div class="gw equal featured-subs">
 						<div class="g one-half palm-one-half">
 							<article class="post-tile <?php the_field('sub_article_colour', 'option'); ?>">
 								<a href="<?php the_field('sub_article_url', 'option'); ?>">
@@ -213,7 +213,7 @@
 							    $category_link = get_category_link( $category_id );
 							?>
 							<h3 class="mf-label"><a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link"><span class="icon icon-food"></span> Eating and Drinking</a></h3>
-							<div class="gw">
+							<div class="gw equal">
 							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => 970);
 					            $myposts1 = get_posts( $args1 );
 					            foreach ( $myposts1 as $post ) : setup_postdata( $post ); ?>
@@ -450,7 +450,7 @@
 							    $category_link = get_category_link( $category_id );
 							?>
 							<h3 class="mf-label"><a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link"><span class="icon icon-brush"></span> Arts &amp; Culture</a></h3>
-							<div class="gw">
+							<div class="gw equal">
 							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => 27);
 					            $myposts1 = get_posts( $args1 );
 					            foreach ( $myposts1 as $post ) : setup_postdata( $post ); ?>
@@ -509,7 +509,7 @@
 							    $category_link = get_category_link( $category_id );
 							?>
 							<h3 class="mf-label"><a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link"><span class="icon icon-newspaper"></span> Articles &amp; reviews</a></h3>
-							<div class="gw">
+							<div class="gw equal">
 							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => array(415, 15));
 					            $myposts1 = get_posts( $args1 );
 					            foreach ( $myposts1 as $post ) : setup_postdata( $post ); ?>
@@ -581,7 +581,7 @@
 							    $category_link = get_category_link( $category_id );
 							?>
 							<h3 class="mf-label"><a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link"><span class="icon icon-ticket"></span> From Mcr to</a></h3>
-							<div class="gw">
+							<div class="gw equal">
 							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => 893);
 					            $myposts1 = get_posts( $args1 );
 					            foreach ( $myposts1 as $post ) : setup_postdata( $post ); ?>
@@ -627,7 +627,7 @@
 							    $category_link = get_category_link( $category_id );
 							?>
 							<h3 class="mf-label"><a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link"><span class="icon icon-bag"></span> Lifestyle</a></h3>
-							<div class="gw">
+							<div class="gw equal">
 							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => 10);
 					            $myposts1 = get_posts( $args1 );
 					            foreach ( $myposts1 as $post ) : setup_postdata( $post ); ?>
@@ -686,7 +686,7 @@
 							    $category_link = get_category_link( $category_id );
 							?>
 							<h3 class="mf-label"><a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link"><span class="icon icon-calendar-2"></span> Events</a></h3>
-							<div class="gw">
+							<div class="gw equal">
 							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => 12);
 					            $myposts1 = get_posts( $args1 );
 					            foreach ( $myposts1 as $post ) : setup_postdata( $post ); ?>
@@ -745,7 +745,7 @@
 							    $category_link = get_category_link( $category_id );
 							?>
 							<h3 class="mf-label"><a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link"><span class="icon icon-music-2"></span> Music</a></h3>
-							<div class="gw">
+							<div class="gw equal">
 							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => 7);
 					            $myposts1 = get_posts( $args1 );
 					            foreach ( $myposts1 as $post ) : setup_postdata( $post ); ?>

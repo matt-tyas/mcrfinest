@@ -116,29 +116,32 @@ get_header(); ?>
         <section class="latest-articles mf-directory-articles">
             <!-- <h1><?php single_cat_title(); ?></h1> -->
             <h2>Articles</h2>
-            <div id="sort-container">
+            <div class="gw equal">
                 <!-- Normal Articles Loop -->
                <?php if (have_posts()) : while (have_posts()) : the_post();
                      //if (in_array($post->ID, $do_not_duplicate)) continue;
                 ?>
-                <article <?php post_class('post-tile'); ?>>
-                    <a href="<?php the_permalink() ?>" rel="bookmark">
-                    <?php
-                        $post_thumbnail_id = get_post_thumbnail_id( );
-                        $imagesized = wp_get_attachment_image_src( $post_thumbnail_id, 'big-post-thumb');
-                        if ($imagesized[1] == 308) {
-                            the_post_thumbnail('big-post-thumb');
-                        } else {
-                            the_post_thumbnail('cat-post-thumb');
-                        }
-                    ?>
-                    <h3><?php the_title(); ?></h3>
-                    <div class="intro">
-                        <p><?php echo get_excerpt(140); ?></p>
+                    <div class="g one-third palm-one-half">
+                        <article <?php post_class('post-tile'); ?>>
+                            <a href="<?php the_permalink() ?>" rel="bookmark">
+                            <?php
+                                $post_thumbnail_id = get_post_thumbnail_id( );
+                                $imagesized = wp_get_attachment_image_src( $post_thumbnail_id, 'big-post-thumb');
+                                if ($imagesized[1] == 308) {
+                                    the_post_thumbnail('big-post-thumb');
+                                } else {
+                                    the_post_thumbnail('cat-post-thumb');
+                                }
+                            ?>
+                            <h3><?php the_title(); ?></h3>
+                            <div class="intro">
+                                <p><?php echo get_excerpt(140); ?></p>
+                            </div>
+                            </a>
+                        </article>
                     </div>
-                    </a>
-                </article>
                 <?php endwhile; endif; ?>
+                </div>
             </section>
             <h3>More articles</h3>
             <?php wp_pagenavi(); ?>
