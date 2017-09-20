@@ -224,7 +224,10 @@
 .post-tile.post-tile--horz {
 	h3,
 	.intro {
-		margin-left: 200px;
+		margin-left: 40%;
+		// @include media-query(mob) {
+		// 	margin-left: 140px;
+		// }
 	}
 }
 .category .mf-directory-picks .post-tile {

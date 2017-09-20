@@ -96,14 +96,17 @@
 	}
 	#s {
     border-bottom: 5px solid #000;
-    background: $lightgrey;
+    // background: $lightgrey;
 		border-top: 0;
 		border-left: 0;
 		border-right: 0;
 		width: 100%;
-		padding-left: 0;
+		padding-left: 0; 
 		margin-bottom: $base-spacing-unit;
 		font-size: 3rem;
+		@include media-query(palm) {
+	    font-size: 1.5rem;
+	  }
 	}
 	#searchsubmit {
 		position: relative;
