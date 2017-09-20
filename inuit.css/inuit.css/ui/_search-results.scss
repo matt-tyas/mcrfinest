@@ -402,9 +402,9 @@
 		height: auto;
 		width: auto;
 		z-index: 1;
-    background: #F3F3F3;
-    padding: $base-spacing-unit $half-spacing-unit;
-		transition: all 0.2s ease-in-out;
+    background: transparent;
+    padding: 0 0;
+		// transition: all 0.2s ease-in-out;
     opacity: 1;
 		visibility: visible;
   }

@@ -76,7 +76,7 @@ a {
 }
 
 .single-post .type-post  {
-  padding-left: 35px !important;
+  padding-left: 20px !important;
 }
 
 .single-post .type-post .post-tile  {
@@ -98,7 +98,7 @@ a {
 
 .directory-template-default .wrapper.page {
   @include media-query(portable) {
-		padding-left: 42px;
+		padding-left: 25px;
 	}
 }
 
