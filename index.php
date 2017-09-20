@@ -214,7 +214,7 @@
 							?>
 							<h3 class="mf-label"><a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link"><span class="icon icon-food"></span> Eating and Drinking</a></h3>
 							<div class="gw">
-							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => 968);
+							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => 970);
 					            $myposts1 = get_posts( $args1 );
 					            foreach ( $myposts1 as $post ) : setup_postdata( $post ); ?>
 				    			<div class="g one-quarter lap-one-half palm-one-half">
