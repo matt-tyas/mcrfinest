@@ -14,8 +14,6 @@
 
 get_header(); ?>
 
-
-
 			<div class="gw">
 
                 <div class="g one-tenth lap-one-fifth palm-one-whole">

@@ -149,12 +149,14 @@ $(document).ready(function(){
   function checkWidth() {
       var windowsize = $window.width();
       if (windowsize < 860) {
-
         if ( $('.site-title').length ) {
           $('.site-title').stick_in_parent({
             parent: ".site",
           });
         }
+      }
+      if (windowsize > 860) {
+        $('.site-title').trigger("sticky_kit:detach");
       }
   }
   // Execute on load

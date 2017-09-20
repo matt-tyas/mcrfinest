@@ -65,7 +65,7 @@
 	width: 100%;
 	z-index: 9999;
 	bottom: 0px;
-	left: -5px;
+	left: 0px;
 	background: #fff;
 	padding: $base-spacing-unit;
 	transition: all 0.2s ease-in-out;
@@ -85,18 +85,22 @@
   visibility: visible !important;
 }
 
+#searchform,
 .main-search {
 	label {
 		font-size: 3rem;
 		font-weight: 700;
 		line-height: 1;
+		margin-top: $base-spacing-unit;
+		margin-bottom: $base-spacing-unit;
 	}
 	#s {
     border-bottom: 5px solid #000;
+    background: $lightgrey;
 		border-top: 0;
 		border-left: 0;
 		border-right: 0;
-		width: 90%;
+		width: 100%;
 		padding-left: 0;
 		margin-bottom: $base-spacing-unit;
 		font-size: 3rem;
@@ -110,6 +114,7 @@
 		color: #000;
 		font-weight: 700;
 		background: transparent;
+		margin-bottom: $base-spacing-unit;
 		&:hover,
     &:focus {
      border-color: $brand-color;
@@ -170,9 +175,9 @@
 }
 
 .search-page {
-	margin-bottom: $base-spacing-unit;
-	padding: $base-spacing-unit;
-	background: lighten($lightgrey, 4%);
+	// margin-bottom: $base-spacing-unit;
+	// padding: $base-spacing-unit;
+	// background: lighten($lightgrey, 4%);
 	label {
 		@extend .accessibility;
 	}

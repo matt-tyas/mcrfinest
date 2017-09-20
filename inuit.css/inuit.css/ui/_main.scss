@@ -69,6 +69,12 @@ a {
 	}
 }
 
+.page--home {
+  @include media-query(palm) {
+		padding: 0 0;
+	}
+}
+
 .single-post .type-post  {
   padding-left: 35px !important;
 }
@@ -113,8 +119,8 @@ a {
 	padding: $base-spacing-unit 0 $half-spacing-unit 0;
 	margin-bottom: $base-spacing-unit;
   @include media-query(palm) {
-    padding: $half-spacing-unit 0 $half-spacing-unit/2 0;
-  	margin-bottom: $half-spacing-unit;
+    padding: 0;
+  	margin-bottom: 0;
 	}
 	.ad-sq {
 		margin-bottom: 0;
@@ -201,6 +207,56 @@ a {
 .category-drinking-in-manchester .page-bg,
 .page-bg.category-drinking-in-manchester {
 	background: lighten(#e3c7e7, 10%);
+}
+
+.mf-masonry {
+	// display: -webkit-box;
+	// display: -ms-flexbox;
+	// display: grid;
+	-webkit-flex-direction: row;
+	   flex-direction: row;
+	   -webkit-align-items: flex-start;
+	   align-items: flex-start;
+	-moz-column-gap: 16px;
+  -webkit-column-gap: 16px;
+  column-gap: 16px;
+	      box-sizing: border-box;
+   -moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+	@media only screen and (min-width: 400px) {
+		column-gap: 8px;
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+  }
+	@media only screen and (min-width: 700px) {
+		column-gap: 16px;
+	  -moz-column-count: 4;
+	  -webkit-column-count: 4;
+	  column-count: 4;
+	}
+  @media only screen and (min-width: 900px) {
+		column-gap: 32px;
+    -moz-column-count: 4;
+    -webkit-column-count: 4;
+    column-count: 4;
+  }
+
+	.mf-masonry__item {
+		position: relative;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+    width: 100%;
+		        box-sizing: border-box;
+       -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+		transition: transform 0.3s ease-in-out;
+		backface-visibility: hidden;
+		// &:hover {
+    // 	transform: scale(1.05);
+		// }
+	}
 }
 
 .skip-nav {

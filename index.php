@@ -104,7 +104,7 @@
 				</div>
 			</div>
 		</section>
-	    <div id="main" class="wrapper page">
+	    <div id="main" class="wrapper page page--home">
 			<a href="#" class="finder-trigger"><span aria-hidden="true" data-icon="&#x260c;"></span> Find things to do in&nbsp;Manchester</a>
     		<section class="border-wrap">
     			<div class="gw">
@@ -214,10 +214,10 @@
 							?>
 							<h3 class="mf-label"><a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link"><span class="icon icon-food"></span> Eating and Drinking</a></h3>
 							<div class="gw">
-							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => 970);
+							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => 968);
 					            $myposts1 = get_posts( $args1 );
 					            foreach ( $myposts1 as $post ) : setup_postdata( $post ); ?>
-				    			<div class="g one-quarter lap-one-half palm-one-whole">
+				    			<div class="g one-quarter lap-one-half palm-one-half">
 									<article <?php post_class('post-tile post-tile--grid wow fadeInUp'); ?>>
 					                    <a href="<?php the_permalink() ?>" rel="bookmark">
 					                    <?php
@@ -454,7 +454,7 @@
 							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => 27);
 					            $myposts1 = get_posts( $args1 );
 					            foreach ( $myposts1 as $post ) : setup_postdata( $post ); ?>
-				    			<div class="g one-quarter lap-one-half palm-one-whole">
+				    			<div class="g one-quarter lap-one-half palm-one-half">
 									<article <?php post_class('post-tile post-tile--grid wow fadeInUp'); ?>>
 					                    <a href="<?php the_permalink() ?>" rel="bookmark">
 					                    <?php
@@ -513,7 +513,7 @@
 							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => array(415, 15));
 					            $myposts1 = get_posts( $args1 );
 					            foreach ( $myposts1 as $post ) : setup_postdata( $post ); ?>
-				    				<div class="g one-quarter lap-one-half palm-one-whole">
+				    			<div class="g one-quarter lap-one-half palm-one-half">
 									<article <?php post_class('post-tile post-tile--grid wow fadeInUp'); ?>>
 					                    <a href="<?php the_permalink() ?>" rel="bookmark">
 					                    <?php
@@ -585,7 +585,7 @@
 							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => 893);
 					            $myposts1 = get_posts( $args1 );
 					            foreach ( $myposts1 as $post ) : setup_postdata( $post ); ?>
-				    				<div class="g one-quarter lap-one-half palm-one-whole">
+				    				<div class="g one-quarter lap-one-half palm-one-half">
 									<article <?php post_class('post-tile post-tile--grid wow fadeInUp'); ?>>
 					                    <a href="<?php the_permalink() ?>" rel="bookmark">
 					                    <?php
@@ -612,21 +612,8 @@
 				</div>
 			</section>
 			<div class="mf-offset mf-offset--wide">
-				<div class="mf-offset__position mf-offset__position--right">
-   					<aside class="mf-connect">
-   						<h5 class="sub-title">Keep up to date</h5>
-   						<ul class="nav nav--banner  social">
-   							<li>
-   								<a class="btn-circle btn--secondary twitter" href="https://twitter.com/intent/user?screen_name=McrFinest" target="_blank" title="Follow on Twitter"><span aria-hidden="true" class="icon-twitter"></span><span class="accessibility">Twitter</span></a>
-   							</li>
-   							<li>
-   								<a class="btn-circle btn--secondary instagram" href="https://www.instagram.com/mcrfinest/" target="_blank" title="Follow on Instagram"><span aria-hidden="true" class="icon-instagram"></span><span class="accessibility">Instagram</span></a>
-   							</li>
-   							<li>
-   								<a class="btn-circle btn--secondary facebook" href="https://facebook.com/MCRfinest" target="_blank" title="Follow on Facebook"><span aria-hidden="true" class="icon-facebook"></span><span class="accessibility">Facebook page</span></a>
-   							</li>
-   						</ul>
-   					</aside>
+				<div class="social-inline mf-offset__position mf-offset__position--right">
+   					<?php get_template_part('social'); ?>
 				</div>
 			</div>
 			<section class="border-wrap">
@@ -644,7 +631,7 @@
 							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => 10);
 					            $myposts1 = get_posts( $args1 );
 					            foreach ( $myposts1 as $post ) : setup_postdata( $post ); ?>
-				    			<div class="g one-quarter lap-one-half palm-one-whole">
+				    			<div class="g one-quarter lap-one-half palm-one-half">
 									<article <?php post_class('post-tile post-tile--grid wow fadeInUp'); ?>>
 					                    <a href="<?php the_permalink() ?>" rel="bookmark">
 					                    <?php
@@ -703,7 +690,7 @@
 							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => 12);
 					            $myposts1 = get_posts( $args1 );
 					            foreach ( $myposts1 as $post ) : setup_postdata( $post ); ?>
-				    			<div class="g one-quarter lap-one-half palm-one-whole">
+				    			<div class="g one-quarter lap-one-half palm-one-half">
 									<article <?php post_class('post-tile post-tile--grid wow fadeInUp'); ?>>
 					                    <a href="<?php the_permalink() ?>" rel="bookmark">
 					                    <?php
@@ -762,7 +749,7 @@
 							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => 7);
 					            $myposts1 = get_posts( $args1 );
 					            foreach ( $myposts1 as $post ) : setup_postdata( $post ); ?>
-				    			<div class="g one-quarter lap-one-half palm-one-whole">
+				    			<div class="g one-quarter lap-one-half palm-one-half">
 									<article <?php post_class('post-tile post-tile--grid wow fadeInUp'); ?>>
 					                    <a href="<?php the_permalink() ?>" rel="bookmark">
 					                    <?php
