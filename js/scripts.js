@@ -172,6 +172,13 @@ $(document).ready(function(){
     });
   }
 
+  if ( $('.is--sticky').length ) {
+    $('.is--sticky').stick_in_parent({
+      parent: ".wrapper",
+      offset_top: 75
+    });
+  }
+
   if ( $('.ad--sticky').length ) {
     $('.ad--sticky').stick_in_parent({
       parent: ".site-content",

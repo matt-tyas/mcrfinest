@@ -121,7 +121,7 @@ get_header(); ?>
                <?php if (have_posts()) : while (have_posts()) : the_post();
                      //if (in_array($post->ID, $do_not_duplicate)) continue;
                 ?>
-                    <div class="g one-third palm-one-half">
+                    <div class="g one-third lap-one-half palm-one-third mob-one-half">
                         <article <?php post_class('post-tile'); ?>>
                             <a href="<?php the_permalink() ?>" rel="bookmark">
                             <?php

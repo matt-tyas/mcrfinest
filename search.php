@@ -35,7 +35,7 @@ get_header(); ?>
 
 				<h2><?php _e( 'Nothing Found', 'twentytwelve' ); ?></h2>
 				<div class="entry-content">
-					<p class="muted"><?php _e( 'Sorry, we could not find anything that matched that. Maybe try searching again.', 'twentytwelve' ); ?></p>
+					<p class="muted"><?php _e( 'Sorry, we could not find anything that matched that. Try searching again.', 'twentytwelve' ); ?></p>
 					<?php // get_search_form(); ?>
 				</div><!-- .entry-content -->
 

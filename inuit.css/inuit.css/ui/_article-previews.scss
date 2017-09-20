@@ -132,7 +132,9 @@
 
 .mf-grey,
 .search-results,
-.directory {
+.directory,
+.page-template-default,
+.search  {
 	background: $bg-grey;
 
 	.mf-label {
@@ -404,19 +406,19 @@
 		padding: 0;
 		color: lighten($darkgrey, 10%);
 	}
-	@include media-query(mob) {
-		width: 47%;
-		margin-right: 2.5%;
-		&:nth-of-type(2n) {
-			margin-right: 0;
-		}
-		&:nth-of-type(3n) {
-			margin-right: 2.5%;
-		}
-    &:nth-of-type(4n) {
-			margin-right: 0;
-		}
-	}
+	// @include media-query(mob) {
+	// 	width: 47%;
+	// 	margin-right: 2.5%;
+	// 	&:nth-of-type(2n) {
+	// 		margin-right: 0;
+	// 	}
+	// 	&:nth-of-type(3n) {
+	// 		margin-right: 2.5%;
+	// 	}
+  //   &:nth-of-type(4n) {
+	// 		margin-right: 0;
+	// 	}
+	// }
 
 }
 

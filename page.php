@@ -16,9 +16,11 @@ get_header(); ?>
 
 			<div class="gw">
 
+				<div class="site-content">
+
                 <div class="g one-tenth lap-one-fifth palm-one-whole">
     				<div class="social-wrap">
-    					<aside class="social-links">
+    					<aside class="social-links is--sticky">
     						<h5 class="sub-title">Share this</h5>
     						<ul class="nav social social-share">
     							<li>
@@ -44,13 +46,13 @@ get_header(); ?>
 					</div>
 				</div>
 
-				<div class="g three-tenths palm-one-whole">
+				<div class="g three-tenths lap-two-tenths palm-one-whole">
 
 				<h5 class="sub-title ad-title">Partners</h5>
 
 				<div class="gw">
 
-					<div class="g one-half palm-one-quarter mob-one-half">
+					<div class="g one-half lap-one-whole  palm-one-quarter mob-one-half">
 
 						<?php
 						if ( is_active_sidebar( 'category-page-advert-1' ) ) : ?>
@@ -58,63 +60,63 @@ get_header(); ?>
 						<?php endif; ?>
 					</div>
 
-					<div class="g one-half palm-one-quarter mob-one-half">
+					<div class="g one-half lap-one-whole  palm-one-quarter mob-one-half">
 						<?php
 						if ( is_active_sidebar( 'category-page-advert-2' ) ) : ?>
 						<?php dynamic_sidebar( 'category-page-advert-2' ); ?>
 						<?php endif; ?>
 					</div>
 
-					<div class="g one-half palm-one-quarter mob-one-half">
+					<div class="g one-half lap-one-whole  palm-one-quarter mob-one-half">
 						<?php
 						if ( is_active_sidebar( 'category-page-advert-3' ) ) : ?>
 				        <?php dynamic_sidebar( 'category-page-advert-3' ); ?>
 				        <?php endif; ?>
 				    </div>
 
-					<div class="g one-half palm-one-quarter mob-one-half">
+					<div class="g one-half lap-one-whole  palm-one-quarter mob-one-half">
 					 	<?php
 				        if ( is_active_sidebar( 'category-page-advert-4' ) ) : ?>
                         <?php dynamic_sidebar( 'category-page-advert-4' ); ?>
 				        <?php endif; ?>
 					</div>
 
-					<div class="g one-half palm-one-quarter mob-one-half">
+					<div class="g one-half  lap-one-whole palm-one-quarter mob-one-half">
 						<?php
 						if ( is_active_sidebar( 'category-page-advert-5' ) ) : ?>
 				        <?php dynamic_sidebar( 'category-page-advert-5' ); ?>
 				        <?php endif; ?>
 				    </div>
 
-					<div class="g one-half palm-one-quarter mob-one-half">
+					<div class="g one-half lap-one-whole  palm-one-quarter mob-one-half">
 					 	<?php
 				        if ( is_active_sidebar( 'category-page-advert-6' ) ) : ?>
                         <?php dynamic_sidebar( 'category-page-advert-6' ); ?>
 				        <?php endif; ?>
 					</div>
 
-					<div class="g one-half palm-one-quarter mob-one-half">
+					<div class="g one-half lap-one-whole  palm-one-quarter mob-one-half">
 						<?php
 						if ( is_active_sidebar( 'category-page-advert-7' ) ) : ?>
 				        <?php dynamic_sidebar( 'category-page-advert-7' ); ?>
 				        <?php endif; ?>
 				    </div>
 
-					<div class="g one-half palm-one-quarter mob-one-half">
+					<div class="g one-half  lap-one-whole  palm-one-quarter mob-one-half">
 					 	<?php
 				        if ( is_active_sidebar( 'category-page-advert-8' ) ) : ?>
                         <?php dynamic_sidebar( 'category-page-advert-8' ); ?>
 				        <?php endif; ?>
 					</div>
 
-					<div class="g one-half palm-one-quarter mob-one-half">
+					<div class="g one-half lap-one-whole palm-one-quarter mob-one-half">
 					 	<?php
 				        if ( is_active_sidebar( 'category-page-advert-9' ) ) : ?>
                         <?php dynamic_sidebar( 'category-page-advert-9' ); ?>
 				        <?php endif; ?>
 					</div>
 
-					<div class="g one-half palm-one-quarter mob-one-half">
+					<div class="g one-half  lap-one-whole  palm-one-quarter mob-one-half">
 					 	<?php
 				        if ( is_active_sidebar( 'category-page-advert-10' ) ) : ?>
                         <?php dynamic_sidebar( 'category-page-advert-10' ); ?>
@@ -122,33 +124,13 @@ get_header(); ?>
 					</div>
 
 				</div>
-
-
-				<!-- Connect CTAs -->
-				<aside class="connect">
-
-					<h5 class="sub-title">Say hello&hellip;</h5>
-					<ul class="nav nav--banner  social">
-						<li>
-							<a class="btn-circle btn--secondary twitter" href="https://twitter.com/intent/user?screen_name=McrFinest" target="_blank" title="Follow on Twitter"><span aria-hidden="true" class="icon-twitter"></span><span class="accessibility">Twitter</span></a>
-						</li>
-						<li>
-							<a class="btn-circle btn--secondary instagram" href="https://www.instagram.com/mcrfinest/" target="_blank" title="Follow on Instagram"><span aria-hidden="true" class="icon-instagram"></span><span class="accessibility">Instagram</span></a>
-						</li>
-						<li>
-							<a class="btn-circle btn--secondary facebook" href="https://facebook.com/MCRfinest" target="_blank" title="Follow on Facebook"><span aria-hidden="true" class="icon-facebook"></span><span class="accessibility">Facebook page</span></a>
-						</li>
-					</ul>
-
-				</aside>
+				<div class="social-inline">
+					<?php get_template_part('social'); ?>
+				</div>
 
 
 			</div>
 
-
-
-
-
+		</div>
 	</div><!-- #primary -->
-
 <?php get_footer(); ?>

@@ -101,7 +101,7 @@
 		border-left: 0;
 		border-right: 0;
 		width: 100%;
-		padding-left: 0; 
+		padding-left: 0;
 		margin-bottom: $base-spacing-unit;
 		font-size: 3rem;
 		@include media-query(palm) {
@@ -214,15 +214,6 @@
 	}
 }
 
-.site-content {
-	padding-top: $half-spacing-unit;
-
-	.newscta {
-		width: 100%;
-		margin-top: $half-spacing-unit;
-	}
-}
-
 .mf-directory-search-home {
 	padding: $base-spacing-unit*2 $half-spacing-unit $base-spacing-unit*2 $half-spacing-unit;
 	background: #F3F3F3;
@@ -244,7 +235,7 @@
 			top: 18px;
 			right: 0;
 			display: inline;
-			font-size: 40px;
+			font-size: 30px;
 			content: "\25be";
 			@extend .icon-chevron-down;
 		}
@@ -278,16 +269,16 @@
 		}
 		h4 {
 			display: inline-block;
-			font-size: 60px !important;
+			font-size: 40px !important;
 		}
 		label {
 			// display: block;
 		}
 	}
 	label {
-		@include font-size(60px);
+		@include font-size(40px);
 		position: relative;
-		top: 20px;
+		top: 24px;
     font-weight: 700;
     padding: 0;
     margin: 0;
@@ -326,10 +317,12 @@
 		color: #000;
 		font-weight: 700;
 		background: transparent;
+		border-radius: 0;
 		&:hover,
     &:focus {
      border-color: $brand-color;
      color: $brand-color;
+		 background-color: transparent;
    }
 	}
 	.beta {
@@ -394,4 +387,25 @@
 	.is-pressed {
 
 	}
+}
+
+.site-content {
+	padding-top: $half-spacing-unit;
+
+	.newscta {
+		width: 100%;
+		margin-top: $half-spacing-unit;
+	}
+
+	@include media-query(palm) {
+    position: static;
+		height: auto;
+		width: auto;
+		z-index: 1;
+    background: #F3F3F3;
+    padding: $base-spacing-unit $half-spacing-unit;
+		transition: all 0.2s ease-in-out;
+    opacity: 1;
+		visibility: visible;
+  }
 }

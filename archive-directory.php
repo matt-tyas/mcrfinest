@@ -12,7 +12,7 @@
  */
 
 get_header(); ?>
-	<section class="site-content author mf-grey">
+	<section class="site-content author">
 		<?php
 			if ( is_active_sidebar( 'directory-search' ) ) : ?>
 			<?php dynamic_sidebar( 'directory-search' ); ?>
