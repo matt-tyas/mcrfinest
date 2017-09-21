@@ -218,6 +218,10 @@
 	}
 }
 
+.post-tile__title {
+  padding: $half-spacing-unit/2 $half-spacing-unit $half-spacing-unit 0 !important;
+}
+
 .box {
   background: #fff;
   padding: $half-spacing-unit;
