@@ -198,8 +198,8 @@ textarea:focus, input:focus{
 
 .newscta {
   width: 400px;
-	background: $darkgrey;
-	padding: $half-spacing-unit $base-spacing-unit;
+	background: $darkgrey; 
+	padding: $base-spacing-unit $base-spacing-unit $half-spacing-unit $base-spacing-unit;
 	color: #fff;
 	margin-top: -30px;
 	@include media-query(palm) {
@@ -330,7 +330,7 @@ span.wpcf7-not-valid-tip {
 	border: 5px solid #000 !important;
   color: #000 !important;
 	border-radius: 0 !important;
-	margin-bottom: 0;
+	margin-bottom: $half-spacing-unit/2 !important;
 }
 
 
