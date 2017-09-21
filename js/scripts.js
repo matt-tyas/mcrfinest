@@ -63,7 +63,7 @@ $.simpleWeather({
 
 $('#owl-videos').owlCarousel({
   loop: true,
-  margin: 10,
+  margin: 16,
   nav: true,
   responsiveClass: true,
   responsive:{
