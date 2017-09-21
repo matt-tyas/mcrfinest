@@ -226,7 +226,7 @@ textarea:focus, input:focus{
 		color: #fff !important;
 	}
 	p {
-		margin-bottom: $half-spacing-unit;
+		margin-bottom: 0;
 	}
 }
 
@@ -242,7 +242,7 @@ textarea:focus, input:focus{
 		}
 	}
 	p {
-		margin-bottom: $half-spacing-unit;
+		margin-bottom: 0;
 	}
 }
 
@@ -330,7 +330,7 @@ span.wpcf7-not-valid-tip {
 	border: 5px solid #000 !important;
   color: #000 !important;
 	border-radius: 0 !important;
-	margin-bottom: 0; 
+	margin-bottom: 0;
 }
 
 
