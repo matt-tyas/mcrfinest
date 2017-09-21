@@ -67,8 +67,8 @@
 					</div>
 					<div class="gw equal featured-subs">
 						<div class="g one-half palm-one-half">
-							<article class="post-tile <?php the_field('sub_article_colour', 'option'); ?>">
-								<a href="<?php the_field('sub_article_url', 'option'); ?>">
+							<a href="<?php the_field('sub_article_url', 'option'); ?>" class="post-tile-link">
+								<article class="post-tile <?php the_field('sub_article_colour', 'option'); ?>">
 									<?php
 										$image = get_field('sub_article_image', 'option');
 										$size = 'thumbnail'; // (thumbnail, medium, large, full or custom size)
@@ -80,12 +80,12 @@
 									<div class="intro">
 										<p><?php the_field('sub_article_introduction', 'option'); ?></p>
 									</div>
-								</a>
-							</article>
+								</article>
+							</a>
 						</div>
 						<div class="g one-half palm-one-half">
-							<article class="post-tile <?php the_field('sub_article_two_colour', 'option'); ?>">
-								<a href="<?php the_field('sub_article_two_url', 'option'); ?>">
+							<a href="<?php the_field('sub_article_two_url', 'option'); ?>" class="post-tile-link">
+								<article class="post-tile <?php the_field('sub_article_two_colour', 'option'); ?>">
 									<?php
 										$image = get_field('sub_article_two_image', 'option');
 										$size = 'thumbnail'; // (thumbnail, medium, large, full or custom size)
@@ -97,8 +97,8 @@
 									<div class="intro">
 										<p><?php the_field('sub_article_two_introduction', 'option'); ?></p>
 									</div>
-								</a>
-							</article>
+								</article>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -218,23 +218,23 @@
 					            $myposts1 = get_posts( $args1 );
 					            foreach ( $myposts1 as $post ) : setup_postdata( $post ); ?>
 				    			<div class="g one-quarter lap-one-half palm-one-half">
-									<article <?php post_class('post-tile post-tile--grid wow fadeInUp'); ?>>
-					                    <a href="<?php the_permalink() ?>" rel="bookmark">
-					                    <?php
-					                        $post_thumbnail_id = get_post_thumbnail_id( );
-					                        $imagesized = wp_get_attachment_image_src( $post_thumbnail_id, 'big-post-thumb');
-					                        if ($imagesized[1] == 224) {
-					                            the_post_thumbnail('big-post-thumb');
-					                        } else {
-					                            the_post_thumbnail('cat-post-thumb');
-					                        }
-					                    ?>
-					                    <h3><?php the_title(); ?></h3>
-					                    <div class="intro">
-					                        <?php the_excerpt(); ?>
-					                    </div>
-					                    </a>
-					                </article>
+									<a href="<?php the_permalink() ?>" rel="bookmark" class="post-tile-link">
+										<article <?php post_class('post-tile post-tile--grid wow fadeInUp'); ?>>
+						                    <?php
+						                        $post_thumbnail_id = get_post_thumbnail_id( );
+						                        $imagesized = wp_get_attachment_image_src( $post_thumbnail_id, 'big-post-thumb');
+						                        if ($imagesized[1] == 224) {
+						                            the_post_thumbnail('big-post-thumb');
+						                        } else {
+						                            the_post_thumbnail('cat-post-thumb');
+						                        }
+						                    ?>
+						                    <h3><?php the_title(); ?></h3>
+						                    <div class="intro">
+						                        <?php the_excerpt(); ?>
+						                    </div>
+						                </article>
+									</a>
 								</div>
 					        <?php endforeach;
 					        wp_reset_postdata();?>
@@ -455,23 +455,23 @@
 					            $myposts1 = get_posts( $args1 );
 					            foreach ( $myposts1 as $post ) : setup_postdata( $post ); ?>
 				    			<div class="g one-quarter lap-one-half palm-one-half">
-									<article <?php post_class('post-tile post-tile--grid wow fadeInUp'); ?>>
-					                    <a href="<?php the_permalink() ?>" rel="bookmark">
-					                    <?php
-					                        $post_thumbnail_id = get_post_thumbnail_id( );
-					                        $imagesized = wp_get_attachment_image_src( $post_thumbnail_id, 'big-post-thumb');
-					                        if ($imagesized[1] == 224) {
-					                            the_post_thumbnail('big-post-thumb');
-					                        } else {
-					                            the_post_thumbnail('cat-post-thumb');
-					                        }
-					                    ?>
-					                    <h3><?php the_title(); ?></h3>
-					                    <div class="intro">
-					                        <?php the_excerpt(); ?>
-					                    </div>
-					                    </a>
-					                </article>
+									<a href="<?php the_permalink() ?>" rel="bookmark" class="post-tile-link">
+										<article <?php post_class('post-tile post-tile--grid wow fadeInUp'); ?>>
+						                    <?php
+						                        $post_thumbnail_id = get_post_thumbnail_id( );
+						                        $imagesized = wp_get_attachment_image_src( $post_thumbnail_id, 'big-post-thumb');
+						                        if ($imagesized[1] == 224) {
+						                            the_post_thumbnail('big-post-thumb');
+						                        } else {
+						                            the_post_thumbnail('cat-post-thumb');
+						                        }
+						                    ?>
+						                    <h3><?php the_title(); ?></h3>
+						                    <div class="intro">
+						                        <?php the_excerpt(); ?>
+						                    </div>
+						                </article>
+									</a>
 								</div>
 					        <?php endforeach;
 					        wp_reset_postdata();?>
@@ -514,23 +514,23 @@
 					            $myposts1 = get_posts( $args1 );
 					            foreach ( $myposts1 as $post ) : setup_postdata( $post ); ?>
 				    			<div class="g one-quarter lap-one-half palm-one-half">
-									<article <?php post_class('post-tile post-tile--grid wow fadeInUp'); ?>>
-					                    <a href="<?php the_permalink() ?>" rel="bookmark">
-					                    <?php
-					                        $post_thumbnail_id = get_post_thumbnail_id( );
-					                        $imagesized = wp_get_attachment_image_src( $post_thumbnail_id, 'big-post-thumb');
-					                        if ($imagesized[1] == 224) {
-					                            the_post_thumbnail('big-post-thumb');
-					                        } else {
-					                            the_post_thumbnail('cat-post-thumb');
-					                        }
-					                    ?>
-					                    <h3><?php the_title(); ?></h3>
-					                    <div class="intro">
-					                        <?php the_excerpt(); ?>
-					                    </div>
-					                    </a>
-					                </article>
+									<a href="<?php the_permalink() ?>" rel="bookmark" class="post-tile-link">
+										<article <?php post_class('post-tile post-tile--grid wow fadeInUp'); ?>>
+						                    <?php
+						                        $post_thumbnail_id = get_post_thumbnail_id( );
+						                        $imagesized = wp_get_attachment_image_src( $post_thumbnail_id, 'big-post-thumb');
+						                        if ($imagesized[1] == 224) {
+						                            the_post_thumbnail('big-post-thumb');
+						                        } else {
+						                            the_post_thumbnail('cat-post-thumb');
+						                        }
+						                    ?>
+						                    <h3><?php the_title(); ?></h3>
+						                    <div class="intro">
+						                        <?php the_excerpt(); ?>
+						                    </div>
+						                </article>
+									</a>
 								</div>
 					        <?php endforeach;
 					        wp_reset_postdata();?>
@@ -585,24 +585,25 @@
 							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => 893);
 					            $myposts1 = get_posts( $args1 );
 					            foreach ( $myposts1 as $post ) : setup_postdata( $post ); ?>
-				    				<div class="g one-quarter lap-one-half palm-one-half">
-									<article <?php post_class('post-tile post-tile--grid wow fadeInUp'); ?>>
-					                    <a href="<?php the_permalink() ?>" rel="bookmark">
-					                    <?php
-					                        $post_thumbnail_id = get_post_thumbnail_id( );
-					                        $imagesized = wp_get_attachment_image_src( $post_thumbnail_id, 'big-post-thumb');
-					                        if ($imagesized[1] == 224) {
-					                            the_post_thumbnail('big-post-thumb');
-					                        } else {
-					                            the_post_thumbnail('cat-post-thumb');
-					                        }
-					                    ?>
-					                    <h3><?php the_title(); ?></h3>
-					                    <div class="intro">
-					                        <?php the_excerpt(); ?>
-					                    </div>
-					                    </a>
-					                </article>
+			    				<div class="g one-quarter lap-one-half palm-one-half">
+									<a href="<?php the_permalink() ?>" rel="bookmark" class="post-tile-link">
+										<article <?php post_class('post-tile post-tile--grid wow fadeInUp'); ?>>
+
+						                    <?php
+						                        $post_thumbnail_id = get_post_thumbnail_id( );
+						                        $imagesized = wp_get_attachment_image_src( $post_thumbnail_id, 'big-post-thumb');
+						                        if ($imagesized[1] == 224) {
+						                            the_post_thumbnail('big-post-thumb');
+						                        } else {
+						                            the_post_thumbnail('cat-post-thumb');
+						                        }
+						                    ?>
+						                    <h3><?php the_title(); ?></h3>
+						                    <div class="intro">
+						                        <?php the_excerpt(); ?>
+						                    </div>
+						                </article>
+									</a>
 								</div>
 					        <?php endforeach;
 					        wp_reset_postdata();?>
@@ -632,23 +633,23 @@
 					            $myposts1 = get_posts( $args1 );
 					            foreach ( $myposts1 as $post ) : setup_postdata( $post ); ?>
 				    			<div class="g one-quarter lap-one-half palm-one-half">
-									<article <?php post_class('post-tile post-tile--grid wow fadeInUp'); ?>>
-					                    <a href="<?php the_permalink() ?>" rel="bookmark">
-					                    <?php
-					                        $post_thumbnail_id = get_post_thumbnail_id( );
-					                        $imagesized = wp_get_attachment_image_src( $post_thumbnail_id, 'big-post-thumb');
-					                        if ($imagesized[1] == 224) {
-					                            the_post_thumbnail('big-post-thumb');
-					                        } else {
-					                            the_post_thumbnail('cat-post-thumb');
-					                        }
-					                    ?>
-					                    <h3><?php the_title(); ?></h3>
-					                    <div class="intro">
-					                        <?php the_excerpt(); ?>
-					                    </div>
-					                    </a>
-					                </article>
+									<a href="<?php the_permalink() ?>" rel="bookmark" class="post-tile-link">
+										<article <?php post_class('post-tile post-tile--grid wow fadeInUp'); ?>>
+						                    <?php
+						                        $post_thumbnail_id = get_post_thumbnail_id( );
+						                        $imagesized = wp_get_attachment_image_src( $post_thumbnail_id, 'big-post-thumb');
+						                        if ($imagesized[1] == 224) {
+						                            the_post_thumbnail('big-post-thumb');
+						                        } else {
+						                            the_post_thumbnail('cat-post-thumb');
+						                        }
+						                    ?>
+						                    <h3><?php the_title(); ?></h3>
+						                    <div class="intro">
+						                        <?php the_excerpt(); ?>
+						                    </div>
+						                </article>
+									</a>
 								</div>
 					        <?php endforeach;
 					        wp_reset_postdata();?>
@@ -691,23 +692,23 @@
 					            $myposts1 = get_posts( $args1 );
 					            foreach ( $myposts1 as $post ) : setup_postdata( $post ); ?>
 				    			<div class="g one-quarter lap-one-half palm-one-half">
-									<article <?php post_class('post-tile post-tile--grid wow fadeInUp'); ?>>
-					                    <a href="<?php the_permalink() ?>" rel="bookmark">
-					                    <?php
-					                        $post_thumbnail_id = get_post_thumbnail_id( );
-					                        $imagesized = wp_get_attachment_image_src( $post_thumbnail_id, 'big-post-thumb');
-					                        if ($imagesized[1] == 224) {
-					                            the_post_thumbnail('big-post-thumb');
-					                        } else {
-					                            the_post_thumbnail('cat-post-thumb');
-					                        }
-					                    ?>
-					                    <h3><?php the_title(); ?></h3>
-					                    <div class="intro">
-					                        <?php the_excerpt(); ?>
-					                    </div>
-					                    </a>
-					                </article>
+									<a href="<?php the_permalink() ?>" rel="bookmark" class="post-tile-link">
+										<article <?php post_class('post-tile post-tile--grid wow fadeInUp'); ?>>
+						                    <?php
+						                        $post_thumbnail_id = get_post_thumbnail_id( );
+						                        $imagesized = wp_get_attachment_image_src( $post_thumbnail_id, 'big-post-thumb');
+						                        if ($imagesized[1] == 224) {
+						                            the_post_thumbnail('big-post-thumb');
+						                        } else {
+						                            the_post_thumbnail('cat-post-thumb');
+						                        }
+						                    ?>
+						                    <h3><?php the_title(); ?></h3>
+						                    <div class="intro">
+						                        <?php the_excerpt(); ?>
+						                    </div>
+						                </article>
+									</a>
 								</div>
 					        <?php endforeach;
 					        wp_reset_postdata();?>
@@ -750,23 +751,23 @@
 					            $myposts1 = get_posts( $args1 );
 					            foreach ( $myposts1 as $post ) : setup_postdata( $post ); ?>
 				    			<div class="g one-quarter lap-one-half palm-one-half">
-									<article <?php post_class('post-tile post-tile--grid wow fadeInUp'); ?>>
-					                    <a href="<?php the_permalink() ?>" rel="bookmark">
-					                    <?php
-					                        $post_thumbnail_id = get_post_thumbnail_id( );
-					                        $imagesized = wp_get_attachment_image_src( $post_thumbnail_id, 'big-post-thumb');
-					                        if ($imagesized[1] == 224) {
-					                            the_post_thumbnail('big-post-thumb');
-					                        } else {
-					                            the_post_thumbnail('cat-post-thumb');
-					                        }
-					                    ?>
-					                    <h3><?php the_title(); ?></h3>
-					                    <div class="intro">
-					                        <?php the_excerpt(); ?>
-					                    </div>
-					                    </a>
-					                </article>
+									<a href="<?php the_permalink() ?>" rel="bookmark" class="post-tile-link">
+										<article <?php post_class('post-tile post-tile--grid wow fadeInUp'); ?>>
+						                    <?php
+						                        $post_thumbnail_id = get_post_thumbnail_id( );
+						                        $imagesized = wp_get_attachment_image_src( $post_thumbnail_id, 'big-post-thumb');
+						                        if ($imagesized[1] == 224) {
+						                            the_post_thumbnail('big-post-thumb');
+						                        } else {
+						                            the_post_thumbnail('cat-post-thumb');
+						                        }
+						                    ?>
+						                    <h3><?php the_title(); ?></h3>
+						                    <div class="intro">
+						                        <?php the_excerpt(); ?>
+						                    </div>
+						                </article>
+									</a>
 								</div>
 					        <?php endforeach;
 					        wp_reset_postdata();?>

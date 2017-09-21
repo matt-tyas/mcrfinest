@@ -210,6 +210,14 @@
 
 /* Post tiles */
 
+.post-tile-link {
+	&:hover {
+		h3 {
+			text-decoration: underline;
+		}
+	}
+}
+
 .box {
   background: #fff;
   padding: $half-spacing-unit;
@@ -226,10 +234,7 @@
 .post-tile.post-tile--horz {
 	h3,
 	.intro {
-		margin-left: 40%;
-		// @include media-query(mob) {
-		// 	margin-left: 140px;
-		// }
+		margin-left: 37%;
 	}
 }
 .category .mf-directory-picks .post-tile {
@@ -247,57 +252,12 @@
 
 .category .post-tile {
 	@extend .cf;
-	// float: left;
-	// width: 23%;
-  // margin-right: 2.5%;
-	// &:nth-of-type(3n) {
-	// 	margin-right: 2.5%;
-	// }
-  // &:nth-of-type(4n) {
-	// 	margin-right: 0;
-	// }
-  // @include media-query(mob) {
-	// 	width: 47%;
-	// 	&:nth-of-type(2n) {
-	// 		margin-right: 0;
-	// 	}
-	// 	&:nth-of-type(4n) {
-	// 		margin-right: 2.5%;
-	// 	}
-	// }
 }
-
-.archive .post-tile {
-	@extend .cf;
-	// float: left;
-	// width: 23%;
-  // margin-right: 2.5%;
-	// &:nth-of-type(3n) {
-	// 	margin-right: 2.5%;
-	// }
-  // &:nth-of-type(4n) {
-	// 	margin-right: 0;
-	// }
-  // @include media-query(mob) {
-	// 	width: 47%;
-	// 	&:nth-of-type(2n) {
-	// 		margin-right: 0;
-	// 	}
-	// 	&:nth-of-type(4n) {
-	// 		margin-right: 2.5%;
-	// 	}
-	// }
-}
-
-
 
 .category .mf-directory-articles .post-tile,
 .post-tile {
 	@extend .cf;
-	//float: left;
-	//width: 31%;
 	height: auto;
-	// margin-right: 3.4%;
 	background: #fff;
 	margin-bottom: $base-spacing-unit;
 	&:nth-of-type(3n) {
@@ -836,40 +796,6 @@
 	}
 }
 
-// .columnists {
-// 	margin-bottom: $base-spacing-unit;
-// }
-//
-// .columnist {
-// 		margin-bottom: 0;
-// 		border-bottom: 1px solid $keylinegrey;
-// 			&:last-of-type {
-// 				border-bottom: 0;
-// 			}
-// 		a {
-// 			display: block;
-// 			@extend .cf;
-// 			//overflow: hidden;
-// 			padding: $half-spacing-unit;
-// 			height: auto;
-// 			-webkit-transition:all 150ms ease-in;
-// 	           -moz-transition:all 150ms ease-in;
-// 	             -o-transition:all 150ms ease-in;
-// 	                transition:all 150ms ease-in;
-// 			&:hover {
-// 				text-decoration: none;
-// 				background: $lightgrey;
-// 			}
-// 		}
-// 	span {
-// 		display: block;
-// 		font-size: $milli-size;
-// 		color: $darkgrey;
-// 		margin-bottom: $half-spacing-unit/2;
-// 	}
-//
-// }
-
 .related-post-col {
 	margin-left: $base-spacing-unit;
 }
@@ -955,9 +881,8 @@
 		margin-left: 0;
 	}
 	h2 {
-	//margin-bottom: $half-spacing-unit /2;
-	margin-top: 10px;
-	line-height: .5em;
+	  margin-top: 10px;
+	  line-height: .5em;
 		a {
 		 @include font-size($h6-size);
 
