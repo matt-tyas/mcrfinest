@@ -383,12 +383,9 @@ $(document).ready(function(){
 	/* Fit Vid
 	---------------------------------- */
   $("#featured-home__video").fitVids();
-  $(".post-tile").fitVids();
+  $(".mf-section--video .post-tile").fitVids();
 	$("#article-content").fitVids();
   $(".featured-home-media").fitVids();
   $(".site-content").fitVids();
-
-
-
 
 });

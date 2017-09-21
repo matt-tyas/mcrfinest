@@ -141,7 +141,7 @@
 			<section class="border-wrap">
     			<div class="gw">
     				<div class="g one-whole lap-one-whole palm-one-whole">
-						<div class="mf-section mf-section--white">
+						<div class="mf-section mf-section--video mf-section--white">
 						<h3 class="mf-label"><span class="icon icon-film-2"></span> Video series and features</h3>
 							<?php
 							// check if the repeater field has rows of data
