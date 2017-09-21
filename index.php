@@ -146,7 +146,7 @@
 							<?php
 							// check if the repeater field has rows of data
 							if( have_rows('video_slider', 'options') ):
-								echo '<div id="owl-videos" class="owl-carousel equal">';
+								echo '<div id="owl-videos" class="owl-carousel">';
 							 	// loop through the rows of data
 							    while ( have_rows('video_slider', 'options') ) : the_row();
 							        // display a sub field value

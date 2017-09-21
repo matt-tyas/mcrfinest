@@ -41,14 +41,6 @@
 
   .post-tile {
     text-align: left;
-
-		@include media-query(lap) {
-	    min-height: 450px;
-	  }
-
-		@include media-query(palm) {
-	    min-height: 575px;
-	  }
   }
 }
 
@@ -219,6 +211,7 @@
 }
 
 .post-tile__title {
+	text-align: center;
   padding: $half-spacing-unit/2 $half-spacing-unit $half-spacing-unit 0 !important;
 }
 
@@ -496,6 +489,7 @@
 
 		@include media-query(palm) {
 			margin: -40px 0 0 0px;
+			padding: $half-spacing-unit $half-spacing-unit $base-spacing-unit;
 			max-width: 100%;
 		}
 

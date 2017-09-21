@@ -1441,6 +1441,8 @@ function move_excerpt_meta_box( $post ) {
 
 remove_filter ('edit_form_after_title', 'wpautop');
 
+
+
 /*
 // TinyMCE: First line toolbar customizations
 if( !function_exists('base_extended_editor_mce_buttons') ){
@@ -1663,3 +1665,7 @@ function get_video_thumbnail_uri( $video_uri ) {
 		}
 
 	}
+
+
+
+	
