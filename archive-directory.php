@@ -12,17 +12,28 @@
  */
 
 get_header(); ?>
+    <a href="#" class="finder-trigger"><span aria-hidden="true" data-icon="&#x260c;"></span> Find things to do in&nbsp;Manchester</a>
+    <section>
+        <div class="gw">
+            <div class="g one-whole lap-one-whole palm-one-whole">
+                <div class="mf-section mf-directory-search-home mf-directory-search--directory">
+                    <h3 class="mf-label"><span class="icon icon-marker"></span> Find something in Manchester</h3>
+                    <?php
+                        if ( is_active_sidebar( 'directory-search' ) ) : ?>
+                        <?php dynamic_sidebar( 'directory-search' ); ?>
+                    <?php endif; ?>
+                    <a href="#" class="finder-close-trigger"><span aria-hidden="true" data-icon="&#x2612;"></span> Close</a>
+                </div>
+            </div>
+        </div>
+    </section>
 	<section class="site-content author">
-		<?php
-			if ( is_active_sidebar( 'directory-search' ) ) : ?>
-			<?php dynamic_sidebar( 'directory-search' ); ?>
-		<?php endif; ?>
 
 		<?php if ( have_posts() ) : ?>
 			<div class="gw">
 				<div class="g one-whole palm-one-whole">
 					<?php $countPosts = $wp_the_query->post_count; ?>
-					<p>We found <?php echo $countPosts ?> for you</p>
+					<h2>We found <?php echo $countPosts ?> things for you</h2>
 				</div>
 			</div>
 			<?php

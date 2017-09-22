@@ -58,7 +58,9 @@ footer {
 	text-align: left;
 
 	.top-link {
+    padding: 0;
 		a {
+			display: inline-block;
 			@include font-size(14px);
 		}
 		&:before {

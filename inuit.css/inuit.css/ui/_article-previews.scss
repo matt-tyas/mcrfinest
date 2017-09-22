@@ -62,6 +62,13 @@
 	}
 }
 
+.mf-upcoming {
+  padding: $base-spacing-unit*2 $base-spacing-unit $base-spacing-unit*2 $base-spacing-unit;
+	@include media-query(palm) {
+		padding: $base-spacing-unit*2 $half-spacing-unit $half-spacing-unit/2 $half-spacing-unit;
+	}
+}
+
 .post-tile--grid {
 	float: none !important;
 	width: 100% !important;
@@ -209,7 +216,7 @@
 		}
 	}
 }
- 
+
 .post-tile__title {
 	text-align: center;
   padding: $half-spacing-unit/2 $half-spacing-unit $half-spacing-unit $half-spacing-unit !important;
