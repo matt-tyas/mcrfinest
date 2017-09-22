@@ -15,11 +15,18 @@ input[type=text], input[type=email], input[type=password] {
 	width: 100%;
 	padding: $half-spacing-unit;
 	background: #fff;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 5px solid #000;
 	&:hover {
 		background: #fff;
 	}
 	&:focus {
-		border: 1px solid $brand-color;
+		border-top: 0;
+		border-left: 0;
+		border-right: 0;
+		border-bottom: 5px solid $brand-color;
 	}
 }
 .site-content {
@@ -37,7 +44,10 @@ input[type=text], input[type=email], input[type=password] {
 			background: #fff;
 		}
 		&:focus {
-			border: 1px solid $brand-color;
+			border-top: 0;
+			border-left: 0;
+			border-right: 0;
+			border-bottom: 5px solid $brand-color;
 		}
 	}
 	textarea {
@@ -48,18 +58,22 @@ input[type=text], input[type=email], input[type=password] {
 			background: #fff;
 		}
 		&:focus {
-			border: 1px solid $brand-color;
+			border-bottom: 5px solid $brand-color;
 		}
 	}
 	.wpcf7-captchac {
 		height: auto !important;
 		width: auto !important;
 	}
+	.wpcf7-form-control {
+		font-size: 20px;
+	}
 	input[type=submit] {
 		padding: $half-spacing-unit;
 		background: $brand-color;
 		border:0;
 		color: #fff;
+		font-size: 20px !important;
 		@include vendor(border-radius, 4px);
 		&:hover {
 			background: lighten($brand-color, 10%);
@@ -73,7 +87,10 @@ input[type=text], input[type=email], input[type=password] {
 
 textarea, input {
 	background: #fff;
-	border: 1px solid $keylinegrey;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 5px solid #000;
     -webkit-transition:all 150ms ease-in;
        -moz-transition:all 150ms ease-in;
 	     -o-transition:all 150ms ease-in;
@@ -136,7 +153,10 @@ textarea:focus, input:focus{
 			background: #fff;
 		}
 		&:focus {
-			border: 1px solid $brand-color;
+			border-top: 0;
+			border-left: 0;
+			border-right: 0;
+			border-bottom: 5px solid $brand-color;
 		}
 	}
 	textarea {
@@ -147,7 +167,7 @@ textarea:focus, input:focus{
 			background: #fff;
 		}
 		&:focus {
-			border: 1px solid $brand-color;
+			border-bottom: 5px solid $brand-color;
 		}
 	}
 	input[type=submit] {
@@ -168,6 +188,9 @@ textarea:focus, input:focus{
 	}
 	input[type=email] {
 		width: 70% !important;
+		border-top: 0;
+		border-left: 0;
+		border-bottom: 0;
 		margin-right: $half-spacing-unit/2;
 		padding: $half-spacing-unit $half-spacing-unit $half-spacing-unit $base-spacing-unit +3 !important;
 	}
@@ -198,7 +221,7 @@ textarea:focus, input:focus{
 
 .newscta {
   width: 400px;
-	background: $darkgrey; 
+	background: $darkgrey;
 	padding: $base-spacing-unit $base-spacing-unit $half-spacing-unit $base-spacing-unit;
 	color: #fff;
 	margin-top: -30px;

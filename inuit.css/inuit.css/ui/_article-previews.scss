@@ -212,8 +212,15 @@
 
 .post-tile-link {
 	&:hover {
+		text-decoration: none;
 		h3 {
 			text-decoration: underline;
+		}
+		span {
+			text-decoration: underline;
+		}
+		img {
+			transform: scale(1.025);
 		}
 	}
 }
@@ -261,6 +268,7 @@
 
 .category .mf-directory-articles .post-tile,
 .post-tile {
+	overflow: hidden;
 	@extend .cf;
 	height: auto;
 	background: #fff;
@@ -268,14 +276,20 @@
 	&:nth-of-type(3n) {
 		margin-right: 0;
 	}
+	img {
+		-webkit-transition: all 150ms ease-in;
+			 -moz-transition: all 150ms ease-in;
+				 -o-transition: all 150ms ease-in;
+						transition: all 150ms ease-in;
+	}
 	a {
 	display: block;
 	height: auto;
 	border-bottom: 0;
-	-webkit-transition: opacity 150ms ease-in;
-      -moz-transition: opacity  150ms ease-in;
-         -o-transition: opacity  150ms ease-in;
-            transition: opacity  150ms ease-in;
+	-webkit-transition: opacity  150ms ease-in;
+     -moz-transition: opacity  150ms ease-in;
+       -o-transition: opacity  150ms ease-in;
+          transition: opacity  150ms ease-in;
 		&:hover {
 			text-decoration: none;
 		  h3 {
@@ -284,6 +298,9 @@
 	    span {
 		    text-decoration: underline;
 	    }
+			img {
+				transform: scale(1.1);
+			}
 		}
     &:focus {
 			outline: 3px solid $brand-color;
