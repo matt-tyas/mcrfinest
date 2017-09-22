@@ -28,7 +28,6 @@ get_header(); ?>
         </div>
     </section>
 	<section class="site-content author">
-
 		<?php if ( have_posts() ) : ?>
 			<div class="gw">
 				<div class="g one-whole palm-one-whole">
@@ -53,7 +52,6 @@ get_header(); ?>
 				 */
 				rewind_posts();
 			?>
-
 			<div class="gw">
 				<div class="g one-whole palm-one-whole">
 					<div class="gw equal">

@@ -212,6 +212,18 @@ $(document).ready(function(){
   // Bind event listener
   $(window).resize(checkWidth);
 
+  $(".finder-trigger-inner").click(function() {
+    $(this).toggleClass("is--pressed");
+    $(".mf-directory-search-inner").addClass("is--open");
+    return false;
+  });
+
+  $(".finder-close-trigger-inner").click(function() {
+    $(this).toggleClass("is--pressed");
+    $(".mf-directory-search-inner").removeClass("is--open");
+    return false;
+  });
+
   $(".finder-trigger").click(function() {
     $(this).toggleClass("is--pressed");
     $(".mf-directory-search-home").addClass("is--open");
@@ -322,63 +334,63 @@ $(document).ready(function(){
   $('input, textarea').placeholder();
 
 
-	/* Article Sorting
-	---------------------------------- */
-	$(window).load(function(){
-		var $container = $('#sort-container')
-		// initialize Isotope
-		$container.isotope({
-		// options...
-	    resizable: true, // disable normal resizing
-	    // set columnWidth to a percentage of container width
-	    layoutMode : 'fitRows',
-	    masonry: { rowHeight: 360, columnWidth: $container.width() / 12 }
-		});
-		// update columnWidth on window resize
-		$(window).smartresize(function(){
-			$container.isotope({
-				// update columnWidth to a percentage of container width
-				layoutMode : 'fitRows',
-				masonry: {
-				rowHeight: 360,
-				columnWidth: $container.width() / 12
-				 }
-			});
-		});
-	});
-
-
-  ( function( $, window, document, undefined )
-  {
-      'use strict';
-
-      var $list       = $( '.rw' ),
-          $items      = $list.find( '.equal-cols' ),
-          setHeights  = function()
-          {
-              $items.css( 'height', 'auto' );
-
-              var perRow = Math.floor( $list.width() / $items.width() );
-              if( perRow == null || perRow < 2 ) return true;
-
-              for( var i = 0, j = $items.length; i < j; i += perRow )
-              {
-                  var maxHeight   = 0,
-                      $row        = $items.slice( i, i + perRow );
-
-                  $row.each( function()
-                  {
-                      var itemHeight = parseInt( $( this ).outerHeight() );
-                      if ( itemHeight > maxHeight ) maxHeight = itemHeight;
-                  });
-                  $row.css( 'height', maxHeight );
-              }
-          };
-
-      setHeights();
-      $( window ).on( 'resize', setHeights );
-
-  })( jQuery, window, document );
+	// /* Article Sorting
+	// ---------------------------------- */
+	// $(window).load(function(){
+	// 	var $container = $('#sort-container')
+	// 	// initialize Isotope
+	// 	$container.isotope({
+	// 	// options...
+	//     resizable: true, // disable normal resizing
+	//     // set columnWidth to a percentage of container width
+	//     layoutMode : 'fitRows',
+	//     masonry: { rowHeight: 360, columnWidth: $container.width() / 12 }
+	// 	});
+	// 	// update columnWidth on window resize
+	// 	$(window).smartresize(function(){
+	// 		$container.isotope({
+	// 			// update columnWidth to a percentage of container width
+	// 			layoutMode : 'fitRows',
+	// 			masonry: {
+	// 			rowHeight: 360,
+	// 			columnWidth: $container.width() / 12
+	// 			 }
+	// 		});
+	// 	});
+	// });
+  //
+  //
+  // ( function( $, window, document, undefined )
+  // {
+  //     'use strict';
+  //
+  //     var $list       = $( '.rw' ),
+  //         $items      = $list.find( '.equal-cols' ),
+  //         setHeights  = function()
+  //         {
+  //             $items.css( 'height', 'auto' );
+  //
+  //             var perRow = Math.floor( $list.width() / $items.width() );
+  //             if( perRow == null || perRow < 2 ) return true;
+  //
+  //             for( var i = 0, j = $items.length; i < j; i += perRow )
+  //             {
+  //                 var maxHeight   = 0,
+  //                     $row        = $items.slice( i, i + perRow );
+  //
+  //                 $row.each( function()
+  //                 {
+  //                     var itemHeight = parseInt( $( this ).outerHeight() );
+  //                     if ( itemHeight > maxHeight ) maxHeight = itemHeight;
+  //                 });
+  //                 $row.css( 'height', maxHeight );
+  //             }
+  //         };
+  //
+  //     setHeights();
+  //     $( window ).on( 'resize', setHeights );
+  //
+  // })( jQuery, window, document );
 
 	/* Fit Vid
 	---------------------------------- */

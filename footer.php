@@ -49,6 +49,24 @@
 			</div>
 		</div>
 	</footer><!-- #colophon -->
+	<?php
+	if(is_front_page()){
+      // Nothing
+	}
+	else{
+		echo '<a href="#" class="finder-trigger-inner"><span aria-hidden="true" data-icon="&#x260c;"></span> Find things to do in&nbsp;Manchester</a>';
+		echo '<section class="mf-directory-search-inner">';
+		   echo '<div class="gw">';
+		        echo '<div class="g one-whole lap-one-whole palm-one-whole">';
+		            echo '<div class="mf-section mf-directory-search-home mf-directory-search--directory">';
+	                    dynamic_sidebar( 'directory-search' );
+						echo '<a href="#" class="finder-close-trigger-inner"><span aria-hidden="true" data-icon="&#x2612;"></span> Close</a>';
+		            echo '</div>';
+		        echo '</div>';
+		    echo '</div>';
+		echo '</section>';
+		}
+	?>
 </div><!-- #page -->
 <?php wp_footer(); ?>
 <!--[if (lt IE 9) & (!IEMobile)]>
