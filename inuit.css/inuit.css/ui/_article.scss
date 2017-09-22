@@ -263,9 +263,9 @@ a[rel~="attachment"] {
 			line-height: 1.2 !important;
   		@include font-size(16px);
   	}
-	}
+	} 
 	a {
-		padding-left: 0;
+		padding-right: 0;
 	}
 	img {
 		position: absolute;
