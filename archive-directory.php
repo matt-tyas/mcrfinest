@@ -32,7 +32,7 @@ get_header(); ?>
 			<div class="gw">
 				<div class="g one-whole palm-one-whole">
 					<?php $countPosts = $wp_the_query->post_count; ?>
-					<h2 class="results-count">We found <?php echo $countPosts ?> things for you</h2>
+					<h2 class="results-count">We found <?php echo $countPosts ?> for you</h2>
 				</div>
 			</div>
 			<?php
