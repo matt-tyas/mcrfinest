@@ -220,6 +220,7 @@
 }
 
 .mf-directory-search--directory {
+	background: transparent;
 	padding-top: $base-spacing-unit;
   .mf-label {
 		position: static;
@@ -469,6 +470,12 @@
 	}
 	.is-pressed {
 
+	}
+}
+
+.results-count {
+	@include media-query(palm) {
+		margin-top: $half-spacing-unit;
 	}
 }
 
