@@ -84,7 +84,7 @@ get_header(); ?>
 
 				?>
 
-				<h3>Related to <?php the_title(); ?></h2>
+				<h3>Related articles</h3>
 				<?php if (function_exists('related_posts') ) : related_posts(); endif; ?>
 
 			</div>

@@ -122,7 +122,7 @@
         					</div>
         				    <div class="g one-whole">
         						<div class="cf" style="width: 100%; overflow:visible; display: block; clear: both; padding: 0px;">
-        						<h2>Latest <?php the_title(); ?> articles</h2>
+        						<h2>Latest articles</h2>
         						<?php if (function_exists('related_posts') ) : related_posts(); endif; ?>
 								</div>
         					</div>

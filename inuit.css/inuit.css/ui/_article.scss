@@ -180,7 +180,7 @@
 
 .post-categories {
 		padding: 0;
-		margin-bottom: $half-spacing-unit;
+		margin-bottom: $half-spacing-unit !important;
 		@extend .nav;
 		li > a {
 			display: inline;
