@@ -47,16 +47,16 @@ get_header(); ?>
                     <div class="gw equal">
     					<?php while ( have_posts() ) : the_post(); ?>
 							<div class="g one-third palm-one-half">
-        						<article <?php post_class('post-tile'); ?>>
-        							<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
+								<a href="<?php the_permalink() ?>" rel="bookmark" class="post-tile-link" title="Permanent Link to <?php the_title_attribute(); ?>">
+	        						<article <?php post_class('post-tile'); ?>>
         								<?php the_post_thumbnail( 'big-post-thumb'); ?>
         								<span class="category"><?php $category = get_the_category(); echo $category[0]->cat_name; ?></span>
         								<h3><?php the_title(); ?></h3>
         								<div class="intro">
-        								<p><?php echo get_excerpt(140); ?></p>
-        							</div>
-        							</a>
-        						</article>
+        									<p><?php echo get_excerpt(140); ?></p>
+	        							</div>
+	        						</article>
+								</a>
 							</div>
     					<?php endwhile; ?>
                     </div>
