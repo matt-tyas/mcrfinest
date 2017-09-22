@@ -264,6 +264,9 @@ a[rel~="attachment"] {
   		@include font-size(16px);
   	}
 	}
+	a {
+		padding-left: 0;
+	}
 	img {
 		position: absolute;
 		width: 160px;
