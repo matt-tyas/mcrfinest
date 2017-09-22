@@ -66,6 +66,7 @@
 		float: left;
 	}
 	.author {
+    background: transparent;
 		float: right;
 		a {
 			color: lighten($darkgrey, 20%);
@@ -263,7 +264,7 @@ a[rel~="attachment"] {
 			line-height: 1.2 !important;
   		@include font-size(16px);
   	}
-	} 
+	}
 	a {
 		padding-right: 0;
 	}
