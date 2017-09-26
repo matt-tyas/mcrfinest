@@ -45,7 +45,7 @@ get_header(); ?>
                                 ?>
                                 <h3><?php the_title(); ?></h3>
                                 <div class="intro">
-                                    <p><?php echo get_excerpt(140); ?></p>
+                                    <p><?php echo get_excerpt(80); ?></p>
                                 </div>
                             </article>
                         </a>

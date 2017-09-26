@@ -13,6 +13,8 @@
 
 .owl-nav {
   @extend .cf;
+  position: relative;
+  top: -20px;
   margin: 0 auto;
   width: 200px;
 }

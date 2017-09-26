@@ -476,15 +476,6 @@
 	// background: lighten($darkgrey, 5%);
 }
 
-.sidr ul li ul li:hover>a,
-.sidr ul li ul li:hover>span,
-.sidr ul li ul li.active>a,
-.sidr ul li ul li.active>span,
-.sidr ul li ul li.sidr-class-active>a,
-.sidr ul li ul li.sidr-class-active>span{
-	// background: lighten($darkgrey, 5%);
-}
-
 .sidr ul li ul li a,
 .sidr ul li ul li span{
 	color:rgba(255,255,255,0.8);

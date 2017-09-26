@@ -2,6 +2,10 @@
     $Homepage
 \*------------------------------------*/
 
+.mf-section--video .post-tile {
+	margin-bottom: 5px;
+}
+ 
 .mf-section {
   @extend .cf;
 	padding: $base-spacing-unit*2 $base-spacing-unit $base-spacing-unit*2 $base-spacing-unit;
@@ -38,6 +42,12 @@
 		display: block;
 		border-bottom: 0;
 	}
+
+  .mf-label__link-click {
+    display: block;
+    text-decoration: underline;
+		font-size: 14px;
+  }
 
   .post-tile {
     text-align: left;
@@ -214,6 +224,10 @@
 
 /* Post tiles */
 
+.featured-subs h3 {
+	background: transparent !important;
+}
+
 .post-tile-link {
 	&:hover {
 		text-decoration: none;
@@ -326,6 +340,9 @@
                 transition:all 150ms ease-in;
 	}
 	h3 {
+		position: relative;
+		z-index: 100;
+		background: #fff;
 		padding: $half-spacing-unit $half-spacing-unit 0 $half-spacing-unit;
     line-height: 1.2 !important;
 		@include font-size($h3-size);
@@ -348,6 +365,8 @@
 		padding: $half-spacing-unit /2;
 	}
 	img {
+		position: relative;
+		z-index: 50;
 		display:block;
 		width: 100% !important;
 		height: auto !important;
@@ -392,20 +411,6 @@
 		padding: 0;
 		color: lighten($darkgrey, 10%);
 	}
-	// @include media-query(mob) {
-	// 	width: 47%;
-	// 	margin-right: 2.5%;
-	// 	&:nth-of-type(2n) {
-	// 		margin-right: 0;
-	// 	}
-	// 	&:nth-of-type(3n) {
-	// 		margin-right: 2.5%;
-	// 	}
-  //   &:nth-of-type(4n) {
-	// 		margin-right: 0;
-	// 	}
-	// }
-
 }
 
 .featured-home {
@@ -511,10 +516,16 @@
 	.featured-home__content {
 		position: relative;
 		z-index: 100;
-		max-width: 80%;
-		margin: -136px 0 0 46px;
+		max-width: 90%;
+		margin: -136px 0 0 16px;
 		padding: $base-spacing-unit $base-spacing-unit;
 		background: #F5EBF6;
+
+		@media only screen and (max-width: 1040px) {
+			margin: -40px 0 0 0px;
+			padding: $half-spacing-unit $half-spacing-unit $base-spacing-unit;
+			max-width: 100%;
+		}
 
 		@include media-query(palm) {
 			margin: -40px 0 0 0px;
@@ -630,7 +641,7 @@
 .featured-home {
 	@extend .cf;
 	max-width: 1400px;
-	margin: 0 auto $half-spacing-unit auto;
+	margin: 0 auto $base-spacing-unit*2 auto;
 	@media screen and (max-width: 1400px){
     padding: 0 $half-spacing-unit/2;
   }

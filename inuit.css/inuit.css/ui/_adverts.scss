@@ -37,12 +37,16 @@
 
 .mf-offset__position--right {
 	right: 32px;
-	top: -100px
+	top: -100px;
 }
 
 .mf-offset__position--left {
   left: 32px;
 	top: -100px;
+}
+
+.mf-offset__position--extra-pull {
+  top: -160px;
 }
 
 .mf-offset__width-med {
