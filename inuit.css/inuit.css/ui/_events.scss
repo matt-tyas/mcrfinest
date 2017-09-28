@@ -58,9 +58,30 @@
 	@extend .cf;
 }
 
-.start-date,
 .end-date {
+	position: absolute;
+  top: 10px;
+  left: 100px;
 
+}
+
+.start-date +
+.end-date {
+   &:before {
+		 font-size: 32px;
+		 position: relative;
+		 left: -45px;
+		 top: 80px;
+		 font-family: 'finest-icons';
+	 	speak: none;
+	 	font-style: normal;
+	 	font-weight: normal;
+	 	font-variant: normal;
+	 	text-transform: none;
+	 	line-height: 1;
+	 	-webkit-font-smoothing: antialiased;
+     content: "\25bb";
+   }
 }
 
 .start-date,

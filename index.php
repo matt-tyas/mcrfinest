@@ -174,13 +174,7 @@
 									<a href="<?php the_permalink() ?>" rel="bookmark" class="post-tile-link">
 										<article <?php post_class('post-tile post-tile--grid wow fadeInUp'); ?>>
 						                    <?php
-						                        $post_thumbnail_id = get_post_thumbnail_id( );
-						                        $imagesized = wp_get_attachment_image_src( $post_thumbnail_id, 'big-post-thumb');
-						                        if ($imagesized[1] == 224) {
-						                            the_post_thumbnail('big-post-thumb');
-						                        } else {
-						                            the_post_thumbnail('cat-post-thumb');
-						                        }
+						                        the_post_thumbnail('big-post-thumb');
 						                    ?>
 						                    <h3><?php echo wp_trim_words ( the_title ( '', '', false ), 6 , '&hellip;'); ?></h3>
 						                    <div class="intro">
@@ -202,6 +196,7 @@
 						<div class="mf-section mf-section--video mf-section--white">
 						<h3 class="mf-label"><span class="icon icon-film-2"></span> Video series and features</h3>
 							<?php
+
 							// check if the repeater field has rows of data
 							if( have_rows('video_slider', 'options') ):
 								echo '<div id="owl-videos" class="owl-carousel">';
@@ -275,14 +270,8 @@
 				    			<div class="g one-quarter lap-one-half palm-one-half">
 									<a href="<?php the_permalink() ?>" rel="bookmark" class="post-tile-link">
 										<article <?php post_class('post-tile post-tile--grid wow fadeInUp'); ?>>
-						                    <?php
-						                        $post_thumbnail_id = get_post_thumbnail_id( );
-						                        $imagesized = wp_get_attachment_image_src( $post_thumbnail_id, 'big-post-thumb');
-						                        if ($imagesized[1] == 224) {
-						                            the_post_thumbnail('big-post-thumb');
-						                        } else {
-						                            the_post_thumbnail('cat-post-thumb');
-						                        }
+											<?php
+						                        the_post_thumbnail('big-post-thumb');
 						                    ?>
                                             <h3><?php echo wp_trim_words ( the_title ( '', '', false ), 6 , '&hellip;'); ?></h3>
 						                    <div class="intro">
@@ -520,14 +509,8 @@
 				    			<div class="g one-quarter lap-one-half palm-one-half">
 									<a href="<?php the_permalink() ?>" rel="bookmark" class="post-tile-link">
 										<article <?php post_class('post-tile post-tile--grid wow fadeInUp'); ?>>
-						                    <?php
-						                        $post_thumbnail_id = get_post_thumbnail_id( );
-						                        $imagesized = wp_get_attachment_image_src( $post_thumbnail_id, 'big-post-thumb');
-						                        if ($imagesized[1] == 224) {
-						                            the_post_thumbnail('big-post-thumb');
-						                        } else {
-						                            the_post_thumbnail('cat-post-thumb');
-						                        }
+											<?php
+						                        the_post_thumbnail('big-post-thumb');
 						                    ?>
 						                    <h3><?php echo wp_trim_words ( the_title ( '', '', false ), 6 , '&hellip;'); ?></h3>
 						                    <div class="intro">
@@ -579,14 +562,8 @@
 				    			<div class="g one-quarter lap-one-half palm-one-half">
 									<a href="<?php the_permalink() ?>" rel="bookmark" class="post-tile-link">
 										<article <?php post_class('post-tile post-tile--grid wow fadeInUp'); ?>>
-						                    <?php
-						                        $post_thumbnail_id = get_post_thumbnail_id( );
-						                        $imagesized = wp_get_attachment_image_src( $post_thumbnail_id, 'big-post-thumb');
-						                        if ($imagesized[1] == 224) {
-						                            the_post_thumbnail('big-post-thumb');
-						                        } else {
-						                            the_post_thumbnail('cat-post-thumb');
-						                        }
+											<?php
+						                        the_post_thumbnail('big-post-thumb');
 						                    ?>
 						                    <h3><?php echo wp_trim_words ( the_title ( '', '', false ), 6 , '&hellip;'); ?></h3>
 						                    <div class="intro">
@@ -651,16 +628,9 @@
 			    				<div class="g one-quarter lap-one-half palm-one-half">
 									<a href="<?php the_permalink() ?>" rel="bookmark" class="post-tile-link">
 										<article <?php post_class('post-tile post-tile--grid wow fadeInUp'); ?>>
-
-						                    <?php
-						                        $post_thumbnail_id = get_post_thumbnail_id( );
-						                        $imagesized = wp_get_attachment_image_src( $post_thumbnail_id, 'big-post-thumb');
-						                        if ($imagesized[1] == 224) {
-						                            the_post_thumbnail('big-post-thumb');
-						                        } else {
-						                            the_post_thumbnail('cat-post-thumb');
-						                        }
-						                    ?>
+											<?php
+												the_post_thumbnail('big-post-thumb');
+											?>
 						                    <h3><?php echo wp_trim_words ( the_title ( '', '', false ), 6 , '&hellip;'); ?></h3>
 						                    <div class="intro">
 						                        <p><?php echo get_excerpt(80); ?></p>
@@ -698,14 +668,8 @@
 				    			<div class="g one-quarter lap-one-half palm-one-half">
 									<a href="<?php the_permalink() ?>" rel="bookmark" class="post-tile-link">
 										<article <?php post_class('post-tile post-tile--grid wow fadeInUp'); ?>>
-						                    <?php
-						                        $post_thumbnail_id = get_post_thumbnail_id( );
-						                        $imagesized = wp_get_attachment_image_src( $post_thumbnail_id, 'big-post-thumb');
-						                        if ($imagesized[1] == 224) {
-						                            the_post_thumbnail('big-post-thumb');
-						                        } else {
-						                            the_post_thumbnail('cat-post-thumb');
-						                        }
+											<?php
+						                        the_post_thumbnail('big-post-thumb');
 						                    ?>
 						                    <h3><?php echo wp_trim_words ( the_title ( '', '', false ), 6 , '&hellip;'); ?></h3>
 						                    <div class="intro">
@@ -757,14 +721,8 @@
 				    			<div class="g one-quarter lap-one-half palm-one-half">
 									<a href="<?php the_permalink() ?>" rel="bookmark" class="post-tile-link">
 										<article <?php post_class('post-tile post-tile--grid wow fadeInUp'); ?>>
-						                    <?php
-						                        $post_thumbnail_id = get_post_thumbnail_id( );
-						                        $imagesized = wp_get_attachment_image_src( $post_thumbnail_id, 'big-post-thumb');
-						                        if ($imagesized[1] == 224) {
-						                            the_post_thumbnail('big-post-thumb');
-						                        } else {
-						                            the_post_thumbnail('cat-post-thumb');
-						                        }
+											<?php
+						                        the_post_thumbnail('big-post-thumb');
 						                    ?>
 						                    <h3><?php echo wp_trim_words ( the_title ( '', '', false ), 6 , '&hellip;'); ?></h3>
 						                    <div class="intro">
@@ -816,14 +774,8 @@
 				    			<div class="g one-quarter lap-one-half palm-one-half">
 									<a href="<?php the_permalink() ?>" rel="bookmark" class="post-tile-link">
 										<article <?php post_class('post-tile post-tile--grid wow fadeInUp'); ?>>
-						                    <?php
-						                        $post_thumbnail_id = get_post_thumbnail_id( );
-						                        $imagesized = wp_get_attachment_image_src( $post_thumbnail_id, 'big-post-thumb');
-						                        if ($imagesized[1] == 224) {
-						                            the_post_thumbnail('big-post-thumb');
-						                        } else {
-						                            the_post_thumbnail('cat-post-thumb');
-						                        }
+											<?php
+						                        the_post_thumbnail('big-post-thumb');
 						                    ?>
 						                    <h3><?php echo wp_trim_words ( the_title ( '', '', false ), 6 , '&hellip;'); ?></h3>
 						                    <div class="intro">
@@ -839,7 +791,7 @@
 					</div>
 				</div>
 			</section>
-	 		</div><!-- End of second row -->
+	 		</div>
 		</div>
-	</div><!-- #content -->
+	</div>
 <?php get_footer(); ?>

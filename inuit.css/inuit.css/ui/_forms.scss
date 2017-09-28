@@ -225,10 +225,13 @@ textarea:focus, input:focus{
 	padding: $base-spacing-unit $base-spacing-unit $half-spacing-unit $base-spacing-unit;
 	color: #fff;
 	margin-top: -30px;
+  margin-bottom: -$half-spacing-unit;
 	@include media-query(palm) {
 		width: 100%;
-		margin-bottom: 0;
-		margin-top: $half-spacing-unit;
+		margin-bottom: $half-spacing-unit;
+		background: #fff;
+		border: 5px solid $darkgrey;
+		color: #000;
 	}
 	@include media-query(lap) {
 		width: 100%;
@@ -247,6 +250,13 @@ textarea:focus, input:focus{
 
 	#mc_embed_signup .mc-field-group input.button {
 		color: #fff !important;
+		@include media-query(palm) {
+			color: #000!important;
+		}
+		&:hover {
+			color: $brand-color;
+			border-color: $brand-color;
+		}
 	}
 	p {
 		margin-bottom: 0;
@@ -254,7 +264,7 @@ textarea:focus, input:focus{
 }
 
 .newscta--home {
-	margin-top: 10px;
+	margin-top: 21px;
   #mc_embed_signup .mc-field-group input {
     width: 65% !important;
   }
@@ -266,7 +276,6 @@ textarea:focus, input:focus{
 .post .newscta,
 .directory .newscta {
 	min-height: 150px;
-	border-top: 0;
 	padding-bottom: $half-spacing-unit;
 	#fit-brand {
 		margin-bottom: $half-spacing-unit/4;
@@ -355,7 +364,14 @@ span.wpcf7-not-valid-tip {
 	position: relative;
 	top: 1px;
 	&:hover {
-		border-color: #fff;
+		border-color: #fff !important;
+		color: #fff !important;
+	}
+	@include media-query(palm) {
+		&:hover {
+			border-color: $brand-color !important;
+			color: $brand-color !important;
+		}
 	}
 }
 

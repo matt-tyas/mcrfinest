@@ -6,6 +6,9 @@
 .mf-twitter {
 	padding: $base-spacing-unit;
 	background: #1DA1F3;
+  @include media-query(palm) {
+    margin-bottom: $half-spacing-unit;
+  }
 	.sub-title-link a {
 		color: #fff;
 		display: inline-block;
@@ -91,6 +94,7 @@
 
 .mf-connect {
 	padding: $base-spacing-unit;
+	border: 5px solid $darkgrey;
 	background: #fff;
 
 	.sub-title {
@@ -106,7 +110,6 @@
 }
 
 .social-inline .social {
-	margin-top: $half-spacing-unit;
 	.btn-circle {
 		margin-right: 20px;
 		font-size: .6em;
