@@ -57,7 +57,7 @@ get_header(); ?>
                                 echo ( !empty($thumbnail_url) ) ? $thumbnail_url : 'No thumb!';
                             echo '"/>';
                             ?>
-                        <h3><?php the_title(); ?></h3>
+                        <h3><?php echo wp_trim_words ( the_title ( '', '', false ), 6 , '&hellip;'); ?></h3>
                         <div class="intro">
                             <p><?php echo get_excerpt(80); ?></p>
                         </div>
@@ -87,7 +87,7 @@ get_header(); ?>
                                         the_post_thumbnail('cat-post-thumb');
                                     }
                                 ?>
-                                <h3><?php the_title(); ?></h3>
+                                <h3><?php echo wp_trim_words ( the_title ( '', '', false ), 6 , '&hellip;'); ?></h3>
                                 <div class="intro">
                                     <p><?php echo get_excerpt(80); ?></p>
                                 </div>

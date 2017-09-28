@@ -182,7 +182,7 @@
 						                            the_post_thumbnail('cat-post-thumb');
 						                        }
 						                    ?>
-						                    <h3><?php the_title(); ?></h3>
+						                    <h3><?php echo wp_trim_words ( the_title ( '', '', false ), 6 , '&hellip;'); ?></h3>
 						                    <div class="intro">
 						                        <p><?php echo get_excerpt(80); ?></p>
 						                    </div>
@@ -284,7 +284,7 @@
 						                            the_post_thumbnail('cat-post-thumb');
 						                        }
 						                    ?>
-						                    <h3><?php the_title(); ?></h3>
+                                            <h3><?php echo wp_trim_words ( the_title ( '', '', false ), 6 , '&hellip;'); ?></h3>
 						                    <div class="intro">
 						                        <p><?php echo get_excerpt(80); ?></p>
 						                    </div>
@@ -529,7 +529,7 @@
 						                            the_post_thumbnail('cat-post-thumb');
 						                        }
 						                    ?>
-						                    <h3><?php the_title(); ?></h3>
+						                    <h3><?php echo wp_trim_words ( the_title ( '', '', false ), 6 , '&hellip;'); ?></h3>
 						                    <div class="intro">
 						                        <p><?php echo get_excerpt(80); ?></p>
 						                    </div>
@@ -588,7 +588,7 @@
 						                            the_post_thumbnail('cat-post-thumb');
 						                        }
 						                    ?>
-						                    <h3><?php the_title(); ?></h3>
+						                    <h3><?php echo wp_trim_words ( the_title ( '', '', false ), 6 , '&hellip;'); ?></h3>
 						                    <div class="intro">
 						                        <p><?php echo get_excerpt(80); ?></p>
 						                    </div>
@@ -661,7 +661,7 @@
 						                            the_post_thumbnail('cat-post-thumb');
 						                        }
 						                    ?>
-						                    <h3><?php the_title(); ?></h3>
+						                    <h3><?php echo wp_trim_words ( the_title ( '', '', false ), 6 , '&hellip;'); ?></h3>
 						                    <div class="intro">
 						                        <p><?php echo get_excerpt(80); ?></p>
 						                    </div>
@@ -707,7 +707,7 @@
 						                            the_post_thumbnail('cat-post-thumb');
 						                        }
 						                    ?>
-						                    <h3><?php the_title(); ?></h3>
+						                    <h3><?php echo wp_trim_words ( the_title ( '', '', false ), 6 , '&hellip;'); ?></h3>
 						                    <div class="intro">
 						                        <p><?php echo get_excerpt(80); ?></p>
 						                    </div>
@@ -766,7 +766,7 @@
 						                            the_post_thumbnail('cat-post-thumb');
 						                        }
 						                    ?>
-						                    <h3><?php the_title(); ?></h3>
+						                    <h3><?php echo wp_trim_words ( the_title ( '', '', false ), 6 , '&hellip;'); ?></h3>
 						                    <div class="intro">
 						                        <p><?php echo get_excerpt(80); ?></p>
 						                    </div>
@@ -825,7 +825,7 @@
 						                            the_post_thumbnail('cat-post-thumb');
 						                        }
 						                    ?>
-						                    <h3><?php the_title(); ?></h3>
+						                    <h3><?php echo wp_trim_words ( the_title ( '', '', false ), 6 , '&hellip;'); ?></h3>
 						                    <div class="intro">
 						                        <p><?php echo get_excerpt(80); ?></p>
 						                    </div>

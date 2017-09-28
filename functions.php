@@ -1665,7 +1665,3 @@ function get_video_thumbnail_uri( $video_uri ) {
 		}
 
 	}
-
-
-
-	
