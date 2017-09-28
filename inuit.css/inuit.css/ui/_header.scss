@@ -45,7 +45,7 @@ header.entry-header {
 	@media only screen and (max-width: 860px) {
 		position: static;
 	}
-	@media only screen and (max-width: 1040px) {
+	@media only screen and (max-width: 1200px) {
 		right: 16px;
 	}
 }
@@ -107,7 +107,7 @@ header.entry-header {
 				text-decoration: none;
 			}
 		}
-		@media only screen and (max-width: 1040px) {
+		@media only screen and (max-width: 1200px) {
 	    padding-top: $half-spacing-unit;
 			margin-left: 0;
 			padding-left: 8px;

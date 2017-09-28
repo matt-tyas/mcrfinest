@@ -33,7 +33,7 @@
 	&:hover {
 		border-bottom: 0;
 	}
-  @media only screen and (min-width: 1040px) {
+  @media only screen and (min-width: 1200px) {
     display: none;
   }
 }
@@ -105,7 +105,7 @@
 		float: left;
 		margin-bottom: 0;
 		position: relative;
-		@media only screen and (max-width: 1040px) {
+		@media only screen and (max-width: 1200px) {
 	    border: 0 !important;
 	    clip: rect(0 0 0 0) !important;
 	    height: 1px !important;
@@ -289,7 +289,7 @@
 		&.is-pressed:before {
 			content: "\2612";
 		}
-		@media only screen and (min-width: 1040px) {
+		@media only screen and (min-width: 1200px) {
 	    border: 0 !important;
 	    clip: rect(0 0 0 0) !important;
 	    height: 1px !important;
