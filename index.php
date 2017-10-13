@@ -165,7 +165,7 @@
     			<div class="gw">
     				<div class="g one-whole lap-one-whole palm-one-whole">
 						<div class="mf-section mf-articles mf-grey">
-							<h3 class="mf-label"><span class="icon icon-newspaper"></span> Latest articles</h3>
+							<h3 class="mf-label">Latest articles</h3>
 							<div class="gw equal">
 							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0);
 					            $myposts1 = get_posts( $args1 );
@@ -190,11 +190,29 @@
 					</div>
 				</div>
 			</section>
+			<div class="mf-offset">
+				<div class="mf-offset__position mf-offset__position--right">
+					<div class="gw">
+						<div class="g one-half">
+							<?php
+								if ( is_active_sidebar( 'homepage-optional-2' ) ) : ?>
+								<?php dynamic_sidebar( 'homepage-optional-2' ); ?>
+							<?php endif; ?>
+						</div>
+						<div class="g one-half">
+							<?php
+								if ( is_active_sidebar( 'homepage-optional-2' ) ) : ?>
+								<?php dynamic_sidebar( 'homepage-optional-2' ); ?>
+							<?php endif; ?>
+						</div>
+					</div>
+				</div>
+			</div>
 			<section class="border-wrap">
     			<div class="gw">
     				<div class="g one-whole lap-one-whole palm-one-whole">
 						<div class="mf-section mf-section--video mf-section--white">
-						<h3 class="mf-label"><span class="icon icon-film-2"></span> Video series and features</h3>
+						<h3 class="mf-label">Video series and features</h3>
 							<?php
 
 							// check if the repeater field has rows of data
@@ -224,30 +242,12 @@
     			</div>
     		</section>
 			<div class="mf-offset">
-				<div class="mf-offset__position mf-offset__position--left mf-offset__position--extra-pull mf-offset__width-med">
+				<div class="mf-offset__position mf-offset__position--right mf-offset__position--extra-pull mf-offset__width-med">
 					<div class="mf-twitter">
 						<?php
 	 					   if ( is_active_sidebar( 'twitter-stream' ) ) : ?>
 	 					   <?php dynamic_sidebar( 'twitter-stream' ); ?>
 	 				    <?php endif; ?>
-					</div>
-				</div>
-			</div>
-			<div class="mf-offset">
-				<div class="mf-offset__position mf-offset__position--right">
-					<div class="gw">
-						<div class="g one-half">
-							<?php
-								if ( is_active_sidebar( 'homepage-optional-2' ) ) : ?>
-								<?php dynamic_sidebar( 'homepage-optional-2' ); ?>
-							<?php endif; ?>
-						</div>
-						<div class="g one-half">
-							<?php
-								if ( is_active_sidebar( 'homepage-optional-2' ) ) : ?>
-								<?php dynamic_sidebar( 'homepage-optional-2' ); ?>
-							<?php endif; ?>
-						</div>
 					</div>
 				</div>
 			</div>
@@ -262,7 +262,7 @@
 							    $category_link = get_category_link( $category_id );
 							?>
 							<h3 class="mf-label"><a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link">
-                                <span class="icon icon-food"></span> Eating and Drinking <span class="mf-label__link-click">View all articles</span></a></h3>
+                                Eating and Drinking <span class="mf-label__link-click">View all articles</span></a></h3>
 							<div class="gw equal">
 							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => 970);
 					            $myposts1 = get_posts( $args1 );
@@ -288,7 +288,7 @@
 				</div>
 			</section>
 			<div class="mf-offset">
-				<div class="mf-offset__position mf-offset__position--left">
+				<div class="mf-offset__position mf-offset__position--right">
 					<div class="gw">
 						<div class="g one-half">
 							<?php
@@ -309,7 +309,7 @@
     			<div class="gw">
     				<div class="g one-whole lap-one-whole palm-one-whole">
 						<div class="mf-section mf-articles mf-upcoming">
-							<h3 class="mf-label mf-label--push"><span class="icon icon-calendar"></span> Upcoming events</h3>
+							<h3 class="mf-label mf-label--push">Upcoming events</h3>
 							<div id="owl-events" class="owl-carousel">
 								<?php
 		 		    			// http://codex.wordpress.org/Function_Reference/current_time
@@ -527,7 +527,7 @@
 				</div>
 			</section>
 			<div class="mf-offset mf-offset--wide">
-				<div class="mf-offset__position mf-offset__position--left">
+				<div class="mf-offset__position mf-offset__position--right">
 					<div class="gw">
 						<div class="g one-half">
 							<?php
@@ -554,7 +554,7 @@
 							    // Get the URL of this category
 							    $category_link = get_category_link( $category_id );
 							?>
-							<h3 class="mf-label"><a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link"><span class="icon icon-comment"></span> Articles &amp; reviews <span class="mf-label__link-click">View all articles</span></a></h3>
+							<h3 class="mf-label"><a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link">Articles &amp; reviews <span class="mf-label__link-click">View all articles</span></a></h3>
 							<div class="gw equal">
 							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => array(415, 15));
 					            $myposts1 = get_posts( $args1 );
@@ -620,7 +620,7 @@
 							    // Get the URL of this category
 							    $category_link = get_category_link( $category_id );
 							?>
-							<h3 class="mf-label"><a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link"><span class="icon icon-ticket"></span> From Mcr to <span class="mf-label__link-click">View all articles</span></a></h3>
+							<h3 class="mf-label"><a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link">From Mcr to <span class="mf-label__link-click">View all articles</span></a></h3>
 							<div class="gw equal">
 							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => 893);
 					            $myposts1 = get_posts( $args1 );
@@ -646,7 +646,7 @@
 				</div>
 			</section>
 			<div class="mf-offset mf-offset--wide">
-				<div class="social-inline mf-offset__position mf-offset__position--left">
+				<div class="social-inline mf-offset__position mf-offset__position--right">
    					<?php get_template_part('social'); ?>
 				</div>
 			</div>
@@ -660,7 +660,7 @@
 							    // Get the URL of this category
 							    $category_link = get_category_link( $category_id );
 							?>
-							<h3 class="mf-label"><a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link"><span class="icon icon-bag"></span> Lifestyle <span class="mf-label__link-click">View all articles</span></a></h3>
+							<h3 class="mf-label"><a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link">Lifestyle <span class="mf-label__link-click">View all articles</span></a></h3>
 							<div class="gw equal">
 							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => 10);
 					            $myposts1 = get_posts( $args1 );
@@ -713,7 +713,7 @@
 							    // Get the URL of this category
 							    $category_link = get_category_link( $category_id );
 							?>
-							<h3 class="mf-label"><a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link"><span class="icon icon-calendar-2"></span> Events <span class="mf-label__link-click">View all events</span></a></h3>
+							<h3 class="mf-label"><a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link">Events <span class="mf-label__link-click">View all events</span></a></h3>
 							<div class="gw equal">
 							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => 12);
 					            $myposts1 = get_posts( $args1 );
@@ -739,7 +739,7 @@
 				</div>
 			</section>
 			<div class="mf-offset mf-offset--wide">
-				<div class="mf-offset__position mf-offset__position--left">
+				<div class="mf-offset__position mf-offset__position--right">
 					<div class="gw">
 						<div class="g one-half">
 							<?php
@@ -766,7 +766,7 @@
 							    // Get the URL of this category
 							    $category_link = get_category_link( $category_id );
 							?>
-							<h3 class="mf-label"><a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link"><span class="icon icon-music-2"></span> Music <span class="mf-label__link-click">View all articles</span></a></h3>
+							<h3 class="mf-label"><a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link">Music <span class="mf-label__link-click">View all articles</span></a></h3>
 							<div class="gw equal">
 							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => 7);
 					            $myposts1 = get_posts( $args1 );
