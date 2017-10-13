@@ -602,12 +602,12 @@
     				<div class="g one-whole lap-one-whole palm-one-whole">
 						<div class="mf-section mf-section--white">
 						<h3 class="mf-label"><a href="https://www.instagram.com/mcrfinest/" class="mf-label__link"><span class="icon icon-instagram"></span> mcrfinest <span class="mf-label__link-click">Follow us</span></a></h3>
-							<div id="owl-instagram" class="owl-carousel">
+
 								<?php
 									 if ( is_active_sidebar( 'homepage-optional-1' ) ) : ?>
 									 <?php dynamic_sidebar( 'homepage-optional-1' ); ?>
 								<?php endif; ?>
-							</div>
+						
     				</div>
     			</div>
     		</section>
