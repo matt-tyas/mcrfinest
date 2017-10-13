@@ -4,9 +4,11 @@
 
 
 .mf-twitter {
+  margin-top: 32px;
 	padding: $base-spacing-unit;
 	background: #1DA1F3;
   @include media-query(palm) {
+		margin-top: 16px;
     margin-bottom: $half-spacing-unit;
   }
 	.sub-title-link a {
