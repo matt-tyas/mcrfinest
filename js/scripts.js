@@ -1,9 +1,228 @@
+$(".mf-loading").fadeOut("fast");
+
+equalheight = function(container){
+
+var currentTallest = 0,
+     currentRowStart = 0,
+     rowDivs = new Array(),
+     $el,
+     topPosition = 0;
+ $(container).each(function() {
+
+   $el = $(this);
+   $($el).height('auto')
+   topPostion = $el.position().top;
+
+   if (currentRowStart != topPostion) {
+     for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+       rowDivs[currentDiv].height(currentTallest);
+     }
+     rowDivs.length = 0; // empty the array
+     currentRowStart = topPostion;
+     currentTallest = $el.height();
+     rowDivs.push($el);
+   } else {
+     rowDivs.push($el);
+     currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
+  }
+   for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+     rowDivs[currentDiv].height(currentTallest);
+   }
+ });
+}
+
 $(window).load(function() {
-	/* This avoids the flags loading in the top left of the browser whilst witing for JS to finish */
-  $('<style> .category-northern-quarter:before { display: block !important; } </style>').appendTo('head');
+  equalheight('.equal .post-tile');
+});
+
+
+$(window).resize(function(){
+  equalheight('.equal .post-tile');
+});
+
+
+new WOW().init();
+
+/* Weather
+---------------------------------- */
+$.simpleWeather({
+  location: 'manchester, united kingdom',
+  unit: 'c',
+  success: function(weather) {
+    html = '';
+    html += '<i class="icon-'+weather.code+'"></i>';
+    html += '<p>'+weather.temp+'&deg; '+weather.units.temp+'</p>';
+    // html += '<a href="'+weather.link+'">View Forecast &raquo;</a>';
+
+    $("#weather").html(html);
+  },
+  error: function(error) {
+    $("#weather").html("<p>"+error+"</p>");
+  }
+});
+
+$('#owl-videos').owlCarousel({
+  loop: true,
+  margin: 16,
+  nav: true,
+  responsiveClass: true,
+  responsive:{
+      0:{
+          items:1,
+          nav:true
+      },
+      600:{
+          items:3,
+          nav:true
+      },
+      1100:{
+          items:4,
+          nav:true
+      }
+  }
+})
+
+$('#owl-events').owlCarousel({
+  loop: true,
+  margin: 10,
+  nav: true,
+  responsiveClass: true,
+  responsive:{
+      0:{
+          items:1,
+          nav:true
+      },
+      750:{
+          items:3,
+          nav:true
+      },
+      1100:{
+          items:4,
+          nav:true
+      }
+  }
+})
+
+$('#owl-instagram').owlCarousel({
+  loop: true,
+  margin: 32,
+  nav: true,
+  responsiveClass: true,
+  responsive:{
+      0:{
+          items:2,
+          nav:true
+      },
+      600:{
+          items:4,
+          nav:true
+      },
+      1100:{
+          items:6,
+          nav:true
+      }
+  }
+})
+
+$('#owl-directory-videos').owlCarousel({
+  loop: true,
+  margin: 10,
+  nav: true,
+  responsiveClass: true,
+  autoHeight:true,
+  responsive:{
+      0:{
+          items:1,
+          nav:true
+      },
+      600:{
+          items:1,
+          nav:true
+      },
+      1100:{
+          items:1,
+          nav:true
+      }
+  }
+})
+
+// $(window).load(function() {
+// 	/* This avoids the flags loading in the top left of the browser whilst witing for JS to finish */
+//   $('<style> .category-northern-quarter:before { display: block !important; } </style>').appendTo('head');
+// });
+
+$(window).scroll(function() {
+  var scroll = $(window).scrollTop();
+
+  if (scroll >= 110) {
+      $(".site-title--srcoll").addClass("is--shown");
+  } else {
+      $(".site-title--srcoll").removeClass("is--shown");
+  }
 });
 
 $(document).ready(function(){
+
+  /* Sticky elements
+  ---------------------------------- */
+  if ( $('.is--sticky').length ) {
+    $('.is--sticky').stick_in_parent({
+      parent: ".site-content",
+      offset_top: 75
+    });
+  }
+
+  if ( $('.is--sticky').length ) {
+    $('.is--sticky').stick_in_parent({
+      parent: ".wrapper",
+      offset_top: 75
+    });
+  }
+
+  if ( $('.ad--sticky').length ) {
+    $('.ad--sticky').stick_in_parent({
+      parent: ".site-content",
+      spacer: ".sticky-spacer",
+    });
+  }
+
+  if ( $('#navigation').length ) {
+    $('#navigation').stick_in_parent({
+      parent: ".site",
+    });
+  }
+
+  var $window = $(window);
+
+  function checkWidth() {
+      var windowsize = $window.width();
+      if (windowsize < 860) {
+        if ( $('.site-title').length ) {
+          $('.site-title').stick_in_parent({
+            parent: ".site",
+          });
+        }
+      }
+      if (windowsize > 860) {
+        $('.site-title').trigger("sticky_kit:detach");
+      }
+  }
+  // Execute on load
+  checkWidth();
+  // Bind event listener
+  $(window).resize(checkWidth);
+
+  $(".finder-trigger-inner").click(function() {
+    $(this).toggleClass("is--pressed");
+    $(".mf-directory-search-inner").addClass("is--open");
+    return false;
+  });
+
+  $(".finder-close-trigger-inner").click(function() {
+    $(this).toggleClass("is--pressed");
+    $(".mf-directory-search-inner").removeClass("is--open");
+    return false;
+  });
 
   $(".finder-trigger").click(function() {
     $(this).toggleClass("is--pressed");
@@ -14,6 +233,11 @@ $(document).ready(function(){
   $(".finder-close-trigger").click(function() {
     $(this).toggleClass("is--pressed");
     $(".mf-directory-search-home").removeClass("is--open");
+    return false;
+  });
+
+  $(".search-close-trigger").click(function() {
+    $("#main-search-reveal").removeClass("is-open");
     return false;
   });
 
@@ -79,6 +303,8 @@ $(document).ready(function(){
 
     $('#menu-toggle__target').click(function(){
 	    $(this).toggleClass('is-pressed');
+      $(this).toggleClass('toggle-position');
+      $('#search-toggle').toggleClass('toggle-position-search');
     });
 
 	// Slide out side menu
@@ -103,74 +329,75 @@ $(document).ready(function(){
 	    return false;
 	 });
 
-    /* PLaceholder Polyfill
+  /* PLaceholder Polyfill
 	---------------------------------- */
-    $('input, textarea').placeholder();
+  $('input, textarea').placeholder();
 
 
-	/* Article Sorting
-	---------------------------------- */
-	$(window).load(function(){
-		var $container = $('#sort-container')
-		// initialize Isotope
-		$container.isotope({
-		// options...
-	    resizable: true, // disable normal resizing
-	    // set columnWidth to a percentage of container width
-	    layoutMode : 'fitRows',
-	    masonry: { rowHeight: 360, columnWidth: $container.width() / 12 }
-		});
-		// update columnWidth on window resize
-		$(window).smartresize(function(){
-			$container.isotope({
-				// update columnWidth to a percentage of container width
-				layoutMode : 'fitRows',
-				masonry: {
-				rowHeight: 360,
-				columnWidth: $container.width() / 12
-				 }
-			});
-		});
-	});
-
-
-  ( function( $, window, document, undefined )
-  {
-      'use strict';
-
-      var $list       = $( '.rw' ),
-          $items      = $list.find( '.equal-cols' ),
-          setHeights  = function()
-          {
-              $items.css( 'height', 'auto' );
-
-              var perRow = Math.floor( $list.width() / $items.width() );
-              if( perRow == null || perRow < 2 ) return true;
-
-              for( var i = 0, j = $items.length; i < j; i += perRow )
-              {
-                  var maxHeight   = 0,
-                      $row        = $items.slice( i, i + perRow );
-
-                  $row.each( function()
-                  {
-                      var itemHeight = parseInt( $( this ).outerHeight() );
-                      if ( itemHeight > maxHeight ) maxHeight = itemHeight;
-                  });
-                  $row.css( 'height', maxHeight );
-              }
-          };
-
-      setHeights();
-      $( window ).on( 'resize', setHeights );
-
-  })( jQuery, window, document );
+	// /* Article Sorting
+	// ---------------------------------- */
+	// $(window).load(function(){
+	// 	var $container = $('#sort-container')
+	// 	// initialize Isotope
+	// 	$container.isotope({
+	// 	// options...
+	//     resizable: true, // disable normal resizing
+	//     // set columnWidth to a percentage of container width
+	//     layoutMode : 'fitRows',
+	//     masonry: { rowHeight: 360, columnWidth: $container.width() / 12 }
+	// 	});
+	// 	// update columnWidth on window resize
+	// 	$(window).smartresize(function(){
+	// 		$container.isotope({
+	// 			// update columnWidth to a percentage of container width
+	// 			layoutMode : 'fitRows',
+	// 			masonry: {
+	// 			rowHeight: 360,
+	// 			columnWidth: $container.width() / 12
+	// 			 }
+	// 		});
+	// 	});
+	// });
+  //
+  //
+  // ( function( $, window, document, undefined )
+  // {
+  //     'use strict';
+  //
+  //     var $list       = $( '.rw' ),
+  //         $items      = $list.find( '.equal-cols' ),
+  //         setHeights  = function()
+  //         {
+  //             $items.css( 'height', 'auto' );
+  //
+  //             var perRow = Math.floor( $list.width() / $items.width() );
+  //             if( perRow == null || perRow < 2 ) return true;
+  //
+  //             for( var i = 0, j = $items.length; i < j; i += perRow )
+  //             {
+  //                 var maxHeight   = 0,
+  //                     $row        = $items.slice( i, i + perRow );
+  //
+  //                 $row.each( function()
+  //                 {
+  //                     var itemHeight = parseInt( $( this ).outerHeight() );
+  //                     if ( itemHeight > maxHeight ) maxHeight = itemHeight;
+  //                 });
+  //                 $row.css( 'height', maxHeight );
+  //             }
+  //         };
+  //
+  //     setHeights();
+  //     $( window ).on( 'resize', setHeights );
+  //
+  // })( jQuery, window, document );
 
 	/* Fit Vid
 	---------------------------------- */
+  $("#featured-home__video").fitVids();
+  $(".mf-section--video .post-tile").fitVids();
 	$("#article-content").fitVids();
   $(".featured-home-media").fitVids();
-
-
+  $(".site-content").fitVids();
 
 });

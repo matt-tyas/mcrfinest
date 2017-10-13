@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-	<section class="site-content">
+	<section class="site-content mf-grey">
 		<div class="gw" role="main">
 
 			<div class="g two-thirds palm-one-whole">
@@ -32,9 +32,10 @@ get_header(); ?>
 				<?php else : ?>
 
 				<div class="search-page"><?php include( TEMPLATEPATH . '/searchform-extended.php'); ?></div>
-				<h2 class="page-title"><?php _e( 'Nothing Found', 'twentytwelve' ); ?></h2>
+
+				<h2><?php _e( 'Nothing Found', 'twentytwelve' ); ?></h2>
 				<div class="entry-content">
-					<p class="text--center muted"><?php _e( 'Sorry, we could not find anything that matched that. Maybe try searching again.', 'twentytwelve' ); ?></p>
+					<p class="muted"><?php _e( 'Sorry, we could not find anything that matched that. Try searching again.', 'twentytwelve' ); ?></p>
 					<?php // get_search_form(); ?>
 				</div><!-- .entry-content -->
 
@@ -105,23 +106,9 @@ get_header(); ?>
 					</div>
 
 				</div>
-
-				<!-- Connect CTAs -->
-				<aside class="connect">
-
-					<h5 class="sub-title">Say hello&hellip;</h5>
-					<ul class="nav nav--banner  social">
-						<li>
-							<a class="btn-circle btn--secondary twitter" href="https://twitter.com/intent/user?screen_name=McrFinest" target="_blank" title="Follow on Twitter"><span aria-hidden="true" class="icon-twitter"></span><span class="accessibility">Twitter</span></a>
-						</li>
-						<li>
-							<a class="btn-circle btn--secondary instagram" href="https://www.instagram.com/mcrfinest/" target="_blank" title="Follow on Instagram"><span aria-hidden="true" class="icon-instagram"></span><span class="accessibility">Instagram</span></a>
-						</li>
-						<li>
-							<a class="btn-circle btn--secondary facebook" href="https://facebook.com/MCRfinest" target="_blank" title="Follow on Facebook"><span aria-hidden="true" class="icon-facebook"></span><span class="accessibility">Facebook page</span></a>
-						</li>
-					</ul>
-				</aside>
+				<div class="social-inline">
+					<?php get_template_part('social'); ?>
+				</div>
 
 		</div>
 

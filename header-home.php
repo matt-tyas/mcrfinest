@@ -48,9 +48,11 @@
 	&noscript=1"/>
 </noscript>
 <!-- End Facebook Pixel Code -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.css" />
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?> >
+<div class="mf-loading"></div>
 <nav class="skip-nav">
 	<ul>
 		<li><a href="#navigation">Skip to main navigation</a></li>
@@ -69,6 +71,8 @@
 				<div class="site-description accessibility"><?php bloginfo( 'description' ); ?></div>
 			</div>
 			<nav role="navigation" id="navigation" class="g  one-whole  primary">
+				<a class="site-title--srcoll" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">M<span class="accessibility">anchester's</span>F<span class="accessibility">inest</span>
+				</a>
 				<div class="site-naviagtion">
 				    <div class="main-search-control">
 				    	<a id="search-toggle" href="#"><span> <span class="search-text">Search</span></span></a>
@@ -83,6 +87,7 @@
 			</nav><!-- #site-navigation -->
 			<div id="main-search-reveal">
 				<div class="main-search">
+					<a href="#" class="search-close-trigger"><span aria-hidden="true" data-icon="&#x2612;"></span> Close</a>
 					<?php get_search_form(); ?>
 				</div>
 			</div>

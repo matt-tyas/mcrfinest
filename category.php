@@ -1,4 +1,11 @@
 <?php
+/*
+ * Category Template: category
+ *
+ */
+?>
+
+<?php
 /**
  * The template for displaying Category pages.
  *
@@ -12,40 +19,43 @@
  */
 
 get_header(); ?>
-
 <?php if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ?>
-
 <div class="gw row">
     <div class="g one-whole palm-one-whole">
-        <section class="latest-articles">
-            <h1><?php single_cat_title(); ?></h1>
-            <div id="sort-container">
+        <h1><?php single_cat_title(); ?></h1>
+    </div>
+    <div class="g one-whole palm-one-whole">
+        <section class="latest-articles mf-directory-articles">
+            <div class="gw equal">
                 <!-- Normal Articles Loop -->
                <?php if (have_posts()) : while (have_posts()) : the_post();
                      //if (in_array($post->ID, $do_not_duplicate)) continue;
                 ?>
-                <article <?php post_class('post-tile'); ?>>
-                    <a href="<?php the_permalink() ?>" rel="bookmark">
-                    <?php
-                        $post_thumbnail_id = get_post_thumbnail_id( );
-                        $imagesized = wp_get_attachment_image_src( $post_thumbnail_id, 'big-post-thumb');
-                        if ($imagesized[1] == 224) {
-                            the_post_thumbnail('big-post-thumb');
-                        } else {
-                            the_post_thumbnail('cat-post-thumb');
-                        }
-                    ?>
-                    <h3><?php the_title(); ?></h3>
-                    <div class="intro">
-                        <?php the_excerpt(); ?>
+                    <div class="g one-quarter lap-one-half palm-one-third mob-one-half">
+                        <a href="<?php the_permalink() ?>" rel="bookmark" class="post-tile-link">
+                            <article <?php post_class('post-tile'); ?>>
+                                <?php
+                                    $post_thumbnail_id = get_post_thumbnail_id( );
+                                    $imagesized = wp_get_attachment_image_src( $post_thumbnail_id, 'big-post-thumb');
+                                    if ($imagesized[1] == 308) {
+                                        the_post_thumbnail('big-post-thumb');
+                                    } else {
+                                        the_post_thumbnail('cat-post-thumb');
+                                    }
+                                ?>
+                                <h3><?php echo wp_trim_words ( the_title ( '', '', false ), 6 , '&hellip;'); ?></h3>
+                                <div class="intro">
+                                    <p><?php echo get_excerpt(80); ?></p>
+                                </div>
+                            </article>
+                        </a>
                     </div>
-                    </a>
-                </article>
                 <?php endwhile; endif; ?>
+                </div>
             </section>
+            <h3>More articles</h3>
             <?php wp_pagenavi(); ?>
         </div>
     </div>
 </div>
-
 <?php get_footer(); ?>

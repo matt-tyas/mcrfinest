@@ -2,6 +2,69 @@
  * $finest nav
  */
 
+#navigation {
+	margin-top: $half-spacing-unit;
+  background: #fff;
+}
+
+#navigation.is_stuck {
+	width: 100% !important;
+	left: 0;
+	z-index: 800;
+	margin-top: 0;
+	// background: $darkgrey;
+	//
+	// a {
+	// 	color: #fff;
+	// }
+}
+
+#navigation.primary.primary .site-title--srcoll {
+	font-family: $brand-face;
+	@include font-size(42px);
+	width: 80px;
+	position: absolute;
+  bottom: -12px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	border-bottom: 0;
+	text-align: center;
+	transition: all 1s ease-out;
+	&:hover {
+		border-bottom: 0; 
+	}
+  @media only screen and (min-width: 1200px) {
+    display: none;
+  }
+}
+
+.site-title--srcoll {
+	opacity: 0;
+	visibility: hidden;
+}
+
+.site-title--srcoll.is--shown {
+	opacity: 1;
+	visibility: visible;
+}
+
+#navigation.is_stuck.g {
+	padding-left: 0;
+}
+
+#navigation.is_stuck #menu-toggle__target {
+	top: 8px;
+}
+
+#navigation.is_stuck #menu-toggle__target.toggle-position {
+  right: 260px;
+}
+
+#navigation.is_stuck .toggle-position-search {
+	right: 300px;
+}
+
 .primary #menu-main-navigation .menu-item-object-category.current-menu-item .sub-menu a {
 	background: lighten($darkgrey, 10%);
  	&:hover {
@@ -43,7 +106,7 @@
 		float: left;
 		margin-bottom: 0;
 		position: relative;
-		@media only screen and (max-width: 1040px) {
+		@media only screen and (max-width: 1200px) {
 	    border: 0 !important;
 	    clip: rect(0 0 0 0) !important;
 	    height: 1px !important;
@@ -58,7 +121,7 @@
 				max-height:0;
 				overflow:hidden;
 				opacity: 0;
-				width: 166.75%; // weird magic number
+				width: 167.8%; // weird magic number
 				float: left;
 				margin-left: 0;
 				z-index: 1000;
@@ -186,7 +249,7 @@
 			content: "\25bc";
 			padding-left: $half-spacing-unit;
 			@media screen and (max-width: 1200px)  {
-				padding-left: $half-spacing-unit/2;
+				padding-left: 20px;
 			}
 		}
 		&.is-pressed {
@@ -202,7 +265,7 @@
 		font-family: 'finest-icons';
 		position: absolute;
 		display: block;
-		top: 96px;
+		top: 113px;
 		right: 0px;
 		margin: 0 0 $half-spacing-unit/2 0;
 		padding: $half-spacing-unit/2 $half-spacing-unit $half-spacing-unit $half-spacing-unit;
@@ -227,7 +290,7 @@
 		&.is-pressed:before {
 			content: "\2612";
 		}
-		@media only screen and (min-width: 1040px) {
+		@media only screen and (min-width: 1200px) {
 	    border: 0 !important;
 	    clip: rect(0 0 0 0) !important;
 	    height: 1px !important;
@@ -411,15 +474,6 @@
 	}
 
 .sidr ul li a:hover {
-	// background: lighten($darkgrey, 5%);
-}
-
-.sidr ul li ul li:hover>a,
-.sidr ul li ul li:hover>span,
-.sidr ul li ul li.active>a,
-.sidr ul li ul li.active>span,
-.sidr ul li ul li.sidr-class-active>a,
-.sidr ul li ul li.sidr-class-active>span{
 	// background: lighten($darkgrey, 5%);
 }
 

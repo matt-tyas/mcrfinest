@@ -44,21 +44,24 @@ get_header(); ?>
 			<div class="gw">
 
 				<div class="g two-thirds palm-one-whole">
-					<div id="sort-container">
-					<?php while ( have_posts() ) : the_post(); ?>
-						<article <?php post_class('post-tile'); ?>>
-							<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
-								<?php the_post_thumbnail( 'big-post-thumb'); ?>
-								<span class="category"><?php $category = get_the_category(); echo $category[0]->cat_name; ?></span>
-								<h3><?php the_title(); ?></h3>
-								<div class="intro">
-								<p><?php echo get_excerpt(140); ?></p>
+                    <div class="gw equal">
+    					<?php while ( have_posts() ) : the_post(); ?>
+							<div class="g one-third palm-one-half">
+								<a href="<?php the_permalink() ?>" rel="bookmark" class="post-tile-link" title="Permanent Link to <?php the_title_attribute(); ?>">
+	        						<article <?php post_class('post-tile'); ?>>
+        								<?php the_post_thumbnail( 'big-post-thumb'); ?>
+        								<span class="category"><?php $category = get_the_category(); echo $category[0]->cat_name; ?></span>
+        								<h3><?php the_title(); ?></h3>
+        								<div class="intro">
+        									<p><?php echo get_excerpt(140); ?></p>
+	        							</div>
+	        						</article>
+								</a>
 							</div>
-							</a>
-						</article>
-					<?php endwhile; ?>
-					</div>
+    					<?php endwhile; ?>
+                    </div>
 				</div>
+
 
 				<div class="g one-third palm-one-whole">
 
@@ -152,21 +155,9 @@ get_header(); ?>
 
 				</div>
 
-					<!-- Connect CTAs -->
-					<aside class="connect">
-						<h5 class="sub-title">// Say hello&hellip;</h5>
-						<ul class="nav nav--banner  social">
-						<li>
-							<a class="btn-circle btn--secondary twitter" href="https://twitter.com/intent/user?screen_name=McrFinest" target="_blank" title="Follow on Twitter"><span aria-hidden="true" class="icon-twitter"></span><span class="accessibility">Twitter</span></a>
-						</li>
-						<li>
-							<a class="btn-circle btn--secondary instagram" href="https://www.instagram.com/mcrfinest/" target="_blank" title="Follow on Instagram"><span aria-hidden="true" class="icon-instagram"></span><span class="accessibility">Instagram</span></a>
-						</li>
-						<li>
-							<a class="btn-circle btn--secondary facebook" href="https://facebook.com/MCRfinest" target="_blank" title="Follow on Facebook"><span aria-hidden="true" class="icon-facebook"></span><span class="accessibility">Facebook page</span></a>
-						</li>
-					</ul>
-					</aside>
+				<div class="social-inline">
+					<?php get_template_part('social'); ?>
+				</div>
 
 				</div>
 

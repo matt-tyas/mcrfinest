@@ -10,7 +10,7 @@
 <div class="gw row">
     <div class="g one-tenth lap-one-fifth palm-one-whole">
         <div class="social-wrap">
-            <aside class="social-links">
+            <aside class="social-links is--sticky">
                 <h5 class="sub-title">Share this</h5>
                 <ul class="nav social social-share">
                     <li>
@@ -26,7 +26,6 @@
             </aside>
         </div>
     </div>
-
 	<div class="g six-tenths lap-four-fifths palm-one-whole f-article">
         <article class="media" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
             <?php if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ?>
@@ -56,7 +55,30 @@
         				<div id="article-content" class="entry-content">
         	                <p class="lead"><?php echo nl2br(get_the_excerpt()) ?></p>
         	                <div class="directory-image">
-        						<?php echo wp_get_attachment_image( listing_image_get_meta('_listing_image_id'), 'full'); ?>
+                                <?php
+    							// check if the repeater field has rows of data
+    							if( have_rows('directory_slider') ):
+                                    the_sub_field('diretory_slider_image');
+    								echo '<div id="owl-directory-videos" class="owl-carousel">';
+
+    							    while ( have_rows('directory_slider') ) : the_row();
+    							        // display a sub field value
+    							        the_sub_field('video');
+
+    							    endwhile;
+                                    // loop through the rows of data
+    							    while ( have_rows('directory_slider') ) : the_row();
+    							        // display a sub field value
+                                        echo '<img src="';
+                                        the_sub_field('image');
+                                        echo '" />';
+
+    							    endwhile;
+    								echo '</div>';
+    							else :
+    							    echo wp_get_attachment_image( listing_image_get_meta('_listing_image_id'), 'full');
+    							endif;
+    							?>
         					</div>
         				</div>
         				<div class="gw row">
@@ -64,36 +86,56 @@
         						<?php the_content(); ?>
         					</div>
         					<div class="g one-third palm-one-whole">
+                                <?php $booking_link = get_post_meta($post->ID, 'directory_urlbooking_meta_box_class', true); ?>
+                                <?php if( empty( $booking_link) ) : ?>
+                                <?php else : ?>
+                                <a href="<?php echo get_post_meta($post->ID, 'directory_urlbooking_meta_box_class', true); ?>" class="btn btn--finest">
+                                    Make a booking
+                                </a>
+                                <?php endif; ?>
         						<div class="directory__address">
         							<?php the_title(); ?>
         							<?php $og_text = get_post_meta($post->ID, 'directory_address_meta_box_class', true);
         								echo wpautop( $og_text );
         							?>
-        							<a href="<?php echo get_post_meta($post->ID, 'directory_url_meta_box_class', true); ?>">
-        							<?php $og_text_2 = get_post_meta($post->ID, 'directory_url_meta_box_class', true);
-        								echo preg_replace("~^(?:f|ht)tps?://~i", '', $og_text_2);
-        							?>
-        							</a>
+                                    <ul class="directory__actions list--bare">
+                                        <li>
+                                            <?php
+                                                $removePhoneSpaces = get_post_meta($post->ID, 'directory_phoneno_meta_box_class', true);
+                                            ?>
+                                            <a href="tel:<?php echo str_replace(' ', '', $removePhoneSpaces); ?>">
+                							    <?php echo get_post_meta($post->ID, 'directory_phoneno_meta_box_class', true); ?>
+                							</a>
+                                        </li>
+                                        <li>
+                                            <a href="<?php echo get_post_meta($post->ID, 'directory_url_meta_box_class', true); ?>" class="btn">
+                							    Visit website
+                							</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.google.com/maps?saddr=My+Location&daddr=<?php echo get_post_meta($post->ID, 'directory_address_meta_box_class', true); ?>" class="btn">
+                                                Get directions
+                                            </a>
+                                        </li>
+                                    </ul>
         						</div>
         					</div>
-        					<div class="g one-whole">
-
+        				    <div class="g one-whole">
         						<div class="cf" style="width: 100%; overflow:visible; display: block; clear: both; padding: 0px;">
-        						<h2>Latest <?php the_title(); ?> articles</h2>
+        						<h2>Latest articles</h2>
         						<?php if (function_exists('related_posts') ) : related_posts(); endif; ?>
 								</div>
         					</div>
-
         				</div>
         			</div>
         			<?php endif; ?>
-
         			<div class="g three-tenths lap-one-whole palm-one-whole readability-right f-article">
         				<div class="gw">
                             <div class="g one-whole palm-one-whole mob-one-whole">
         						<div class="newscta">
         								<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
         								<style type="text/css">
+                                        #mc_embed_signup .mc-field-group {width: 100%;}
         								#mce-responses { position: fixed; top: 0px; left: 0; width: 100%; }
         								#mc_embed_signup div.response { width: 100%; text-align: center;  padding: 1.5em 1em 1em 1em; }
         								#mc_embed_signup #mce-success-response { background: #529214; color: #fff;}
@@ -101,7 +143,7 @@
         								#mc_embed_signup div#mce-responses { z-index:9999; }
         								#mc_embed_signup #mc-embedded-subscribe-form input.mce_inline_error { border: 1px solid #e85c41; }
         								#mc_embed_signup .mc-field-group input { opacity: 1;}
-        								#mc_embed_signup .button { background: #886808; font-size: 20px; }
+        								#mc_embed_signup .button { background: #886808; font-size: 16px; }
         								#mc_embed_signup .button:hover { background: #b88d0b; }
         								#mc_embed_signup .mc-field-group { min-height:60px; }
         								#mc_embed_signup form {padding: 0;}
@@ -124,86 +166,86 @@
         									</div>
         								</form>
         							</div>
-        								<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='MMERGE3';ftypes[3]='text';fnames[4]='MMERGE4';ftypes[4]='text';fnames[5]='MMERGE5';ftypes[5]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+    								<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='MMERGE3';ftypes[3]='text';fnames[4]='MMERGE4';ftypes[4]='text';fnames[5]='MMERGE5';ftypes[5]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
         						</div>
-            				<div class="g one-whole palm-one-whole mob-one-whole">
-            					<h5 class="sub-title ad-title">Partners</h5>
+                				<div class="g one-whole palm-one-whole mob-one-whole">
+                					<h5 class="sub-title ad-title">Partners</h5>
+                				</div>
+                				<div class="g one-half palm-one-quarter mob-one-half">
+                					<?php
+                					if ( is_active_sidebar( 'category-page-advert-1' ) ) : ?>
+                					<?php dynamic_sidebar( 'category-page-advert-1' ); ?>
+                					<?php endif; ?>
+                				</div>
+                				<div class="g one-half palm-one-quarter mob-one-half">
+                					<?php
+                					if ( is_active_sidebar( 'category-page-advert-2' ) ) : ?>
+                					<?php dynamic_sidebar( 'category-page-advert-2' ); ?>
+                					<?php endif; ?>
+                				</div>
+                				<div class="g one-half palm-one-quarter mob-one-half">
+                					<?php
+                					if ( is_active_sidebar( 'category-page-advert-3' ) ) : ?>
+                					<?php dynamic_sidebar( 'category-page-advert-3' ); ?>
+                					<?php endif; ?>
+                				</div>
+                				<div class="g one-half palm-one-quarter mob-one-half">
+                					<?php
+                					if ( is_active_sidebar( 'category-page-advert-4' ) ) : ?>
+                					<?php dynamic_sidebar( 'category-page-advert-4' ); ?>
+                					<?php endif; ?>
+                				</div>
+                				<div class="g one-half palm-one-quarter mob-one-half">
+                					<?php
+                					if ( is_active_sidebar( 'category-page-advert-5' ) ) : ?>
+                					<?php dynamic_sidebar( 'category-page-advert-5' ); ?>
+                					<?php endif; ?>
+                				</div>
+                				<div class="g one-half palm-one-quarter mob-one-half">
+                					<?php
+                					if ( is_active_sidebar( 'category-page-advert-6' ) ) : ?>
+                					<?php dynamic_sidebar( 'category-page-advert-6' ); ?>
+                					<?php endif; ?>
+                				</div>
+                				<div class="g one-half palm-one-quarter mob-one-half">
+                					<?php
+                					if ( is_active_sidebar( 'category-page-advert-7' ) ) : ?>
+                					<?php dynamic_sidebar( 'category-page-advert-7' ); ?>
+                					<?php endif; ?>
+                				</div>
+                				<div class="g one-half palm-one-quarter mob-one-half">
+                					<?php
+                					if ( is_active_sidebar( 'category-page-advert-8' ) ) : ?>
+                					<?php dynamic_sidebar( 'category-page-advert-8' ); ?>
+                					<?php endif; ?>
+                				</div>
+                				<div class="g one-half palm-one-quarter mob-one-half">
+                					<?php
+                					if ( is_active_sidebar( 'category-page-advert-9' ) ) : ?>
+                					<?php dynamic_sidebar( 'category-page-advert-9' ); ?>
+                					<?php endif; ?>
+                				</div>
+                				<div class="g one-half palm-one-quarter mob-one-half">
+                					<?php
+                					if ( is_active_sidebar( 'category-page-advert-10' ) ) : ?>
+                					<?php dynamic_sidebar( 'category-page-advert-10' ); ?>
+                					<?php endif; ?>
+                				</div>
             				</div>
-            				<div class="g one-half palm-one-quarter mob-one-half">
-            					<?php
-            					if ( is_active_sidebar( 'category-page-advert-1' ) ) : ?>
-            					<?php dynamic_sidebar( 'category-page-advert-1' ); ?>
-            					<?php endif; ?>
+                            <div class="ad-sense is--sticky">
+            					<h5 class="sub-title ad-title">Advert</h5>
+            					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            					<!-- Article Custom size 2 -->
+            					<ins class="adsbygoogle"
+            					     style="display:inline-block;width:250px;height:250px"
+            					     data-ad-client="ca-pub-0654331869436657"
+            					     data-ad-slot="1388693406"></ins>
+            					<script>
+            					(adsbygoogle = window.adsbygoogle || []).push({});
+            					</script>
             				</div>
-            				<div class="g one-half palm-one-quarter mob-one-half">
-            					<?php
-            					if ( is_active_sidebar( 'category-page-advert-2' ) ) : ?>
-            					<?php dynamic_sidebar( 'category-page-advert-2' ); ?>
-            					<?php endif; ?>
-            				</div>
-            				<div class="g one-half palm-one-quarter mob-one-half">
-            					<?php
-            					if ( is_active_sidebar( 'category-page-advert-3' ) ) : ?>
-            					<?php dynamic_sidebar( 'category-page-advert-3' ); ?>
-            					<?php endif; ?>
-            				</div>
-            				<div class="g one-half palm-one-quarter mob-one-half">
-            					<?php
-            					if ( is_active_sidebar( 'category-page-advert-4' ) ) : ?>
-            					<?php dynamic_sidebar( 'category-page-advert-4' ); ?>
-            					<?php endif; ?>
-            				</div>
-            				<div class="g one-half palm-one-quarter mob-one-half">
-            					<?php
-            					if ( is_active_sidebar( 'category-page-advert-5' ) ) : ?>
-            					<?php dynamic_sidebar( 'category-page-advert-5' ); ?>
-            					<?php endif; ?>
-            				</div>
-            				<div class="g one-half palm-one-quarter mob-one-half">
-            					<?php
-            					if ( is_active_sidebar( 'category-page-advert-6' ) ) : ?>
-            					<?php dynamic_sidebar( 'category-page-advert-6' ); ?>
-            					<?php endif; ?>
-            				</div>
-            				<div class="g one-half palm-one-quarter mob-one-half">
-            					<?php
-            					if ( is_active_sidebar( 'category-page-advert-7' ) ) : ?>
-            					<?php dynamic_sidebar( 'category-page-advert-7' ); ?>
-            					<?php endif; ?>
-            				</div>
-            				<div class="g one-half palm-one-quarter mob-one-half">
-            					<?php
-            					if ( is_active_sidebar( 'category-page-advert-8' ) ) : ?>
-            					<?php dynamic_sidebar( 'category-page-advert-8' ); ?>
-            					<?php endif; ?>
-            				</div>
-            				<div class="g one-half palm-one-quarter mob-one-half">
-            					<?php
-            					if ( is_active_sidebar( 'category-page-advert-9' ) ) : ?>
-            					<?php dynamic_sidebar( 'category-page-advert-9' ); ?>
-            					<?php endif; ?>
-            				</div>
-            				<div class="g one-half palm-one-quarter mob-one-half">
-            					<?php
-            					if ( is_active_sidebar( 'category-page-advert-10' ) ) : ?>
-            					<?php dynamic_sidebar( 'category-page-advert-10' ); ?>
-            					<?php endif; ?>
-            				</div>
-        				</div>
-                        <div class="ad-sense">
-        					<h5 class="sub-title ad-title">Advert</h5>
-        					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        					<!-- Article Custom size 2 -->
-        					<ins class="adsbygoogle"
-        					     style="display:inline-block;width:250px;height:250px"
-        					     data-ad-client="ca-pub-0654331869436657"
-        					     data-ad-slot="1388693406"></ins>
-        					<script>
-        					(adsbygoogle = window.adsbygoogle || []).push({});
-        					</script>
-        				</div>
-        			</div>
-        		</div>
-        </article><!-- #post -->
+            			</div>
+            		</div>
+            </article><!-- #post -->
+        </div>
     </div>
-</div>

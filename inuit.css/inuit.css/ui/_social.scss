@@ -2,15 +2,32 @@
     $Social
 \*------------------------------------*/
 
+
+.mf-twitter {
+	padding: $base-spacing-unit;
+	background: #1DA1F3;
+  @include media-query(palm) {
+    margin-bottom: $half-spacing-unit;
+  }
+	.sub-title-link a {
+		color: #fff;
+		display: inline-block;
+	}
+}
+
 .twitter-stream {
 	p {
-		padding: $half-spacing-unit 0;
+    color: #fff;
 		margin-bottom: $half-spacing-unit;
 		@include font-size($body-size);
 		line-height: 1.4;
 	}
 	.profile-link {
 		display: none;
+	}
+	a {
+		color: #fff;
+		border-bottom-color: #fff;
 	}
 }
 
@@ -20,11 +37,13 @@
 	margin-right: 0;
 	height: auto;
 	list-style-type: none;
-		@include media-query(palm) {
-			width: 100% !important;
-			height: auto !important;
-			}
-	img {
+
+	@include media-query(palm) {
+		width: 100% !important;
+		height: auto !important;
+	}
+
+  img {
 		display: block;
 		margin-top: $base-spacing-unit;
 		@include media-query(palm) {
@@ -43,32 +62,74 @@
 	}
 }
 
-.instagram-pics {
-	@extend .cf;
-	margin-left: 0;
-	margin-right: 0;
-	margin-top: $base-spacing-unit;
-	height: auto;
-	list-style-type: none;
-		@include media-query(palm) {
-			width: 100% !important;
-			height: auto !important;
-			}
-	img {
-		display: block;
-		margin-bottom: 26px;
-		@include media-query(palm) {
-			width: 50%;
-			height: auto;
-			float: left;
-			&:last-of-type(2) img {
-				margin-right: $base-spacing-unit !important;
-			}
+// .instagram-pics {
+// 	@extend .cf;
+// 	margin-left: 0;
+// 	margin-right: 0;
+// 	margin-top: $base-spacing-unit;
+// 	height: auto;
+// 	list-style-type: none;
+// 		@include media-query(palm) {
+// 			width: 100% !important;
+// 			height: auto !important;
+// 			}
+// 	img {
+// 		display: block;
+// 		margin-bottom: 26px;
+// 		@include media-query(palm) {
+// 			width: 50%;
+// 			height: auto;
+// 			float: left;
+// 			&:last-of-type(2) img {
+// 				margin-right: $base-spacing-unit !important;
+// 			}
+// 		}
+// 		@include media-query(mob) {
+// 			width: 100%;
+// 			height: auto;
+// 			float: none;
+// 		}
+// 	}
+// }
+
+.mf-connect {
+	// padding: $base-spacing-unit;
+	// border: 5px solid $darkgrey;
+	// background: #fff;
+	margin-bottom: $half-spacing-unit;
+
+	li a {
+		margin-left: 16px;
+	}
+
+	.sub-title {
+		text-align: center;
+		font-weight: bold;
+		font-size: 32px !important;
+		color: #000;
+		border-bottom: 0;
+	}
+
+	.social {
+		margin-bottom: 0;
+		margin-top: 0;
+	}
+
+}
+
+.social-inline .social {
+	.btn-circle {
+		margin-right: 20px;
+		font-size: .6em;
+		display: inline-block;
+    .icon-twitter,
+		.icon-facebook,
+		.icon-instagram {
+			position: relative;
+			top: 10px;
 		}
-		@include media-query(mob) {
-			width: 100%;
-			height: auto;
-			float: none;
+		.icon-instagram {
+			color: #4C68D7;
 		}
 	}
 }
@@ -83,12 +144,14 @@
 }
 
 .social-links {
-
-	position: absolute;
+	list-style-type: none;
+	margin-left: 0;
+	margin-bottom: $base-spacing-unit;
+	text-align: center;
 	h5 {
 		font-size: 16px;
 		margin-top: 2px;
-		margin-bottom: 0;
+		margin-bottom: $half-spacing-unit;
 		padding-bottom: 0;
 		border-bottom: 0;
 	}
@@ -100,18 +163,42 @@
 }
 
 .social-share {
-		.btn-circle {
-			font-size: .4em;
-	    padding: 8px 10px 0px 0px;
-			color: #999;
-			margin-bottom: 0;
-		}
+	list-style-type: none;
+	margin-left: 0;
+	margin-bottom: $base-spacing-unit;
+	text-align: center;
 
-		.icon-envelope {
-			font-size: 3em;
-			&:before{
-				position: relative;
-				top: 1px;
-			}
+	.btn-circle {
+		padding: 0 !important;
+		width: auto;
+		font-size: .6em;
+		display: inline-block;
+		line-height: 1.06667;
+		border: 0;
+		border-radius: 50%;
+		height: 64px;
+		width: 64px;
+		display: block;
+		text-align: center;
+		margin: 0 auto 16px auto;
+	}
+
+	.btn--secondary.instagram {
+		background: #886808 !important;
+	}
+
+  .icon-twitter,
+	.icon-facebook,
+	.icon-envelope {
+		font-size: 3em;
+		&:before{
+			position: relative;
+			top: 12px;
 		}
+	}
+	.icon-envelope {
+		&:before{
+			top: 14px;
+		}
+	}
 }

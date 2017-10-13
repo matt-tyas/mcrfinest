@@ -1,3 +1,4 @@
+
 /*------------------------------------*\
     $Forms
 \*------------------------------------*/
@@ -14,11 +15,18 @@ input[type=text], input[type=email], input[type=password] {
 	width: 100%;
 	padding: $half-spacing-unit;
 	background: #fff;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 5px solid #000;
 	&:hover {
 		background: #fff;
 	}
 	&:focus {
-		border: 1px solid $brand-color;
+		border-top: 0;
+		border-left: 0;
+		border-right: 0;
+		border-bottom: 5px solid $brand-color;
 	}
 }
 .site-content {
@@ -36,7 +44,10 @@ input[type=text], input[type=email], input[type=password] {
 			background: #fff;
 		}
 		&:focus {
-			border: 1px solid $brand-color;
+			border-top: 0;
+			border-left: 0;
+			border-right: 0;
+			border-bottom: 5px solid $brand-color;
 		}
 	}
 	textarea {
@@ -47,18 +58,22 @@ input[type=text], input[type=email], input[type=password] {
 			background: #fff;
 		}
 		&:focus {
-			border: 1px solid $brand-color;
+			border-bottom: 5px solid $brand-color;
 		}
 	}
 	.wpcf7-captchac {
 		height: auto !important;
 		width: auto !important;
 	}
+	.wpcf7-form-control {
+		font-size: 20px;
+	}
 	input[type=submit] {
 		padding: $half-spacing-unit;
 		background: $brand-color;
 		border:0;
 		color: #fff;
+		font-size: 20px !important;
 		@include vendor(border-radius, 4px);
 		&:hover {
 			background: lighten($brand-color, 10%);
@@ -72,7 +87,10 @@ input[type=text], input[type=email], input[type=password] {
 
 textarea, input {
 	background: #fff;
-	border: 1px solid $keylinegrey;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 5px solid #000;
     -webkit-transition:all 150ms ease-in;
        -moz-transition:all 150ms ease-in;
 	     -o-transition:all 150ms ease-in;
@@ -135,7 +153,10 @@ textarea:focus, input:focus{
 			background: #fff;
 		}
 		&:focus {
-			border: 1px solid $brand-color;
+			border-top: 0;
+			border-left: 0;
+			border-right: 0;
+			border-bottom: 5px solid $brand-color;
 		}
 	}
 	textarea {
@@ -146,7 +167,7 @@ textarea:focus, input:focus{
 			background: #fff;
 		}
 		&:focus {
-			border: 1px solid $brand-color;
+			border-bottom: 5px solid $brand-color;
 		}
 	}
 	input[type=submit] {
@@ -167,6 +188,9 @@ textarea:focus, input:focus{
 	}
 	input[type=email] {
 		width: 70% !important;
+		border-top: 0;
+		border-left: 0;
+		border-bottom: 0;
 		margin-right: $half-spacing-unit/2;
 		padding: $half-spacing-unit $half-spacing-unit $half-spacing-unit $base-spacing-unit +3 !important;
 	}
@@ -195,27 +219,63 @@ textarea:focus, input:focus{
 	}
 }
 
-.home .post .newscta {
-	min-height: 227px;
-	// border-top: 1px solid #999;
-	padding-top: $base-spacing-unit;
-	padding-bottom: $half-spacing-unit;
+.newscta {
+  width: 400px;
+	background: $darkgrey;
+	padding: $base-spacing-unit $base-spacing-unit $half-spacing-unit $base-spacing-unit;
+	color: #fff;
+	margin-top: -30px;
+  margin-bottom: -$half-spacing-unit;
+	@include media-query(palm) {
+		width: 100%;
+		margin-bottom: $half-spacing-unit;
+		background: #fff;
+		border: 5px solid $darkgrey;
+		color: #000;
+	}
+	@include media-query(lap) {
+		width: 100%;
+		margin-bottom: $half-spacing-unit;
+	}
+	@include media-query(desk) {
+		width: 400px;
+		margin-bottom: $half-spacing-unit;
+	}
 	#fit-brand {
 		margin-bottom: $half-spacing-unit/4;
 		@include media-query(palm) {
 			font-size: 35px;
 		}
 	}
-	p {
-		margin-bottom: $half-spacing-unit;
+
+	#mc_embed_signup .mc-field-group input.button {
+		color: #fff !important;
+		@include media-query(palm) {
+			color: #000!important;
+		}
+		&:hover {
+			color: $brand-color;
+			border-color: $brand-color;
+		}
 	}
+	p {
+		margin-bottom: 0;
+	}
+}
+
+.newscta--home {
+	margin-top: 21px;
+  #mc_embed_signup .mc-field-group input {
+    width: 65% !important;
+  }
+  #mc_embed_signup .mc-field-group input.button {
+
+  }
 }
 
 .post .newscta,
 .directory .newscta {
 	min-height: 150px;
-	border-top: 0;
-	padding-top: 0;
 	padding-bottom: $half-spacing-unit;
 	#fit-brand {
 		margin-bottom: $half-spacing-unit/4;
@@ -224,7 +284,7 @@ textarea:focus, input:focus{
 		}
 	}
 	p {
-		margin-bottom: $half-spacing-unit;
+		margin-bottom: 0;
 	}
 }
 
@@ -280,7 +340,7 @@ textarea:focus, input:focus{
 
 #mc_embed_signup .mc-field-group input {
 	display: inline !important;
-	width: 70% !important;
+	width: 100% !important;
 }
 
 span.wpcf7-not-valid-tip {
@@ -296,11 +356,30 @@ span.wpcf7-not-valid-tip {
 }
 
 #mc_embed_signup .mc-field-group input.button {
-	padding: 4px 8px;
-	height: auto;
-  line-height: auto;
-	display: inline !important;
-	width: 25% !important;
+	@include mf-button();
+	width: 100px !important;
+	border-radius: 0 !important;
+	height: 48px !important;
+	line-height: 0 !important;
+	position: relative;
+	top: 1px;
+	&:hover {
+		border-color: #fff !important;
+		color: #fff !important;
+	}
+	@include media-query(palm) {
+		&:hover {
+			border-color: $brand-color !important;
+			color: $brand-color !important;
+		}
+	}
+}
+
+#mc_embed_signup .mc-field-group input {
+	border: 5px solid #000 !important;
+  color: #000 !important;
+	border-radius: 0 !important;
+	margin-bottom: $half-spacing-unit/2 !important;
 }
 
 

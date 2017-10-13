@@ -92,11 +92,19 @@ function twentytwelve_setup() {
 	set_post_thumbnail_size( 624, 9999 ); // Unlimited height, soft crop
 	if ( function_exists( 'add_image_size' ) ) {
 	    add_image_size( 'cat-post-thumb', 172, 88, true );
-	    add_image_size( 'big-post-thumb', 308, 158, true );
+	    add_image_size( 'sq-med-post-thumb', 165, 165, true );
+		add_image_size( 'big-post-thumb', 308, 158, true );
 	    add_image_size( 'big-article-image', 750, 450, true );
 		add_image_size( 'sq-post-thumb', 400, 400, true );
 		// add_image_size( 'large-post-thumb', 120, 120, true );
 		// add_image_size( 'mini-post-thumb', 50, 50, true );
+	}
+
+	add_filter( 'image_size_names_choose', 'wpshout_custom_sizes' );
+	function wpshout_custom_sizes( $sizes ) {
+	    return array_merge( $sizes, array(
+	        'sq-med-post-thumb' => __( 'sq-med-post-thumb' ),
+	    ) );
 	}
 
 	function setup() {
@@ -270,6 +278,16 @@ add_filter( 'wp_page_menu_args', 'twentytwelve_page_menu_args' );
  * @since Twenty Twelve 1.0
  */
 function twentytwelve_widgets_init() {
+
+	register_sidebar( array(
+		'name' => __( 'Homepage videos', 'twentytwelve' ),
+		'id' => 'homepage-videos',
+		'description' => __( 'Homepage videos', 'twentytwelve' ),
+		'before_widget' => '',
+		'after_widget' => '',
+		'before_title' => '',
+		'after_title' => '',
+	) );
 
 	register_sidebar( array(
 		'name' => __( 'Homepage Header advert', 'twentytwelve' ),
@@ -1176,6 +1194,171 @@ function directory_url_save_meta( $post_id, $post ) {
 }
 
 
+
+/* BOOKING URL */
+
+/* Fire our meta box setup function on the post editor screen. */
+add_action( 'load-post.php', 'directory_urlbooking_setup' );
+add_action( 'load-post-new.php', 'directory_urlbooking_setup' );
+
+/* Meta box setup function. */
+function directory_urlbooking_setup() {
+
+  /* Add meta boxes on the 'add_meta_boxes' hook. */
+  add_action( 'add_meta_boxes', 'directory_urlbooking_meta_boxes' );
+
+  /* Save post meta on the 'save_post' hook. */
+  add_action( 'save_post', 'directory_urlbooking_save_meta', 10, 2 );
+}
+
+function directory_urlbooking_meta_boxes() {
+
+  add_meta_box(
+    'directory_urlbooking_meta_box_class',      // Unique ID
+    esc_html__( 'Booking url', 'example' ),    // Title
+    'directory_urlbooking_meta_box',   // Callback function
+    'directory',         // Admin page (or post type)
+    'side',         // Context
+    'default'         // Priority
+  );
+}
+
+/* Display the post meta box. */
+function directory_urlbooking_meta_box( $object, $box ) { ?>
+  <?php wp_nonce_field( basename( __FILE__ ), 'directory_urlbooking_meta_box_class_nonce' ); ?>
+  <p>
+    <label for="directory_urlbooking_meta_box_class"><?php _e( "Add a booking url for the listing", 'example' ); ?></label>
+    <br />
+	<input type="text" class="widefat" id="directory_urlbooking_meta_box_class" name="directory_urlbooking_meta_box_class" value="<?php echo get_post_meta( $object->ID, 'directory_urlbooking_meta_box_class', true ); ?>" />
+  </p>
+<?php }
+
+/* Save the meta box's post metadata. */
+function directory_urlbooking_save_meta( $post_id, $post ) {
+
+  /* Verify the nonce before proceeding. */
+  if ( !isset( $_POST['directory_urlbooking_meta_box_class_nonce'] ) || !wp_verify_nonce( $_POST['directory_urlbooking_meta_box_class_nonce'], basename( __FILE__ ) ) )
+    return $post_id;
+
+  /* Get the post type object. */
+  $post_type = get_post_type_object( $post->post_type );
+
+  /* Check if the current user has permission to edit the post. */
+  if ( !current_user_can( $post_type->cap->edit_post, $post_id ) )
+    return $post_id;
+
+  /* Get the posted data and sanitize it for use as an HTML class. */
+  $new_meta_value = ( isset( $_POST['directory_urlbooking_meta_box_class'] ) ? ( $_POST['directory_urlbooking_meta_box_class'] ) : '' );
+
+  /* Get the meta key. */
+  $meta_key = 'directory_urlbooking_meta_box_class';
+
+  /* Get the meta value of the custom field key. */
+  $meta_value = get_post_meta( $post_id, $meta_key, true );
+
+  /* If a new meta value was added and there was no previous value, add it. */
+  if ( $new_meta_value && '' == $meta_value )
+    add_post_meta( $post_id, $meta_key, $new_meta_value, true );
+
+  /* If the new meta value does not match the old value, update it. */
+  elseif ( $new_meta_value && $new_meta_value != $meta_value )
+    update_post_meta( $post_id, $meta_key, $new_meta_value );
+
+  /* If there is no new meta value but an old value exists, delete it. */
+  elseif ( '' == $new_meta_value && $meta_value )
+    delete_post_meta( $post_id, $meta_key, $meta_value );
+}
+
+/* BOOKING URL */
+
+/* PHONE NO */
+
+/* Fire our meta box setup function on the post editor screen. */
+add_action( 'load-post.php', 'directory_phoneno_setup' );
+add_action( 'load-post-new.php', 'directory_phoneno_setup' );
+
+/* Meta box setup function. */
+function directory_phoneno_setup() {
+
+  /* Add meta boxes on the 'add_meta_boxes' hook. */
+  add_action( 'add_meta_boxes', 'directory_phoneno_meta_boxes' );
+
+  /* Save post meta on the 'save_post' hook. */
+  add_action( 'save_post', 'directory_phoneno_save_meta', 10, 2 );
+}
+
+function directory_phoneno_meta_boxes() {
+
+  add_meta_box(
+    'directory_phoneno_meta_box_class',      // Unique ID
+    esc_html__( 'Phone number', 'example' ),    // Title
+    'directory_phoneno_meta_box',   // Callback function
+    'directory',         // Admin page (or post type)
+    'side',         // Context
+    'default'         // Priority
+  );
+}
+
+/* Display the post meta box. */
+function directory_phoneno_meta_box( $object, $box ) { ?>
+  <?php wp_nonce_field( basename( __FILE__ ), 'directory_phoneno_meta_box_class_nonce' ); ?>
+  <p>
+    <label for="directory_phoneno_meta_box_class"><?php _e( "Add a phone number for the listing", 'example' ); ?></label>
+    <br />
+	<input type="text" class="widefat" id="directory_phoneno_meta_box_class" name="directory_phoneno_meta_box_class" value="<?php echo get_post_meta( $object->ID, 'directory_phoneno_meta_box_class', true ); ?>" />
+  </p>
+<?php }
+
+/* Save the meta box's post metadata. */
+function directory_phoneno_save_meta( $post_id, $post ) {
+
+  /* Verify the nonce before proceeding. */
+  if ( !isset( $_POST['directory_phoneno_meta_box_class_nonce'] ) || !wp_verify_nonce( $_POST['directory_phoneno_meta_box_class_nonce'], basename( __FILE__ ) ) )
+    return $post_id;
+
+  /* Get the post type object. */
+  $post_type = get_post_type_object( $post->post_type );
+
+  /* Check if the current user has permission to edit the post. */
+  if ( !current_user_can( $post_type->cap->edit_post, $post_id ) )
+    return $post_id;
+
+  /* Get the posted data and sanitize it for use as an HTML class. */
+  $new_meta_value = ( isset( $_POST['directory_phoneno_meta_box_class'] ) ? ( $_POST['directory_phoneno_meta_box_class'] ) : '' );
+
+  /* Get the meta key. */
+  $meta_key = 'directory_phoneno_meta_box_class';
+
+  /* Get the meta value of the custom field key. */
+  $meta_value = get_post_meta( $post_id, $meta_key, true );
+
+  /* If a new meta value was added and there was no previous value, add it. */
+  if ( $new_meta_value && '' == $meta_value )
+    add_post_meta( $post_id, $meta_key, $new_meta_value, true );
+
+  /* If the new meta value does not match the old value, update it. */
+  elseif ( $new_meta_value && $new_meta_value != $meta_value )
+    update_post_meta( $post_id, $meta_key, $new_meta_value );
+
+  /* If there is no new meta value but an old value exists, delete it. */
+  elseif ( '' == $new_meta_value && $meta_value )
+    delete_post_meta( $post_id, $meta_key, $meta_value );
+}
+
+
+/* PHONE NO */
+
+
+
+
+
+
+
+
+
+
+
+
 function add_admin_scripts( $hook ) {
 
     global $post;
@@ -1243,6 +1426,7 @@ $image_id = get_post_meta ($post->ID, $value, true);
 	}
 }
 
+
 add_action( 'edit_form_after_title', 'move_excerpt_meta_box' );
 function move_excerpt_meta_box( $post ) {
     if ( post_type_supports( $post->post_type, 'excerpt' ) ) {
@@ -1257,44 +1441,227 @@ function move_excerpt_meta_box( $post ) {
 
 remove_filter ('edit_form_after_title', 'wpautop');
 
+
+
+/*
 // TinyMCE: First line toolbar customizations
 if( !function_exists('base_extended_editor_mce_buttons') ){
 	function base_extended_editor_mce_buttons($buttons) {
 		// The settings are returned in this array. Customize to suite your needs.
-		return array(
-			'formatselect', 'bullist', 'numlist', 'link', 'unlink', 'blockquote', 'charmap', 'removeformat', 'spellchecker', 'fullscreen', 'wp_more', 'wp_help'
+		/*
+return array(
+			'bold', 'italic', 'formatselect', 'bullist', 'numlist', 'link', 'unlink', 'blockquote', 'justifyleft', 'justifycenter', 'justifyright', 'charmap', 'removeformat', 'spellchecker', 'fullscreen', 'wp_more', 'wp_help'
 		);
-		/* WordPress Default
+
+		WordPress Default
 		return array(
 			'bold', 'italic', 'strikethrough', 'separator',
 			'bullist', 'numlist', 'blockquote', 'separator',
 			'justifyleft', 'justifycenter', 'justifyright', 'separator',
 			'link', 'unlink', 'wp_more', 'separator',
 			'spellchecker', 'fullscreen', 'wp_adv'
-		); */
+		);
 	}
 	add_filter("mce_buttons", "base_extended_editor_mce_buttons", 0);
 }
-
+ */
+/*
 // TinyMCE: Second line toolbar customizations
 if( !function_exists('base_extended_editor_mce_buttons_2') ){
 	function base_extended_editor_mce_buttons_2($buttons) {
 		// The settings are returned in this array. Customize to suite your needs. An empty array is used here because I remove the second row of icons.
-		return array();
-		/* WordPress Default
+		return array('underline', 'justifyfull', 'undo', 'redo', 'media');
+		WordPress Default
 		return array(
 			'formatselect', 'underline', 'justifyfull', 'forecolor', 'separator',
 			'pastetext', 'pasteword', 'removeformat', 'separator',
 			'media', 'charmap', 'separator',
 			'outdent', 'indent', 'separator',
 			'undo', 'redo', 'wp_help'
-		); */
+		);
 	}
 	add_filter("mce_buttons_2", "base_extended_editor_mce_buttons_2", 0);
 }
+*/
 
 function wpa_45815($arr){
     $arr['block_formats'] = 'Paragraph=p;Heading 2=h2';
     return $arr;
   }
 add_filter('tiny_mce_before_init', 'wpa_45815');
+
+
+
+add_filter('tiny_mce_before_init', 'modify_formats');
+
+function modify_formats($settings){
+   $formats = array(
+     'bold' => array('inline' => 'b')
+    );
+    $settings['formats'] = json_encode( $formats );
+    return $settings;
+}
+
+
+
+/* Homepage admin */
+
+if( function_exists('acf_add_options_page') ) {
+
+	acf_add_options_page(array(
+		'page_title' 	=> 'Homepage admin',
+		'menu_title'	=> 'Homepage',
+		'menu_slug' 	=> 'homepage-admin',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));
+
+	// acf_add_options_sub_page(array(
+	// 	'page_title' 	=> 'Theme Header Settings',
+	// 	'menu_title'	=> 'Header',
+	// 	'parent_slug'	=> 'theme-general-settings',
+	// ));
+
+}
+
+function acf_wysiwyg_remove_wpautop() {
+    remove_filter('acf_the_content', 'wpautop' );
+}
+add_action('acf/init', 'acf_wysiwyg_remove_wpautop');
+
+
+/* You tube thumnails */
+function get_video_thumbnail_uri( $video_uri ) {
+
+		$thumbnail_uri = '';
+
+		// determine the type of video and the video id
+		$video = parse_video_uri( $video_uri );
+
+		// get youtube thumbnail
+		if ( $video['type'] == 'youtube' )
+			$thumbnail_uri = 'http://img.youtube.com/vi/' . $video['id'] . '/hqdefault.jpg';
+
+		// get vimeo thumbnail
+		if( $video['type'] == 'vimeo' )
+			$thumbnail_uri = get_vimeo_thumbnail_uri( $video['id'] );
+		// get wistia thumbnail
+		if( $video['type'] == 'wistia' )
+			$thumbnail_uri = get_wistia_thumbnail_uri( $video_uri );
+		// get default/placeholder thumbnail
+		if( empty( $thumbnail_uri ) || is_wp_error( $thumbnail_uri ) )
+			$thumbnail_uri = '';
+
+		//return thumbnail uri
+		return $thumbnail_uri;
+
+	}
+
+
+	/**
+	 * Parse the video uri/url to determine the video type/source and the video id
+	 */
+	function parse_video_uri( $url ) {
+
+		// Parse the url
+		$parse = parse_url( $url );
+
+		// Set blank variables
+		$video_type = '';
+		$video_id = '';
+
+		// Url is http://youtu.be/xxxx
+		if ( $parse['host'] == 'youtu.be' ) {
+
+			$video_type = 'youtube';
+
+			$video_id = ltrim( $parse['path'],'/' );
+
+		}
+
+		// Url is http://www.youtube.com/watch?v=xxxx
+		// or http://www.youtube.com/watch?feature=player_embedded&v=xxx
+		// or http://www.youtube.com/embed/xxxx
+		if ( ( $parse['host'] == 'youtube.com' ) || ( $parse['host'] == 'www.youtube.com' ) ) {
+
+			$video_type = 'youtube';
+
+			parse_str( $parse['query'] );
+
+			$video_id = $v;
+
+			if ( !empty( $feature ) )
+				$video_id = end( explode( 'v=', $parse['query'] ) );
+
+			if ( strpos( $parse['path'], 'embed' ) == 1 )
+				$video_id = end( explode( '/', $parse['path'] ) );
+
+		}
+
+		// Url is http://www.vimeo.com
+		if ( ( $parse['host'] == 'vimeo.com' ) || ( $parse['host'] == 'www.vimeo.com' ) ) {
+
+			$video_type = 'vimeo';
+
+			$video_id = ltrim( $parse['path'],'/' );
+
+		}
+		$host_names = explode(".", $parse['host'] );
+		$rebuild = ( ! empty( $host_names[1] ) ? $host_names[1] : '') . '.' . ( ! empty($host_names[2] ) ? $host_names[2] : '');
+		// Url is an oembed url wistia.com
+		if ( ( $rebuild == 'wistia.com' ) || ( $rebuild == 'wi.st.com' ) ) {
+
+			$video_type = 'wistia';
+
+			if ( strpos( $parse['path'], 'medias' ) == 1 )
+					$video_id = end( explode( '/', $parse['path'] ) );
+
+		}
+
+		// If recognised type return video array
+		if ( !empty( $video_type ) ) {
+
+			$video_array = array(
+				'type' => $video_type,
+				'id' => $video_id
+			);
+
+			return $video_array;
+
+		} else {
+
+			return false;
+
+		}
+
+	}
+
+	 /* Takes a Vimeo video/clip ID and calls the Vimeo API v2 to get the large thumbnail URL.
+	 */
+	function get_vimeo_thumbnail_uri( $clip_id ) {
+		$vimeo_api_uri = 'http://vimeo.com/api/v2/video/' . $clip_id . '.php';
+		$vimeo_response = wp_remote_get( $vimeo_api_uri );
+		if( is_wp_error( $vimeo_response ) ) {
+			return $vimeo_response;
+		} else {
+			$vimeo_response = unserialize( $vimeo_response['body'] );
+			return $vimeo_response[0]['thumbnail_large'];
+		}
+
+	}
+	/**
+	 * Takes a wistia oembed url and gets the video thumbnail url.
+	 */
+	function get_wistia_thumbnail_uri( $video_uri ) {
+		if ( empty($video_uri) )
+			return false;
+		$wistia_api_uri = 'http://fast.wistia.com/oembed?url=' . $video_uri;
+		$wistia_response = wp_remote_get( $wistia_api_uri );
+		if( is_wp_error( $wistia_response ) ) {
+			return $wistia_response;
+		} else {
+			$wistia_response = json_decode( $wistia_response['body'], true );
+			return $wistia_response['thumbnail_url'];
+		}
+
+	}

@@ -41,7 +41,7 @@
 
 .post .page {
   @include media-query(portable) {
-		padding-left: 42px;
+		// padding-left: 42px;
 	}
 }
 
@@ -66,6 +66,7 @@
 		float: left;
 	}
 	.author {
+    background: transparent;
 		float: right;
 		a {
 			color: lighten($darkgrey, 20%);
@@ -180,7 +181,7 @@
 
 .post-categories {
 		padding: 0;
-		margin-bottom: $half-spacing-unit;
+		margin-bottom: $half-spacing-unit !important;
 		@extend .nav;
 		li > a {
 			display: inline;
@@ -264,6 +265,9 @@ a[rel~="attachment"] {
   		@include font-size(16px);
   	}
 	}
+	a {
+		padding-right: 0;
+	}
 	img {
 		position: absolute;
 		width: 160px;
@@ -283,8 +287,11 @@ a[rel~="attachment"] {
 	margin-bottom: $base-spacing-unit
 }
 
+
+
 .directory__address {
 	 padding: $base-spacing-unit $half-spacing-unit;
+   margin-bottom: $base-spacing-unit;
 	 border-top: 3px solid #999;
 	 border-bottom: 3px solid #999;
 	 line-height: 1.4;
@@ -292,4 +299,12 @@ a[rel~="attachment"] {
 	 a {
 		 overflow-wrap: break-word;
 	 }
+}
+
+.directory__actions {
+  .btn {
+		@include mf-button();
+    width: 100%;
+		margin-bottom: 10px;
+  }
 }

@@ -16,22 +16,19 @@
 
 header {
 	@extend .cf;
+  // margin-bottom: $half-spacing-unit !important;
 	.page {
 		position: relative;
 	}
   @include media-query(lap) {
 		position: relative;
-		z-index: 9999;
-		-webkit-box-shadow: 0px 3px 16px 0px rgba(163,163,163,1);
-       -moz-box-shadow: 0px 3px 16px 0px rgba(163,163,163,1);
-            box-shadow: 0px 3px 16px 0px rgba(163,163,163,1);
+		z-index: 8000;
+		margin-bottom: 0 !important;
 	}
 	@include media-query(palm) {
 		position: relative;
-		z-index: 9999;
-		-webkit-box-shadow: 0px 3px 16px 0px rgba(163,163,163,1);
-       -moz-box-shadow: 0px 3px 16px 0px rgba(163,163,163,1);
-            box-shadow: 0px 3px 16px 0px rgba(163,163,163,1);
+		z-index: 8000;
+		margin-bottom: 0 !important;
 	}
 }
 
@@ -44,24 +41,42 @@ header.entry-header {
 .desk-position {
   position: absolute;
   top: 0px;
-  right: 16px;
+  right: 0px;
 	@media only screen and (max-width: 860px) {
 		position: static;
 	}
+	@media only screen and (max-width: 1200px) {
+		right: 16px;
+	}
+}
+
+.site-title.is_stuck {
+  width: 100% !important;
+	padding-left: 8px;
+	margin-left: -8px;
+}
+
+#navigation.is_stuck #search-toggle {
+	top: -4px;
 }
 
 .site-title {
 	font-weight: normal;
 	display: block;
-	@include font-size($brand-phone-size);
+	@include font-size(42px);
 	color: #fff;
-	margin-bottom: $half-spacing-unit;
-	margin-top: $half-spacing-unit;
+	background: #fff;
+	padding-bottom: $half-spacing-unit;
+	padding-top: $half-spacing-unit;
+	padding-left: 0px;
   font-family: $brand-face;
   font-style: normal;
   line-height: 0.95 !important;
   text-align: left;
   white-space: nowrap;
+	@media only screen and (max-width: 860px) {
+		margin-left: 0;
+	}
 
     a {
 	    color: #000;
@@ -83,7 +98,8 @@ header.entry-header {
     @include media-query(lap-and-up) {
     	text-align: left;
     	font-size: 3em;
-    	margin-top: 25px;
+    	padding-top: 28px;
+			margin-left: 5px;
     	a {
 	    	color: #000;
 	    	&:hover {
@@ -91,13 +107,16 @@ header.entry-header {
 				text-decoration: none;
 			}
 		}
-		@media only screen and (max-width: 1040px) {
-	    margin-top: $half-spacing-unit;
+		@media only screen and (max-width: 1200px) {
+	    padding-top: $half-spacing-unit;
+			margin-left: 0;
+			padding-left: 8px;
 	  }
-    }
-    @include media-query(desk) {
-    	text-align: left;
-    }
+
+  }
+  @include media-query(desk) {
+  	text-align: left;
+  }
 }
 
 .site-description {

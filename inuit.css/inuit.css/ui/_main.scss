@@ -7,7 +7,25 @@
 	 font-family: $body-face;
 	 -webkit-font-smoothing: antialiased;
 	 background: #fff;
+	 // background: #F3F3F3 !important;
  }
+
+.mf-loading {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  opacity: 1;
+	z-index: 9999;
+	background-size: 80px 80px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjY4LjggMzE3LjMiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDI2OC44IDMxNy4zOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGcgaWQ9IlhNTElEXzJfIj48cGF0aCBpZD0iWE1MSURfM18iIGQ9Ik0xNTEuOCwzMDcuN2MwLDIuNC0wLjcsNC40LTIuMiw2Yy0xLjUsMS41LTMuMiwyLjUtNS4zLDIuOGMtMi4xLDAuMy00LjEsMC41LTYuMywwLjdzLTMuOCwwLjEtNS4xLDBjLTAuOCwwLjMtMi4yLDAuMy00LjIsMC4xYy0yLjEtMC4yLTQuMS0wLjQtNi4zLTAuN2MtMi4xLTAuMy00LTEuMi01LjctMi44Yy0xLjctMS42LTIuNS0zLjgtMi41LTYuNHYtMTAzYy0yLjEsMTAuNS0zLjMsMTguMy0zLjgsMjMuM2wtNS42LDI4LjVjLTMuNywyMS40LTcuMiwzOS41LTEwLjYsNTQuM2MtMi4zLDMuNi00LjYsNS44LTYuNyw2LjdINzUuNGMtMTAuOSwwLjgtMTcuMy0xLjctMTkuMS03LjVjLTEuNC04LjYtNi0zMy4zLTEzLjctNzQuMWMtMi42LTE0LjktNC40LTI1LjMtNS42LTMxLjJ2MTAzLjNjMCwyLjQtMC43LDQuNC0yLjIsNmMtMS41LDEuNS0zLjIsMi41LTUuMywyLjhjLTIuMSwwLjMtNC4xLDAuNS02LjMsMC43Yy0yLjEsMC4xLTMuOCwwLjEtNS4xLDBjLTAuOSwwLjMtMi40LDAuMy00LjQsMC4xYy0yLjEtMC4yLTQuMS0wLjUtNi4yLTAuOWMtMi4xLTAuNC0zLjgtMS4zLTUuNC0yLjljLTEuNS0xLjUtMi4zLTMuNi0yLjMtNi4yVjkuOEMwLDIuNSw2LjQtMC43LDE5LjEsMC4xYzQuNywwLDguNCwwLjMsMTEuMSwwLjhjMi42LDAuNSw0LjcsMS43LDYuMiwzLjdjMS41LDEuOSwyLjUsMy45LDMsNS45YzAuNSwyLDEuMSw1LjQsMS43LDEwLjNjMC41LDYuNSwxLjYsMTMuOCwzLjMsMjEuN2MxLjQsNi40LDcuOCw0MC41LDE5LjIsMTAyLjRjMC45LDUuMSwyLjcsMTUuNSw1LjQsMzEuMWMyLjcsMTUuNiw0LjksMjcuNyw2LjUsMzYuM2wxNC40LTc3LjZjMTQuMi03OCwyMS43LTExOS4xLDIyLjUtMTIzLjRjMS44LTMuNyw0LjQtNy40LDcuOS0xMS4yaDIyLjljMS43LDAsMy41LDEuMiw1LjYsMy43YzIuMSwyLjQsMy4xLDQuNCwzLjEsNlYzMDcuN3ogTTc2LjIsMjE4LjZjMC4xLTAuMSwwLTAuNC0wLjQtMC44Qzc1LjgsMjE4LjMsNzYsMjE4LjYsNzYuMiwyMTguNnoiLz48cGF0aCBpZD0iWE1MSURfNl8iIGQ9Ik0yNjguOCwxNS45YzAsMS41LTAuMiwzLjQtMC42LDUuNWMtMC40LDIuMS0xLjMsNC4zLTIuOCw2LjVjLTEuNSwyLjItMy40LDMuNC01LjcsMy40aC00Ny4zYy0wLjMsMC44LTAuNCwxLjQtMC40LDEuOXYxMDIuMmwwLjQsMS45aDMzLjljMi43LDAsNC44LDEuMiw2LjMsMy43YzEuNSwyLjQsMi4zLDQuOSwyLjYsNy4zbDAuMiwzLjdjMCwxLjQtMC4yLDMuMS0wLjYsNS4yYy0wLjQsMi4xLTEuMyw0LjItMi44LDYuNGMtMS41LDIuMi0zLjQsMy40LTUuNywzLjRoLTMzLjljLTAuMywwLjgtMC40LDEuNC0wLjQsMS45djEzOC44YzAsMi40LTAuNyw0LjQtMi4yLDZjLTEuNSwxLjUtMy4zLDIuNS01LjQsMi44Yy0yLjEsMC4zLTQuMywwLjUtNi40LDAuN2MtMi4yLDAuMS0zLjksMC4xLTUuMiwwYy0wLjgsMC4zLTIuMiwwLjMtNC4yLDBjLTIuMS0wLjMtNC4xLTAuNS02LjItMC45Yy0yLjEtMC4zLTMuOS0xLjMtNS41LTIuOGMtMS42LTEuNS0yLjQtMy42LTIuNC02LjJWMTAuNWMwLTEuOCwxLjItMy45LDMuNy02LjRjMi40LTIuNCw0LjctMy43LDYuNy0zLjdoNzMuM0MyNjUuMywwLjUsMjY4LjgsNS43LDI2OC44LDE1Ljl6Ii8+ICAgICAgICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJmaWxsLW9wYWNpdHkiICAgICBiZWdpbj0iMHMiIGR1cj0iMXMiICAgICB2YWx1ZXM9IjE7LjI7MSIgY2FsY01vZGU9ImxpbmVhciIgICAgIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAvPjwvZz48L3N2Zz4=);
+}
 
 a {
     color: $black;
@@ -43,25 +61,32 @@ a {
 #page,
 .page {
 	@extend .cf;
-	max-width: 1280px;
+	max-width: 1440px;
 	margin: 0 auto;
-	padding: 0 $half-spacing-unit;
+	padding: 0 4px;
 	@include media-query(palm) {
 		padding: 0 $half-spacing-unit/2;
 	}
 }
 
-.featured-home {
-	@extend .cf;
-	max-width: 1400px;
-	margin: $half-spacing-unit auto $half-spacing-unit auto;
-	padding: 0;
-  @include media-query(lap) {
-		margin: 0 auto $half-spacing-unit auto;
+.page--home {
+  @include media-query(palm) {
+		padding: 0 0;
 	}
-	@include media-query(palm) {
-		margin: 0 auto $half-spacing-unit auto;
-	}
+}
+
+.single-post .type-post  {
+  padding-left: 20px !important;
+}
+
+.single-post .type-post .post-tile  {
+	padding-left: 0px !important;
+}
+
+.greybox {
+	background: #ccc;
+	min-height: 240px;
+	width: 100%;
 }
 
 .page-template-default .wrapper.page {
@@ -73,7 +98,7 @@ a {
 
 .directory-template-default .wrapper.page {
   @include media-query(portable) {
-		padding-left: 42px;
+		padding-left: 25px;
 	}
 }
 
@@ -87,10 +112,12 @@ a {
 }
 
 .border-wrap {
-	padding: $base-spacing-unit 0 $half-spacing-unit 0;
+	padding: $base-spacing-unit 0 0 0;
 	margin-bottom: $base-spacing-unit;
-	border-top: 1px solid #999;
-	border-bottom: 1px solid #999;
+  @include media-query(palm) {
+    padding: 0;
+  	margin-bottom: 0;
+	}
 	.ad-sq {
 		margin-bottom: 0;
 	}
@@ -114,18 +141,12 @@ a {
 }
 
 .home .page-bg {
-	background: #F3F3F3 !important;
-	@include media-query(lap) {
-		padding-top: 0;
-	}
-	@include media-query(palm) {
-		padding-top: 0;
-	}
+  padding: 0;
 }
 
 .page-bg {
 	padding: $half-spacing-unit 0;
-	background: #F3F3F3;
+	// background: #F3F3F3;
 	@include media-query(palm) {
 		padding: $half-spacing-unit/2 0;
 	}
@@ -175,6 +196,56 @@ a {
 .category-drinking-in-manchester .page-bg,
 .page-bg.category-drinking-in-manchester {
 	background: lighten(#e3c7e7, 10%);
+}
+
+.mf-masonry {
+	// display: -webkit-box;
+	// display: -ms-flexbox;
+	// display: grid;
+	-webkit-flex-direction: row;
+	   flex-direction: row;
+	   -webkit-align-items: flex-start;
+	   align-items: flex-start;
+	-moz-column-gap: 16px;
+  -webkit-column-gap: 16px;
+  column-gap: 16px;
+	      box-sizing: border-box;
+   -moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+	@media only screen and (min-width: 400px) {
+		column-gap: 8px;
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+  }
+	@media only screen and (min-width: 700px) {
+		column-gap: 16px;
+	  -moz-column-count: 4;
+	  -webkit-column-count: 4;
+	  column-count: 4;
+	}
+  @media only screen and (min-width: 900px) {
+		column-gap: 32px;
+    -moz-column-count: 4;
+    -webkit-column-count: 4;
+    column-count: 4;
+  }
+
+	.mf-masonry__item {
+		position: relative;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+    width: 100%;
+		        box-sizing: border-box;
+       -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+		transition: transform 0.3s ease-in-out;
+		backface-visibility: hidden;
+		// &:hover {
+    // 	transform: scale(1.05);
+		// }
+	}
 }
 
 .skip-nav {
