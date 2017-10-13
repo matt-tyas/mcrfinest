@@ -36,50 +36,53 @@
 	}
 }
 
-// .btn--secondary {
-// 	background: lighten($darkgrey, 50%);
-// 	color: white;
-// 	font-weight: bold;
-// 	-webkit-transition: all 0.3s ease;
-//        -moz-transition: all 0.3s ease;
-//             transition: all 0.3s ease;
-// 	&:hover {
-// 		background: lighten($brand-color, 11%);
-// 		color: #fff !important;
-// 		}
-// }
-
 .btn--secondary.twitter {
-	color: #00aced;
+	padding: 10px;
+	width: 90px;
+	background-color: #00aced;
 	font-weight: bold;
+	color: #fff;
+	border-bottom: 0;
 	.icon-twitter {
 		font-size: 3.5em;
 	}
 	&:hover {
-		border: 1px solid darken(#999, 20%);
+		//border: 1px solid darken(#999, 20%);
 	}
 }
 
 .btn--secondary.instagram {
-	color: #886808;
+	padding: 10px;
+	width: 90px;
+	background: -webkit-radial-gradient(32% 106%, circle cover, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), -webkit-linear-gradient(-45deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
+	background: -moz-radial-gradient(32% 106%, circle cover, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), -moz-linear-gradient(-45deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
+	background: -ms-radial-gradient(32% 106%, circle cover, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), -ms-linear-gradient(-45deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
+	background: -o-radial-gradient(32% 106%, circle cover, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), -o-linear-gradient(-45deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
+	background: radial-gradient(circle farthest-corner at 32% 106%, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), linear-gradient(135deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
+	color: #fff;
 	font-weight: bold;
+	border-bottom: 0;
 	.icon-instagram {
 		font-size: 3.5em;
 	}
 	&:hover {
-		border: 1px solid darken(#999, 20%);
+		//border: 1px solid darken(#999, 20%);
 	}
 }
 
 
 .btn--secondary.facebook {
-	color: #3B5998;
+	padding: 10px;
+	width: 90px;
+	background-color: #3B5998;
 	font-weight: bold;
+	color: #fff;
+	border-bottom: 0;
 	.icon-facebook {
 		  font-size: 3.5em;
 		}
 		&:hover {
-			border: 1px solid darken(#999, 20%);
+			//border: 1px solid darken(#999, 20%);
 		}
 	}
 

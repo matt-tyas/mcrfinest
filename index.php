@@ -264,7 +264,7 @@
 							<h3 class="mf-label"><a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link">
                                 Eating and Drinking <span class="mf-label__link-click">View all articles</span></a></h3>
 							<div class="gw equal">
-							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => 970);
+							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => 968);
 					            $myposts1 = get_posts( $args1 );
 					            foreach ( $myposts1 as $post ) : setup_postdata( $post ); ?>
 				    			<div class="g one-quarter lap-one-half palm-one-half">
@@ -579,6 +579,24 @@
 					</div>
 				</div>
 			</section>
+			<div class="mf-offset mf-offset--wide">
+				<div class="mf-offset__position mf-offset__position--right">
+					<div class="gw">
+						<div class="g one-half">
+							<?php
+								if ( is_active_sidebar( 'homepage-optional-2' ) ) : ?>
+								<?php dynamic_sidebar( 'homepage-optional-2' ); ?>
+							<?php endif; ?>
+						</div>
+						<div class="g one-half">
+							<?php
+								if ( is_active_sidebar( 'homepage-optional-2' ) ) : ?>
+								<?php dynamic_sidebar( 'homepage-optional-2' ); ?>
+							<?php endif; ?>
+						</div>
+					</div>
+				</div>
+			</div>
 			<section class="border-wrap">
     			<div class="gw">
     				<div class="g one-whole lap-one-whole palm-one-whole">
@@ -646,7 +664,7 @@
 				</div>
 			</section>
 			<div class="mf-offset mf-offset--wide">
-				<div class="social-inline mf-offset__position mf-offset__position--right">
+				<div class="social-inline">
    					<?php get_template_part('social'); ?>
 				</div>
 			</div>

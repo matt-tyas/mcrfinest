@@ -112,7 +112,7 @@ a {
 }
 
 .border-wrap {
-	padding: $base-spacing-unit 0 $half-spacing-unit 0;
+	padding: $base-spacing-unit 0 0 0;
 	margin-bottom: $base-spacing-unit;
   @include media-query(palm) {
     padding: 0;

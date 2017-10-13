@@ -93,11 +93,19 @@
 // }
 
 .mf-connect {
-	padding: $base-spacing-unit;
-	border: 5px solid $darkgrey;
-	background: #fff;
+	// padding: $base-spacing-unit;
+	// border: 5px solid $darkgrey;
+	// background: #fff;
+	margin-bottom: $half-spacing-unit;
+
+	li a {
+		margin-left: 16px;
+	}
 
 	.sub-title {
+		text-align: center;
+		font-weight: bold;
+		font-size: 32px !important;
 		color: #000;
 		border-bottom: 0;
 	}
@@ -161,8 +169,22 @@
 	text-align: center;
 
 	.btn-circle {
+		padding: 0 !important;
+		width: auto;
 		font-size: .6em;
 		display: inline-block;
+		line-height: 1.06667;
+		border: 0;
+		border-radius: 50%;
+		height: 64px;
+		width: 64px;
+		display: block;
+		text-align: center;
+		margin: 0 auto 16px auto;
+	}
+
+	.btn--secondary.instagram {
+		background: #886808 !important;
 	}
 
   .icon-twitter,
@@ -171,12 +193,12 @@
 		font-size: 3em;
 		&:before{
 			position: relative;
-			top: 10px;
+			top: 12px;
 		}
 	}
 	.icon-envelope {
 		&:before{
-			top: 12px;
+			top: 14px;
 		}
 	}
 }
