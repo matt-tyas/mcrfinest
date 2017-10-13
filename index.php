@@ -501,7 +501,7 @@
 							    // Get the URL of this category
 							    $category_link = get_category_link( $category_id );
 							?>
-							<h3 class="mf-label"><a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link"><span class="icon icon-brush"></span> Arts &amp; Culture <span class="mf-label__link-click">View all articles</span></a></h3>
+							<h3 class="mf-label"><a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link">Arts &amp; Culture <span class="mf-label__link-click">View all articles</span></a></h3>
 							<div class="gw equal">
 							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => 27);
 					            $myposts1 = get_posts( $args1 );
