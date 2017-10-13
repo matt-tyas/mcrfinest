@@ -85,7 +85,7 @@
 .ad-title {
 	margin-bottom: $base-spacing-unit !important;
 }
-
+ 
 .ad-sq {
 	margin: 0 auto $half-spacing-unit auto;
   @include media-query(palm) {
@@ -99,7 +99,7 @@
   }
 	a {
 		border: 0;
-	}  
+	}
 	img {
 		// width: 100%;
 	}
