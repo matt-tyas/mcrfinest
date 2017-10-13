@@ -15,7 +15,7 @@
     #mc_embed_signup .mc-field-group {width: 100%;}
     #mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error { border: 1px solid #CE0000; }
     </style>
-    <div id="mc_embed_signup  ">  
+    <div id="mc_embed_signup">  
         <form action="//ManchestersFinest.us2.list-manage.com/subscribe/post?u=80f2869a6d1828e3a9de6548f&amp;id=3b2131b21e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
             <div id="mc_embed_signup_scroll">
             <div class="mc-field-group">
