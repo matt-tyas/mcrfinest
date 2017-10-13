@@ -15,12 +15,12 @@
     #mc_embed_signup .mc-field-group {width: 100%;}
     #mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error { border: 1px solid #CE0000; }
     </style>
-    <div id="mc_embed_signup">
+    <div id="mc_embed_signup  ">  
         <form action="//ManchestersFinest.us2.list-manage.com/subscribe/post?u=80f2869a6d1828e3a9de6548f&amp;id=3b2131b21e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
             <div id="mc_embed_signup_scroll">
             <div class="mc-field-group">
-                <h4 role="label" for="mce-EMAIL" id="fit-brand" class="brandface-title">GET THE NEWSLETTER</h4>
-                <p>Offers, competitions &amp; news</p>
+                <h4 role="label" for="mce-EMAIL" id="fit-brand" class="brandface-title">Sign up</h4>
+                <p>Exclusive events &amp; news in mcr</p>
                 <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Enter your email">
                 <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_80f2869a6d1828e3a9de6548f_3b2131b21e" tabindex="-1" value=""></div>
                <input type="submit" value="Sign up" name="subscribe" id="mc-embedded-subscribe" class="button"></div>

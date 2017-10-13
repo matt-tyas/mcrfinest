@@ -143,8 +143,8 @@
 						<form action="//ManchestersFinest.us2.list-manage.com/subscribe/post?u=80f2869a6d1828e3a9de6548f&amp;id=3b2131b21e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 							<div id="mc_embed_signup_scroll">
 								<div class="mc-field-group">
-									<h4 role="label" for="mce-EMAIL" id="fit-brand" class="brandface-title">GET THE NEWSLETTER</h4>
-									<p>Offers, competitions and Mcr news</p>
+									<h4 role="label" for="mce-EMAIL" id="fit-brand" class="brandface-title">Sign up</h4>
+									<p>Exclusive events &amp; news in mcr</p>
 									<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Enter your email">
 									<div style="position: absolute; left: -5000px;" aria-hidden="true">
 										<input type="text" name="b_80f2869a6d1828e3a9de6548f_3b2131b21e" tabindex="-1" value="">
@@ -194,16 +194,16 @@
 				<div class="mf-offset__position mf-offset__position--right">
 					<div class="gw">
 						<div class="g one-half">
-							<?php
-								if ( is_active_sidebar( 'homepage-optional-2' ) ) : ?>
-								<?php dynamic_sidebar( 'homepage-optional-2' ); ?>
-							<?php endif; ?>
+                            <?php
+                                if ( is_active_sidebar( 'homepage-advert-1' ) ) : ?>
+                                <?php dynamic_sidebar( 'homepage-advert-1' ); ?>
+                            <?php endif; ?>
 						</div>
 						<div class="g one-half">
-							<?php
-								if ( is_active_sidebar( 'homepage-optional-2' ) ) : ?>
-								<?php dynamic_sidebar( 'homepage-optional-2' ); ?>
-							<?php endif; ?>
+                            <?php
+                                if ( is_active_sidebar( 'homepage-advert-2' ) ) : ?>
+                                <?php dynamic_sidebar( 'homepage-advert-2' ); ?>
+                            <?php endif; ?>
 						</div>
 					</div>
 				</div>
@@ -262,9 +262,9 @@
 							    $category_link = get_category_link( $category_id );
 							?>
 							<h3 class="mf-label"><a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link">
-                                Eating and Drinking <span class="mf-label__link-click">View all articles</span></a></h3>
+                                Eating and drinking <span class="mf-label__link-click">View all articles</span></a></h3>
 							<div class="gw equal">
-							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => 970);
+							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => 975);
 					            $myposts1 = get_posts( $args1 );
 					            foreach ( $myposts1 as $post ) : setup_postdata( $post ); ?>
 				    			<div class="g one-quarter lap-one-half palm-one-half">
@@ -292,14 +292,14 @@
 					<div class="gw">
 						<div class="g one-half">
 							<?php
-								if ( is_active_sidebar( 'homepage-optional-2' ) ) : ?>
-								<?php dynamic_sidebar( 'homepage-optional-2' ); ?>
+								if ( is_active_sidebar( 'homepage-optional-7' ) ) : ?>
+								<?php dynamic_sidebar( 'homepage-optional-7' ); ?>
 							<?php endif; ?>
 						</div>
 						<div class="g one-half">
 							<?php
-								if ( is_active_sidebar( 'homepage-optional-2' ) ) : ?>
-								<?php dynamic_sidebar( 'homepage-optional-2' ); ?>
+							    if ( is_active_sidebar( 'homepage-advert-3' ) ) : ?>
+								<?php dynamic_sidebar( 'homepage-advert-3' ); ?>
 							<?php endif; ?>
 						</div>
 					</div>
@@ -478,8 +478,8 @@
 					<div class="gw">
 						<div class="g one-half">
 							<?php
-								if ( is_active_sidebar( 'homepage-optional-2' ) ) : ?>
-								<?php dynamic_sidebar( 'homepage-optional-2' ); ?>
+							    if ( is_active_sidebar( 'homepage-advert-4' ) ) : ?>
+								<?php dynamic_sidebar( 'homepage-advert-4' ); ?>
 							<?php endif; ?>
 						</div>
 						<div class="g one-half">
@@ -531,14 +531,14 @@
 					<div class="gw">
 						<div class="g one-half">
 							<?php
-								if ( is_active_sidebar( 'homepage-optional-2' ) ) : ?>
-								<?php dynamic_sidebar( 'homepage-optional-2' ); ?>
+								 if ( is_active_sidebar( 'homepage-optional-3' ) ) : ?>
+								 <?php dynamic_sidebar( 'homepage-optional-3' ); ?>
 							<?php endif; ?>
 						</div>
 						<div class="g one-half">
 							<?php
-								if ( is_active_sidebar( 'homepage-optional-2' ) ) : ?>
-								<?php dynamic_sidebar( 'homepage-optional-2' ); ?>
+								 if ( is_active_sidebar( 'homepage-optional-4' ) ) : ?>
+								 <?php dynamic_sidebar( 'homepage-optional-4' ); ?>
 							<?php endif; ?>
 						</div>
 					</div>
@@ -584,14 +584,14 @@
 					<div class="gw">
 						<div class="g one-half">
 							<?php
-								if ( is_active_sidebar( 'homepage-optional-2' ) ) : ?>
-								<?php dynamic_sidebar( 'homepage-optional-2' ); ?>
+								 if ( is_active_sidebar( 'homepage-optional-5' ) ) : ?>
+								 <?php dynamic_sidebar( 'homepage-optional-5' ); ?>
 							<?php endif; ?>
 						</div>
 						<div class="g one-half">
 							<?php
-								if ( is_active_sidebar( 'homepage-optional-2' ) ) : ?>
-								<?php dynamic_sidebar( 'homepage-optional-2' ); ?>
+								 if ( is_active_sidebar( 'homepage-optional-6' ) ) : ?>
+								 <?php dynamic_sidebar( 'homepage-optional-6' ); ?>
 							<?php endif; ?>
 						</div>
 					</div>
@@ -602,11 +602,12 @@
     				<div class="g one-whole lap-one-whole palm-one-whole">
 						<div class="mf-section mf-section--white">
 						<h3 class="mf-label"><a href="https://www.instagram.com/mcrfinest/" class="mf-label__link"><span class="icon icon-instagram"></span> mcrfinest <span class="mf-label__link-click">Follow us</span></a></h3>
-							<?php
-								if ( is_active_sidebar( 'homepage-optional-1' ) ) : ?>
-								<?php dynamic_sidebar( 'homepage-optional-1' ); ?>
-							<?php endif; ?>
-						</div>
+							<div id="owl-instagram" class="owl-carousel">
+								<?php
+									 if ( is_active_sidebar( 'homepage-optional-1' ) ) : ?>
+									 <?php dynamic_sidebar( 'homepage-optional-1' ); ?>
+								<?php endif; ?>
+							</div>
     				</div>
     			</div>
     		</section>
@@ -621,8 +622,8 @@
 						</div>
 						<div class="g one-half">
 							<?php
-								if ( is_active_sidebar( 'homepage-optional-2' ) ) : ?>
-								<?php dynamic_sidebar( 'homepage-optional-2' ); ?>
+								 if ( is_active_sidebar( 'homepage-optional-8' ) ) : ?>
+								 <?php dynamic_sidebar( 'homepage-optional-8' ); ?>
 							<?php endif; ?>
 						</div>
 					</div>
@@ -703,7 +704,7 @@
 					</div>
 				</div>
 			</section>
-			<div class="mf-offset mf-offset--wide">
+			<!-- <div class="mf-offset mf-offset--wide">
 				<div class="mf-offset__position mf-offset__position--right">
 					<div class="gw">
 						<div class="g one-half">
@@ -720,7 +721,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
 			<section class="border-wrap">
     			<div class="gw">
     				<div class="g one-whole lap-one-whole palm-one-whole">
@@ -756,7 +757,7 @@
 					</div>
 				</div>
 			</section>
-			<div class="mf-offset mf-offset--wide">
+			<!-- <div class="mf-offset mf-offset--wide">
 				<div class="mf-offset__position mf-offset__position--right">
 					<div class="gw">
 						<div class="g one-half">
@@ -773,7 +774,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
 			<section class="border-wrap">
     			<div class="gw">
     				<div class="g one-whole lap-one-whole palm-one-whole">
