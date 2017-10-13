@@ -143,7 +143,7 @@
 						<form action="//ManchestersFinest.us2.list-manage.com/subscribe/post?u=80f2869a6d1828e3a9de6548f&amp;id=3b2131b21e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 							<div id="mc_embed_signup_scroll">
 								<div class="mc-field-group">
-									<h4 role="label" for="mce-EMAIL" id="fit-brand" class="brandface-title">Sign up now</h4>
+									<h4 role="label" for="mce-EMAIL" id="fit-brand" class="brandface-title">Sign up</h4>
 									<p>Exclusive events &amp; news in mcr</p>
 									<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Enter your email">
 									<div style="position: absolute; left: -5000px;" aria-hidden="true">
