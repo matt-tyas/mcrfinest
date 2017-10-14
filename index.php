@@ -497,7 +497,7 @@
 						<div class="mf-section mf-articles mf-peach">
 							<?php
 							    // Get the ID of a given category
-							    $category_id = get_cat_ID( 'arts' );
+							    $category_id = get_cat_ID( 'Arts & Culture' );
 							    // Get the URL of this category
 							    $category_link = get_category_link( $category_id );
 							?>
