@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-	<section class="site-content mf-grey">
+	<section class="site-content">
 		<div class="gw" role="main">
 
 			<div class="g two-thirds palm-one-whole">
