@@ -501,7 +501,7 @@
 							    // Get the URL of this category
 							    $category_link = get_category_link( $category_id );
 							?>
-							<h3 class="mf-label"><a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link">Arts &amp; Culture <span class="mf-label__link-click">View all articles</span></a></h3>
+							<h3 class="mf-label"><a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link">Arts &amp; culture <span class="mf-label__link-click">View all articles</span></a></h3>
 							<div class="gw equal">
 							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => 27);
 					            $myposts1 = get_posts( $args1 );
@@ -602,12 +602,10 @@
     				<div class="g one-whole lap-one-whole palm-one-whole">
 						<div class="mf-section mf-section--white">
 						<h3 class="mf-label"><a href="https://www.instagram.com/mcrfinest/" class="mf-label__link"><span class="icon icon-instagram"></span> mcrfinest <span class="mf-label__link-click">Follow us</span></a></h3>
-
-								<?php
-									 if ( is_active_sidebar( 'homepage-optional-1' ) ) : ?>
-									 <?php dynamic_sidebar( 'homepage-optional-1' ); ?>
-								<?php endif; ?>
-						
+    						<?php
+    							 if ( is_active_sidebar( 'homepage-optional-1' ) ) : ?>
+    							 <?php dynamic_sidebar( 'homepage-optional-1' ); ?>
+    						<?php endif; ?>
     				</div>
     			</div>
     		</section>
