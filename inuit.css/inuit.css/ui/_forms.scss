@@ -238,7 +238,7 @@ textarea:focus, input:focus{
 		margin-bottom: $half-spacing-unit;
 	}
 	@include media-query(desk) {
-		width: 400px;
+		width: 450px;
 		margin-bottom: $half-spacing-unit;
 	}
 	#fit-brand {
@@ -266,7 +266,7 @@ textarea:focus, input:focus{
 .newscta--home {
 	margin-top: 5px;
   #mc_embed_signup .mc-field-group input {
-    width: 65% !important;
+    width: 70% !important;
   }
   #mc_embed_signup .mc-field-group input.button {
 

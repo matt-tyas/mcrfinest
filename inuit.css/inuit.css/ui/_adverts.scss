@@ -48,8 +48,13 @@
 
 .mf-offset__position--right {
 	right: 32px;
-	top: -74px;
-  width: 400px;
+	top: -77px;
+  width: 350px;
+}
+
+.mf-offset__position--right--news {
+  right: 132px;
+  top: -92px;
 }
 
 .mf-offset__position--left {
@@ -62,7 +67,7 @@
 }
 
 .mf-offset__width-med {
-  width: 400px;
+  width: 350px;
 	@include media-query(lap) {
     width: 100%;
   }

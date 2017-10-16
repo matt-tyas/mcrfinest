@@ -121,7 +121,7 @@
     			</div>
     		</section> -->
 			<div class="mf-offset mf-offset--wide">
-				<div class="mf-offset__position mf-offset__position--right">
+				<div class="mf-offset__position mf-offset__position--right mf-offset__position--right--news">
 					<div class="newscta newscta--home">
 					<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
 					<style type="text/css">
@@ -135,7 +135,7 @@
 						#mc_embed_signup .mc-field-group input { opacity: 1;}
 						#mc_embed_signup .button { background: #886808; font-size: 20px; }
 						#mc_embed_signup .button:hover { background: #b88d0b; }
-						#mc_embed_signup .mc-field-group { min-height:60px; }
+						#mc_embed_signup .mc-field-group { min-height:60px; padding-bottom: 0; }
 						#mc_embed_signup form {padding: 0;}
 						#mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {background: #CE0000; color: #fff; font-weight: bold; font-size: 18px; border-radius: 0; width: 100%;}
 					</style>
@@ -264,7 +264,7 @@
 							<h3 class="mf-label"><a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link">
                                 Eating and drinking <span class="mf-label__link-click">View all articles</span></a></h3>
 							<div class="gw equal">
-							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => 975);
+							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => 968);
 					            $myposts1 = get_posts( $args1 );
 					            foreach ( $myposts1 as $post ) : setup_postdata( $post ); ?>
 				    			<div class="g one-quarter lap-one-half palm-one-half">
