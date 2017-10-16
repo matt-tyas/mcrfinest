@@ -136,8 +136,9 @@ a {
 	}
 }
 
-.white-bg {
-	background: #fff;
+.white-bg,
+.home {
+	background: #fff !important;
 }
 
 .home .page-bg {
@@ -192,7 +193,10 @@ a {
 .category-arts .page-bg {
 	background: lighten(#EAD9DB, 5%);
 }
+.home .category-drinking-in-manchester .page-bg,
+.home .page-bg.category-drinking-in-manchester {
 
+}
 .category-drinking-in-manchester .page-bg,
 .page-bg.category-drinking-in-manchester {
 	background: lighten(#e3c7e7, 10%);
