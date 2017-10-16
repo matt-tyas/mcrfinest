@@ -176,10 +176,10 @@
 						                    <?php
 						                        the_post_thumbnail('big-post-thumb');
 						                    ?>
-						                    <h3><?php echo wp_trim_words ( the_title ( '', '', false ), 6 , '&hellip;'); ?></h3>
-						                    <div class="intro">
-						                        <p><?php echo get_excerpt(80); ?></p>
-						                    </div>
+						                    <h3><?php echo wp_trim_words ( the_title ( '', '', false ), 12 , '&hellip;'); ?></h3>
+						                    <!-- <div class="intro">
+						                        <p><?php // echo get_excerpt(80); ?></p>
+						                    </div> -->
 						                </article>
 									</a>
 								</div>
@@ -273,10 +273,10 @@
 											<?php
 						                        the_post_thumbnail('big-post-thumb');
 						                    ?>
-                                            <h3><?php echo wp_trim_words ( the_title ( '', '', false ), 6 , '&hellip;'); ?></h3>
-						                    <div class="intro">
-						                        <p><?php echo get_excerpt(80); ?></p>
-						                    </div>
+                                            <h3><?php echo wp_trim_words ( the_title ( '', '', false ), 12 , '&hellip;'); ?></h3>
+											<!-- <div class="intro">
+						                        <p><?php // echo get_excerpt(80); ?></p>
+						                    </div> -->
 						                </article>
 									</a>
 								</div>
@@ -512,10 +512,10 @@
 											<?php
 						                        the_post_thumbnail('big-post-thumb');
 						                    ?>
-						                    <h3><?php echo wp_trim_words ( the_title ( '', '', false ), 6 , '&hellip;'); ?></h3>
-						                    <div class="intro">
-						                        <p><?php echo get_excerpt(80); ?></p>
-						                    </div>
+						                    <h3><?php echo wp_trim_words ( the_title ( '', '', false ), 12 , '&hellip;'); ?></h3>
+											<!-- <div class="intro">
+						                        <p><?php // echo get_excerpt(80); ?></p>
+						                    </div> -->
 						                </article>
 									</a>
 								</div>
@@ -565,10 +565,10 @@
 											<?php
 						                        the_post_thumbnail('big-post-thumb');
 						                    ?>
-						                    <h3><?php echo wp_trim_words ( the_title ( '', '', false ), 6 , '&hellip;'); ?></h3>
-						                    <div class="intro">
-						                        <p><?php echo get_excerpt(80); ?></p>
-						                    </div>
+						                    <h3><?php echo wp_trim_words ( the_title ( '', '', false ), 12 , '&hellip;'); ?></h3>
+											<!-- <div class="intro">
+						                        <p><?php // echo get_excerpt(80); ?></p>
+						                    </div> -->
 						                </article>
 									</a>
 								</div>
@@ -648,10 +648,10 @@
 											<?php
 												the_post_thumbnail('big-post-thumb');
 											?>
-						                    <h3><?php echo wp_trim_words ( the_title ( '', '', false ), 6 , '&hellip;'); ?></h3>
-						                    <div class="intro">
-						                        <p><?php echo get_excerpt(80); ?></p>
-						                    </div>
+						                    <h3><?php echo wp_trim_words ( the_title ( '', '', false ), 12 , '&hellip;'); ?></h3>
+											<!-- <div class="intro">
+						                        <p><?php // echo get_excerpt(80); ?></p>
+						                    </div> -->
 						                </article>
 									</a>
 								</div>
@@ -688,10 +688,10 @@
 											<?php
 						                        the_post_thumbnail('big-post-thumb');
 						                    ?>
-						                    <h3><?php echo wp_trim_words ( the_title ( '', '', false ), 6 , '&hellip;'); ?></h3>
-						                    <div class="intro">
-						                        <p><?php echo get_excerpt(80); ?></p>
-						                    </div>
+						                    <h3><?php echo wp_trim_words ( the_title ( '', '', false ), 12 , '&hellip;'); ?></h3>
+											<!-- <div class="intro">
+						                        <p><?php // echo get_excerpt(80); ?></p>
+						                    </div> -->
 						                </article>
 									</a>
 								</div>
@@ -741,10 +741,10 @@
 											<?php
 						                        the_post_thumbnail('big-post-thumb');
 						                    ?>
-						                    <h3><?php echo wp_trim_words ( the_title ( '', '', false ), 6 , '&hellip;'); ?></h3>
-						                    <div class="intro">
-						                        <p><?php echo get_excerpt(80); ?></p>
-						                    </div>
+						                    <h3><?php echo wp_trim_words ( the_title ( '', '', false ), 12 , '&hellip;'); ?></h3>
+											<!-- <div class="intro">
+						                        <p><?php // echo get_excerpt(80); ?></p>
+						                    </div> -->
 						                </article>
 									</a>
 								</div>
@@ -794,10 +794,10 @@
 											<?php
 						                        the_post_thumbnail('big-post-thumb');
 						                    ?>
-						                    <h3><?php echo wp_trim_words ( the_title ( '', '', false ), 6 , '&hellip;'); ?></h3>
-						                    <div class="intro">
-						                        <p><?php echo get_excerpt(80); ?></p>
-						                    </div>
+						                    <h3><?php echo wp_trim_words ( the_title ( '', '', false ), 12 , '&hellip;'); ?></h3>
+											<!-- <div class="intro">
+						                        <p><?php // echo get_excerpt(80); ?></p>
+						                    </div> -->
 						                </article>
 									</a>
 								</div>

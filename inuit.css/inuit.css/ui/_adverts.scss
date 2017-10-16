@@ -30,9 +30,11 @@
   z-index: 500;
 	@include media-query(lap) {
     position: static;
+    margin: $base-spacing-unit auto 0 auto;
   }
 	@include media-query(palm) {
     position: static;
+    margin: $base-spacing-unit auto 0 auto;
   }
   .ad-sq {
     @include media-query(lap) {
@@ -46,13 +48,13 @@
 
 .mf-offset__position--right {
 	right: 32px;
-	top: -90px;
+	top: -74px;
   width: 400px;
 }
 
 .mf-offset__position--left {
   left: 32px;
-	top: -100px;
+	top: -74px;
 }
 
 .mf-offset__position--extra-pull {
