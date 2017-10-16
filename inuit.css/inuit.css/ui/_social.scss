@@ -5,7 +5,7 @@
 
 .mf-twitter {
   margin-top: 32px;
-	padding: $base-spacing-unit;
+	padding: $half-spacing-unit $base-spacing-unit;
 	background: #1DA1F3;
   @include media-query(palm) {
 		margin-top: 16px;
