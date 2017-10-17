@@ -64,10 +64,7 @@
 	<header role="banner" class="gw white-bg">
 		<div class="page">
 			<div class="g six-twelfths lap-one-half palm-one-whole">
-				<div class="site-title">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">Manchester's <span>Finest</span><span class="accessibility"> and the Northern Quarter</span>
-					</a>
-				</div>
+				<?php get_template_part('logo'); ?>
 				<div class="site-description accessibility"><?php bloginfo( 'description' ); ?></div>
 			</div>
 			<nav role="navigation" id="navigation" class="g  one-whole  primary">

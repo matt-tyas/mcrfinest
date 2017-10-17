@@ -86,6 +86,21 @@
 		}
 	}
 
+  .btn--secondary.whatsapp {
+  	padding: 10px;
+  	width: 90px;
+  	background-color: #22CD5B;
+  	font-weight: bold;
+  	color: #fff;
+  	border-bottom: 0;
+  	.icon-facebook {
+  		  font-size: 3.5em;
+  		}
+  		&:hover {
+  			//border: 1px solid darken(#999, 20%);
+  		}
+  	}
+
 
 .btn--twitter {
 	background: #00aced;
