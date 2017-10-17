@@ -66,6 +66,7 @@ header.entry-header {
 	@include font-size(42px);
 	color: #fff;
 	background: #fff;
+	padding-bottom: $half-spacing-unit;
 	padding-top: $half-spacing-unit;
 	padding-left: 0px;
   font-family: $brand-face;
@@ -76,15 +77,6 @@ header.entry-header {
 	@media only screen and (max-width: 860px) {
 		margin-left: 0;
 	}
-	@include media-query(palm) {
-		padding-top: 4px;
-	}
-  img {
-    width: 250px;
-		@include media-query(palm) {
-			width: 180px;
-		}
-  }
 
     a {
 	    color: #000;
@@ -105,6 +97,8 @@ header.entry-header {
     }
     @include media-query(lap-and-up) {
     	text-align: left;
+    	font-size: 3em;
+    	padding-top: 28px;
 			margin-left: 5px;
     	a {
 	    	color: #000;

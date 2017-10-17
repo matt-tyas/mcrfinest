@@ -55,6 +55,9 @@
 .mf-offset__position--right--news {
   right: 132px;
   top: -92px;
+  @include media-query(lap) {
+    width: 100%;
+  }
 }
 
 .mf-offset__position--left {

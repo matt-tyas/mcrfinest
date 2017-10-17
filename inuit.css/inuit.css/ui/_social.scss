@@ -8,7 +8,9 @@
 	padding: $half-spacing-unit $base-spacing-unit;
 	background: #1DA1F3;
   @include media-query(palm) {
-		margin-top: 16px;
+    margin-bottom: $half-spacing-unit;
+  }
+	@include media-query(palm) {
     margin-bottom: $half-spacing-unit;
   }
 	.sub-title-link a {
