@@ -24,9 +24,9 @@ get_header(); ?>
 							<li>
 								<a class="btn-circle btn--secondary facebook" href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>" target="_blank" rel="nofollow"><span aria-hidden="true" class="icon-facebook"></span><span class="accessibility">Share article on Facebook</span></a>
 							</li>
-							<!-- <li>
-								<a class="btn-circle btn--secondary whatsapp" href="whatsapp://send?text=The text to share!" data-action="share/whatsapp/share" target="_blank" rel="nofollow"><span aria-hidden="true" class="icon-facebook"></span><span class="accessibility">Share article via Whatsapp</span></a>
-							</li> -->
+							<li class="mobile-only">
+								<a class="btn-circle btn--secondary whatsapp" href="whatsapp://send?text=<?php the_permalink(); ?>" data-action="share/whatsapp/share" target="_blank" rel="nofollow"><span aria-hidden="true" class="icon-facebook"></span><span class="accessibility">Share article via Whatsapp</span></a>
+							</li>
 							<li>
 								<a class="btn-circle btn--secondary instagram" href="mailto:?subject=Article from Manchester's Finest - <?php the_title(); ?>&amp;body=<?php the_permalink(); ?>" target="_blank" title="Follow on Instagram"><span aria-hidden="true" class="icon-envelope"></span><span class="accessibility">Share article on email</span></a>
 							</li>

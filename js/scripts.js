@@ -165,12 +165,6 @@ $(document).ready(function(){
 
   /* Sticky elements
   ---------------------------------- */
-  if ( $('.is--sticky').length ) {
-    $('.is--sticky').stick_in_parent({
-      parent: ".site-content",
-      offset_top: 75
-    });
-  }
 
   if ( $('.is--sticky').length ) {
     $('.is--sticky').stick_in_parent({
@@ -202,9 +196,18 @@ $(document).ready(function(){
             parent: ".site",
           });
         }
+        $('.social-links.is--sticky').trigger("sticky_kit:detach");
       }
       if (windowsize > 860) {
         $('.site-title').trigger("sticky_kit:detach");
+
+        if ( $('.social-links.is--sticky').length ) {
+          $('social-links.is--sticky').stick_in_parent({
+            parent: ".site-content",
+            offset_top: 75
+          });
+        }
+
       }
   }
   // Execute on load

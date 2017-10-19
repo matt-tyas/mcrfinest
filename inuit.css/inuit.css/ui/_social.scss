@@ -109,8 +109,49 @@
 	height: 64px;
 	width: 105px;
 	position: relative;
+
+	.social-share {
+		.mobile-only {
+			display: none;
+		}
+	}
+
 	@include media-query(palm) {
-		display:none;
+		z-index: 900;
+		width: 100%;
+		position: fixed;
+		bottom: 40px;
+		left: 0;
+
+		.sub-title {
+			text-align: right;
+			color: #000;
+			background: #fff;
+			display: inline-block;
+			margin-right: 12px;
+			padding: 0 3px;
+			float: right;
+		}
+
+		.social-share {
+			width: 300px;
+			position: absolute;
+			top: 32px;
+			right: 0;
+			li {
+				float: left;
+				margin-right: 10px;
+			}
+
+			.mobile-only {
+				display: inline-block;
+			}
+
+			.btn-circle {
+				display: inline-block;
+				float: left;
+			}
+		}
 	}
 }
 
@@ -143,7 +184,6 @@
 		padding: 0 !important;
 		width: auto;
 		font-size: .6em;
-		display: inline-block;
 		line-height: 1.06667;
 		border: 0;
 		border-radius: 50%;
