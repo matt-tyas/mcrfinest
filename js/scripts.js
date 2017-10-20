@@ -336,65 +336,6 @@ $(document).ready(function(){
 	---------------------------------- */
   $('input, textarea').placeholder();
 
-
-	// /* Article Sorting
-	// ---------------------------------- */
-	// $(window).load(function(){
-	// 	var $container = $('#sort-container')
-	// 	// initialize Isotope
-	// 	$container.isotope({
-	// 	// options...
-	//     resizable: true, // disable normal resizing
-	//     // set columnWidth to a percentage of container width
-	//     layoutMode : 'fitRows',
-	//     masonry: { rowHeight: 360, columnWidth: $container.width() / 12 }
-	// 	});
-	// 	// update columnWidth on window resize
-	// 	$(window).smartresize(function(){
-	// 		$container.isotope({
-	// 			// update columnWidth to a percentage of container width
-	// 			layoutMode : 'fitRows',
-	// 			masonry: {
-	// 			rowHeight: 360,
-	// 			columnWidth: $container.width() / 12
-	// 			 }
-	// 		});
-	// 	});
-	// });
-  //
-  //
-  // ( function( $, window, document, undefined )
-  // {
-  //     'use strict';
-  //
-  //     var $list       = $( '.rw' ),
-  //         $items      = $list.find( '.equal-cols' ),
-  //         setHeights  = function()
-  //         {
-  //             $items.css( 'height', 'auto' );
-  //
-  //             var perRow = Math.floor( $list.width() / $items.width() );
-  //             if( perRow == null || perRow < 2 ) return true;
-  //
-  //             for( var i = 0, j = $items.length; i < j; i += perRow )
-  //             {
-  //                 var maxHeight   = 0,
-  //                     $row        = $items.slice( i, i + perRow );
-  //
-  //                 $row.each( function()
-  //                 {
-  //                     var itemHeight = parseInt( $( this ).outerHeight() );
-  //                     if ( itemHeight > maxHeight ) maxHeight = itemHeight;
-  //                 });
-  //                 $row.css( 'height', maxHeight );
-  //             }
-  //         };
-  //
-  //     setHeights();
-  //     $( window ).on( 'resize', setHeights );
-  //
-  // })( jQuery, window, document );
-
 	/* Fit Vid
 	---------------------------------- */
   $("#featured-home__video").fitVids();
@@ -404,3 +345,47 @@ $(document).ready(function(){
   $(".site-content").fitVids();
 
 });
+
+(function() {
+  if (window.__twitterIntentHandler) return;
+  var intentRegex = /twitter\.com\/intent\/(\w+)/,
+      windowOptions = 'scrollbars=yes,resizable=yes,toolbar=no,location=yes',
+      width = 550,
+      height = 420,
+      winHeight = screen.height,
+      winWidth = screen.width;
+
+  function handleIntent(e) {
+    e = e || window.event;
+    var target = e.target || e.srcElement,
+        m, left, top;
+
+    while (target && target.nodeName.toLowerCase() !== 'a') {
+      target = target.parentNode;
+    }
+
+    if (target && target.nodeName.toLowerCase() === 'a' && target.href) {
+      m = target.href.match(intentRegex);
+      if (m) {
+        left = Math.round((winWidth / 2) - (width / 2));
+        top = 0;
+
+        if (winHeight > height) {
+          top = Math.round((winHeight / 2) - (height / 2));
+        }
+
+        window.open(target.href, 'intent', windowOptions + ',width=' + width +
+                                           ',height=' + height + ',left=' + left + ',top=' + top);
+        e.returnValue = false;
+        e.preventDefault && e.preventDefault();
+      }
+    }
+  }
+
+  if (document.addEventListener) {
+    document.addEventListener('click', handleIntent, false);
+  } else if (document.attachEvent) {
+    document.attachEvent('onclick', handleIntent);
+  }
+  window.__twitterIntentHandler = true;
+}());
