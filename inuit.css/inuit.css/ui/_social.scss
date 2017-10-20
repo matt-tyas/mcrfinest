@@ -120,36 +120,48 @@
 		z-index: 900;
 		width: 100%;
 		position: fixed;
-		bottom: 40px;
+		bottom: -20px;
 		left: 0;
 
 		.sub-title {
-			text-align: right;
-			color: #000;
-			background: #fff;
-			display: inline-block;
-			margin-right: 12px;
-			padding: 0 3px;
-			float: right;
+			display: none;
 		}
 
 		.social-share {
-			width: 300px;
-			position: absolute;
-			top: 32px;
-			right: 0;
+			display: table;
+	    width: 100%;
+
 			li {
-				float: left;
-				margin-right: 10px;
+				display: table-cell;
+				width: 25%;
 			}
 
 			.mobile-only {
-				display: inline-block;
+				display: table-cell;
 			}
 
 			.btn-circle {
-				display: inline-block;
-				float: left;
+				display:block;
+				border-radius: 0;
+				font-size: .4em;
+				width: 100%;
+				height: 44px;
+			}
+			.icon-twitter,
+			.icon-facebook,
+			.icon-whatsapp {
+				&:before {
+					top: 8px;
+				}
+			}
+			.instagram {
+				position: relative;
+				top: -3px;
+			}
+			.icon-envelope {
+				&:before {
+					top: 10px;
+				}
 			}
 		}
 	}
@@ -196,6 +208,17 @@
 
 	.btn--secondary.instagram {
 		background: #886808 !important;
+	}
+
+	.btn-circle.whatsapp {
+		position: relative;
+		top: 1px;
+		height: 44px;
+		img {
+			position: relative;
+			top: 9px;
+			width: 25px;
+		}
 	}
 
   .icon-twitter,
