@@ -71,7 +71,7 @@
 								<article class="post-tile <?php the_field('sub_article_colour', 'option'); ?>">
 									<?php
 										$image = get_field('sub_article_image', 'option');
-										$size = 'thumbnail'; // (thumbnail, medium, large, full or custom size)
+										$size = 'medium'; // (thumbnail, medium, large, full or custom size)
 										if( $image ) {
 											echo wp_get_attachment_image( $image, $size );
 										}
@@ -88,7 +88,7 @@
 								<article class="post-tile <?php the_field('sub_article_two_colour', 'option'); ?>">
 									<?php
 										$image = get_field('sub_article_two_image', 'option');
-										$size = 'thumbnail'; // (thumbnail, medium, large, full or custom size)
+										$size = 'medium'; // (thumbnail, medium, large, full or custom size)
 										if( $image ) {
 											echo wp_get_attachment_image( $image, $size );
 										}
