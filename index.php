@@ -597,18 +597,6 @@
 					</div>
 				</div>
 			</div>
-			<section class="border-wrap">
-    			<div class="gw">
-    				<div class="g one-whole lap-one-whole palm-one-whole">
-						<div class="mf-section mf-section--white">
-						<h3 class="mf-label"><a href="https://www.instagram.com/mcrfinest/" class="mf-label__link"><span class="icon icon-instagram"></span> mcrfinest <span class="mf-label__link-click">Follow us</span></a></h3>
-    						<?php
-    							 if ( is_active_sidebar( 'homepage-optional-1' ) ) : ?>
-    							 <?php dynamic_sidebar( 'homepage-optional-1' ); ?>
-    						<?php endif; ?>
-    				</div>
-    			</div>
-    		</section>
 			<div class="mf-offset mf-offset--wide">
 				<div class="mf-offset__position mf-offset__position--right">
 					<div class="gw">
@@ -808,6 +796,18 @@
 					</div>
 				</div>
 			</section>
+            <section class="border-wrap">
+    			<div class="gw">
+    				<div class="g one-whole lap-one-whole palm-one-whole">
+						<div class="mf-section mf-section--white">
+						<h3 class="mf-label"><a href="https://www.instagram.com/mcrfinest/" class="mf-label__link"><span class="icon icon-instagram"></span> mcrfinest <span class="mf-label__link-click">Follow us</span></a></h3>
+    						<?php
+    							 if ( is_active_sidebar( 'homepage-optional-1' ) ) : ?>
+    							 <?php dynamic_sidebar( 'homepage-optional-1' ); ?>
+    						<?php endif; ?>
+    				</div>
+    			</div>
+    		</section>
 	 		</div>
 		</div>
 	</div>
