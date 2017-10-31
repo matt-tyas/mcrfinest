@@ -280,16 +280,6 @@ add_filter( 'wp_page_menu_args', 'twentytwelve_page_menu_args' );
 function twentytwelve_widgets_init() {
 
 	register_sidebar( array(
-		'name' => __( 'Homepage videos', 'twentytwelve' ),
-		'id' => 'homepage-videos',
-		'description' => __( 'Homepage videos', 'twentytwelve' ),
-		'before_widget' => '',
-		'after_widget' => '',
-		'before_title' => '',
-		'after_title' => '',
-	) );
-
-	register_sidebar( array(
 		'name' => __( 'Homepage Header advert', 'twentytwelve' ),
 		'id' => 'header-advert',
 		'description' => __( 'The very top banner in the website header', 'twentytwelve' ),
@@ -350,48 +340,48 @@ function twentytwelve_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name' => __( 'Homepage CTA 1', 'twentytwelve' ),
-		'id' => 'homepage-cta-1',
-		'description' => __( 'Call to action under the slider', 'twentytwelve' ),
-		'before_widget' => '<div class="discover">',
-		'after_widget' => '</div>',
-		'before_title' => '<span class="discover-cta">',
-		'after_title' => '</span>',
+		'name' => __( 'Homepage advert square 5', 'twentytwelve' ),
+		'id' => 'homepage-advert-5',
+		'description' => __( 'Homepage top four squares adverts', 'twentytwelve' ),
+        'before_widget' => '',
+		'after_widget' => '',
+		'before_title' => '',
+		'after_title' => '',
 	) );
 
 	register_sidebar( array(
-		'name' => __( 'Homepage CTA 2', 'twentytwelve' ),
-		'id' => 'homepage-cta-2',
-		'description' => __( 'Call to action under the slider', 'twentytwelve' ),
-		'before_widget' => '<div class="discover">',
-		'after_widget' => '</div>',
-		'before_title' => '<span class="discover-cta">',
-		'after_title' => '</span>',
+        'name' => __( 'Homepage advert square 6', 'twentytwelve' ),
+		'id' => 'homepage-advert-6',
+        'description' => __( 'Homepage top four squares adverts', 'twentytwelve' ),
+        'before_widget' => '',
+		'after_widget' => '',
+		'before_title' => '',
+		'after_title' => '',
 	) );
 
 	register_sidebar( array(
-		'name' => __( 'Homepage CTA 3', 'twentytwelve' ),
-		'id' => 'homepage-cta-3',
-		'description' => __( 'Call to action under the slider', 'twentytwelve' ),
-		'before_widget' => '<div class="discover">',
-		'after_widget' => '</div>',
-		'before_title' => '<span class="discover-cta">',
-		'after_title' => '</span>',
+        'name' => __( 'Homepage advert square 7', 'twentytwelve' ),
+		'id' => 'homepage-advert-7',
+        'description' => __( 'Homepage top four squares adverts', 'twentytwelve' ),
+        'before_widget' => '',
+		'after_widget' => '',
+		'before_title' => '',
+		'after_title' => '',
 	) );
 
 	register_sidebar( array(
-		'name' => __( 'Homepage CTA 4', 'twentytwelve' ),
-		'id' => 'homepage-cta-4',
-		'description' => __( 'Call to action under the slider', 'twentytwelve' ),
-		'before_widget' => '<div class="discover">',
-		'after_widget' => '</div>',
-		'before_title' => '<span class="discover-cta">',
-		'after_title' => '</span>',
+		'name' => __( 'Homepage advert square 8', 'twentytwelve' ),
+		'id' => 'homepage-advert-8',
+        'description' => __( 'Homepage top four squares adverts', 'twentytwelve' ),
+        'before_widget' => '',
+		'after_widget' => '',
+		'before_title' => '',
+		'after_title' => '',
 	) );
 
 	register_sidebar( array(
 		'name' => __( 'Homepage Optional 1', 'twentytwelve' ),
-		'id' => 'homepage-optional-1',
+		'id' => 'owl-instagram',
 		'description' => __( 'Homepage Optional 1', 'twentytwelve' ),
 		'before_widget' => '',
 		'after_widget' => '',
@@ -465,16 +455,6 @@ function twentytwelve_widgets_init() {
 		'description' => __( 'Homepage Optional 8', 'twentytwelve' ),
 		'before_widget' => '',
 		'after_widget' => '',
-		'before_title' => '<h5 class="sub-title">',
-		'after_title' => '</h5>',
-	) );
-
-	register_sidebar( array(
-		'name' => __( 'Inner Page Optional', 'twentytwelve' ),
-		'id' => 'inner-page-optional',
-		'description' => __( 'Inner Page Optional', 'twentytwelve' ),
-		'before_widget' => '<div class="featured-articles">',
-		'after_widget' => '</div>',
 		'before_title' => '<h5 class="sub-title">',
 		'after_title' => '</h5>',
 	) );
@@ -572,6 +552,26 @@ function twentytwelve_widgets_init() {
 	register_sidebar( array(
 		'name' => __( 'Category Page Advert 10', 'twentytwelve' ),
 		'id' => 'category-page-advert-10',
+		'description' => __( 'Category page advert', 'twentytwelve' ),
+		'before_widget' => '',
+		'after_widget' => '',
+		'before_title' => '',
+		'after_title' => '',
+	) );
+
+	register_sidebar( array(
+		'name' => __( 'Category Page Advert 11', 'twentytwelve' ),
+		'id' => 'category-page-advert-11',
+		'description' => __( 'Category page advert', 'twentytwelve' ),
+		'before_widget' => '',
+		'after_widget' => '',
+		'before_title' => '',
+		'after_title' => '',
+	) );
+
+	register_sidebar( array(
+		'name' => __( 'Category Page Advert 12', 'twentytwelve' ),
+		'id' => 'category-page-advert-12',
 		'description' => __( 'Category page advert', 'twentytwelve' ),
 		'before_widget' => '',
 		'after_widget' => '',

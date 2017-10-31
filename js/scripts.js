@@ -100,7 +100,7 @@ $('#owl-events').owlCarousel({
           items:4,
           nav:true
       }
-  }
+  }  
 })
 
 $('#owl-instagram').owlCarousel({
