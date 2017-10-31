@@ -572,8 +572,8 @@
 					<div class="gw">
 						<div class="g one-half">
 							<?php
-								 if ( is_active_sidebar( 'homepage-optional-1' ) ) : ?>
-								 <?php dynamic_sidebar( 'homepage-optional-1' ); ?>
+								 if ( is_active_sidebar( 'homepage-optional-0' ) ) : ?>
+								 <?php dynamic_sidebar( 'homepage-optional-0' ); ?>
 							<?php endif; ?>
 						</div>
 						<div class="g one-half">
