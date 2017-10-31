@@ -380,6 +380,16 @@ function twentytwelve_widgets_init() {
 	) );
 
 	register_sidebar( array(
+		'name' => __( 'Homepage Optional 0', 'twentytwelve' ),
+		'id' => 'homepage-optional-0',
+		'description' => __( 'Homepage Optional 0', 'twentytwelve' ),
+		'before_widget' => '',
+		'after_widget' => '',
+		'before_title' => '<h5 class="sub-title">',
+		'after_title' => '</h5>',
+	) );
+
+	register_sidebar( array(
 		'name' => __( 'Homepage Optional 1', 'twentytwelve' ),
 		'id' => 'owl-instagram',
 		'description' => __( 'Homepage Optional 1', 'twentytwelve' ),
