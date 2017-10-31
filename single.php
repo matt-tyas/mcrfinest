@@ -8,15 +8,11 @@
  */
 
 get_header(); ?>
-
 	<div class="site-content">
-
 		<div class="gw">
-
             <div class="g one-tenth lap-one-fifth palm-one-whole">
 				<?php get_template_part('social-share'); ?>
 			</div>
-
 			<div class="g six-tenths lap-four-fifths palm-one-whole f-article">
 
 				<?php
@@ -68,92 +64,124 @@ get_header(); ?>
 					}
 
 				?>
-
 				<h3>Related articles</h3>
 				<?php if (function_exists('related_posts') ) : related_posts(); endif; ?>
-
 			</div>
-
 			<div class="g three-tenths lap-one-whole palm-one-whole readability-right f-article">
-
                 <div class="gw">
 					<div class="g one-whole palm-one-whole mob-one-whole">
 					<?php get_template_part('newsletter'); ?>
-
 					<div class="g one-whole palm-one-whole mob-one-whole">
 						<h5 class="sub-title ad-title">Partners</h5>
 					</div>
-
 					<div class="g one-half lap-one-quarter palm-one-quarter mob-one-half">
 						<?php
 						if ( is_active_sidebar( 'category-page-advert-1' ) ) : ?>
 				        <?php dynamic_sidebar( 'category-page-advert-1' ); ?>
 						<?php endif; ?>
 					</div>
-
 					<div class="g one-half lap-one-quarter palm-one-quarter mob-one-half">
 						<?php
 						if ( is_active_sidebar( 'category-page-advert-2' ) ) : ?>
 						<?php dynamic_sidebar( 'category-page-advert-2' ); ?>
 						<?php endif; ?>
 					</div>
-
 					<div class="g one-half lap-one-quarter  palm-one-quarter mob-one-half">
 						<?php
 						if ( is_active_sidebar( 'category-page-advert-3' ) ) : ?>
 				        <?php dynamic_sidebar( 'category-page-advert-3' ); ?>
 				        <?php endif; ?>
 				    </div>
-
 					<div class="g one-half lap-one-quarter  palm-one-quarter mob-one-half">
 					 	<?php
 				        if ( is_active_sidebar( 'category-page-advert-4' ) ) : ?>
                         <?php dynamic_sidebar( 'category-page-advert-4' ); ?>
 				        <?php endif; ?>
 					</div>
-
 					<div class="g one-half lap-one-quarter   palm-one-quarter mob-one-half">
 						<?php
 						if ( is_active_sidebar( 'category-page-advert-5' ) ) : ?>
 				        <?php dynamic_sidebar( 'category-page-advert-5' ); ?>
 				        <?php endif; ?>
 				    </div>
-
 					<div class="g one-half lap-one-quarter  palm-one-quarter mob-one-half">
 					 	<?php
 				        if ( is_active_sidebar( 'category-page-advert-6' ) ) : ?>
                         <?php dynamic_sidebar( 'category-page-advert-6' ); ?>
 				        <?php endif; ?>
 					</div>
-
 					<div class="g one-half lap-one-quarter palm-one-quarter mob-one-half">
 						<?php
 						if ( is_active_sidebar( 'category-page-advert-7' ) ) : ?>
 				        <?php dynamic_sidebar( 'category-page-advert-7' ); ?>
 				        <?php endif; ?>
 				    </div>
-
 					<div class="g one-half lap-one-quarter  palm-one-quarter mob-one-half">
 					 	<?php
 				        if ( is_active_sidebar( 'category-page-advert-8' ) ) : ?>
                         <?php dynamic_sidebar( 'category-page-advert-8' ); ?>
 				        <?php endif; ?>
 					</div>
-
 					<div class="g one-half lap-one-quarter palm-one-quarter mob-one-half">
 						<?php
 						if ( is_active_sidebar( 'category-page-advert-9' ) ) : ?>
 				        <?php dynamic_sidebar( 'category-page-advert-9' ); ?>
 				        <?php endif; ?>
 				    </div>
-
 					<div class="g one-half lap-one-quarter palm-one-quarter mob-one-half">
 					 	<?php
 				        if ( is_active_sidebar( 'category-page-advert-10' ) ) : ?>
                         <?php dynamic_sidebar( 'category-page-advert-10' ); ?>
 				        <?php endif; ?>
 					</div>
-
+                    <div class="g one-half lap-one-quarter palm-one-quarter mob-one-half">
+					 	<?php
+				        if ( is_active_sidebar( 'category-page-advert-11' ) ) : ?>
+                        <?php dynamic_sidebar( 'category-page-advert-11' ); ?>
+				        <?php endif; ?>
+					</div>
+                    <div class="g one-half lap-one-quarter palm-one-quarter mob-one-half">
+					 	<?php
+				        if ( is_active_sidebar( 'category-page-advert-12' ) ) : ?>
+                        <?php dynamic_sidebar( 'category-page-advert-12' ); ?>
+				        <?php endif; ?>
+					</div>
+                    <div class="g one-half lap-one-quarter palm-one-quarter mob-one-half">
+					 	<?php
+				        if ( is_active_sidebar( 'category-page-advert-13' ) ) : ?>
+                        <?php dynamic_sidebar( 'category-page-advert-13' ); ?>
+				        <?php endif; ?>
+					</div>
+                    <div class="g one-half lap-one-quarter palm-one-quarter mob-one-half">
+					 	<?php
+				        if ( is_active_sidebar( 'category-page-advert-14' ) ) : ?>
+                        <?php dynamic_sidebar( 'category-page-advert-14' ); ?>
+				        <?php endif; ?>
+					</div>
+                    <div class="g one-half lap-one-quarter palm-one-quarter mob-one-half">
+					 	<?php
+				        if ( is_active_sidebar( 'category-page-advert-15' ) ) : ?>
+                        <?php dynamic_sidebar( 'category-page-advert-15' ); ?>
+				        <?php endif; ?>
+					</div>
+                    <div class="g one-half lap-one-quarter palm-one-quarter mob-one-half">
+					 	<?php
+				        if ( is_active_sidebar( 'category-page-advert-16' ) ) : ?>
+                        <?php dynamic_sidebar( 'category-page-advert-16' ); ?>
+				        <?php endif; ?>
+					</div>
+                    <div class="g one-half lap-one-quarter palm-one-quarter mob-one-half">
+					 	<?php
+				        if ( is_active_sidebar( 'category-page-advert-17' ) ) : ?>
+                        <?php dynamic_sidebar( 'category-page-advert-17' ); ?>
+				        <?php endif; ?>
+					</div>
+                    <div class="g one-half lap-one-quarter palm-one-quarter mob-one-half">
+					 	<?php
+				        if ( is_active_sidebar( 'category-page-advert-18' ) ) : ?>
+                        <?php dynamic_sidebar( 'category-page-advert-18' ); ?>
+				        <?php endif; ?>
+					</div>
 					<div class="g one-whole lap-one-half palm-one-half mob-one-half">
 						<div class="sticky-spacer">
 							<div class="ad-sense ad--sticky">
@@ -171,12 +199,8 @@ get_header(); ?>
 			 				</div>
 						</div>
 					</div>
-
-
 				</div>
 			</div>
-
 		</div><!-- #content -->
 	</div><!-- #primary -->
-
 <?php get_footer(); ?>

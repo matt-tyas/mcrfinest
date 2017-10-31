@@ -16,22 +16,7 @@ get_header(); ?>
 	<div class="gw">
 		<div class="site-content">
             <div class="g one-tenth lap-one-fifth palm-one-whole">
-				<div class="social-wrap">
-					<aside class="social-links is--sticky">
-						<h5 class="sub-title">Share this</h5>
-						<ul class="nav social social-share">
-							<li>
-								<a class="btn-circle btn--secondary twitter" href="https://twitter.com/intent/tweet?original_referer=<?php the_permalink(); ?>source=tweetbutton&amp;text=<?php the_title(); ?> <?php the_permalink(); ?>&amp;<?php the_permalink(); ?>" target="_blank" rel="nofollow"><span aria-hidden="true" class="icon-twitter"></span><span class="accessibility">Share article on Twitter</span></a>
-							</li>
-							<li>
-								<a class="btn-circle btn--secondary facebook" href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>" target="_blank" rel="nofollow"><span aria-hidden="true" class="icon-facebook"></span><span class="accessibility">Share article on Facebook</span></a>
-							</li>
-							<li>
-								<a class="btn-circle btn--secondary instagram" href="mailto:?subject=Article from Manchester's Finest - <?php the_title(); ?>&amp;body=<?php the_permalink(); ?>" target="_blank" title="Follow on Instagram"><span aria-hidden="true" class="icon-envelope"></span><span class="accessibility">Share article on email</span></a>
-							</li>
-						</ul>
-					</aside>
-				</div>
+				<?php get_template_part('social-share'); ?>
 			</div>
 			<div class="g six-tenths palm-one-whole">
 				<div class="f-article media">
@@ -103,6 +88,54 @@ get_header(); ?>
 			        if ( is_active_sidebar( 'category-page-advert-10' ) ) : ?>
                     <?php dynamic_sidebar( 'category-page-advert-10' ); ?>
 			        <?php endif; ?>
+				</div>
+				<div class="g one-half  lap-one-whole  palm-one-quarter mob-one-half">
+				 	<?php
+			        if ( is_active_sidebar( 'category-page-advert-11' ) ) : ?>
+                    <?php dynamic_sidebar( 'category-page-advert-11' ); ?>
+			        <?php endif; ?>
+				</div>
+				<div class="g one-half lap-one-quarter palm-one-quarter mob-one-half">
+					<?php
+					if ( is_active_sidebar( 'category-page-advert-12' ) ) : ?>
+					<?php dynamic_sidebar( 'category-page-advert-12' ); ?>
+					<?php endif; ?>
+				</div>
+				<div class="g one-half lap-one-quarter palm-one-quarter mob-one-half">
+					<?php
+					if ( is_active_sidebar( 'category-page-advert-13' ) ) : ?>
+					<?php dynamic_sidebar( 'category-page-advert-13' ); ?>
+					<?php endif; ?>
+				</div>
+				<div class="g one-half lap-one-quarter palm-one-quarter mob-one-half">
+					<?php
+					if ( is_active_sidebar( 'category-page-advert-14' ) ) : ?>
+					<?php dynamic_sidebar( 'category-page-advert-14' ); ?>
+					<?php endif; ?>
+				</div>
+				<div class="g one-half lap-one-quarter palm-one-quarter mob-one-half">
+					<?php
+					if ( is_active_sidebar( 'category-page-advert-15' ) ) : ?>
+					<?php dynamic_sidebar( 'category-page-advert-15' ); ?>
+					<?php endif; ?>
+				</div>
+				<div class="g one-half lap-one-quarter palm-one-quarter mob-one-half">
+					<?php
+					if ( is_active_sidebar( 'category-page-advert-16' ) ) : ?>
+					<?php dynamic_sidebar( 'category-page-advert-16' ); ?>
+					<?php endif; ?>
+				</div>
+				<div class="g one-half lap-one-quarter palm-one-quarter mob-one-half">
+					<?php
+					if ( is_active_sidebar( 'category-page-advert-17' ) ) : ?>
+					<?php dynamic_sidebar( 'category-page-advert-17' ); ?>
+					<?php endif; ?>
+				</div>
+				<div class="g one-half lap-one-quarter palm-one-quarter mob-one-half">
+					<?php
+					if ( is_active_sidebar( 'category-page-advert-18' ) ) : ?>
+					<?php dynamic_sidebar( 'category-page-advert-18' ); ?>
+					<?php endif; ?>
 				</div>
 			</div>
 		</div>

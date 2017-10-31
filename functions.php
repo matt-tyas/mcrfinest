@@ -590,6 +590,66 @@ function twentytwelve_widgets_init() {
 	) );
 
 	register_sidebar( array(
+		'name' => __( 'Category Page Advert 13', 'twentytwelve' ),
+		'id' => 'category-page-advert-13',
+		'description' => __( 'Category page advert', 'twentytwelve' ),
+		'before_widget' => '',
+		'after_widget' => '',
+		'before_title' => '',
+		'after_title' => '',
+	) );
+
+	register_sidebar( array(
+		'name' => __( 'Category Page Advert 14', 'twentytwelve' ),
+		'id' => 'category-page-advert-14',
+		'description' => __( 'Category page advert', 'twentytwelve' ),
+		'before_widget' => '',
+		'after_widget' => '',
+		'before_title' => '',
+		'after_title' => '',
+	) );
+
+	register_sidebar( array(
+		'name' => __( 'Category Page Advert 15', 'twentytwelve' ),
+		'id' => 'category-page-advert-15',
+		'description' => __( 'Category page advert', 'twentytwelve' ),
+		'before_widget' => '',
+		'after_widget' => '',
+		'before_title' => '',
+		'after_title' => '',
+	) );
+
+	register_sidebar( array(
+		'name' => __( 'Category Page Advert 16', 'twentytwelve' ),
+		'id' => 'category-page-advert-16',
+		'description' => __( 'Category page advert', 'twentytwelve' ),
+		'before_widget' => '',
+		'after_widget' => '',
+		'before_title' => '',
+		'after_title' => '',
+	) );
+
+	register_sidebar( array(
+		'name' => __( 'Category Page Advert 17', 'twentytwelve' ),
+		'id' => 'category-page-advert-17',
+		'description' => __( 'Category page advert', 'twentytwelve' ),
+		'before_widget' => '',
+		'after_widget' => '',
+		'before_title' => '',
+		'after_title' => '',
+	) );
+
+	register_sidebar( array(
+		'name' => __( 'Category Page Advert 18', 'twentytwelve' ),
+		'id' => 'category-page-advert-18',
+		'description' => __( 'Category page advert', 'twentytwelve' ),
+		'before_widget' => '',
+		'after_widget' => '',
+		'before_title' => '',
+		'after_title' => '',
+	) );
+
+	register_sidebar( array(
 		'name' => __( 'Site Footer', 'twentytwelve' ),
 		'id' => 'site-footer',
 		'description' => __( 'Site wide footer', 'twentytwelve' ),
