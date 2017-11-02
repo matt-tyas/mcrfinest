@@ -73,6 +73,13 @@
 		margin-left: 16px;
 	}
 
+  p {
+		color: $darkgrey;
+    margin-bottom: 0;
+		margin-left: 16px;
+		font-size: 16px;
+  }
+
 	.sub-title {
 		text-align: center;
 		font-weight: bold;
@@ -149,7 +156,7 @@
 			.btn-circle {
 				display:block;
 				border-radius: 0;
-				font-size: .4em;
+				font-size: 14px;
 				width: 100%;
 				height: 44px;
 			}
@@ -165,6 +172,7 @@
 				top: -4px;
 			}
 			.icon-envelope {
+				font-size: 24px !important;
 				&:before {
 					top: 10px;
 				}
@@ -212,6 +220,10 @@
 		margin: 0 auto 16px auto;
 	}
 
+	.btn--secondary{
+		font-size: 1em;
+	}
+
 	.btn--secondary.instagram {
 		background: #886808 !important;
 	}
@@ -230,15 +242,16 @@
   .icon-twitter,
 	.icon-facebook,
 	.icon-envelope {
-		font-size: 3em;
+		font-size: 2em !important;
 		&:before{
 			position: relative;
-			top: 12px;
+			top: 10px;
 		}
 	}
 	.icon-envelope {
+		font-size: 1.5em !important;
 		&:before{
-			top: 14px;
+			top: 16px;
 		}
 	}
 }

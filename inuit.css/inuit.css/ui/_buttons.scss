@@ -38,13 +38,16 @@
 
 .btn--secondary.twitter {
 	padding: 10px;
-	width: 90px;
+	width: 65px;
 	background-color: #00aced;
+	border-radius: 50%;
 	font-weight: bold;
 	color: #fff;
 	border-bottom: 0;
 	.icon-twitter {
-		font-size: 3.5em;
+		font-size: 2em;
+		position: relative;
+		top: 2px;
 	}
 	&:hover {
 		//border: 1px solid darken(#999, 20%);
@@ -53,7 +56,10 @@
 
 .btn--secondary.instagram {
 	padding: 10px;
-	width: 90px;
+	width: 65px;
+	position: relative;
+	top: 2px;
+	border-radius: 50%;
 	background: -webkit-radial-gradient(32% 106%, circle cover, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), -webkit-linear-gradient(-45deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
 	background: -moz-radial-gradient(32% 106%, circle cover, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), -moz-linear-gradient(-45deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
 	background: -ms-radial-gradient(32% 106%, circle cover, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), -ms-linear-gradient(-45deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
@@ -63,7 +69,9 @@
 	font-weight: bold;
 	border-bottom: 0;
 	.icon-instagram {
-		font-size: 3.5em;
+		position: relative;
+		top: 1px;
+		font-size: 2em;
 	}
 	&:hover {
 		//border: 1px solid darken(#999, 20%);
@@ -73,13 +81,16 @@
 
 .btn--secondary.facebook {
 	padding: 10px;
-	width: 90px;
+	width: 65px;
+	border-radius: 50%;
 	background-color: #3B5998;
 	font-weight: bold;
 	color: #fff;
 	border-bottom: 0;
 	.icon-facebook {
-		  font-size: 3.5em;
+		position: relative;
+		top: 2px;
+		  font-size: 2em;
 		}
 		&:hover {
 			//border: 1px solid darken(#999, 20%);
