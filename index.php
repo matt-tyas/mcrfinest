@@ -190,6 +190,7 @@
 								</div>
 					        <?php endforeach;
 					        wp_reset_postdata();?>
+							<!-- <a href="<?php // echo esc_url( $category_link ); ?>" class="mf-label__link-click">View all articles</a> -->
 							</div>
 						</div>
 					</div>
@@ -267,7 +268,7 @@
 							    $category_link = get_category_link( $category_id );
 							?>
 							<h3 class="mf-label"><a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link">
-                                Eating and drinking <span class="mf-label__link-click">View all articles</span></a></h3>
+                                Eating and drinking</a></h3>
 							<div class="gw equal">
 							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => 975);
 					            $myposts1 = get_posts( $args1 );
@@ -284,6 +285,7 @@
 								</div>
 					        <?php endforeach;
 					        wp_reset_postdata();?>
+							<a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link-click">View all articles</a>
 							</div>
 						</div>
 					</div>
@@ -503,7 +505,7 @@
 							    // Get the URL of this category
 							    $category_link = get_category_link( $category_id );
 							?>
-							<h3 class="mf-label"><a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link">Arts &amp; culture <span class="mf-label__link-click">View all articles</span></a></h3>
+							<h3 class="mf-label"><a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link">Arts &amp; culture</a></h3>
 							<div class="gw equal">
 							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => 27);
 					            $myposts1 = get_posts( $args1 );
@@ -520,6 +522,7 @@
 								</div>
 					        <?php endforeach;
 					        wp_reset_postdata();?>
+							<a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link-click">View all articles</a>
 							</div>
 						</div>
 					</div>
@@ -553,7 +556,7 @@
 							    // Get the URL of this category
 							    $category_link = get_category_link( $category_id );
 							?>
-							<h3 class="mf-label"><a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link">Articles &amp; reviews <span class="mf-label__link-click">View all articles</span></a></h3>
+							<h3 class="mf-label"><a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link">Articles &amp; reviews</a></h3>
 							<div class="gw equal">
 							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => array(415, 15));
 					            $myposts1 = get_posts( $args1 );
@@ -570,6 +573,7 @@
 								</div>
 					        <?php endforeach;
 					        wp_reset_postdata();?>
+							<a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link-click">View all articles</a>
 							</div>
 						</div>
 					</div>
@@ -603,7 +607,7 @@
 							    // Get the URL of this category
 							    $category_link = get_category_link( $category_id );
 							?>
-							<h3 class="mf-label"><a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link">From Mcr to <span class="mf-label__link-click">View all articles</span></a></h3>
+							<h3 class="mf-label"><a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link">From Mcr to</a></h3>
 							<div class="gw equal">
 							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => 893);
 					            $myposts1 = get_posts( $args1 );
@@ -620,49 +624,13 @@
 								</div>
 					        <?php endforeach;
 					        wp_reset_postdata();?>
+							<a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link-click">View all articles</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-			<!-- <div class="mf-offset mf-offset--wide">
-				<div class="social-inline">
-   					<?php // get_template_part('social'); ?>
-				</div>
-			</div> -->
-			<section class="border-wrap">
-    			<div class="gw">
-    				<div class="g one-whole lap-one-whole palm-one-whole">
-						<div class="mf-section mf-articles mf-lilac">
-							<?php
-							    // Get the ID of a given category
-							    $category_id = get_cat_ID( 'Lifestyle' );
-							    // Get the URL of this category
-							    $category_link = get_category_link( $category_id );
-							?>
-							<h3 class="mf-label"><a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link">Lifestyle <span class="mf-label__link-click">View all articles</span></a></h3>
-							<div class="gw equal">
-							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => 10);
-					            $myposts1 = get_posts( $args1 );
-					            foreach ( $myposts1 as $post ) : setup_postdata( $post ); ?>
-				    			<div class="g one-quarter lap-one-half palm-one-half">
-									<a href="<?php the_permalink() ?>" rel="bookmark" class="post-tile-link">
-										<article <?php post_class('post-tile post-tile--grid wow fadeInUp'); ?>>
-											<?php
-						                        the_post_thumbnail('big-post-thumb');
-						                    ?>
-						                    <h3><?php echo wp_trim_words ( the_title ( '', '', false ), 12 , '&hellip;'); ?></h3>
-						                </article>
-									</a>
-								</div>
-					        <?php endforeach;
-					        wp_reset_postdata();?>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<div class="mf-offset mf-offset--wide">
+            <div class="mf-offset mf-offset--wide">
 				<div class="mf-offset__position mf-offset__position--right">
 					<div class="gw">
 						<div class="g one-half">
@@ -683,16 +651,16 @@
 			<section class="border-wrap">
     			<div class="gw">
     				<div class="g one-whole lap-one-whole palm-one-whole">
-						<div class="mf-section mf-articles mf-pink">
+						<div class="mf-section mf-articles mf-lilac">
 							<?php
 							    // Get the ID of a given category
-							    $category_id = get_cat_ID( 'Events' );
+							    $category_id = get_cat_ID( 'Lifestyle' );
 							    // Get the URL of this category
 							    $category_link = get_category_link( $category_id );
 							?>
-							<h3 class="mf-label"><a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link">Events <span class="mf-label__link-click">View all events</span></a></h3>
+							<h3 class="mf-label"><a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link">Lifestyle </a></h3>
 							<div class="gw equal">
-							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => 12);
+							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => 10);
 					            $myposts1 = get_posts( $args1 );
 					            foreach ( $myposts1 as $post ) : setup_postdata( $post ); ?>
 				    			<div class="g one-quarter lap-one-half palm-one-half">
@@ -707,12 +675,13 @@
 								</div>
 					        <?php endforeach;
 					        wp_reset_postdata();?>
+							<a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link-click">View all articles</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-			<div class="mf-offset mf-offset--wide">
+            <div class="mf-offset mf-offset--wide">
 				<div class="mf-offset__position mf-offset__position--right">
 					<div class="gw">
 						<div class="g one-half">
@@ -733,16 +702,16 @@
 			<section class="border-wrap">
     			<div class="gw">
     				<div class="g one-whole lap-one-whole palm-one-whole">
-						<div class="mf-section mf-articles mf-mint-green">
+						<div class="mf-section mf-articles mf-pink">
 							<?php
 							    // Get the ID of a given category
-							    $category_id = get_cat_ID( 'Music' );
+							    $category_id = get_cat_ID( 'Events' );
 							    // Get the URL of this category
 							    $category_link = get_category_link( $category_id );
 							?>
-							<h3 class="mf-label"><a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link">Music <span class="mf-label__link-click">View all articles</span></a></h3>
+							<h3 class="mf-label"><a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link">Events </a></h3>
 							<div class="gw equal">
-							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => 7);
+							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => 12);
 					            $myposts1 = get_posts( $args1 );
 					            foreach ( $myposts1 as $post ) : setup_postdata( $post ); ?>
 				    			<div class="g one-quarter lap-one-half palm-one-half">
@@ -757,12 +726,13 @@
 								</div>
 					        <?php endforeach;
 					        wp_reset_postdata();?>
+							<a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link-click">View all articles</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-			<div class="mf-offset mf-offset--wide">
+            <div class="mf-offset mf-offset--wide">
 				<div class="mf-offset__position mf-offset__position--right">
 					<div class="gw">
 						<div class="g one-half">
@@ -780,11 +750,44 @@
 					</div>
 				</div>
 			</div>
+			<section class="border-wrap">
+    			<div class="gw">
+    				<div class="g one-whole lap-one-whole palm-one-whole">
+						<div class="mf-section mf-articles mf-mint-green">
+							<?php
+							    // Get the ID of a given category
+							    $category_id = get_cat_ID( 'Music' );
+							    // Get the URL of this category
+							    $category_link = get_category_link( $category_id );
+							?>
+							<h3 class="mf-label"><a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link">Music </a></h3>
+							<div class="gw equal">
+							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => 7);
+					            $myposts1 = get_posts( $args1 );
+					            foreach ( $myposts1 as $post ) : setup_postdata( $post ); ?>
+				    			<div class="g one-quarter lap-one-half palm-one-half">
+									<a href="<?php the_permalink() ?>" rel="bookmark" class="post-tile-link">
+										<article <?php post_class('post-tile post-tile--grid wow fadeInUp'); ?>>
+											<?php
+						                        the_post_thumbnail('big-post-thumb');
+						                    ?>
+						                    <h3><?php echo wp_trim_words ( the_title ( '', '', false ), 12 , '&hellip;'); ?></h3>
+						                </article>
+									</a>
+								</div>
+					        <?php endforeach;
+					        wp_reset_postdata();?>
+							<a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link-click">View all articles</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
             <section class="border-wrap">
     			<div class="gw">
     				<div class="g one-whole lap-one-whole palm-one-whole">
 						<div class="mf-section mf-section--white">
-						<h3 class="mf-label"><a href="https://www.instagram.com/mcrfinest/" class="mf-label__link"><span class="icon icon-instagram"></span> mcrfinest <span class="mf-label__link-click">Follow us</span></a></h3>
+						<h3 class="mf-label"><a href="https://www.instagram.com/mcrfinest/" class="mf-label__link"><span class="icon icon-instagram"></span> mcrfinest</a></h3>
     						<?php
     							 if ( is_active_sidebar( 'owl-instagram' ) ) : ?>
     							 <?php dynamic_sidebar( 'owl-instagram' ); ?>

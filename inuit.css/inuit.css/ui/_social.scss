@@ -76,8 +76,13 @@
   p {
 		color: $darkgrey;
     margin-bottom: 0;
-		margin-left: 16px;
 		font-size: 16px;
+		margin-left: 16px;
+    text-align: left;
+		@include media-query(palm) {
+			margin-left: 0px;
+			text-align: center;
+		}
   }
 
 	.sub-title {
@@ -108,6 +113,11 @@
 		}
 		.icon-instagram {
 			color: #4C68D7;
+		}
+	}
+	.btn--secondary.twitter {
+		@include media-query(palm) {
+			margin-left: 0px;
 		}
 	}
 }
@@ -212,6 +222,7 @@
 		font-size: .6em;
 		line-height: 1.06667;
 		border: 0;
+
 		border-radius: 50%;
 		height: 64px;
 		width: 64px;
@@ -222,6 +233,21 @@
 
 	.btn--secondary{
 		font-size: 1em;
+		span {
+			color: #fff;
+		}
+	}
+
+	.btn--secondary.twitter {
+		background: #00aced;
+	}
+
+	.btn--secondary.facebook {
+		background: #334E94;
+	}
+
+	.btn--secondary.email {
+		background: #334E94;
 	}
 
 	.btn--secondary.instagram {

@@ -1,5 +1,5 @@
 <aside class="mf-connect">
-    <!-- <p>Follow us in these places</p> -->
+    <p>Follow us</p>
     <ul class="nav nav--banner social">
         <li>
             <a class="btn--secondary twitter" href="https://twitter.com/intent/user?screen_name=McrFinest" target="_blank" title="Follow on Twitter"><span aria-hidden="true" class="icon-twitter"></span><span class="accessibility">Twitter</span></a>
