@@ -208,7 +208,7 @@ function twentytwelve_scripts_styles() {
 	/*
 	 * Loads our main stylesheet.
 	 */
-	wp_enqueue_style( 'twentytwelve-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'twentytwelve-style', get_stylesheet_uri() . '', array(), filemtime( get_stylesheet_directory() . '/style.css' ) );
 
 	/*
 	 * Loads the Internet Explorer specific stylesheet.
