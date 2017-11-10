@@ -190,7 +190,7 @@
 								</div>
 					        <?php endforeach;
 					        wp_reset_postdata();?>
-							<a href="<?php echo get_page_link(41139); ?>" class="mf-label__link-click">View all articles</a>
+							<a href="<?php echo get_page_link(41139); ?>" class="wow fadeIn mf-label__link-click">View all articles</a>
 							</div>
 						</div>
 					</div>
@@ -285,7 +285,7 @@
 								</div>
 					        <?php endforeach;
 					        wp_reset_postdata();?>
-							<a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link-click">View all articles</a>
+							<a href="<?php echo esc_url( $category_link ); ?>" class="wow fadeIn mf-label__link-click">View all articles</a>
 							</div>
 						</div>
 					</div>
@@ -522,7 +522,7 @@
 								</div>
 					        <?php endforeach;
 					        wp_reset_postdata();?>
-							<a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link-click">View all articles</a>
+							<a href="<?php echo esc_url( $category_link ); ?>" class="wow fadeIn mf-label__link-click">View all articles</a>
 							</div>
 						</div>
 					</div>
@@ -573,7 +573,7 @@
 								</div>
 					        <?php endforeach;
 					        wp_reset_postdata();?>
-							<a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link-click">View all articles</a>
+							<a href="<?php echo esc_url( $category_link ); ?>" class="wow fadeIn mf-label__link-click">View all articles</a>
 							</div>
 						</div>
 					</div>
@@ -624,7 +624,7 @@
 								</div>
 					        <?php endforeach;
 					        wp_reset_postdata();?>
-							<a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link-click">View all articles</a>
+							<a href="<?php echo esc_url( $category_link ); ?>" class="wow fadeIn mf-label__link-click">View all articles</a>
 							</div>
 						</div>
 					</div>
@@ -675,7 +675,7 @@
 								</div>
 					        <?php endforeach;
 					        wp_reset_postdata();?>
-							<a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link-click">View all articles</a>
+							<a href="<?php echo esc_url( $category_link ); ?>" class="wow fadeIn mf-label__link-click">View all articles</a>
 							</div>
 						</div>
 					</div>
@@ -726,7 +726,7 @@
 								</div>
 					        <?php endforeach;
 					        wp_reset_postdata();?>
-							<a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link-click">View all articles</a>
+							<a href="<?php echo esc_url( $category_link ); ?>" class="wow fadeIn mf-label__link-click">View all articles</a>
 							</div>
 						</div>
 					</div>
@@ -777,7 +777,7 @@
 								</div>
 					        <?php endforeach;
 					        wp_reset_postdata();?>
-							<a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link-click">View all articles</a>
+							<a href="<?php echo esc_url( $category_link ); ?>" class="wow fadeIn mf-label__link-click">View all articles</a>
 							</div>
 						</div>
 					</div>
