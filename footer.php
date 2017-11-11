@@ -19,8 +19,8 @@
 					</div>
 					<div class="g one-fifth palm-one-half">
 						<?php
-							if ( is_active_sidebar( 'site-sponsor-2' ) ) : ?>
-							<?php dynamic_sidebar( 'site-sponsor-2' ); ?>
+							if ( is_active_sidebar( 'site-sponsor-3' ) ) : ?>
+							<?php dynamic_sidebar( 'site-sponsor-3' ); ?>
 						<?php endif; ?>
 					</div>
 					<div class="g two-fifths palm-one-half">
