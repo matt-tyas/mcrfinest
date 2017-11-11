@@ -18,15 +18,15 @@
 						<?php wp_nav_menu( array( 'theme_location' => 'secondary-menu', 'menu_class' => 'nav nav--stacked' )); ?>
 					</div>
 					<div class="g one-fifth palm-one-half">
-							<?php
-							    if ( is_active_sidebar( 'site-sponsor-1' ) ) : ?>
-								<?php dynamic_sidebar( 'site-sponsor-1' ); ?>
-							<?php endif; ?>
+						<?php
+							if ( is_active_sidebar( 'site-sponsor-2' ) ) : ?>
+							<?php dynamic_sidebar( 'site-sponsor-2' ); ?>
+						<?php endif; ?>
 					</div>
 					<div class="g two-fifths palm-one-half">
-                        <div class="social-inline">
-                            <?php get_template_part('social'); ?>
-                        </div>
+						<div class="social-inline">
+							<?php get_template_part('social'); ?>
+						</div>
 					</div>
 				</div>
 			</div>
