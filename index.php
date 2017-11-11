@@ -172,7 +172,7 @@
 			<section class="border-wrap">
     			<div class="gw">
     				<div class="g one-whole lap-one-whole palm-one-whole">
-						<div class="mf-section mf-articles mf-grey">
+						<div class="mf-section mf-articles mf-grey wow fadeIn">
 							<h3 class="mf-label">Latest articles</h3>
 							<div class="gw equal">
 							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0);
@@ -217,7 +217,7 @@
 			<section class="border-wrap">
     			<div class="gw">
     				<div class="g one-whole lap-one-whole palm-one-whole">
-						<div class="mf-section mf-section--video mf-section--white">
+						<div class="mf-section mf-section--video mf-section--white  wow fadeIn">
 						<h3 class="mf-label">Video series and features</h3>
 							<?php
 
@@ -260,7 +260,7 @@
 			<section class="border-wrap">
     			<div class="gw">
     				<div class="g one-whole lap-one-whole palm-one-whole">
-						<div class="mf-section mf-articles mf-sand">
+						<div class="mf-section mf-articles mf-sand wow fadeIn">
 							<?php
 							    // Get the ID of a given category
 							    $category_id = get_cat_ID( 'Eating & Drinking' );
@@ -312,7 +312,7 @@
 			<section class="border-wrap">
     			<div class="gw">
     				<div class="g one-whole lap-one-whole palm-one-whole">
-						<div class="mf-section mf-articles mf-upcoming">
+						<div class="mf-section mf-articles mf-upcoming wow fadeIn">
 							<h3 class="mf-label mf-label--push">Upcoming events</h3>
 							<div id="owl-events" class="owl-carousel">
 								<?php
@@ -498,7 +498,7 @@
 			<section class="border-wrap">
     			<div class="gw">
     				<div class="g one-whole lap-one-whole palm-one-whole">
-						<div class="mf-section mf-articles mf-peach">
+						<div class="mf-section mf-articles mf-peach wow fadeIn">
 							<?php
 							    // Get the ID of a given category
 							    $category_id = get_cat_ID( 'Arts & Culture' );
@@ -549,7 +549,7 @@
 			<section class="border-wrap">
     			<div class="gw">
     				<div class="g one-whole lap-one-whole palm-one-whole">
-						<div class="mf-section mf-articles mf-grey">
+						<div class="mf-section mf-articles mf-grey wow fadeIn">
 							<?php
 							    // Get the ID of a given category
 							    $category_id = get_cat_ID( 'Articles' );
@@ -600,7 +600,7 @@
 			<section class="border-wrap">
     			<div class="gw">
     				<div class="g one-whole lap-one-whole palm-one-whole">
-						<div class="mf-section mf-articles mf-baby-blue">
+						<div class="mf-section mf-articles mf-baby-blue wow fadeIn">
 							<?php
 							    // Get the ID of a given category
 							    $category_id = get_cat_ID( 'From Mcr to' );
@@ -651,7 +651,7 @@
 			<section class="border-wrap">
     			<div class="gw">
     				<div class="g one-whole lap-one-whole palm-one-whole">
-						<div class="mf-section mf-articles mf-lilac">
+						<div class="mf-section mf-articles mf-lilac wow fadeIn">
 							<?php
 							    // Get the ID of a given category
 							    $category_id = get_cat_ID( 'Lifestyle' );
@@ -702,7 +702,7 @@
 			<section class="border-wrap">
     			<div class="gw">
     				<div class="g one-whole lap-one-whole palm-one-whole">
-						<div class="mf-section mf-articles mf-pink">
+						<div class="mf-section mf-articles mf-pink wow fadeIn">
 							<?php
 							    // Get the ID of a given category
 							    $category_id = get_cat_ID( 'Events' );
@@ -753,7 +753,7 @@
 			<section class="border-wrap">
     			<div class="gw">
     				<div class="g one-whole lap-one-whole palm-one-whole">
-						<div class="mf-section mf-articles mf-mint-green">
+						<div class="mf-section mf-articles mf-mint-green wow fadeIn">
 							<?php
 							    // Get the ID of a given category
 							    $category_id = get_cat_ID( 'Music' );
