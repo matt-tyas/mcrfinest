@@ -71,9 +71,6 @@ get_header(); ?>
                 <div class="gw">
 					<div class="g one-whole palm-one-whole mob-one-whole">
 					<?php get_template_part('newsletter'); ?>
-					<div class="g one-whole palm-one-whole mob-one-whole">
-						<h5 class="sub-title ad-title">Partners</h5>
-					</div>
 					<div class="g one-half lap-one-quarter palm-one-quarter mob-one-half">
 						<?php
 						if ( is_active_sidebar( 'category-page-advert-1' ) ) : ?>
