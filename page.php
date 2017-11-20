@@ -27,7 +27,6 @@ get_header(); ?>
 				</div>
 			</div>
 			<div class="g three-tenths lap-two-tenths palm-one-whole">
-			<h5 class="sub-title ad-title">Partners</h5>
 			<div class="gw">
 				<div class="g one-half lap-one-whole  palm-one-quarter mob-one-half">
 					<?php
