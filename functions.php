@@ -93,7 +93,7 @@ function twentytwelve_setup() {
 	if ( function_exists( 'add_image_size' ) ) {
 	    // add_image_size( 'cat-post-thumb', 172, 88, true );
 	    add_image_size( 'sq-med-post-thumb', 165, 165, true );
-		add_image_size( 'big-post-thumb', 400, 175, true );
+		add_image_size( 'big-post-thumb', 400, 300, true );
 	    add_image_size( 'big-article-image', 750, 450, true );
 		add_image_size( 'sq-post-thumb', 400, 400, true );
 		// add_image_size( 'large-post-thumb', 120, 120, true );
@@ -110,7 +110,7 @@ function twentytwelve_setup() {
 	function setup() {
     // ...
 
-    add_theme_support( 'post-thumbnails' ); // This feature enables post-thumbnail support for a theme
+    // add_theme_support( 'post-thumbnails' ); // This feature enables post-thumbnail support for a theme
     // To enable only for posts:
     //add_theme_support( 'post-thumbnails', array( 'post' ) );
     // To enable only for posts and custom post types:

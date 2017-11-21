@@ -2,6 +2,12 @@
     $Homepage
 \*------------------------------------*/
 
+.mf-video {
+	padding: $half-spacing-unit;
+  @extend .cf;
+}
+
+
 .mf-section--video .post-tile {
 	margin-bottom: 5px;
 }

@@ -37,16 +37,14 @@ get_header(); ?>
                                 <?php
                                     $post_thumbnail_id = get_post_thumbnail_id( );
                                     $imagesized = wp_get_attachment_image_src( $post_thumbnail_id, 'big-post-thumb');
-                                    if ($imagesized[1] == 308) {
+                                    if ($imagesized[1] > 308) {
                                         the_post_thumbnail('big-post-thumb');
                                     } else {
                                         the_post_thumbnail('cat-post-thumb');
+                                        // the_post_thumbnail('cat-post-thumb');
                                     }
                                 ?>
                                 <h3><?php echo wp_trim_words ( the_title ( '', '', false ), 12 , '&hellip;'); ?></h3>
-                                <!-- <div class="intro">
-                                    <p><?php // echo get_excerpt(80); ?></p>
-                                </div> -->
                             </article>
                         </a>
                     </div>
