@@ -92,9 +92,9 @@ function twentytwelve_setup() {
 	set_post_thumbnail_size( 624, 9999 ); // Unlimited height, soft crop
 	if ( function_exists( 'add_image_size' ) ) {
 	    // add_image_size( 'cat-post-thumb', 172, 88, true );
-	    add_image_size( 'sq-med-post-thumb', 165, 165, true );
-		add_image_size( 'big-post-thumb', 400, 300, true );
-	    add_image_size( 'big-article-image', 750, 450, true );
+	    add_image_size( 'sq-med-post-thumb', 200, 200, true );
+		add_image_size( 'big-post-thumb', 400, 209, true );
+	    add_image_size( 'big-article-image', 750, 393, true );
 		add_image_size( 'sq-post-thumb', 400, 400, true );
 		// add_image_size( 'large-post-thumb', 120, 120, true );
 		// add_image_size( 'mini-post-thumb', 50, 50, true );

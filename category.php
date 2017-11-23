@@ -41,7 +41,6 @@ get_header(); ?>
                                         the_post_thumbnail('big-post-thumb');
                                     } else {
                                         the_post_thumbnail('cat-post-thumb');
-                                        // the_post_thumbnail('cat-post-thumb');
                                     }
                                 ?>
                                 <h3><?php echo wp_trim_words ( the_title ( '', '', false ), 12 , '&hellip;'); ?></h3>
