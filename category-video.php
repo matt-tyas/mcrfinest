@@ -52,8 +52,15 @@ get_header(); ?>
                                         echo 'mf-pop--meats">';
                                     }if(has_category( 'Signature Dish' )) {
                                         echo 'mf-pop--signature">';
-                                    }elseif(has_category( '' )) {
-                                        echo '';
+                                    }
+                                    if(has_category( 'Manchester Sampled' )) {
+                                        echo 'mf-pop--sampled">';
+                                    }
+                                    if(has_category( 'Confessions of a bar tender' )) {
+                                        echo 'mf-pop--confessions">';
+                                    }
+                                    elseif(has_category( '' )) {
+                                        echo '">';
                                     }
                                 ?>
                                 <div class="mf-pop__logo">
@@ -66,8 +73,12 @@ get_header(); ?>
                                         echo '<img src="';
                                         echo get_bloginfo('template_url');
                                         echo '/images/video/signature-dish.svg"/>';
+                                    if(has_category( 'Signature Dish' )) {
+                                        echo '<img src="';
+                                        echo get_bloginfo('template_url');
+                                        echo '/images/video/signature-dish.svg"/>';
                                     }elseif(has_category( '' )) {
-
+                                        echo '';
                                     }?>
                                 </div>
                                 <div class="mf-pop__desc">
