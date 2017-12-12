@@ -57,7 +57,7 @@ get_header(); ?>
                                     }if(has_category( 'Confessions of a bar tender' )) {
                                         echo 'mf-pop--confessions">';
                                     }elseif(has_category( '' )) {
-                                        echo '">';
+                                        echo '';
                                     }
                                 ?>
                                 <div class="mf-pop__logo">
@@ -75,9 +75,9 @@ get_header(); ?>
                                         echo get_bloginfo('template_url');
                                         echo '/images/video/signature-dish.svg"/>';
                                     }if(has_category( 'Confessions of a bar tender' )) {
-                                            echo '<img src="';
-                                            echo get_bloginfo('template_url');
-                                            echo '/images/video/signature-dish.svg"/>';
+                                        echo '<img src="';
+                                        echo get_bloginfo('template_url');
+                                        echo '/images/video/signature-dish.svg"/>';
                                     }elseif(has_category( '' )) {
                                         echo '';
                                     }?>
