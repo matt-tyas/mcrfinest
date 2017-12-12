@@ -22,7 +22,10 @@ get_header(); ?>
 <?php if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ?>
 <div class="gw row">
     <div class="g one-whole palm-one-whole">
-        <h1><?php single_cat_title(); ?> series</h1>
+        <h1 class="left-title"><?php single_cat_title(); ?> series</h1>
+        <a class="icon-you-tube" href="https://www.youtube.com/channel/UC3vsqrPJWduz1vw3Kw0dEkg/?sub_confirmation=1" target="_blank" rel="nofollow">
+            <span>Subscribe to Finest on You Tube</span>
+        </a>
     </div>
     <div class="g one-whole palm-one-whole">
         <section class="latest-articles mf-directory-articles">
@@ -44,15 +47,16 @@ get_header(); ?>
                             <?php $catID = get_the_category(); ?>
                             <a href="<?php echo esc_url( get_category_link( $catID[0] ) ); ?>">
                                 <?php
-                                    echo '<article class="post-tile mf-video ';
-                                if(has_category( 'Meats' )) {
-                                    echo '';
-                                } elseif(has_category( '' )) {
-
-                                }
-                                    echo '">';
+                                echo '<article class="post-tile mf-pop ';
+                                    if(has_category( 'mEats' )) {
+                                        echo 'mf-pop--meats">';
+                                    }if(has_category( 'Signature Dish' )) {
+                                        echo 'mf-pop--signature">';
+                                    }elseif(has_category( '' )) {
+                                        echo '';
+                                    }
                                 ?>
-                                <div class="mf-video__logo">
+                                <div class="mf-pop__logo">
                                     <?php
                                     if(has_category( 'mEats' )) {
                                         echo '<img src="';
@@ -66,7 +70,7 @@ get_header(); ?>
 
                                     }?>
                                 </div>
-                                <div class="mf-video__desc">
+                                <div class="mf-pop__desc">
                                     <?php echo category_description( $catID[0] ); ?>
                                 </div>
                                 </article>

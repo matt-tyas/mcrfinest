@@ -2,7 +2,6 @@
     $Social
 \*------------------------------------*/
 
-
 .mf-twitter {
   margin-top: -24px;
 	padding: $half-spacing-unit $base-spacing-unit;
@@ -296,6 +295,35 @@ footer .mf-connect {
 		font-size: 1.5em !important;
 		&:before{
 			top: 16px;
+		}
+	}
+}
+
+.left-title {
+	float: left;
+}
+
+.icon-you-tube {
+	float: right;
+  display: inline;
+	margin-top: 15px;
+	border-bottom: 0;
+	&:before {
+		position: relative;
+		left: 10px;
+		top: 4px;
+		display: inline-block;
+		width: 44px;
+		height: 20px;
+		content: '';
+		background: url('images/icons/you-tube.svg') no-repeat left;
+	}
+
+	span {
+		border-bottom: .1em solid $black;
+
+		&:hover {
+			border: 0;
 		}
 	}
 }

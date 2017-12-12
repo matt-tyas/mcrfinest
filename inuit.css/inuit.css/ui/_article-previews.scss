@@ -2,32 +2,94 @@
     $Homepage
 \*------------------------------------*/
 
-.mf-video {
+.mf-pop .mf-pop__desc::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 60%;
+	// background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 80%);
+	// background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 80%);
+	content: '';
+	opacity: 0;
+	-webkit-transform: translate3d(0,30%,0);
+	transform: translate3d(0,30%,0);
+}
+
+.mf-pop .mf-pop__logo {
+	position: absolute;
+	top: 50%;
+	left: 76%;
+	width: 180px;
+	margin-left: -180px;
+	color: #484c61;
+	-webkit-transition: -webkit-transform 0.35s, all 0.35s;
+	transition: transform 0.35s, all 0.35s;
+	-webkit-transform: translate3d(0,-50%,0);
+	transform: translate3d(0,-50%,0);
+}
+
+.mf-pop .mf-pop__desc::before,
+.mf-pop p {
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+}
+
+.mf-pop p {
+	position: absolute;
+	bottom: 0;
+	left: 0;
 	padding: $half-spacing-unit;
+	text-align: center;
+	color: #fff !important;
+	font-size: 20px !important;
+	margin-bottom: 0 !important;
+	width: 100%;
+	opacity: 0;
+	-webkit-transform: translate3d(0,10px,0);
+	transform: translate3d(0,10px,0);
+}
+
+.mf-pop:hover .mf-pop__logo {
+	width: 140px;
+	left: 81%;
+	color: #fff;
+	-webkit-transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
+	transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
+}
+
+.mf-pop:hover .mf-pop__desc::before ,
+.mf-pop:hover p {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+.mf-pop {
+	position: relative;
+	min-height: 205px;
   @extend .cf;
 	background: #fff;
 	margin-bottom: $half-spacing-unit;
 	transition: all .15s ease-in-out;
-
-
-	&:hover {
-		transform: scale(1.025);
-		-webkit-box-shadow: 0px 18px 67px 0px rgba(0,0,0,0.2);
-       -moz-box-shadow: 0px 18px 67px 0px rgba(0,0,0,0.2);
-            box-shadow: 0px 18px 67px 0px rgba(0,0,0,0.2);
-	}
-
-	.mf-video__desc p {
-		font-size: 20px !important;
-		text-align: center;
-		margin-bottom: $half-spacing-unit/2;
-	}
 }
 
-.mf-video__logo {
+.mf-pop__logo {
   width: 180px;
 	height: 90px;
 	margin: 0 auto $half-spacing-unit/2 auto;
+}
+
+.mf-pop--signature {
+  background-image: url('images/video/signature-bg.jpg') !important;
+	background-repeat: no-repeat !important;
+	background-size:100% !important;
+}
+
+.mf-pop--meats {
+  background-image: url('images/video/meats-bg.jpg') !important;
+	background-repeat: no-repeat !important;
+	background-size:100% !important;
 }
 
 
