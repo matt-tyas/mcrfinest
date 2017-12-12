@@ -71,7 +71,7 @@ get_header(); ?>
                                         echo get_bloginfo('template_url');
                                         echo '/images/video/signature-dish.svg"/>';
                                     }if(has_category( 'Manchester Sampled' )) {
-                                        echo '<img src="';
+                                        echo '<img class="mf-pop__logo--sampled" src="';
                                         echo get_bloginfo('template_url');
                                         echo '/images/video/mcr-sampled.svg"/>';
                                     }if(has_category( 'Confessions of a bar tender' )) {

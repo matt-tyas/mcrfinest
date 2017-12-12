@@ -308,6 +308,11 @@ footer .mf-connect {
   display: inline;
 	margin-top: 15px;
 	border-bottom: 0;
+  @include media-query(palm) {
+    margin-top: 0;
+    margin-bottom: $half-spacing-unit;
+    float: left;
+  }
 	&:before {
 		position: relative;
 		left: 10px;

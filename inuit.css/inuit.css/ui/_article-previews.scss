@@ -49,11 +49,15 @@
 }
 
 .mf-pop:hover .mf-pop__logo {
-	width: 140px;
+	width: 160px;
 	// left: 81%;
 	color: #fff;
 	-webkit-transform: translate3d(0,20%,0) translate3d(0,0px,0);
 	transform: translate3d(0,20%,0) translate3d(0,0px,0);
+}
+
+.category .mf-directory-articles .post-tile.mf-pop:hover .mf-pop__logo--sampled {
+	width: 120px !important;
 }
 
 .mf-pop:hover .mf-pop__desc::before ,
@@ -78,6 +82,12 @@
 	margin: 0 auto $half-spacing-unit/2 auto;
 }
 
+.category .mf-directory-articles .post-tile img.mf-pop__logo--sampled {
+	width: 140px !important;
+	margin: 0 auto;
+	height: 90px;
+}
+
 .mf-pop--signature {
   background-image: url('images/video/signature-bg.jpg') !important;
 	background-repeat: no-repeat !important;
@@ -86,6 +96,12 @@
 
 .mf-pop--meats {
   background-image: url('images/video/meats-bg.jpg') !important;
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+}
+
+.mf-pop--sampled {
+  background-image: url('images/video/mcr-sampled-bg.jpg') !important;
 	background-repeat: no-repeat !important;
 	background-size: cover !important;
 }
