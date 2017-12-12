@@ -52,14 +52,11 @@ get_header(); ?>
                                         echo 'mf-pop--meats">';
                                     }if(has_category( 'Signature Dish' )) {
                                         echo 'mf-pop--signature">';
-                                    }
-                                    if(has_category( 'Manchester Sampled' )) {
+                                    }if(has_category( 'Manchester Sampled' )) {
                                         echo 'mf-pop--sampled">';
-                                    }
-                                    if(has_category( 'Confessions of a bar tender' )) {
+                                    }if(has_category( 'Confessions of a bar tender' )) {
                                         echo 'mf-pop--confessions">';
-                                    }
-                                    elseif(has_category( '' )) {
+                                    }elseif(has_category( '' )) {
                                         echo '">';
                                     }
                                 ?>
@@ -73,10 +70,14 @@ get_header(); ?>
                                         echo '<img src="';
                                         echo get_bloginfo('template_url');
                                         echo '/images/video/signature-dish.svg"/>';
-                                    if(has_category( 'Signature Dish' )) {
+                                    }if(has_category( 'Manchester Sampled' )) {
                                         echo '<img src="';
                                         echo get_bloginfo('template_url');
                                         echo '/images/video/signature-dish.svg"/>';
+                                    }if(has_category( 'Confessions of a bar tender' )) {
+                                            echo '<img src="';
+                                            echo get_bloginfo('template_url');
+                                            echo '/images/video/signature-dish.svg"/>';
                                     }elseif(has_category( '' )) {
                                         echo '';
                                     }?>
