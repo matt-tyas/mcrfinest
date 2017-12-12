@@ -29,7 +29,7 @@ get_header(); ?>
     </div>
     <div class="g one-whole palm-one-whole">
         <section class="latest-articles mf-directory-articles">
-            <div class="gw equal">
+            <div class="gw">
                 <?php
                     $video_cat_ID = get_cat_ID( 'video' );
                     $video_cats   = get_categories( "parent=$video_cat_ID" );
@@ -43,7 +43,7 @@ get_header(); ?>
                     ));
                 ?>
                     <?php while ( $video_query->have_posts() ) : $video_query->the_post() ?>
-                        <div class="g one-quarter lap-one-quarter palm-one-half mob-one-whole">
+                        <div class="g one-quarter lap-one-third palm-one-half mob-one-whole">
                             <?php $catID = get_the_category(); ?>
                             <a href="<?php echo esc_url( get_category_link( $catID[0] ) ); ?>">
                                 <?php

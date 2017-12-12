@@ -17,16 +17,14 @@
 }
 
 .mf-pop .mf-pop__logo {
-	position: absolute;
-	top: 50%;
-	left: 76%;
+	position: relative;
+	margin: 0 auto;
 	width: 180px;
-	margin-left: -180px;
 	color: #484c61;
 	-webkit-transition: -webkit-transform 0.35s, all 0.35s;
 	transition: transform 0.35s, all 0.35s;
-	-webkit-transform: translate3d(0,-50%,0);
-	transform: translate3d(0,-50%,0);
+	-webkit-transform: translate3d(0,65%,0);
+	transform: translate3d(0,65%,0);
 }
 
 .mf-pop .mf-pop__desc::before,
@@ -52,10 +50,10 @@
 
 .mf-pop:hover .mf-pop__logo {
 	width: 140px;
-	left: 81%;
+	// left: 81%;
 	color: #fff;
-	-webkit-transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
-	transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
+	-webkit-transform: translate3d(0,20%,0) translate3d(0,0px,0);
+	transform: translate3d(0,20%,0) translate3d(0,0px,0);
 }
 
 .mf-pop:hover .mf-pop__desc::before ,
@@ -83,13 +81,13 @@
 .mf-pop--signature {
   background-image: url('images/video/signature-bg.jpg') !important;
 	background-repeat: no-repeat !important;
-	background-size:100% !important;
+	background-size: cover !important;
 }
 
 .mf-pop--meats {
   background-image: url('images/video/meats-bg.jpg') !important;
 	background-repeat: no-repeat !important;
-	background-size:100% !important;
+	background-size: cover !important;
 }
 
 
