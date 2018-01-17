@@ -106,6 +106,7 @@
 		</section>
 
 	    <div id="main" class="wrapper page page--home">
+			
 			<!-- <a href="#" class="finder-trigger"><span aria-hidden="true" data-icon="&#x260c;"></span> Find things to do in&nbsp;Manchester</a>
     		<section class="border-wrap">
     			<div class="gw">
