@@ -27,8 +27,9 @@
   //   h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
   // })(document);
 </script>
-<script src="<?php echo get_template_directory_uri(); ?>/js/libs/jquery-1.9.1.min.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/js/libs/modernizr.custom.js"></script>
+<!--[if lte IE 8]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
 <!-- Facebook Pixel Code -->
 <script>
 	!function(f,b,e,v,n,t,s)
