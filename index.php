@@ -106,7 +106,7 @@
 		</section>
 
 	    <div id="main" class="wrapper page page--home">
-			<!-- <a href="#" class="finder-trigger"><span aria-hidden="true" data-icon="&#x260c;"></span> Find things to do in&nbsp;Manchester</a>
+			<a href="#" class="finder-trigger"><span aria-hidden="true" data-icon="&#x260c;"></span> Find things to do in&nbsp;Manchester</a>
     		<section class="border-wrap">
     			<div class="gw">
     				<div class="g one-whole lap-one-whole palm-one-whole">
@@ -120,7 +120,7 @@
     					</div>
     				</div>
     			</div>
-    		</section> -->
+    		</section>
 			<div class="mf-offset mf-offset--wide">
 				<div class="mf-offset__position mf-offset__position--left">
 					<div class="social-inline">
