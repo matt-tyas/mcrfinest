@@ -87,9 +87,10 @@ get_header(); ?>
                                 </div>
                                 </article>
                             </a>
+                        <?php endwhile ?>
                         </div>
-                    <?php endwhile ?>
-                <?php endforeach ?>
+                    <?php endforeach ?>
+
             </div>
         </section>
     </div>
