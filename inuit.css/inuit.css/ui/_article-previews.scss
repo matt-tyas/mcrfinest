@@ -86,7 +86,7 @@
 	width: 140px !important;
 	margin: 0 auto;
 	height: 90px;
-}
+} 
 
 .mf-pop--signature {
   background-image: url('images/video/signature-bg.jpg') !important;
@@ -102,6 +102,12 @@
 
 .mf-pop--sampled {
   background-image: url('images/video/mcr-sampled-bg.jpg') !important;
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+}
+
+.mf-pop--documentaries {
+  background-image: url('images/video/docs-bg.jpg') !important;
 	background-repeat: no-repeat !important;
 	background-size: cover !important;
 }

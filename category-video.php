@@ -56,6 +56,8 @@ get_header(); ?>
                                         echo 'mf-pop--sampled">';
                                     }if(has_category( 'Confessions of a bar tender' )) {
                                         echo 'mf-pop--confessions">';
+                                    }if(has_category( 'Documentaries' )) {
+                                        echo 'mf-pop--documentaries">';
                                     }elseif(has_category( '' )) {
                                         echo '';
                                     }
@@ -78,6 +80,10 @@ get_header(); ?>
                                         echo '<img src="';
                                         echo get_bloginfo('template_url');
                                         echo '/images/video/signature-dish.svg"/>';
+                                    }if(has_category( 'Documentaries' )) {
+                                        echo '<img src="';
+                                        echo get_bloginfo('template_url');
+                                        echo '/images/video/documentaries.svg"/>';
                                     }elseif(has_category( '' )) {
                                         echo '';
                                     }?>
