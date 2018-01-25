@@ -100,7 +100,7 @@ $('#owl-events').owlCarousel({
           items:4,
           nav:true
       }
-  }  
+  }
 })
 
 $('#owl-instagram').owlCarousel({
@@ -170,6 +170,13 @@ $(document).ready(function(){
     $('.is--sticky').stick_in_parent({
       parent: ".wrapper",
       offset_top: 75
+    });
+  }
+
+  if ( $('.mf-article-featured__social').length ) {
+    $('.mf-article-featured__social').stick_in_parent({
+      parent: ".mf-article-featured",
+      offset_top: 0
     });
   }
 
