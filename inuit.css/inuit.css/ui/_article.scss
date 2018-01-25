@@ -2,6 +2,26 @@
     $Articles
 \*------------------------------------*/
 
+.mf-article-featured {
+	margin-left: -32px;
+}
+
+.mf-article-featured__image {
+  width: 100%;
+  background-size: cover;
+	height: 500px;
+}
+
+.mf-article-featured__intro {
+	position: relative;
+	z-index: 100;
+	width: 50%;
+	margin-top: -200px;
+	margin-left: 5%;
+	background: #fff;
+	padding: $base-spacing-unit;
+}
+
 .readability-left {
 	padding-right: $half-spacing-unit;
 }
@@ -296,14 +316,23 @@ a[rel~="attachment"] {
 	 border-bottom: 3px solid #999;
 	 line-height: 1.4;
 
+	 p {
+		 margin-bottom: 10px;
+	 }
+
 	 a {
 		 overflow-wrap: break-word;
 	 }
 }
 
 .directory__actions {
+  .directory__actions__phone-no {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
   .btn {
 		@include mf-button();
+		text-align: center;
     width: 100%;
 		margin-bottom: 10px;
   }

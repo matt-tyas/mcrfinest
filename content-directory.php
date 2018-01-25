@@ -9,22 +9,7 @@
 ?>
 <div class="gw row">
     <div class="g one-tenth lap-one-fifth palm-one-whole">
-        <div class="social-wrap">
-            <aside class="social-links is--sticky">
-                <h5 class="sub-title">Share this</h5>
-                <ul class="nav social social-share">
-                    <li>
-                        <a class="btn-circle btn--secondary twitter" href="https://twitter.com/intent/tweet?original_referer=<?php the_permalink(); ?>source=tweetbutton&amp;text=<?php the_title(); ?> <?php the_permalink(); ?>&amp;<?php the_permalink(); ?>" target="_blank" rel="nofollow"><span aria-hidden="true" class="icon-twitter"></span><span class="accessibility">Share article on Twitter</span></a>
-                    </li>
-                    <li>
-                        <a class="btn-circle btn--secondary facebook" href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>" target="_blank" rel="nofollow"><span aria-hidden="true" class="icon-facebook"></span><span class="accessibility">Share article on Facebook</span></a>
-                    </li>
-                    <li>
-                        <a class="btn-circle btn--secondary instagram" href="mailto:?subject=Article from Manchester's Finest - <?php the_title(); ?>&amp;body=<?php the_permalink(); ?>" target="_blank" title="Follow on Instagram"><span aria-hidden="true" class="icon-envelope"></span><span class="accessibility">Share article on email</span></a>
-                    </li>
-                </ul>
-            </aside>
-        </div>
+        <?php get_template_part('social-share'); ?>
     </div>
 	<div class="g six-tenths lap-four-fifths palm-one-whole f-article">
         <article class="media" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -86,20 +71,14 @@
         						<?php the_content(); ?>
         					</div>
         					<div class="g one-third palm-one-whole">
-                                <?php $booking_link = get_post_meta($post->ID, 'directory_urlbooking_meta_box_class', true); ?>
-                                <?php if( empty( $booking_link) ) : ?>
-                                <?php else : ?>
-                                <a href="<?php echo get_post_meta($post->ID, 'directory_urlbooking_meta_box_class', true); ?>" class="btn btn--finest">
-                                    Make a booking
-                                </a>
-                                <?php endif; ?>
+
         						<div class="directory__address">
         							<?php the_title(); ?>
         							<?php $og_text = get_post_meta($post->ID, 'directory_address_meta_box_class', true);
         								echo wpautop( $og_text );
         							?>
                                     <ul class="directory__actions list--bare">
-                                        <li>
+                                        <li class="directory__actions__phone-no">
                                             <?php
                                                 $removePhoneSpaces = get_post_meta($post->ID, 'directory_phoneno_meta_box_class', true);
                                             ?>
@@ -108,23 +87,26 @@
                 							</a>
                                         </li>
                                         <li>
-                                            <a href="<?php echo get_post_meta($post->ID, 'directory_url_meta_box_class', true); ?>" class="btn">
-                							    Visit website
-                							</a>
+                                            <?php $booking_link = get_post_meta($post->ID, 'directory_urlbooking_meta_box_class', true); ?>
+                                            <?php if( empty( $booking_link) ) : ?>
+                                            <?php else : ?>
+                                            <a href="<?php echo get_post_meta($post->ID, 'directory_urlbooking_meta_box_class', true); ?>" class="btn">
+                                                Make a booking
+                                            </a>
+                                            <?php endif; ?>
                                         </li>
                                         <li>
                                             <a href="https://www.google.com/maps?saddr=My+Location&daddr=<?php echo get_post_meta($post->ID, 'directory_address_meta_box_class', true); ?>" class="btn">
                                                 Get directions
                                             </a>
                                         </li>
+                                        <li>
+                                            <a href="<?php echo get_post_meta($post->ID, 'directory_url_meta_box_class', true); ?>" class="btn">
+                							    Visit website
+                							</a>
+                                        </li>
                                     </ul>
         						</div>
-        					</div>
-        				    <div class="g one-whole">
-        						<div class="cf" style="width: 100%; overflow:visible; display: block; clear: both; padding: 0px;">
-        						<h2>Latest articles</h2>
-        						<?php if (function_exists('related_posts') ) : related_posts(); endif; ?>
-								</div>
         					</div>
         				</div>
         			</div>
@@ -132,6 +114,10 @@
         			<div class="g three-tenths lap-one-whole palm-one-whole readability-right f-article">
         				<div class="gw">
                             <div class="g one-whole palm-one-whole mob-one-whole">
+                                <div class="related-sidebar">
+                                    <h2>Latest articles</h2>
+        						    <?php if (function_exists('related_posts') ) : related_posts(); endif; ?>
+                                </div>
         						<div class="newscta">
         								<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
         								<style type="text/css">
@@ -171,61 +157,61 @@
                 				<div class="g one-whole palm-one-whole mob-one-whole">
                 					<h5 class="sub-title ad-title">Partners</h5>
                 				</div>
-                				<div class="g one-half palm-one-quarter mob-one-half">
+                				<div class="g one-half lap-one-quarter palm-one-quarter mob-one-half">
                 					<?php
                 					if ( is_active_sidebar( 'category-page-advert-1' ) ) : ?>
                 					<?php dynamic_sidebar( 'category-page-advert-1' ); ?>
                 					<?php endif; ?>
                 				</div>
-                				<div class="g one-half palm-one-quarter mob-one-half">
+                				<div class="g one-half lap-one-quarter palm-one-quarter mob-one-half">
                 					<?php
                 					if ( is_active_sidebar( 'category-page-advert-2' ) ) : ?>
                 					<?php dynamic_sidebar( 'category-page-advert-2' ); ?>
                 					<?php endif; ?>
                 				</div>
-                				<div class="g one-half palm-one-quarter mob-one-half">
+                				<div class="g one-half lap-one-quarter palm-one-quarter mob-one-half">
                 					<?php
                 					if ( is_active_sidebar( 'category-page-advert-3' ) ) : ?>
                 					<?php dynamic_sidebar( 'category-page-advert-3' ); ?>
                 					<?php endif; ?>
                 				</div>
-                				<div class="g one-half palm-one-quarter mob-one-half">
+                				<div class="g one-half lap-one-quarter palm-one-quarter mob-one-half">
                 					<?php
                 					if ( is_active_sidebar( 'category-page-advert-4' ) ) : ?>
                 					<?php dynamic_sidebar( 'category-page-advert-4' ); ?>
                 					<?php endif; ?>
                 				</div>
-                				<div class="g one-half palm-one-quarter mob-one-half">
+                				<div class="g one-half lap-one-quarter palm-one-quarter mob-one-half">
                 					<?php
                 					if ( is_active_sidebar( 'category-page-advert-5' ) ) : ?>
                 					<?php dynamic_sidebar( 'category-page-advert-5' ); ?>
                 					<?php endif; ?>
                 				</div>
-                				<div class="g one-half palm-one-quarter mob-one-half">
+                				<div class="g one-half lap-one-quarter palm-one-quarter mob-one-half">
                 					<?php
                 					if ( is_active_sidebar( 'category-page-advert-6' ) ) : ?>
                 					<?php dynamic_sidebar( 'category-page-advert-6' ); ?>
                 					<?php endif; ?>
                 				</div>
-                				<div class="g one-half palm-one-quarter mob-one-half">
+                				<div class="g one-half lap-one-quarter palm-one-quarter mob-one-half">
                 					<?php
                 					if ( is_active_sidebar( 'category-page-advert-7' ) ) : ?>
                 					<?php dynamic_sidebar( 'category-page-advert-7' ); ?>
                 					<?php endif; ?>
                 				</div>
-                				<div class="g one-half palm-one-quarter mob-one-half">
+                				<div class="g one-half lap-one-quarter palm-one-quarter mob-one-half">
                 					<?php
                 					if ( is_active_sidebar( 'category-page-advert-8' ) ) : ?>
                 					<?php dynamic_sidebar( 'category-page-advert-8' ); ?>
                 					<?php endif; ?>
                 				</div>
-                				<div class="g one-half palm-one-quarter mob-one-half">
+                				<div class="g one-half lap-one-quarter palm-one-quarter mob-one-half">
                 					<?php
                 					if ( is_active_sidebar( 'category-page-advert-9' ) ) : ?>
                 					<?php dynamic_sidebar( 'category-page-advert-9' ); ?>
                 					<?php endif; ?>
                 				</div>
-                				<div class="g one-half palm-one-quarter mob-one-half">
+                				<div class="g one-half lap-one-quarter palm-one-quarter mob-one-half">
                 					<?php
                 					if ( is_active_sidebar( 'category-page-advert-10' ) ) : ?>
                 					<?php dynamic_sidebar( 'category-page-advert-10' ); ?>

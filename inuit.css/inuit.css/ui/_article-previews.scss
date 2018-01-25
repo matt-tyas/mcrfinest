@@ -86,7 +86,7 @@
 	width: 140px !important;
 	margin: 0 auto;
 	height: 90px;
-} 
+}
 
 .mf-pop--signature {
   background-image: url('images/video/signature-bg.jpg') !important;
@@ -1066,4 +1066,24 @@
 			background: $lightgrey;
 		}
 	}
+}
+
+.related-sidebar {
+
+	@media only screen and (max-width : 1024px) {
+		margin-left: 12px;
+	}
+	@media only screen and (max-width : 480px) {
+		margin-left: 0px;
+	}
+  .one-third {
+    width: 100% !important;
+		@media only screen and (max-width : 1024px) {
+	    width: 33.333% !important;
+	  }
+		@media only screen and (max-width : 480px) {
+	    width: 100% !important;
+	  }
+  }
+
 }
