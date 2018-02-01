@@ -65,10 +65,16 @@
   }
 }
 
-
+.owl-prev {
+  float: left;
+}
+.owl-next {
+  float: right;
+}
 
 .owl-prev,
 .owl-next {
+  display: inline-block;
   @include mf-button();
 }
 

@@ -175,9 +175,6 @@ get_header(); ?>
     					<?php endif; ?>
     				</div>
 				</div>
-				<div class="social-inline">
-					<?php get_template_part('social'); ?>
-				</div>
 				</div>
 			</div>
 		<?php else : ?>

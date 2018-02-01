@@ -14,7 +14,7 @@
 						</div>
 					</div>
 					<div class="g two-fifths palm-one-whole">
-						<h5 class="sub-title">Get involved</h5>  
+						<h5 class="sub-title">Get involved</h5>
 						<?php wp_nav_menu( array( 'theme_location' => 'secondary-menu', 'menu_class' => 'nav nav--stacked' )); ?>
 					</div>
 					<div class="g one-fifth palm-one-half">
@@ -61,9 +61,6 @@
 <!--[if (gte IE 6)&(lte IE 8)]>
 <script src="<?php echo get_template_directory_uri(); ?>/library/js/libs/selectivizr-min.js"></script>
 <![endif]-->
-<!-- Plugins -->
-<script src="<?php echo get_template_directory_uri(); ?>/js/plugins.js"></script>
-<!-- Scripts -->
-<script src="<?php echo get_template_directory_uri(); ?>/js/scripts.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/package-min/main.js"></script>
 </body>
 </html>
