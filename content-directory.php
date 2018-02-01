@@ -88,19 +88,34 @@
                                             <?php
                                                 $removePhoneSpaces = get_post_meta($post->ID, 'directory_phoneno_meta_box_class', true);
                                             ?>
+                                            <?php if( empty( $removePhoneSpaces) ) : ?>
+                                            <?php else : ?>
                                             <a href="tel:<?php echo str_replace(' ', '', $removePhoneSpaces); ?>" class="link-icon-left">
                 							    <span class="icon icon-phone"></span> <?php echo get_post_meta($post->ID, 'directory_phoneno_meta_box_class', true); ?>
                 							</a>
+                                            <?php endif; ?>
                                         </li>
                                         <li>
+                                            <?php
+                                                $directoryDirections = get_post_meta($post->ID, 'directory_address_meta_box_class', true);
+                                            ?>
+                                            <?php if( empty( $directoryDirections) ) : ?>
+                                            <?php else : ?>
                                             <a href="https://www.google.com/maps?saddr=My+Location&daddr=<?php echo get_post_meta($post->ID, 'directory_address_meta_box_class', true); ?>" class="link-icon-left">
                                                 <span class="icon icon-map-marker"></span> Get directions
                                             </a>
+                                            <?php endif; ?>
                                         </li>
                                         <li>
+                                            <?php
+                                                $directoryURL = get_post_meta($post->ID, 'directory_url_meta_box_class', true);
+                                            ?>
+                                            <?php if( empty( $directoryURL) ) : ?>
+                                            <?php else : ?>
                                             <a href="<?php echo get_post_meta($post->ID, 'directory_url_meta_box_class', true); ?>" class="link-icon-left">
                 							    <span class="icon icon-info"></span> Visit website
                 							</a>
+                                            <?php endif; ?>
                                         </li>
                                     </ul>
         						</div>
