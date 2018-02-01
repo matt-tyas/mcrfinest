@@ -388,14 +388,8 @@ a[rel~="attachment"] {
 }
 
 .directory__actions {
-  .directory__actions__phone-no {
-    display: inline-block;
-    margin-bottom: 20px;
-  }
-  .btn {
-		@include mf-button();
-		text-align: center;
-    width: 100%;
+	li {
+		display: block;
 		margin-bottom: 10px;
-  }
+	}
 }

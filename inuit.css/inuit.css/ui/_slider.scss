@@ -23,17 +23,31 @@
   top: 0px;
 }
 
-#owl-directory-videos .owl-nav {
-  margin-top: $half-spacing-unit;
+#owl-directory-videos {
+  position: relative;
+  .owl-nav {
+    position: absolute;
+    z-index: 200;
+    top: 50%;
+    width: 100%;
+  }
+  .owl-prev,
+  .owl-next {
+   position: absolute;
+   color: #fff;
+   border-color: #fff;
+   border-radius: 50%;
+  }
+  .owl-prev {
+   left: 0;
+  }
+  .owl-next {
+   right: 0;
+
+  }
 }
 
-.owl-prev {
- float: left;
-}
 
-.owl-next {
- float: right;
-}
 
 .owl-prev,
 .owl-next {

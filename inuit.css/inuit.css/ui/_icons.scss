@@ -124,9 +124,6 @@
 .icon-twitter:before {
 	content: "\2604";
 }
-/*.icon-search:before {
-	content: "\f002";
-}*/
 .icon-search:before {
 	content: "\260c";
 }
@@ -327,3 +324,28 @@ i {
 .icon-45:before { content: "S"; }
 .icon-46:before { content: "U"; }
 .icon-47:before { content: "S"; }
+
+// Icon links
+.link-icon-right {
+  margin-right: 1.5em;
+
+  .icon {
+    display: inline-block;
+    width: 1em;
+    margin-right: - 1.25em;
+    font-size: 1em;
+		text-align: center;
+  }
+}
+
+.link-icon-left {
+  margin-left: 1.25em;
+
+  .icon {
+    display: inline-block;
+    width: 1em;
+    margin-left: - 1.25em;
+    font-size: 1em;
+		text-align: center;
+  }
+}

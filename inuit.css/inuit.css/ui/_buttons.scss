@@ -31,9 +31,15 @@
 	font-size: 20px !important;
 	&:hover {
 		background: transparent;
-    border: 5px solid #886808;
+    border: 3px solid #886808;
     color: #886808;
 	}
+}
+
+
+
+.btn--full {
+	width: 100%;
 }
 
 .btn--secondary.twitter {
@@ -48,9 +54,6 @@
 		font-size: 2em;
 		position: relative;
 		top: 2px;
-	}
-	&:hover {
-		//border: 1px solid darken(#999, 20%);
 	}
 }
 
@@ -69,9 +72,6 @@
 		top: 1px;
 		font-size: 2em;
 	}
-	&:hover {
-		//border: 1px solid darken(#999, 20%);
-	}
 }
 
 
@@ -87,9 +87,6 @@
 		top: 2px;
 		  font-size: 2em;
 		}
-		&:hover {
-			//border: 1px solid darken(#999, 20%);
-		}
 	}
 
   .btn--secondary.whatsapp {
@@ -102,10 +99,8 @@
   	.icon-facebook {
   		  font-size: 3.5em;
   		}
-  		&:hover {
-  			//border: 1px solid darken(#999, 20%);
-  		}
   	}
+	
 
 
 .btn--twitter {

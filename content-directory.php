@@ -71,7 +71,13 @@
         						<?php the_content(); ?>
         					</div>
         					<div class="g one-third palm-one-whole">
-
+                                <?php $booking_link = get_post_meta($post->ID, 'directory_urlbooking_meta_box_class', true); ?>
+                                <?php if( empty( $booking_link) ) : ?>
+                                <?php else : ?>
+                                <a href="<?php echo get_post_meta($post->ID, 'directory_urlbooking_meta_box_class', true); ?>" class="btn btn--finest btn--full">
+                                    Book now
+                                </a>
+                                <?php endif; ?>
         						<div class="directory__address">
         							<?php the_title(); ?>
         							<?php $og_text = get_post_meta($post->ID, 'directory_address_meta_box_class', true);
@@ -82,27 +88,18 @@
                                             <?php
                                                 $removePhoneSpaces = get_post_meta($post->ID, 'directory_phoneno_meta_box_class', true);
                                             ?>
-                                            <a href="tel:<?php echo str_replace(' ', '', $removePhoneSpaces); ?>">
-                							    <?php echo get_post_meta($post->ID, 'directory_phoneno_meta_box_class', true); ?>
+                                            <a href="tel:<?php echo str_replace(' ', '', $removePhoneSpaces); ?>" class="link-icon-left">
+                							    <span class="icon icon-phone"></span> <?php echo get_post_meta($post->ID, 'directory_phoneno_meta_box_class', true); ?>
                 							</a>
                                         </li>
                                         <li>
-                                            <?php $booking_link = get_post_meta($post->ID, 'directory_urlbooking_meta_box_class', true); ?>
-                                            <?php if( empty( $booking_link) ) : ?>
-                                            <?php else : ?>
-                                            <a href="<?php echo get_post_meta($post->ID, 'directory_urlbooking_meta_box_class', true); ?>" class="btn">
-                                                Make a booking
-                                            </a>
-                                            <?php endif; ?>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.google.com/maps?saddr=My+Location&daddr=<?php echo get_post_meta($post->ID, 'directory_address_meta_box_class', true); ?>" class="btn">
-                                                Get directions
+                                            <a href="https://www.google.com/maps?saddr=My+Location&daddr=<?php echo get_post_meta($post->ID, 'directory_address_meta_box_class', true); ?>" class="link-icon-left">
+                                                <span class="icon icon-map-marker"></span> Get directions
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="<?php echo get_post_meta($post->ID, 'directory_url_meta_box_class', true); ?>" class="btn">
-                							    Visit website
+                                            <a href="<?php echo get_post_meta($post->ID, 'directory_url_meta_box_class', true); ?>" class="link-icon-left">
+                							    <span class="icon icon-info"></span> Visit website
                 							</a>
                                         </li>
                                     </ul>
