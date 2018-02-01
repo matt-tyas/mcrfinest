@@ -128,8 +128,9 @@ $('#owl-directory-videos').owlCarousel({
   loop: true,
   margin: 10,
   nav: true,
+  navText : ["<span class='accessibility'>previous</span>","<span class='fa accessibility'>next</span>"],
   responsiveClass: true,
-  autoHeight:true,
+  autoHeight:false,
   responsive:{
       0:{
           items:1,
