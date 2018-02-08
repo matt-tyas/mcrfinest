@@ -13,7 +13,7 @@
     </div>
 	<div class="g six-tenths lap-four-fifths palm-one-whole f-article">
         <article class="media" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-            <?php if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ?>
+            <?php if (function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<p class="breadcrumbs">','</p>'); } ?>
         	<header class="entry-header">
         		<?php if ( is_single() ) : ?>
         		<h1><?php the_title(); ?></h1>

@@ -26,7 +26,9 @@ get_header(); ?>
 
 						while ( have_posts() ) : the_post();
 
-					    if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs();
+                        if (function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<p class="breadcrumbs">','</p>'); };
+
+					    // if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs();
 
 						get_template_part( 'content', get_post_format() );
 
@@ -38,7 +40,8 @@ get_header(); ?>
 
 						while ( have_posts() ) : the_post();
 
-						if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs();
+						// if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs();
+                        if (function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<p class="breadcrumbs">','</p>'); };
 
 					    echo "<h1>";
 							echo apply_filters( 'the_title', get_the_title( get_option( 'page_for_posts' ) ) );

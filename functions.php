@@ -146,15 +146,28 @@ require( get_template_directory() . '/inc/custom-header.php' );
 function twentytwelve_scripts_styles() {
 	global $wp_styles;
 
-	/*
-	 * Adds latest version of Jquery from Google CDN
-	 */
-	if (!is_admin()) add_action("wp_enqueue_scripts", "my_jquery_enqueue", 11);
-	function my_jquery_enqueue() {
-	   wp_deregister_script('jquery');
-	   wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js", false, null);
-	   wp_enqueue_script('jquery');
-	}
+	// /*
+	//  * Adds latest version of Jquery from Google CDN
+	//  */
+	// if (!is_admin()) add_action("wp_enqueue_scripts", "my_jquery_enqueue", 11);
+	// function my_jquery_enqueue() {
+	//    wp_deregister_script('jquery');
+	//    wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js", false, null);
+	//    wp_enqueue_script('jquery');
+	// }
+    //
+    // if (function_exists('load_my_scripts')) {
+    //     function load_my_scripts() {
+    //         if (!is_admin()) {
+    //         wp_deregister_script( 'jquery' );
+    //         wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js');
+    //         wp_enqueue_script('jquery');
+    //         wp_register_script('myscript', bloginfo('template_url').'/js/myScript.js'__FILE__), array('jquery'), '1.0', true );
+    //         wp_enqueue_script('myscript');
+    //         }
+    //     }
+    // }
+    // add_action('init', 'load_my_scripts');
 
 	/*
 	 * Adds JavaScript to pages with the comment form to support
@@ -183,27 +196,27 @@ function twentytwelve_scripts_styles() {
 
 	/* translators: If there are characters in your language that are not supported
 	   by Open Sans, translate this to 'off'. Do not translate into your own language. */
-	if ( 'off' !== _x( 'on', 'Open Sans font: on or off', 'twentytwelve' ) ) {
-		$subsets = 'latin,latin-ext';
-
-		/* translators: To add an additional Open Sans character subset specific to your language, translate
-		   this to 'greek', 'cyrillic' or 'vietnamese'. Do not translate into your own language. */
-		$subset = _x( 'no-subset', 'Open Sans font: add new subset (greek, cyrillic, vietnamese)', 'twentytwelve' );
-
-		if ( 'cyrillic' == $subset )
-			$subsets .= ',cyrillic,cyrillic-ext';
-		elseif ( 'greek' == $subset )
-			$subsets .= ',greek,greek-ext';
-		elseif ( 'vietnamese' == $subset )
-			$subsets .= ',vietnamese';
-
-		$protocol = is_ssl() ? 'https' : 'http';
-		$query_args = array(
-			'family' => 'Open+Sans:400italic,700italic,400,700',
-			'subset' => $subsets,
-		);
-		wp_enqueue_style( 'twentytwelve-fonts', add_query_arg( $query_args, "$protocol://fonts.googleapis.com/css" ), array(), null );
-	}
+	// if ( 'off' !== _x( 'on', 'Open Sans font: on or off', 'twentytwelve' ) ) {
+	// 	$subsets = 'latin,latin-ext';
+    //
+	// 	/* translators: To add an additional Open Sans character subset specific to your language, translate
+	// 	   this to 'greek', 'cyrillic' or 'vietnamese'. Do not translate into your own language. */
+	// 	$subset = _x( 'no-subset', 'Open Sans font: add new subset (greek, cyrillic, vietnamese)', 'twentytwelve' );
+    //
+	// 	if ( 'cyrillic' == $subset )
+	// 		$subsets .= ',cyrillic,cyrillic-ext';
+	// 	elseif ( 'greek' == $subset )
+	// 		$subsets .= ',greek,greek-ext';
+	// 	elseif ( 'vietnamese' == $subset )
+	// 		$subsets .= ',vietnamese';
+    //
+	// 	$protocol = is_ssl() ? 'https' : 'http';
+	// 	$query_args = array(
+	// 		'family' => 'Open+Sans:400italic,700italic,400,700',
+	// 		'subset' => $subsets,
+	// 	);
+	// 	wp_enqueue_style( 'twentytwelve-fonts', add_query_arg( $query_args, "$protocol://fonts.googleapis.com/css" ), array(), null );
+	// }
 
 	/*
 	 * Loads our main stylesheet.
@@ -217,6 +230,14 @@ function twentytwelve_scripts_styles() {
 	//$wp_styles->add_data( 'twentytwelve-ie', 'conditional', 'lt IE 9' );
 }
 add_action( 'wp_enqueue_scripts', 'twentytwelve_scripts_styles' );
+
+// function starter_scripts() {
+//     wp_deregister_script( 'jquery' );
+//     wp_register_script( 'jquery', includes_url( '/js/jquery/jquery.js' ), false, NULL, true );
+//     wp_enqueue_script( 'jquery' );
+//
+// }
+// add_action( 'wp_enqueue_scripts', 'starter_scripts' );
 
 // Disable comments on attachment pages
 function filter_media_comment_status( $open, $post_id ) {
@@ -935,134 +956,141 @@ function twentytwelve_customize_preview_js() {
 }
 add_action( 'customize_preview_init', 'twentytwelve_customize_preview_js' );
 
-/* Breadcrumb */
-function dimox_breadcrumbs() {
 
-	/* === OPTIONS === */
-	$text['home']     = 'Home'; // text for the 'Home' link
-	$text['category'] = ' %s'; // text for a category page
-	$text['search']   = 'Search results for "%s"'; // text for a search results page
-	$text['tag']      = 'Articles tagged "%s"'; // text for a tag page
-	$text['author']   = 'Articles by %s'; // text for an author page
-	$text['404']      = 'Oh dear... missing page!'; // text for the 404 page
+// /* Breadcrumb */
+// function dimox_breadcrumbs() {
+//
+// 	/* === OPTIONS === */
+// 	$text['home']     = 'Home'; // text for the 'Home' link
+// 	$text['category'] = ' %s'; // text for a category page
+// 	$text['search']   = 'Search results for "%s"'; // text for a search results page
+// 	$text['tag']      = 'Articles tagged "%s"'; // text for a tag page
+// 	$text['author']   = 'Articles by %s'; // text for an author page
+// 	$text['404']      = 'Oh dear... missing page!'; // text for the 404 page
+//
+// 	$showCurrent = 1; // 1 - show current post/page title in breadcrumbs, 0 - don't show
+// 	$showOnHome  = 0; // 1 - show breadcrumbs on the homepage, 0 - don't show
+// 	$delimiter   = ' &raquo; '; // delimiter between crumbs
+// 	$before      = '<span class="current">'; // tag before the current crumb
+// 	$after       = '</span>'; // tag after the current crumb
+// 	/* === END OF OPTIONS === */
+//
+// 	global $post;
+// 	$homeLink = get_bloginfo('url') . '/';
+// 	$linkBefore = '<span typeof="v:Breadcrumb">';
+// 	$linkAfter = '</span>';
+// 	$linkAttr = ' rel="v:url" property="v:title"';
+// 	$link = $linkBefore . '<a' . $linkAttr . ' href="%1$s">%2$s</a>' . $linkAfter;
+//
+// 	if (is_home() || is_front_page()) {
+//
+// 		if ($showOnHome == 1) echo '<div class="breadcrumbs"><a href="' . $homeLink . '">' . $text['home'] . '</a></div>';
+//
+// 	} else {
+//
+// 		echo '<div class="breadcrumbs" xmlns:v="http://rdf.data-vocabulary.org/#">' . sprintf($link, $homeLink, $text['home']) . $delimiter;
+//
+// 		if ( is_category() ) {
+// 			$thisCat = get_category(get_query_var('cat'), false);
+// 			if ($thisCat->parent != 0) {
+// 				$cats = get_category_parents($thisCat->parent, TRUE, $delimiter);
+// 				$cats = str_replace('<a', $linkBefore . '<a' . $linkAttr, $cats);
+// 				$cats = str_replace('</a>', '</a>' . $linkAfter, $cats);
+// 				echo $cats;
+// 			}
+// 			echo $before . sprintf($text['category'], single_cat_title('', false)) . $after;
+//
+// 		}
+//
+// 		elseif ( is_search() ) {
+// 			echo $before . sprintf($text['search'], get_search_query()) . $after;
+//
+// 		}
+//
+// 		elseif ( is_day() ) {
+// 			echo sprintf($link, get_year_link(get_the_time('Y')), get_the_time('Y')) . $delimiter;
+// 			echo sprintf($link, get_month_link(get_the_time('Y'),get_the_time('m')), get_the_time('F')) . $delimiter;
+// 			echo $before . get_the_time('d') . $after;
+//
+// 		} elseif ( is_month() ) {
+// 			echo sprintf($link, get_year_link(get_the_time('Y')), get_the_time('Y')) . $delimiter;
+// 			echo $before . get_the_time('F') . $after;
+//
+// 		} elseif ( is_year() ) {
+// 			echo $before . get_the_time('Y') . $after;
+//
+// 		} elseif ( is_single() && !is_attachment() ) {
+// 			if ( get_post_type() != 'post' ) {
+// 				$post_type = get_post_type_object(get_post_type());
+// 				$slug = $post_type->rewrite;
+// 				printf($link, $homeLink . '/' . $slug['slug'] . '/', $post_type->labels->singular_name);
+// 				if ($showCurrent == 1) echo $delimiter . $before . get_the_title() . $after;
+// 			} else {
+// 				$cat = get_the_category(); $cat = $cat[0];
+// 				$cats = get_category_parents($cat, TRUE, $delimiter);
+// 				if ($showCurrent == 0) $cats = preg_replace("#^(.+)$delimiter$#", "$1", $cats);
+// 				$cats = str_replace('<a', $linkBefore . '<a' . $linkAttr, $cats);
+// 				$cats = str_replace('</a>', '</a>' . $linkAfter, $cats);
+// 				echo $cats;
+// 				if ($showCurrent == 1) echo $before . get_the_title() . $after;
+// 			}
+//
+// 		} elseif ( !is_single() && !is_page() && get_post_type() != 'post' && !is_404() ) {
+// 			$post_type = get_post_type_object(get_post_type());
+// 			echo $before . $post_type->labels->singular_name . $after;
+//
+// 		} elseif ( is_attachment() ) {
+// 			$parent = get_post($post->post_parent);
+// 			$cat = get_the_category($parent->ID); $cat = $cat[0];
+// 			$cats = get_category_parents($cat, TRUE, $delimiter);
+// 			$cats = str_replace('<a', $linkBefore . '<a' . $linkAttr, $cats);
+// 			$cats = str_replace('</a>', '</a>' . $linkAfter, $cats);
+// 			echo $cats;
+// 			printf($link, get_permalink($parent), $parent->post_title);
+// 			if ($showCurrent == 1) echo $delimiter . $before . get_the_title() . $after;
+//
+// 		} elseif ( is_page() && !$post->post_parent ) {
+// 			if ($showCurrent == 1) echo $before . get_the_title() . $after;
+//
+// 		} elseif ( is_page() && $post->post_parent ) {
+// 			$parent_id  = $post->post_parent;
+// 			$breadcrumbs = array();
+// 			while ($parent_id) {
+// 				$page = get_page($parent_id);
+// 				$breadcrumbs[] = sprintf($link, get_permalink($page->ID), get_the_title($page->ID));
+// 				$parent_id  = $page->post_parent;
+// 			}
+// 			$breadcrumbs = array_reverse($breadcrumbs);
+// 			for ($i = 0; $i < count($breadcrumbs); $i++) {
+// 				echo $breadcrumbs[$i];
+// 				if ($i != count($breadcrumbs)-1) echo $delimiter;
+// 			}
+// 			if ($showCurrent == 1) echo $delimiter . $before . get_the_title() . $after;
+//
+// 		} elseif ( is_tag() ) {
+// 			echo $before . sprintf($text['tag'], single_tag_title('', false)) . $after;
+//
+// 		} elseif ( is_author() ) {
+// 	 		global $author;
+// 			$userdata = get_userdata($author);
+// 			echo $before . sprintf($text['author'], $userdata->display_name) . $after;
+//
+// 		} elseif ( is_404() ) {
+// 			echo $before . $text['404'] . $after;
+// 		}
+//
+// 		if ( get_query_var('paged') ) {
+// 			if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) echo ' (';
+// 			echo __('Page') . ' ' . get_query_var('paged');
+// 			if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) echo ')';
+// 		}
+//
+// 		echo '</div>';
+//
+// 	}
+// } // end dimox_breadcrumbs()
 
-	$showCurrent = 1; // 1 - show current post/page title in breadcrumbs, 0 - don't show
-	$showOnHome  = 0; // 1 - show breadcrumbs on the homepage, 0 - don't show
-	$delimiter   = ' &raquo; '; // delimiter between crumbs
-	$before      = '<span class="current">'; // tag before the current crumb
-	$after       = '</span>'; // tag after the current crumb
-	/* === END OF OPTIONS === */
 
-	global $post;
-	$homeLink = get_bloginfo('url') . '/';
-	$linkBefore = '<span typeof="v:Breadcrumb">';
-	$linkAfter = '</span>';
-	$linkAttr = ' rel="v:url" property="v:title"';
-	$link = $linkBefore . '<a' . $linkAttr . ' href="%1$s">%2$s</a>' . $linkAfter;
-
-	if (is_home() || is_front_page()) {
-
-		if ($showOnHome == 1) echo '<div class="breadcrumbs"><a href="' . $homeLink . '">' . $text['home'] . '</a></div>';
-
-	} else {
-
-		echo '<div class="breadcrumbs" xmlns:v="http://rdf.data-vocabulary.org/#">' . sprintf($link, $homeLink, $text['home']) . $delimiter;
-
-		if ( is_category() ) {
-			$thisCat = get_category(get_query_var('cat'), false);
-			if ($thisCat->parent != 0) {
-				$cats = get_category_parents($thisCat->parent, TRUE, $delimiter);
-				$cats = str_replace('<a', $linkBefore . '<a' . $linkAttr, $cats);
-				$cats = str_replace('</a>', '</a>' . $linkAfter, $cats);
-				echo $cats;
-			}
-			echo $before . sprintf($text['category'], single_cat_title('', false)) . $after;
-
-		} elseif ( is_search() ) {
-			echo $before . sprintf($text['search'], get_search_query()) . $after;
-
-		} elseif ( is_day() ) {
-			echo sprintf($link, get_year_link(get_the_time('Y')), get_the_time('Y')) . $delimiter;
-			echo sprintf($link, get_month_link(get_the_time('Y'),get_the_time('m')), get_the_time('F')) . $delimiter;
-			echo $before . get_the_time('d') . $after;
-
-		} elseif ( is_month() ) {
-			echo sprintf($link, get_year_link(get_the_time('Y')), get_the_time('Y')) . $delimiter;
-			echo $before . get_the_time('F') . $after;
-
-		} elseif ( is_year() ) {
-			echo $before . get_the_time('Y') . $after;
-
-		} elseif ( is_single() && !is_attachment() ) {
-			if ( get_post_type() != 'post' ) {
-				$post_type = get_post_type_object(get_post_type());
-				$slug = $post_type->rewrite;
-				printf($link, $homeLink . '/' . $slug['slug'] . '/', $post_type->labels->singular_name);
-				if ($showCurrent == 1) echo $delimiter . $before . get_the_title() . $after;
-			} else {
-				$cat = get_the_category(); $cat = $cat[0];
-				$cats = get_category_parents($cat, TRUE, $delimiter);
-				if ($showCurrent == 0) $cats = preg_replace("#^(.+)$delimiter$#", "$1", $cats);
-				$cats = str_replace('<a', $linkBefore . '<a' . $linkAttr, $cats);
-				$cats = str_replace('</a>', '</a>' . $linkAfter, $cats);
-				echo $cats;
-				if ($showCurrent == 1) echo $before . get_the_title() . $after;
-			}
-
-		} elseif ( !is_single() && !is_page() && get_post_type() != 'post' && !is_404() ) {
-			$post_type = get_post_type_object(get_post_type());
-			echo $before . $post_type->labels->singular_name . $after;
-
-		} elseif ( is_attachment() ) {
-			$parent = get_post($post->post_parent);
-			$cat = get_the_category($parent->ID); $cat = $cat[0];
-			$cats = get_category_parents($cat, TRUE, $delimiter);
-			$cats = str_replace('<a', $linkBefore . '<a' . $linkAttr, $cats);
-			$cats = str_replace('</a>', '</a>' . $linkAfter, $cats);
-			echo $cats;
-			printf($link, get_permalink($parent), $parent->post_title);
-			if ($showCurrent == 1) echo $delimiter . $before . get_the_title() . $after;
-
-		} elseif ( is_page() && !$post->post_parent ) {
-			if ($showCurrent == 1) echo $before . get_the_title() . $after;
-
-		} elseif ( is_page() && $post->post_parent ) {
-			$parent_id  = $post->post_parent;
-			$breadcrumbs = array();
-			while ($parent_id) {
-				$page = get_page($parent_id);
-				$breadcrumbs[] = sprintf($link, get_permalink($page->ID), get_the_title($page->ID));
-				$parent_id  = $page->post_parent;
-			}
-			$breadcrumbs = array_reverse($breadcrumbs);
-			for ($i = 0; $i < count($breadcrumbs); $i++) {
-				echo $breadcrumbs[$i];
-				if ($i != count($breadcrumbs)-1) echo $delimiter;
-			}
-			if ($showCurrent == 1) echo $delimiter . $before . get_the_title() . $after;
-
-		} elseif ( is_tag() ) {
-			echo $before . sprintf($text['tag'], single_tag_title('', false)) . $after;
-
-		} elseif ( is_author() ) {
-	 		global $author;
-			$userdata = get_userdata($author);
-			echo $before . sprintf($text['author'], $userdata->display_name) . $after;
-
-		} elseif ( is_404() ) {
-			echo $before . $text['404'] . $after;
-		}
-
-		if ( get_query_var('paged') ) {
-			if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) echo ' (';
-			echo __('Page') . ' ' . get_query_var('paged');
-			if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) echo ')';
-		}
-
-		echo '</div>';
-
-	}
-} // end dimox_breadcrumbs()
 
 // Home Link in Menu
 
@@ -1078,10 +1106,6 @@ function custom_login_logo() {
 	echo '<style type="text/css">h1 a { height:80px !important; width: 304px !important; background: url("http://www.manchestersfinest.com/wp-content/uploads/2017/03/finest-brand-landscape-new.jpg") 75% 55% no-repeat !important; }</style>';
 }
 add_action('login_head', 'custom_login_logo');
-
-
-
-
 
 
 
@@ -1101,6 +1125,12 @@ function create_post_type() {
       'parent_item_colon'  => '',
       'menu_name'          => 'Directory'
     );
+	// $rewrite = array(
+	//    'slug'                => 'directory',
+	//    'with_front'          => true,
+	//    'pages'               => true,
+	//    'feeds'               => true,
+    // );
     $args = array(
       'labels'        => $labels,
       'description'   => 'Finest business directory',
@@ -1112,8 +1142,16 @@ function create_post_type() {
 	  'taxonomies' => array('category', 'post_tag')
     );
     register_post_type( 'directory', $args );
+	flush_rewrite_rules();
 }
 add_action( 'init', 'create_post_type' );
+
+// add_action( 'init', 'build_taxonomies', 0 );
+//
+// function build_taxonomies() {
+//     register_taxonomy( 'Directory', 'Directory', array( 'hierarchical' => true, 'label' => 'Directory categories', 'query_var' => true, 'rewrite' => true ) );
+// }
+
 
 
 
@@ -1737,9 +1775,6 @@ function get_video_thumbnail_uri( $video_uri ) {
 	}
 
 
-
-
-
     function add_classes_to_linked_images($html) {
         $classes = 'media-img'; // can do multiple classes, separate with space
 
@@ -1761,3 +1796,20 @@ function get_video_thumbnail_uri( $video_uri ) {
     }
 
     add_filter('the_content', 'add_classes_to_linked_images', 100, 1);
+
+
+	function disable_wp_emojicons() {
+
+	  // all actions related to emojis
+	  remove_action( 'admin_print_styles', 'print_emoji_styles' );
+	  remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+	  remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+	  remove_action( 'wp_print_styles', 'print_emoji_styles' );
+	  remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+	  remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
+	  remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
+
+	  // filter to remove TinyMCE emojis
+	  add_filter( 'tiny_mce_plugins', 'disable_emojicons_tinymce' );
+	}
+	add_action( 'init', 'disable_wp_emojicons' );

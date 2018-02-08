@@ -9,6 +9,7 @@ var jshint = require('gulp-jshint');
 var stylish = require('jshint-stylish');
 var uglify = require('gulp-uglify');
 var mocha = require('gulp-mocha');
+// var purge = require('gulp-css-purge');
 
 
 /**
@@ -65,6 +66,7 @@ gulp.task('css', function() {
       .pipe(sass(settings.sass))
       .on('error', sass.logError)
       .pipe(autoprefixer(settings.autoprefixer))
+      // .pipe(purge())
     .pipe(sourcemaps.write('maps/'))
     .pipe(gulp.dest(dest_paths.styles))
 });

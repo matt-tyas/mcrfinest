@@ -24,9 +24,9 @@ get_header(); ?>
     <div class="g one-whole palm-one-whole">
         <h1><?php single_cat_title(); ?></h1>
     </div>
-    <div class="g two-fifths palm-one-whole">
+    <div class="g one-half palm-one-whole">
         <div class="mf-directory-picks">
-            <h2>Directory picks</h2>
+            <h2>Directory</h2>
             <?php // The Query
                 wp_reset_query();
                 global $wp_query;
@@ -61,13 +61,12 @@ get_header(); ?>
                         <div class="intro">
                             <p><?php echo get_excerpt(80); ?></p>
                         </div>
-
                     </article>
                 </a>
             <?php endwhile; ?>
         </div>
     </div>
-        <div class="g three-fifths palm-one-whole">
+        <div class="g one-half palm-one-whole">
             <section class="latest-articles mf-directory-articles">
                 <h2>Articles</h2>
                 <div class="gw equal">
@@ -75,7 +74,7 @@ get_header(); ?>
                     <?php if (have_posts()) : while (have_posts()) : the_post();
                          // if (in_array($post->ID, $do_not_duplicate)) continue;
                     ?>
-                    <div class="g one-third lap-one-half palm-one-third mob-one-half">
+                    <div class="g one-half lap-one-half palm-one-third mob-one-half">
                         <a href="<?php the_permalink() ?>" rel="bookmark" class="post-tile-link">
                             <article <?php post_class('post-tile'); ?>>
                                 <?php
@@ -97,8 +96,11 @@ get_header(); ?>
                     <?php endwhile; endif; ?>
                 </div>
             </section>
-            <h3>More articles</h3>
-            <?php wp_pagenavi(); ?>
+        </div>
+        <div class="gw row">
+            <div class="g one-whole palm-one-whole">
+                <?php wp_pagenavi(); ?>
+            </div>
         </div>
     </div>
 </div>
