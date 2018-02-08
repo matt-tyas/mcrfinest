@@ -384,6 +384,9 @@
 	.intro {
 		margin-left: 25%;
 	}
+	p {
+		@include font-size($h4-size);
+	}
 }
 .category .mf-directory-picks .post-tile {
 	@extend .cf;
