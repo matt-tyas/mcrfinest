@@ -13,7 +13,7 @@
 <meta http-equiv="cleartype" content="on">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="fb:pages" content="1557163057929499" />
-<title><?php wp_title( '|', true, 'right' ); ?> scscsdsd</title>
+<title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <link rel="apple-touch-icon" href="http://www.manchestersfinest.com/wp-content/uploads/2011/08/apple-touch-icon.png" />

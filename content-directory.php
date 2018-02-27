@@ -43,22 +43,21 @@
                                 <?php
     							// check if the repeater field has rows of data
     							if( have_rows('directory_slider') ):
-                                    the_sub_field('diretory_slider_image');
+
     								echo '<div id="owl-directory-videos" class="owl-carousel">';
 
     							    while ( have_rows('directory_slider') ) : the_row();
     							        // display a sub field value
-    							        the_sub_field('video');
+                                        if (! empty(the_sub_field('video'))) {
+    							            the_sub_field('video');
+                                        }
+
+                                        if (! empty(get_sub_field('image'))) {
+                                            echo '<img src="' . get_sub_field('image') . '" />';
+                                        }
 
     							    endwhile;
-                                    // loop through the rows of data
-    							    while ( have_rows('directory_slider') ) : the_row();
-    							        // display a sub field value
-                                        echo '<img src="';
-                                        the_sub_field('image');
-                                        echo '" />';
 
-    							    endwhile;
     								echo '</div>';
     							else :
     							    echo wp_get_attachment_image( listing_image_get_meta('_listing_image_id'), 'full');
@@ -128,7 +127,23 @@
                             <div class="g one-whole palm-one-whole mob-one-whole">
                                 <div class="related-sidebar">
                                     <h2>Latest articles</h2>
-        						    <?php if (function_exists('related_posts') ) : related_posts(); endif; ?>
+                                    <?php $search_term = get_field('directory_related_posts_search_term'); ?>
+                                    <?php $args1 = array( 'posts_per_page' => 3, 'offset'=> 0, 's' => $search_term);
+        					            $myposts1 = get_posts( $args1 );
+        					            foreach ( $myposts1 as $post ) : setup_postdata( $post ); ?>
+    									<a href="<?php the_permalink() ?>" rel="bookmark" class="post-tile-link">
+    										<article <?php post_class('post-tile post-tile--grid'); ?>>
+    						                    <?php
+    						                        the_post_thumbnail('big-post-thumb');
+    						                    ?>
+    						                    <h3><?php echo wp_trim_words ( the_title ( '', '', false ), 12 , '&hellip;'); ?></h3>
+    						                </article>
+    									</a>
+        					        <?php endforeach;
+        					        wp_reset_postdata();?>
+                                    <!-- <div class="center-block">
+                                        <?php // echo '<a href="' . get_home_url() . '/?s=' . $search_term . '">All articles</a>'; ?>
+                                    </div> -->
                                 </div>
         						<div class="newscta">
         								<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
@@ -231,7 +246,6 @@
                 				</div>
             				</div>
                             <div class="ad-sense is--sticky">
-            					<h5 class="sub-title ad-title">Advert</h5>
             					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
             					<!-- Article Custom size 2 -->
             					<ins class="adsbygoogle"

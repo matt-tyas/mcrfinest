@@ -9,15 +9,9 @@
 ?>
 
 	<article id="post-0" class="post no-results not-found">
-		<header>
-			<h1><?php _e( 'Sorry - nothing Found', 'twentytwelve' ); ?></h1>
-		</header>
-		<div class="gw">
-			<div class="g one-third palm-one-whole">
-				<div class="entry-content">
-					<p><?php _e( 'Apologies, but no results were found. Perhaps searching will help find a related article.', 'twentytwelve' ); ?></p>
-			        <?php // get_search_form(); ?>
-				</div>
-			</div>
+		<h1><?php _e( 'Nothing found', 'twentytwelve' ); ?></h1>
+		<div class="entry-content">
+			<p><?php _e( 'Sorry - no results were found.', 'twentytwelve' ); ?></p>
+		</div>
 		</div><!-- .entry-content -->
 	</article><!-- #post-0 -->

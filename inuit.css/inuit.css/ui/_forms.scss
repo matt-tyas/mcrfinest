@@ -15,18 +15,15 @@ input[type=text], input[type=email], input[type=password] {
 	width: 100%;
 	padding: $half-spacing-unit;
 	background: #fff;
-	border-top: 0;
-	border-left: 0;
-	border-right: 0;
-	border-bottom: 5px solid #000;
+	// border-top: 0;
+	// border-left: 0;
+	// border-right: 0;
+	border: 1px solid #000;
 	&:hover {
 		background: #fff;
 	}
 	&:focus {
-		border-top: 0;
-		border-left: 0;
-		border-right: 0;
-		border-bottom: 5px solid $brand-color;
+		border: 1px solid $brand-color;
 	}
 }
 .site-content {
@@ -44,10 +41,7 @@ input[type=text], input[type=email], input[type=password] {
 			background: #fff;
 		}
 		&:focus {
-			border-top: 0;
-			border-left: 0;
-			border-right: 0;
-			border-bottom: 5px solid $brand-color;
+			border: 1px solid $brand-color;
 		}
 	}
 	textarea {
@@ -58,7 +52,7 @@ input[type=text], input[type=email], input[type=password] {
 			background: #fff;
 		}
 		&:focus {
-			border-bottom: 5px solid $brand-color;
+			border: 1px solid $brand-color;
 		}
 	}
 	.wpcf7-captchac {
@@ -153,10 +147,7 @@ textarea:focus, input:focus{
 			background: #fff;
 		}
 		&:focus {
-			border-top: 0;
-			border-left: 0;
-			border-right: 0;
-			border-bottom: 5px solid $brand-color;
+			border: 1px solid $brand-color;
 		}
 	}
 	textarea {
@@ -210,6 +201,7 @@ textarea:focus, input:focus{
 	.wpcf7-response-output {
 		margin-left: 0;
 	}
+
 	.wpcf7-not-valid-tip {
 		background: #ff0000 !important;
 		border: 2px solid #ff0000 !important;
@@ -353,6 +345,11 @@ span.wpcf7-not-valid-tip {
 	display: block;
 	width: 100%;
 	font-size: 18px !important;
+}
+
+.wpcf7-mail-sent-ok {
+  background: #398f14;
+  color: #fff;
 }
 
 #mc_embed_signup .mc-field-group input.button {

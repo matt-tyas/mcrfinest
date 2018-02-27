@@ -131,6 +131,7 @@ $('#owl-directory-videos').owlCarousel({
   navText : ["<span class='accessibility'>previous</span>","<span class='fa accessibility'>next</span>"],
   responsiveClass: true,
   autoHeight:false,
+  singleItem : true,
   responsive:{
       0:{
           items:1,
@@ -146,6 +147,8 @@ $('#owl-directory-videos').owlCarousel({
       }
   }
 })
+
+
 
 // $(window).load(function() {
 // 	/* This avoids the flags loading in the top left of the browser whilst witing for JS to finish */
@@ -245,6 +248,11 @@ $(document).ready(function(){
     $(this).toggleClass("is--pressed");
     $(".mf-directory-search-home").removeClass("is--open");
     return false;
+  });
+
+  $(".sf-field-submit input").click(function() {
+    $(".finder-close-trigger").toggleClass("is--pressed");
+    $(".mf-directory-search-home").removeClass("is--open");
   });
 
   $(".search-close-trigger").click(function() {

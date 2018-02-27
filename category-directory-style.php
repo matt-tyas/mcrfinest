@@ -30,18 +30,21 @@ get_header(); ?>
             <?php // The Query
                 wp_reset_query();
                 global $wp_query;
+                $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
                 $term = $wp_query->queried_object;
                 $args=array(
                     'ignore_sticky_posts' => true,
-                    'posts_per_page' => 5,
+                    'posts_per_page' => 26,
                     'post_type' => 'directory',
                     'suppress_filters' => true,
                     // 'tag' => 'finest-picks',
+                    'paged' => get_query_var('paged'),
                     'tax_query' => array(
                     array(
                         'taxonomy'  => $term->taxonomy,
                         'field'     => 'slug',
                         'terms'     => $term->slug,
+                        'paged'     => $paged
                         )
                     )
                 );
@@ -60,11 +63,18 @@ get_header(); ?>
                         <h3><?php echo wp_trim_words ( the_title ( '', '', false ), 6 , '&hellip;'); ?></h3>
                         <div class="intro">
                             <p><?php echo get_excerpt(80); ?></p>
+                            <?php
+                            // $categories = get_the_category();
+                            //     if ( ! empty( $categories ) ) {
+                            //         echo esc_html( $categories[0]->name );
+                            //     }
+                            ?>
                         </div>
                     </article>
                 </a>
             <?php endwhile; ?>
         </div>
+
     </div>
         <div class="g one-half palm-one-whole">
             <section class="latest-articles mf-directory-articles">
@@ -87,9 +97,6 @@ get_header(); ?>
                                     }
                                 ?>
                                 <h3><?php echo wp_trim_words ( the_title ( '', '', false ), 12 , '&hellip;'); ?></h3>
-                                <!-- <div class="intro">
-                                    <p><?php // echo get_excerpt(80); ?></p>
-                                </div> -->
                             </article>
                         </a>
                     </div>

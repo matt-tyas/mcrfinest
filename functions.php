@@ -1139,7 +1139,7 @@ function create_post_type() {
       'menu_position' => 4,
       'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
       'has_archive'   => true,
-	  'taxonomies' => array('category', 'post_tag')
+	  'taxonomies' => array('directory', 'post_tag')
     );
     register_post_type( 'directory', $args );
 	flush_rewrite_rules();
@@ -1187,7 +1187,7 @@ function directory_address_meta_box( $object, $box ) { ?>
   <p>
     <label for="directory_address_meta_box_class"><?php _e( "Add an address for the listing", 'example' ); ?></label>
     <br />
-	<textarea style="height: 100px;"class="widefat" id="directory_address_meta_box_class" name="directory_address_meta_box_class"><?php echo get_post_meta( $object->ID, 'directory_address_meta_box_class', true ); ?></textarea>
+	<textarea style="height: 100px;" class="widefat" id="directory_address_meta_box_class" name="directory_address_meta_box_class"><?php echo get_post_meta( $object->ID, 'directory_address_meta_box_class', true ); ?></textarea>
   </p>
 <?php }
 

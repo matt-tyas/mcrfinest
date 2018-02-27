@@ -138,8 +138,8 @@
 	}
 
 	.mf-label {
-	  margin: 0 0 $base-spacing-unit 0;
-		@include font-size(38px);
+	  margin: 0 0 $half-spacing-unit 0;
+		@include font-size(32px);
 		font-weight: bold;
 		text-align: left;
 	}
@@ -380,9 +380,17 @@
 	width: 25% !important;
 }
 .post-tile.post-tile--horz {
+	h3 {
+		padding-top: 0;
+	}
 	h3,
 	.intro {
+		background: transparent;
 		margin-left: 25%;
+		padding-right: 40px;
+    @include media-query(palm) {
+				padding-right: 0;
+		}
 	}
 	p {
 		@include font-size($h4-size);

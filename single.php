@@ -11,7 +11,7 @@ get_header(); ?>
 	<div class="site-content">
 		<div class="gw">
             <div class="g one-tenth lap-one-fifth palm-one-whole">
-				<?php get_template_part('social-share'); ?>
+				<?php get_template_part('includes/social-share'); ?>
 			</div>
 			<div class="g six-tenths lap-four-fifths palm-one-whole f-article">
 
@@ -185,7 +185,6 @@ get_header(); ?>
 					<div class="g one-whole lap-one-half palm-one-half mob-one-half">
 						<div class="sticky-spacer">
 							<div class="ad-sense ad--sticky">
-			 	        		<h5 class="sub-title ad-title">Advert</h5>
 			 					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 			 					<!-- Home responsive 1 -->
 			 					<ins class="adsbygoogle"

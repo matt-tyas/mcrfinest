@@ -16,7 +16,7 @@ get_header(); ?>
 	<div class="gw">
 		<div class="site-content">
             <div class="g one-tenth lap-one-fifth palm-one-whole">
-				<?php get_template_part('social-share'); ?>
+				<?php get_template_part('includes/social-share'); ?>
 			</div>
 			<div class="g six-tenths palm-one-whole">
 				<div class="f-article media">

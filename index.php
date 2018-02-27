@@ -104,24 +104,7 @@
 				</div>
 			</div>
 		</section>
-
 	    <div id="main" class="wrapper page page--home">
-
-			<!-- <a href="#" class="finder-trigger"><span aria-hidden="true" data-icon="&#x260c;"></span> Find things to do in&nbsp;Manchester</a>
-    		<section class="border-wrap">
-    			<div class="gw">
-    				<div class="g one-whole lap-one-whole palm-one-whole">
-    					<div class="mf-section mf-directory-search-home">
-							<h3 class="mf-label"><a href="<?php echo get_site_url(); ?>/find/" class="mf-label__link"><span class="icon icon-marker"></span> Find something in Manchester</a></h3>
-    						<?php
-    							if ( is_active_sidebar( 'directory-search' ) ) : ?>
-    							<?php dynamic_sidebar( 'directory-search' ); ?>
-    						<?php endif; ?>
-    						<a href="#" class="finder-close-trigger"><span aria-hidden="true" data-icon="&#x2612;"></span> Close</a>
-    					</div>
-    				</div>
-    			</div>
-    		</section> -->
 			<div class="mf-offset mf-offset--wide">
 				<div class="mf-offset__position mf-offset__position--left">
 					<div class="social-inline">
@@ -170,6 +153,30 @@
 					<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='MMERGE3';ftypes[3]='text';fnames[4]='MMERGE4';ftypes[4]='text';fnames[5]='MMERGE5';ftypes[5]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
 				</div>
 			</div>
+			<section class="border-wrap finder-trigger-section">
+    			<div class="gw">
+    				<div class="g one-whole lap-one-whole palm-one-whole">
+    					<div class="mf-section mf-peach">
+							<h3 class="mf-label"><a href="<?php echo get_site_url(); ?>/find/" class="mf-label__link">Find something to do in Manchester</a></h3>
+							<a href="#" class="finder-trigger"><span aria-hidden="true" data-icon="&#x260c;"></span> Search now</a>
+						</div>
+					</div>
+				</div>
+			</section>
+    		<section class="border-wrap">
+    			<div class="gw">
+    				<div class="g one-whole lap-one-whole palm-one-whole">
+    					<div class="mf-section mf-peach mf-directory-search-home">
+							<h3 class="mf-label"><a href="<?php echo get_site_url(); ?>/find/" class="mf-label__link">Find something to do in Manchester</a></h3>
+    						<?php
+    							if ( is_active_sidebar( 'directory-search' ) ) : ?>
+    							<?php dynamic_sidebar( 'directory-search' ); ?>
+    						<?php endif; ?>
+    						<a href="#" class="finder-close-trigger"><span aria-hidden="true" data-icon="&#x2612;"></span> Close</a>
+    					</div>
+    				</div>
+    			</div>
+    		</section>
 			<section class="border-wrap">
     			<div class="gw">
     				<div class="g one-whole lap-one-whole palm-one-whole">

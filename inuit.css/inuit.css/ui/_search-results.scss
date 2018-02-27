@@ -1,6 +1,19 @@
 /*------------------------------------*\
     $Search Results
 \*------------------------------------*/
+
+.no-results {
+	padding: $base-spacing-unit;
+	margin: -50px auto $base-spacing-unit auto;
+	width: 50%;
+	background: #DDEFF5;
+	text-align: center;
+	@include media-query(palm) {
+		width: 100%;
+		padding: $half-spacing-unit;
+	}
+}
+
 .main-search-control {
 	float: right;
 	display: block;
@@ -178,9 +191,7 @@
 }
 
 .search-page {
-	// margin-bottom: $base-spacing-unit;
-	// padding: $base-spacing-unit;
-	// background: lighten($lightgrey, 4%);
+
 	label {
 		@extend .accessibility;
 	}
@@ -214,9 +225,16 @@
 	}
 }
 
+#directory-results .post-tile {
+	min-height: 280px;
+}
+
 .mf-directory-search-home {
-	padding: $base-spacing-unit*2 $half-spacing-unit $base-spacing-unit*2 $half-spacing-unit;
-	background: #F3F3F3;
+	padding: $base-spacing-unit*4 $half-spacing-unit $base-spacing-unit*2 $half-spacing-unit;
+	.mf-label {
+		font-weight: normal;
+		text-align: center;
+	}
 }
 
 .mf-directory-search--directory {
@@ -226,7 +244,7 @@
 		position: static;
 		transform: translateX(0%);
 		margin: 0 auto;
-		width: 400px;
+		text-align: center;
 	}
 	.mf-directory-search .searchandfilter ul li.sf-field-submit {
 		display: inline-block !important;
@@ -239,8 +257,17 @@
 			text-align: left !important;
 		}
 	}
+	.mf-directory-search .searchandfilter ul li:first-of-type {
+		// width: 420px !important;
+		@include media-query(palm) {
+			width: 100% !important;
+		}
+	}
 	.mf-directory-search .searchandfilter ul li {
-		width: 500px !important
+		width: 500px !important;
+		@include media-query(palm) {
+			width: 100% !important;
+		}
 	}
 }
 
@@ -322,9 +349,10 @@
 	.searchandfilter {
 		ul {
 			text-align: center;
+			margin-bottom: $base-spacing-unit;
 		}
 		ul li {
-			width: 520px !important;
+			// width: 520px !important;
 			display: inline-block !important;
 			padding: 0 $half-spacing-unit 0 0;
 			margin: 0;
@@ -335,7 +363,6 @@
 		  }
 		}
 		ul li.sf-field-submit {
-			display: block !important;
 			width: 9% !important;
 			text-align: center !important;
 			margin: 0 auto !important;
@@ -347,15 +374,12 @@
 		}
 		h4 {
 			display: inline-block;
-			font-size: 40px !important;
+			font-size: 35px !important;
 			@include media-query(palm) {
 				display: block;
 	      padding: 0;
 				line-height: 1;
 	    }
-		}
-		label {
-			// display: block;
 		}
 	}
 	label {
@@ -366,13 +390,16 @@
     padding: 0;
     margin: 0;
     border-bottom: 5px solid #000;
-    width: 350px;
+    width: 420px;
     overflow: hidden;
     background-color: transparent;
     @include media-query(palm) {
+			width: 100%;
       top: 0px;
     }
 		select {
+			position: relative;
+      z-index: 9999;
 		  font-weight: 700;
 	    padding: 0px 8px 0px 0;
 	    width: 130%;
@@ -387,11 +414,22 @@
 		select:focus {
 		    outline: none;
 		}
+		&:first-child select {
+			width: 90%;
+		}
+	}
+	li:first-child label {
+		width: 375px;
+		@include media-query(palm) {
+	    width: 100%;
+			margin-bottom: $base-spacing-unit;
+	  }
 	}
 	input[type=submit] {
 		position: relative;
-		font-size: 40px;
-		padding: 5px 5px;
+		top: 4px;
+		font-size: 35px;
+		padding: 5px 10px;
 		text-align: center;
 		border: 5px solid #000;
 		color: #000;
@@ -435,24 +473,37 @@
 	}
 }
 
+.finder-trigger-section {
+	display: none;
+	@include media-query(palm) {
+		display: block;
+	}
+	.mf-section {
+		@include media-query(palm) {
+			padding-top: 24px;
+		}
+	}
+	.mf-label {
+		text-align: center;
+		margin-bottom: $half-spacing-unit;
+	}
+}
+
 .finder-trigger {
 	display: none;
 	@include media-query(palm) {
 		display: block;
-		position: fixed;
-		width: 100%;
+		width: 90%;
+		margin: 0 auto $half-spacing-unit auto;
 		padding: 5px;
-		border-top: 1px solid #000;
-		border-bottom: 0;
-		bottom: 0px;
+		border: 3px solid #000;
 		z-index: 999;
-		background: #fff;
+		background: transparent;
 		color: #000;
 		text-align: center;
 		&:hover {
-			border-top: 1px solid #000;
-			border-bottom: 0;
-			color: #000;
+			border: 3px solid $brand-color;
+			color: $brand-color;
 		}
 	}
 	.is-pressed {

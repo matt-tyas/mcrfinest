@@ -25,10 +25,20 @@
 
 #owl-directory-videos {
   position: relative;
+  .owl-stage-outer {
+    height: 447px;
+    overflow: hidden;
+    @include media-query(palm) {
+  		height: 447px;
+  	}
+    @include media-query(mob) {
+  		height: 300px;
+  	}
+  }
   .owl-nav {
     position: absolute;
     z-index: 200;
-    top: 40%;
+    top: 44%;
     width: 100%;
   }
   .owl-prev,
