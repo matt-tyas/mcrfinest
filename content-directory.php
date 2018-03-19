@@ -9,7 +9,7 @@
 ?>
 <div class="gw row">
     <div class="g one-tenth lap-one-fifth palm-one-whole">
-        <?php get_template_part('social-share'); ?>
+        <?php get_template_part('includes/social-share'); ?>
     </div>
 	<div class="g six-tenths lap-four-fifths palm-one-whole f-article">
         <article class="media" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
