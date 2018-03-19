@@ -1139,7 +1139,7 @@ function create_post_type() {
       'menu_position' => 4,
       'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
       'has_archive'   => true,
-	  'taxonomies' => array('directory', 'post_tag')
+	  'taxonomies' => array('category', 'post_tag')
     );
     register_post_type( 'directory', $args );
 	flush_rewrite_rules();

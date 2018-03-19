@@ -127,8 +127,13 @@
                             <div class="g one-whole palm-one-whole mob-one-whole">
                                 <div class="related-sidebar">
                                     <h2>Latest articles</h2>
-                                    <?php $search_term = get_field('directory_related_posts_search_term'); ?>
-                                    <?php $args1 = array( 'posts_per_page' => 3, 'offset'=> 0, 's' => $search_term);
+                                    <?php
+                                        $search_term = get_field('directory_related_posts_search_term');
+                                        $args1 = array(
+                                            'posts_per_page' => 3,
+                                            's'              => $search_term,
+                                            'post_type' => 'post'
+                                        );
         					            $myposts1 = get_posts( $args1 );
         					            foreach ( $myposts1 as $post ) : setup_postdata( $post ); ?>
     									<a href="<?php the_permalink() ?>" rel="bookmark" class="post-tile-link">
