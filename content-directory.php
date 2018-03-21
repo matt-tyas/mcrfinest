@@ -153,13 +153,13 @@
     									echo "</a>";
                                         }
                                     ?>
-                                    <div class="center-block">
+                                    <!-- <div class="center-block">
                                         <?php
-                                            echo '<a href="' . get_home_url() . '/?s=' . $search_term . '">Find more on ';
-                                            echo the_title();
-                                            echo '</a>';
+                                            //echo '<a href="' . get_home_url() . '/?s=' . $search_term . '">Find more on ';
+                                            //echo the_title();
+                                            //echo '</a>';
                                         ?>
-                                    </div>
+                                    </div> -->
                                 </div>
         						<div class="newscta">
     								<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
