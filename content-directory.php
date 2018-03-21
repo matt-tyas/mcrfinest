@@ -128,48 +128,59 @@
                                 <div class="related-sidebar">
                                     <h2>Latest articles</h2>
                                     <?php
-                                        $search_term = get_field('directory_related_posts_search_term');
-                                        $args1 = array(
-                                            'posts_per_page' => 3,
-                                            's'              => $search_term,
-                                            'post_type' => 'post'
-                                        );
-        					            $myposts1 = get_posts( $args1 );
-        					            foreach ( $myposts1 as $post ) : setup_postdata( $post ); ?>
-    									<a href="<?php the_permalink() ?>" rel="bookmark" class="post-tile-link">
-    										<article <?php post_class('post-tile post-tile--grid'); ?>>
-    						                    <?php
-    						                        the_post_thumbnail('big-post-thumb');
-    						                    ?>
-    						                    <h3><?php echo wp_trim_words ( the_title ( '', '', false ), 12 , '&hellip;'); ?></h3>
-    						                </article>
-    									</a>
-        					        <?php endforeach;
-        					        wp_reset_postdata();?>
-                                    <!-- <div class="center-block">
-                                        <?php // echo '<a href="' . get_home_url() . '/?s=' . $search_term . '">All articles</a>'; ?>
-                                    </div> -->
+                                    $user_search_term = get_field('directory_related_posts_search_term');
+                                    $search_term = str_replace("+", " ", $user_search_term);
+                                    global $wpdb;
+                                    $myposts = $wpdb->get_results
+                                    ( $wpdb->prepare("
+                                        SELECT
+                                            * FROM $wpdb->posts
+                                        WHERE
+                                            post_title LIKE '%s' LIMIT 3", '%'. $wpdb->esc_like( $search_term ) . '%'
+                                        )
+                                    );
+                                    foreach ( $myposts as $mypost ) {
+                                        $post = get_post( $mypost );
+                                        echo "<a href='";
+                                             the_permalink();
+                                        echo "' class='post-tile-link'>";
+                                        echo "<article class='post-tile post-tile--grid'>";
+    						                 the_post_thumbnail('big-post-thumb');
+    						            echo "<h3>";
+                                        echo wp_trim_words ( the_title ( '', '', false ), 12 , '&hellip;');
+                                        echo "</h3>";
+    						            echo "</article>";
+    									echo "</a>";
+                                        }
+                                    ?>
+                                    <div class="center-block">
+                                        <?php
+                                            echo '<a href="' . get_home_url() . '/?s=' . $search_term . '">Find more on ';
+                                            echo the_title();
+                                            echo '</a>';
+                                        ?>
+                                    </div>
                                 </div>
         						<div class="newscta">
-        								<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
-        								<style type="text/css">
-                                        #mc_embed_signup .mc-field-group {width: 100%;}
-        								#mce-responses { position: fixed; top: 0px; left: 0; width: 100%; }
-        								#mc_embed_signup div.response { width: 100%; text-align: center;  padding: 1.5em 1em 1em 1em; }
-        								#mc_embed_signup #mce-success-response { background: #529214; color: #fff;}
-        								#mc_embed_signup #mce-error-response { background: #CE0000; color: #fff;}
-        								#mc_embed_signup div#mce-responses { z-index:9999; }
-        								#mc_embed_signup #mc-embedded-subscribe-form input.mce_inline_error { border: 1px solid #e85c41; }
-        								#mc_embed_signup .mc-field-group input { opacity: 1;}
-        								#mc_embed_signup .button { background: #886808; font-size: 16px; }
-        								#mc_embed_signup .button:hover { background: #b88d0b; }
-        								#mc_embed_signup .mc-field-group { min-height:60px; }
-        								#mc_embed_signup form {padding: 0;}
-        								#mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error { border: 1px solid #CE0000; }
-        								</style>
-        								<div id="mc_embed_signup">
-        								<form action="//ManchestersFinest.us2.list-manage.com/subscribe/post?u=80f2869a6d1828e3a9de6548f&amp;id=3b2131b21e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-        									<div id="mc_embed_signup_scroll">
+    								<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+    								<style type="text/css">
+                                    #mc_embed_signup .mc-field-group {width: 100%;}
+    								#mce-responses { position: fixed; top: 0px; left: 0; width: 100%; }
+    								#mc_embed_signup div.response { width: 100%; text-align: center;  padding: 1.5em 1em 1em 1em; }
+    								#mc_embed_signup #mce-success-response { background: #529214; color: #fff;}
+    								#mc_embed_signup #mce-error-response { background: #CE0000; color: #fff;}
+    								#mc_embed_signup div#mce-responses { z-index:9999; }
+    								#mc_embed_signup #mc-embedded-subscribe-form input.mce_inline_error { border: 1px solid #e85c41; }
+    								#mc_embed_signup .mc-field-group input { opacity: 1;}
+    								#mc_embed_signup .button { background: #886808; font-size: 16px; }
+    								#mc_embed_signup .button:hover { background: #b88d0b; }
+    								#mc_embed_signup .mc-field-group { min-height:60px; }
+    								#mc_embed_signup form {padding: 0;}
+    								#mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error { border: 1px solid #CE0000; }
+    								</style>
+    								<div id="mc_embed_signup">
+    								<form action="//ManchestersFinest.us2.list-manage.com/subscribe/post?u=80f2869a6d1828e3a9de6548f&amp;id=3b2131b21e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    									<div id="mc_embed_signup_scroll">
         									<div class="mc-field-group">
         										<h4 role="label" for="mce-EMAIL" id="fit-brand" class="brandface-title">GET THE NEWSLETTER</h4>
         										<p>Offers, competitions and Mcr news</p>
@@ -184,7 +195,7 @@
         									</div>
         								</form>
         							</div>
-    								<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='MMERGE3';ftypes[3]='text';fnames[4]='MMERGE4';ftypes[4]='text';fnames[5]='MMERGE5';ftypes[5]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+    							<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='MMERGE3';ftypes[3]='text';fnames[4]='MMERGE4';ftypes[4]='text';fnames[5]='MMERGE5';ftypes[5]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
         						</div>
                 				<div class="g one-whole palm-one-whole mob-one-whole">
                 					<h5 class="sub-title ad-title">Partners</h5>
