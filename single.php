@@ -24,7 +24,7 @@ get_header(); ?>
 
 						// Old posts
 
-						while ( have_posts() ) : the_post();
+						while ( have_posts() ) : the_post(); 
 
                         if (function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<p class="breadcrumbs">','</p>'); };
 
