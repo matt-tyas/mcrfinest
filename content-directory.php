@@ -138,7 +138,7 @@
                                         WHERE
                                             post_type = 'post'
                                         AND
-                                            post_title LIKE '%s' ORDER BY post_date DESC LIMIT 3", '%'. $wpdb->esc_like( $search_term ) . '%'
+                                            post_title LIKE '%s' ORDER BY ID DESC LIMIT 3", '%'. $wpdb->esc_like( $search_term ) . '%'
                                         )
                                     );
                                     foreach ( $myposts as $mypost ) {
