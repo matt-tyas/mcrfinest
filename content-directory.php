@@ -128,8 +128,9 @@
                                 <div class="related-sidebar">
                                     <h2>Latest articles</h2>
                                     <?php
-                                    $user_search_term = get_field('directory_related_posts_search_term');
-                                    $search_term = str_replace("+", " ", $user_search_term);
+                                    // $user_search_term = get_field('directory_related_posts_search_term');
+                                    // $search_term = str_replace("+", " ", $user_search_term);
+                                    $search_term = "Crazy Pedro's";
                                     global $wpdb;
                                     $myposts = $wpdb->get_results
                                     ( $wpdb->prepare("
@@ -138,22 +139,25 @@
                                         WHERE
                                             post_type = 'post'
                                         AND
-                                            post_title LIKE '%s' ORDER BY ID DESC LIMIT 3", '%'. $wpdb->esc_like( $search_term ) . '%'
+                                            post_title LIKE '%s' ORDER BY post_date LIMIT 3", '%'. $wpdb->esc_like( $search_term ) . '%'
                                         )
                                     );
-                                    foreach ( $myposts as $mypost ) {
-                                        $post = get_post( $mypost );
-                                        echo "<a href='";
-                                             the_permalink();
-                                        echo "' class='post-tile-link'>";
-                                        echo "<article class='post-tile post-tile--grid'>";
-    						                 the_post_thumbnail('big-post-thumb');
-    						            echo "<h3>";
-                                        echo wp_trim_words ( the_title ( '', '', false ), 12 , '&hellip;');
-                                        echo "</h3>";
-    						            echo "</article>";
-    									echo "</a>";
-                                        }
+                                    global $post;
+                                    $save = $post;
+                                    foreach ( $myposts as $post ) {
+                                      setup_postdata( $post );
+                                      echo "<a href='";
+                                      the_permalink();
+                                      echo "' class='post-tile-link'>";
+                                      echo "<article class='post-tile post-tile--grid'>";
+                                           the_post_thumbnail('big-post-thumb');
+                                      echo "<h3>";
+                                      echo wp_trim_words ( the_title ( '', '', false ), 12 , '&hellip;');
+                                      echo "</h3>";
+                                      echo "</article>";
+                                      echo "</a>";
+                                    }
+                                    $post = $save;
                                     ?>
                                     <!-- <div class="center-block">
                                         <?php
