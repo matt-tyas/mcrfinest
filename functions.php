@@ -1134,7 +1134,7 @@ function create_post_type() {
     // );
     $args = array(
       'labels'        => $labels,
-	  'exclude_from_search' => true, 
+	  'exclude_from_search' => true,
       'description'   => 'Finest business directory',
 	  'register_meta_box_address' => 'mcr_add_address_metaboxes',
       'public'        => true,
@@ -1798,6 +1798,3 @@ function get_video_thumbnail_uri( $video_uri ) {
     }
 
     add_filter('the_content', 'add_classes_to_linked_images', 100, 1);
-
-
-    require_once('simple_html_dom.php');
