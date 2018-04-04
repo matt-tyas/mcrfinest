@@ -21,12 +21,34 @@ get_header(); ?>
 				<?php // twentytwelve_content_nav( 'nav-above' ); ?>
 
 				<?php /* Start the Loop */ ?>
-				<?php while ( have_posts() ) : the_post(); ?>
+                <div class="gw equal">
+					<?php
+						$count = 0; //set up counter variable
+						while (have_posts()) : the_post();
+						$count++; //increment the variable by 1 each time the loop executes
+					?>
 
-					<?php get_template_part( 'content', get_post_format() ); ?>
+						<div class="g one-third lap-one-half palm-one-third mob-one-half">
+					        <div class="search-result-<?php echo $count ?>">
+								<a href="<?php the_permalink() ?>" rel="bookmark" class="post-tile-link">
+									<article <?php post_class('post-tile'); ?>>
+										<?php
+											$post_thumbnail_id = get_post_thumbnail_id( );
+											$imagesized = wp_get_attachment_image_src( $post_thumbnail_id, 'big-post-thumb');
+											if ($imagesized[1] > 308) {
+												the_post_thumbnail('big-post-thumb');
+											} else {
+												the_post_thumbnail('cat-post-thumb');
+											}
+										?>
+										<h3><?php echo wp_trim_words ( the_title ( '', '', false ), 12 , '&hellip;'); ?></h3>
+									</article>
+								</a>
+							</div>
+						</div>
 
-				<?php endwhile; ?>
-
+					<?php endwhile; ?>
+                </div>
 				<?php // twentytwelve_content_nav( 'nav-below' ); ?>
 
 				<?php else : ?>

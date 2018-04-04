@@ -118,6 +118,21 @@
 	background-size: cover !important;
 }
 
+.mf-pop--brewer {
+  background-image: url('images/video/brewer-bg.jpg') !important;
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+}
+
+.category .mf-directory-articles .post-tile.mf-pop--brewer {
+  .mf-pop__logo img {
+    width: 60% !important;
+    margin: 0 auto;
+  }
+}
+
+
+
 
 .mf-section--video .post-tile {
 	margin-bottom: 5px;

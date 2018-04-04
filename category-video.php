@@ -24,7 +24,7 @@ get_header(); ?>
     <div class="g one-whole palm-one-whole">
         <h1 class="left-title"><?php single_cat_title(); ?> series</h1>
         <a class="icon-you-tube" href="https://www.youtube.com/channel/UC3vsqrPJWduz1vw3Kw0dEkg/?sub_confirmation=1" target="_blank" rel="nofollow">
-            <span>Subscribe to Finest on You Tube</span>
+            <span>Subscribe to Finest on YouTube</span>
         </a>
     </div>
     <div class="g one-whole palm-one-whole">
@@ -58,6 +58,8 @@ get_header(); ?>
                                         echo 'mf-pop--confessions">';
                                     }if(has_category( 'Documentaries' )) {
                                         echo 'mf-pop--documentaries">';
+                                    }if(has_category( 'Meet the Brewer' )) {
+                                        echo 'mf-pop--brewer">';
                                     }elseif(has_category( '' )) {
                                         echo '';
                                     }
@@ -83,7 +85,11 @@ get_header(); ?>
                                     }if(has_category( 'Documentaries' )) {
                                         echo '<img src="';
                                         echo get_bloginfo('template_url');
-                                        echo '/images/video/documentaries.svg"/>';
+                                        echo '/images/video/finest-docs-logo.svg"/>';
+                                    }if(has_category( 'Meet the Brewer' )) {
+                                        echo '<img src="';
+                                        echo get_bloginfo('template_url');
+                                        echo '/images/video/meet-the-brewer-logo.svg"/>';
                                     }elseif(has_category( '' )) {
                                         echo '';
                                     }?>

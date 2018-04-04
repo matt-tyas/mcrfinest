@@ -50,7 +50,7 @@ get_header(); ?>
                 <?php endwhile; endif; ?>
                 </div>
             </section>
-            <h3>More articles</h3>
+            <!-- <h3>More articles</h3> -->
             <?php wp_pagenavi(); ?>
         </div>
     </div>

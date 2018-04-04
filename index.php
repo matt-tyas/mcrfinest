@@ -22,6 +22,8 @@
  }
  ?>
 
+
+
 <div class="g one-whole">
 	<div id="content">
         <h1 class="accessibility">Manchester's Finest and the Northern Quarter</h1>

@@ -43,6 +43,12 @@ $(window).resize(function(){
 
 new WOW().init();
 
+// var i = 1;
+// $('.search-result').each(function(){
+//     $(this).addClass('result-'+i);
+//     i++;
+// });
+
 /* Weather
 ---------------------------------- */
 $.simpleWeather({

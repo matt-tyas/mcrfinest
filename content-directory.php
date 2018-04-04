@@ -126,46 +126,28 @@
         				<div class="gw">
                             <div class="g one-whole palm-one-whole mob-one-whole">
                                 <div class="related-sidebar">
-                                    <h2>Latest articles</h2>
                                     <?php
-                                    // $user_search_term = get_field('directory_related_posts_search_term');
-                                    // $search_term = str_replace("+", " ", $user_search_term);
-                                    $search_term = "Crazy Pedro's";
-                                    global $wpdb;
-                                    $myposts = $wpdb->get_results
-                                    ( $wpdb->prepare("
-                                        SELECT
-                                            * FROM $wpdb->posts
-                                        WHERE
-                                            post_type = 'post'
-                                        AND
-                                            post_title LIKE '%s' ORDER BY post_date LIMIT 3", '%'. $wpdb->esc_like( $search_term ) . '%'
-                                        )
-                                    );
-                                    global $post;
-                                    $save = $post;
-                                    foreach ( $myposts as $post ) {
-                                      setup_postdata( $post );
-                                      echo "<a href='";
-                                      the_permalink();
-                                      echo "' class='post-tile-link'>";
-                                      echo "<article class='post-tile post-tile--grid'>";
-                                           the_post_thumbnail('big-post-thumb');
-                                      echo "<h3>";
-                                      echo wp_trim_words ( the_title ( '', '', false ), 12 , '&hellip;');
-                                      echo "</h3>";
-                                      echo "</article>";
-                                      echo "</a>";
-                                    }
-                                    $post = $save;
+                                        $user_search_term = get_field('directory_related_posts_search_term');
+                                        $search_term = str_replace("'", "", $user_search_term);
                                     ?>
-                                    <!-- <div class="center-block">
-                                        <?php
-                                            //echo '<a href="' . get_home_url() . '/?s=' . $search_term . '">Find more on ';
-                                            //echo the_title();
-                                            //echo '</a>';
-                                        ?>
-                                    </div> -->
+                                    <script>
+                                        jQuery.ajax({
+                                            url: '<?php echo get_site_url(); ?>/?s=<?php echo $search_term ?>',
+                                            type: 'GET',
+                                            data:({
+                                                id: 0
+                                            }),
+                                            success:function(results) {
+                                                $('#related-directory-1').html($(results).find('.search-result-1').html());
+                                                $('#related-directory-2').html($(results).find('.search-result-2').html());
+                                                $('#related-directory-3').html($(results).find('.search-result-3').html());
+                                            }
+                                        });
+                                    </script>
+                                    <h2>Latest articles</h2>
+                                    <div id="related-directory-1"></div>
+                                    <div id="related-directory-2"></div>
+                                    <div id="related-directory-3"></div>
                                 </div>
         						<div class="newscta">
     								<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
