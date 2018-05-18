@@ -22,8 +22,24 @@ get_header(); ?>
 <?php if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ?>
 <div class="gw row">
     <div class="g one-whole palm-one-whole">
-        <h1><?php single_cat_title(); ?></h1>
+        <div class="gw row">
+            <div class="g one-half palm-one-whole">
+                <h1><?php single_cat_title(); ?> in Manchester</h1>
+                <p>Finest is all about bringing you Manchester's best restaurants and bars. Choosing where to go to eat in Manchester can be a daunting task so we're trying to make that easier for you. Try our directory search to find somewhere to eat and drink in Manchester or browse our reviews and articles.</p>
+            </div>
+            <div class="g one-half palm-one-whole">
+                <div class="mf-section mf-grey mf-directory-search-home mf-directory-search--directory">
+                    <h3 class="mf-label"><a href="<?php echo get_site_url(); ?>/find/" class="mf-label__link">Find somewhere to eat in Manchester</a></h3>
+                    <?php
+                        if ( is_active_sidebar( 'directory-search' ) ) : ?>
+                        <?php dynamic_sidebar( 'directory-search' ); ?>
+                    <?php endif; ?>
+                    <a href="#" class="finder-close-trigger"><span aria-hidden="true" data-icon="&#x2612;"></span> Close</a>
+                </div>
+            </div>
+        </div>
     </div>
+
     <div class="g one-half palm-one-whole">
         <div class="mf-directory-picks">
             <h2>Directory</h2>

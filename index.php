@@ -33,7 +33,7 @@
 				<div class="g six-twelfths palm-one-whole">
 					<article class="featured-home__super">
 						<?php if( get_field('main_video', 'option') ): ?>
-							<div class="featured-home__image">
+							<div class="featured-home__image featured-home__image--video-thumb">
 								<?php
 									$video = get_field('main_video', 'option'); // Embed Code
 								    $video_url = get_field('main_video', 'option', FALSE, FALSE); // URL
@@ -48,12 +48,21 @@
 								<img src="<?php the_field('main_article_image', 'option'); ?>">
 							</div>
 						<?php endif; ?>
+						<?php if( get_field('main_video', 'option') ): ?>
 						<a href="<?php the_field('main_article_url', 'option'); ?>" class="featured-home__link">
-							<div class="featured-home__content <?php the_field('main_article_colour', 'option'); ?>">
+							<div class="featured-home__content featured-home__content--video <?php the_field('main_article_colour', 'option'); ?>">
 								<h3 class="alpha featured-home__title"><?php the_field('main_article_title', 'option'); ?></h3>
 								<p><?php the_field('main_article_introduction', 'option'); ?></p>
 							</div>
 						</a>
+						<?php else : ?>
+							<a href="<?php the_field('main_article_url', 'option'); ?>" class="featured-home__link">
+								<div class="featured-home__content <?php the_field('main_article_colour', 'option'); ?>">
+									<h3 class="alpha featured-home__title"><?php the_field('main_article_title', 'option'); ?></h3>
+									<p><?php the_field('main_article_introduction', 'option'); ?></p>
+								</div>
+							</a>
+						<?php endif; ?>
                     </article>
 				</div>
                 <div class="g six-twelfths palm-one-whole">
@@ -253,6 +262,7 @@
 							    // no rows found
 							endif;
 							?>
+							<a href="<?php echo get_site_url(); ?>/video" class="wow fadeIn mf-label__link-click">View all video series</a>
 						</div>
     				</div>
     			</div>

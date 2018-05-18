@@ -40,14 +40,7 @@ $(window).resize(function(){
   equalheight('.equal .post-tile');
 });
 
-
 new WOW().init();
-
-// var i = 1;
-// $('.search-result').each(function(){
-//     $(this).addClass('result-'+i);
-//     i++;
-// });
 
 /* Weather
 ---------------------------------- */
@@ -58,7 +51,6 @@ $.simpleWeather({
     html = '';
     html += '<i class="icon-'+weather.code+'"></i>';
     html += '<p>'+weather.temp+'&deg; '+weather.units.temp+'</p>';
-    // html += '<a href="'+weather.link+'">View Forecast &raquo;</a>';
 
     $("#weather").html(html);
   },
@@ -194,6 +186,7 @@ $(document).ready(function(){
     $('.ad--sticky').stick_in_parent({
       parent: ".site-content",
       spacer: ".sticky-spacer",
+      offset_top: 75
     });
   }
 

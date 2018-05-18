@@ -2,6 +2,10 @@
     $Articles
 \*------------------------------------*/
 
+.wp-caption {
+  width: 100% !important;
+}
+
 .mf-article-featured {
   width: calc(100% + 10px) !important;
 }
