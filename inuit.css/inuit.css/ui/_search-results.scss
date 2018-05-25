@@ -533,11 +533,6 @@
 .site-content {
 	padding-top: $half-spacing-unit;
 
-	.newscta {
-		width: 100%;
-		margin-top: $half-spacing-unit;
-	}
-
 	@include media-query(palm) {
     position: static;
 		height: auto;
