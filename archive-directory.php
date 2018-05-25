@@ -12,7 +12,7 @@
  */
 
 get_header(); ?>
-	<section class="border-wrap finder-trigger-section">
+	<!-- <section class="border-wrap finder-trigger-section">
 		<div class="gw">
 			<div class="g one-whole lap-one-whole palm-one-whole">
 				<div class="mf-section mf-peach">
@@ -21,8 +21,8 @@ get_header(); ?>
 				</div>
 			</div>
 		</div>
-	</section>
-    <section>
+	</section> -->
+    <!-- <section>
         <div class="gw">
             <div class="g one-whole lap-one-whole palm-one-whole">
                 <div class="mf-section mf-directory-search-home mf-directory-search--directory">
@@ -35,7 +35,7 @@ get_header(); ?>
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 	<section class="site-content author">
 		<div id="directory-results" class="gw">
 		<?php if ( have_posts() ) : ?>
@@ -63,7 +63,9 @@ get_header(); ?>
 				</div>
 			</div>
 		<?php else : ?>
-			<?php get_template_part( 'content', 'none' ); ?>
+			<?php // get_template_part( 'content', 'none' ); ?>
+			<h1>Coming soon&hellip;</h1>
+			<p>A searchable, Finest curated selection of things to eat, drink and do in Manchester.</p>
 		<?php endif; ?>
 		<?php // wp_pagenavi(); ?>
 	</section><!-- #primary -->
