@@ -64,8 +64,10 @@ get_header(); ?>
 			</div>
 		<?php else : ?>
 			<?php // get_template_part( 'content', 'none' ); ?>
-			<h1>Coming soon&hellip;</h1>
-			<p>A searchable, Finest curated selection of things to eat, drink and do in Manchester.</p>
+			<article id="post-0" class="post no-results not-found">
+				<h1>Coming soon&hellip;</h1>
+				<p>A searchable, Finest curated selection of things to eat, drink and do in Manchester.</p>
+			</article>
 		<?php endif; ?>
 		<?php // wp_pagenavi(); ?>
 	</section><!-- #primary -->
