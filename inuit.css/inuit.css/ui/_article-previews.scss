@@ -139,7 +139,7 @@
 }
 
 .mf-section--video {
-	padding: $half-spacing-unit $base-spacing-unit 100px $base-spacing-unit !important;
+	padding: $base-spacing-unit $base-spacing-unit 100px $base-spacing-unit !important;
 }
 
 .mf-section {
@@ -668,8 +668,8 @@
 	.featured-home__content {
 		position: relative;
 		z-index: 100;
-		max-width: 90%;
-		margin: -136px 0 0 16px;
+		max-width: 100%;
+		margin: -40px 0 0 0px;
 		padding: $base-spacing-unit $base-spacing-unit;
 		background: #F5EBF6;
 
@@ -802,7 +802,7 @@
 .featured-home {
 	@extend .cf;
 	max-width: 1464px;
-	margin: 0 auto 80px auto;
+	margin: 0 auto 150px auto;
 	@media screen and (max-width: 1400px){
     padding: 0 $half-spacing-unit/2;
   }
