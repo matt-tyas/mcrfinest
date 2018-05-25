@@ -73,7 +73,9 @@ get_header(); ?>
 			<div class="g three-tenths lap-one-whole palm-one-whole readability-right f-article">
                 <div class="gw">
 					<div class="g one-whole palm-one-whole mob-one-whole">
-					<?php get_template_part('newsletter'); ?>
+					<div class="newscta newscta--home">
+						<?php get_template_part('includes/newsletter'); ?>
+					</div>
 					<div class="g one-half lap-one-quarter palm-one-quarter mob-one-half">
 						<?php
 						if ( is_active_sidebar( 'category-page-advert-1' ) ) : ?>

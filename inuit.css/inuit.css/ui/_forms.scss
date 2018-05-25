@@ -78,10 +78,7 @@ input[type=text], input[type=email], input[type=password] {
 
 textarea, input {
 	background: #fff;
-	border-top: 0;
-	border-left: 0;
-	border-right: 0;
-	border-bottom: 5px solid #000;
+	border: 1px solid #000;
     -webkit-transition:all 150ms ease-in;
        -moz-transition:all 150ms ease-in;
 	     -o-transition:all 150ms ease-in;
@@ -155,7 +152,7 @@ textarea:focus, input:focus{
 			background: #fff;
 		}
 		&:focus {
-			border-bottom: 5px solid $brand-color;
+			border: 1px solid $brand-color;
 		}
 	}
 	input[type=submit] {
@@ -388,6 +385,27 @@ ul li label{
   -webkit-transition: all 0.25s linear;
 }
 
+.site-content {
+
+	#mc_embed_signup h2 {
+		font-size: 24px;
+	}
+
+	.newsletter-radio__label {
+		position: relative;
+		top: -5px;
+		border-bottom: 0;
+		width: 300px;
+	}
+
+	.newscta--home #mc_embed_signup .mc-field-group input.newsletter-radio {
+		position: absolute;
+	  visibility: hidden;
+		margin-bottom: 0 !important;
+	}
+
+}
+
 .mc-field-group.input-group {
 
 	.check{
@@ -409,6 +427,8 @@ ul li label{
 	}
 
   .newsletter-radio__label {
+		font-size: 18px;
+		font-weight: normal;
 		line-height: 1.4;
 		padding-left: 35px;
 		display: block !important;

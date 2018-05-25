@@ -23,7 +23,7 @@
 
 		<?php endif; // is_single() ?>
 
-<div id="article-content" class="entry-content">
+        <div id="article-content" class="entry-content">
 
 			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentytwelve' ) ); ?>
 
@@ -50,4 +50,3 @@
 			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'twentytwelve' ), 'after' => '</div>' ) ); ?>
 		</div><!-- .entry-content -->
 		</article><!-- #post -->
-		
