@@ -164,7 +164,7 @@
 					<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='MMERGE3';ftypes[3]='text';fnames[4]='MMERGE4';ftypes[4]='text';fnames[5]='MMERGE5';ftypes[5]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
 				</div>
 			</div>
-			<section class="border-wrap finder-trigger-section">
+			<!-- <section class="border-wrap finder-trigger-section">
     			<div class="gw">
     				<div class="g one-whole lap-one-whole palm-one-whole">
     					<div class="mf-section mf-peach">
@@ -173,8 +173,8 @@
 						</div>
 					</div>
 				</div>
-			</section>
-    		<section class="border-wrap">
+			</section> -->
+    		<!-- <section class="border-wrap">
     			<div class="gw">
     				<div class="g one-whole lap-one-whole palm-one-whole">
     					<div class="mf-section mf-peach mf-directory-search-home">
@@ -187,7 +187,7 @@
     					</div>
     				</div>
     			</div>
-    		</section>
+    		</section> -->
 			<section class="border-wrap">
     			<div class="gw">
     				<div class="g one-whole lap-one-whole palm-one-whole">
