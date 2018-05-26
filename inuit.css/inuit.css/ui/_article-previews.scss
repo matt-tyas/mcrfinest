@@ -619,6 +619,12 @@
 				width: 100px;
 				height: 100px;
 			}
+			@include media-query(mob) {
+				top: -100px;
+			}
+			@include media-query(desk) {
+				top: -80px;
+			}
 			&:after {
 				position: absolute;
 				display: block;
@@ -636,6 +642,7 @@
 				@include media-query(mob) {
 					border-width: 17.5px 0 17.5px 30.3px;
 				}
+
 			}
 			&:hover {
 				border: 10px solid rgba(255,255,255,1);
@@ -702,12 +709,12 @@
 
 	.featured-home__content--video {
 		margin: 0px 0 0 0px;
-		// @media only screen and (max-width: 1040px) {
-		// 	margin: -80px 0 0 0px;
-		// }
-		// @include media-query(palm) {
-		// 	margin: -80px 0 0 0px;
-		// }
+		@include media-query(desk) {
+			margin: -115px 0 0 0px;
+		}
+		@include media-query(palm) {
+			margin: -115px 0 0 0px;
+		}
 	}
 
 	.featured-home__greeting {
