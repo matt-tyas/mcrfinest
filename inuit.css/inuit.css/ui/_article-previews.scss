@@ -623,7 +623,7 @@
 				top: -100px;
 			}
 			@include media-query(desk) {
-				top: -80px;
+				top: 0px;
 			}
 			&:after {
 				position: absolute;
@@ -709,8 +709,8 @@
 
 	.featured-home__content--video {
 		margin: 0px 0 0 0px;
-		@include media-query(desk) {
-			margin: -115px 0 0 0px;
+		@media only screen and (min-width: 960px) {
+			margin: -50px 0 0 0px;
 		}
 		@include media-query(palm) {
 			margin: -115px 0 0 0px;
