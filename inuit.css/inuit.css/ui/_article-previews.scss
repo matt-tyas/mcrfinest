@@ -136,18 +136,24 @@
 	background-size: cover !important;
 }
 
+.mf-pop--banton {
+  background-image: url('images/video/banton-bg.gif') !important;
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+}
+
 .category .mf-directory-articles .post-tile.mf-pop--brewer {
   .mf-pop__logo img {
     width: 60% !important;
     margin: 0 auto;
   }
 }
-
+ 
 .category .mf-directory-articles .post-tile.mf-pop--howtomake {
 	.mf-pop__logo {
     top: 20px;
   }
-} 
+}
 
 .category .mf-directory-articles .post-tile.mf-pop--developingmanchester {
 	.mf-pop__logo {
