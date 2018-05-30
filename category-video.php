@@ -62,6 +62,8 @@ get_header(); ?>
                                         echo 'mf-pop--brewer">';
                                     }if(has_category( 'How to make' )) {
                                         echo 'mf-pop--howtomake">';
+                                    }if(has_category( 'Developing Manchester' )) {
+                                        echo 'mf-pop--developingmanchester">';
                                     }elseif(has_category( '' )) {
                                         echo '';
                                     }
@@ -96,6 +98,10 @@ get_header(); ?>
                                         echo '<img src="';
                                         echo get_bloginfo('template_url');
                                         echo '/images/video/how-to-make-logo.svg"/>';
+                                    }if(has_category( 'Developing Manchester' )) {
+                                        echo '<img src="';
+                                        echo get_bloginfo('template_url');
+                                        echo '/images/video/developing-manchester.svg"/>';
                                     }elseif(has_category( '' )) {
                                         echo '';
                                     }?>
