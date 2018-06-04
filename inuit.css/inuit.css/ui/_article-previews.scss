@@ -148,7 +148,7 @@
     margin: 0 auto;
   }
 }
- 
+
 .category .mf-directory-articles .post-tile.mf-pop--howtomake {
 	.mf-pop__logo {
     top: 20px;
@@ -649,9 +649,6 @@
 				width: 100px;
 				height: 100px;
 			}
-			@include media-query(mob) {
-				top: -100px;
-			}
 			@include media-query(desk) {
 				top: 0px;
 			}
@@ -686,11 +683,11 @@
 
   .featured-home__image--video-thumb {
     overflow: hidden;
-    max-height: 390px;
+    // max-height: 390px;
 
     img {
       position: relative;
-      top: -68px;
+      display: block;
     }
   }
 
@@ -706,18 +703,18 @@
 		position: relative;
 		z-index: 100;
 		max-width: 100%;
-		margin: -40px 0 0 0px;
+		margin: 0px 0 0 0px;
 		padding: $base-spacing-unit $base-spacing-unit;
 		background: #F5EBF6;
 
 		@media only screen and (max-width: 1040px) {
-			margin: -40px 0 0 0px;
+			margin: 0px 0 0 0px;
 			padding: $half-spacing-unit $half-spacing-unit $base-spacing-unit;
 			max-width: 100%;
 		}
 
 		@include media-query(palm) {
-			margin: -40px 0 0 0px;
+			margin: 0px 0 0 0px;
 			padding: $half-spacing-unit $half-spacing-unit $base-spacing-unit;
 			max-width: 100%;
 		}
@@ -741,9 +738,6 @@
 		margin: 0px 0 0 0px;
 		@media only screen and (min-width: 960px) {
 			margin: 0px 0 0 0px;
-		}
-		@include media-query(palm) {
-			margin: -115px 0 0 0px;
 		}
 	}
 
