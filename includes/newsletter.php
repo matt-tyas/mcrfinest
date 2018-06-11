@@ -42,6 +42,7 @@
     <div class="clear">
         <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
     </div>
+    <p class="small-text">For how we use personal data see our <a href="<?php echo esc_url( home_url( '/privacy/' ) ); ?>">privacy policy</a>.</p>
     </div>
 </form>
 </div>

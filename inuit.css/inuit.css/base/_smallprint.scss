@@ -11,3 +11,8 @@
 .micro{
     @include font-size($micro-size);
 }
+
+.small-text {
+  @include font-size(16px);
+  line-height: 1.4;
+}
