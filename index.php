@@ -39,13 +39,16 @@
 								    $video_url = get_field('main_video', 'option', FALSE, FALSE); // URL
 							  	    $video_thumb_url = get_video_thumbnail_uri($video_url);
 								?>
-								<a data-fancybox="gallery" href="<?php echo $video_url; ?>"><img src="<?php echo $video_thumb_url; ?>"/>
+								<a data-fancybox="gallery" href="<?php echo $video_url; ?>">
+                                    <img src="<?php echo $video_thumb_url; ?>" alt=""/>
 									<span class="featured-home__image-link"></span>
 								</a>
 							</div>
 						<?php else : ?>
 							<div class="featured-home__image">
-								<img src="<?php the_field('main_article_image', 'option'); ?>">
+                                <a href="<?php the_field('main_article_url', 'option'); ?>" class="featured-home__link">
+								    <img src="<?php the_field('main_article_image', 'option'); ?>" alt="">
+                                </a>
 							</div>
 						<?php endif; ?>
 						<?php if( get_field('main_video', 'option') ): ?>
