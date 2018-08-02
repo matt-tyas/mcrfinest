@@ -66,8 +66,6 @@ get_header(); ?>
                                         echo 'mf-pop--developingmanchester">';
                                     }if(has_category( 'Nanny Banton and Friends' )) {
                                         echo 'mf-pop--banton">';
-                                    }elseif(has_category( '' )) {
-                                        echo '';
                                     }
                                 ?>
                                 <div class="mf-pop__logo">
@@ -108,8 +106,6 @@ get_header(); ?>
                                         echo '<img src="';
                                         echo get_bloginfo('template_url');
                                         echo '/images/video/banton-logo.svg"/>';
-                                    }elseif(has_category( '' )) {
-                                        echo '';
                                     }?>
                                 </div>
                                 <div class="mf-pop__desc">
