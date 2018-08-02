@@ -145,6 +145,13 @@
 	}
 }
 
+.mf-pop--scoffed {
+  background-color: #feed01 !important;
+	p {
+		color: #000 !important;
+	}
+}
+
 .category .mf-directory-articles .post-tile.mf-pop--brewer {
   .mf-pop__logo img {
     width: 60% !important;
@@ -625,7 +632,7 @@
 		position: relative;
 		img {
       display: block;
-			width: 100%; 
+			width: 100%;
 		}
 
 		a {

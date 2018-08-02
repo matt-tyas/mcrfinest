@@ -66,6 +66,8 @@ get_header(); ?>
                                         echo 'mf-pop--developingmanchester">';
                                     }if(has_category( 'Nanny Banton and Friends' )) {
                                         echo 'mf-pop--banton">';
+                                    }if(has_category( 'Scoffed' )) {
+                                        echo 'mf-pop--scoffed">';
                                     }elseif(has_category( '' )) {
                                         echo '';
                                     }
@@ -108,6 +110,10 @@ get_header(); ?>
                                         echo '<img src="';
                                         echo get_bloginfo('template_url');
                                         echo '/images/video/banton-logo.svg"/>';
+                                    }if(has_category( 'Nanny Banton and Friends' )) {
+                                        echo '<img src="';
+                                        echo get_bloginfo('template_url');
+                                        echo '/images/video/scoffed.svg"/>';
                                     }elseif(has_category( '' )) {
                                         echo '';
                                     }?>
