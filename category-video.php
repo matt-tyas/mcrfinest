@@ -110,7 +110,7 @@ get_header(); ?>
                                         echo '<img src="';
                                         echo get_bloginfo('template_url');
                                         echo '/images/video/banton-logo.svg"/>';
-                                    }if(has_category( 'Nanny Banton and Friends' )) {
+                                    }if(has_category( 'Scoffed' )) {
                                         echo '<img src="';
                                         echo get_bloginfo('template_url');
                                         echo '/images/video/scoffed.svg"/>';
