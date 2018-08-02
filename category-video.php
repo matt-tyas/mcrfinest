@@ -111,7 +111,7 @@ get_header(); ?>
                                         echo get_bloginfo('template_url');
                                         echo '/images/video/banton-logo.svg"/>';
                                     }if(has_category( 'Scoffed' )) {
-                                        echo '<img src="';
+                                        echo '<img src="';  
                                         echo get_bloginfo('template_url');
                                         echo '/images/video/scoffed.svg"/>';
                                     }elseif(has_category( '' )) {
