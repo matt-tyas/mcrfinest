@@ -184,19 +184,31 @@
 					</div>
 				</div>
 			</section>
-			<div class="mf-offset">
-				<div class="mf-offset__position mf-offset__position--right">
+			<div class="mf-centre">
+				<div class="mf-">
 					<div class="gw">
-						<div class="g one-half">
+						<div class="g one-quarter palm-one-half">
                             <?php
                                 if ( is_active_sidebar( 'homepage-advert-1' ) ) : ?>
                                 <?php dynamic_sidebar( 'homepage-advert-1' ); ?>
                             <?php endif; ?>
 						</div>
-						<div class="g one-half">
+						<div class="g one-quarter palm-one-half">
                             <?php
                                 if ( is_active_sidebar( 'homepage-advert-2' ) ) : ?>
                                 <?php dynamic_sidebar( 'homepage-advert-2' ); ?>
+                            <?php endif; ?>
+						</div>
+						<div class="g one-quarter palm-one-half">
+                            <?php
+                                if ( is_active_sidebar( 'homepage-advert-3' ) ) : ?>
+                                <?php dynamic_sidebar( 'homepage-advert-3' ); ?>
+                            <?php endif; ?>
+						</div>
+						<div class="g one-quarter palm-one-half">
+                            <?php
+                                if ( is_active_sidebar( 'homepage-advert-4' ) ) : ?>
+                                <?php dynamic_sidebar( 'homepage-advert-4' ); ?>
                             <?php endif; ?>
 						</div>
 					</div>
@@ -280,19 +292,31 @@
 					</div>
 				</div>
 			</section>
-			<div class="mf-offset">
-				<div class="mf-offset__position mf-offset__position--right">
+			<div class="mf-centre">
+				<div class="mf-">
 					<div class="gw">
-						<div class="g one-half">
+						<div class="g one-quarter palm-one-half">
                             <?php
-                                if ( is_active_sidebar( 'homepage-advert-3' ) ) : ?>
-                                <?php dynamic_sidebar( 'homepage-advert-3' ); ?>
+                                if ( is_active_sidebar( 'homepage-advert-5' ) ) : ?>
+                                <?php dynamic_sidebar( 'homepage-advert-5' ); ?>
                             <?php endif; ?>
 						</div>
-						<div class="g one-half">
+						<div class="g one-quarter palm-one-half">
                             <?php
-                                if ( is_active_sidebar( 'homepage-advert-4' ) ) : ?>
-                                <?php dynamic_sidebar( 'homepage-advert-4' ); ?>
+                                if ( is_active_sidebar( 'homepage-advert-6' ) ) : ?>
+                                <?php dynamic_sidebar( 'homepage-advert-6' ); ?>
+                            <?php endif; ?>
+						</div>
+						<div class="g one-quarter palm-one-half">
+                            <?php
+                                if ( is_active_sidebar( 'homepage-advert-7' ) ) : ?>
+                                <?php dynamic_sidebar( 'homepage-advert-7' ); ?>
+                            <?php endif; ?>
+						</div>
+						<div class="g one-quarter palm-one-half">
+                            <?php
+                                if ( is_active_sidebar( 'homepage-advert-8' ) ) : ?>
+                                <?php dynamic_sidebar( 'homepage-advert-8' ); ?>
                             <?php endif; ?>
 						</div>
 					</div>
@@ -466,20 +490,32 @@
 					</div>
 				</div>
 			</section>
-			<div class="mf-offset mf-offset--wide">
-				<div class="mf-offset__position mf-offset__position--right">
+			<div class="mf-centre">
+				<div class="mf-">
 					<div class="gw">
-						<div class="g one-half">
-                            <?php
-                                if ( is_active_sidebar( 'homepage-advert-5' ) ) : ?>
-                                <?php dynamic_sidebar( 'homepage-advert-5' ); ?>
-                            <?php endif; ?>
+						<div class="g one-quarter palm-one-half">
+							<?php
+								 if ( is_active_sidebar( 'homepage-optional-0' ) ) : ?>
+								 <?php dynamic_sidebar( 'homepage-optional-0' ); ?>
+							<?php endif; ?>
 						</div>
-						<div class="g one-half">
-                            <?php
-                                if ( is_active_sidebar( 'homepage-advert-6' ) ) : ?>
-                                <?php dynamic_sidebar( 'homepage-advert-6' ); ?>
-                            <?php endif; ?>
+						<div class="g one-quarter palm-one-half">
+							<?php
+								 if ( is_active_sidebar( 'homepage-optional-2' ) ) : ?>
+								 <?php dynamic_sidebar( 'homepage-optional-2' ); ?>
+							<?php endif; ?>
+						</div>
+						<div class="g one-quarter palm-one-half">
+							<?php
+								 if ( is_active_sidebar( 'homepage-optional-3' ) ) : ?>
+								 <?php dynamic_sidebar( 'homepage-optional-3' ); ?>
+							<?php endif; ?>
+						</div>
+						<div class="g one-quarter palm-one-half">
+							<?php
+								 if ( is_active_sidebar( 'homepage-optional-4' ) ) : ?>
+								 <?php dynamic_sidebar( 'homepage-optional-4' ); ?>
+							<?php endif; ?>
 						</div>
 					</div>
 				</div>
@@ -517,20 +553,32 @@
 					</div>
 				</div>
 			</section>
-			<div class="mf-offset mf-offset--wide">
-				<div class="mf-offset__position mf-offset__position--right">
+			<div class="mf-centre">
+				<div class="mf-">
 					<div class="gw">
-						<div class="g one-half">
-                            <?php
-                                if ( is_active_sidebar( 'homepage-advert-7' ) ) : ?>
-                                <?php dynamic_sidebar( 'homepage-advert-7' ); ?>
-                            <?php endif; ?>
+						<div class="g one-quarter palm-one-half">
+							<?php
+								 if ( is_active_sidebar( 'homepage-optional-5' ) ) : ?>
+								 <?php dynamic_sidebar( 'homepage-optional-5' ); ?>
+							<?php endif; ?>
 						</div>
-						<div class="g one-half">
-                            <?php
-                                if ( is_active_sidebar( 'homepage-advert-8' ) ) : ?>
-                                <?php dynamic_sidebar( 'homepage-advert-8' ); ?>
-                            <?php endif; ?>
+						<div class="g one-quarter palm-one-half">
+							<?php
+								 if ( is_active_sidebar( 'homepage-optional-6' ) ) : ?>
+								 <?php dynamic_sidebar( 'homepage-optional-6' ); ?>
+							<?php endif; ?>
+						</div>
+						<div class="g one-quarter palm-one-half">
+							<?php
+								 if ( is_active_sidebar( 'homepage-optional-7' ) ) : ?>
+								 <?php dynamic_sidebar( 'homepage-optional-7' ); ?>
+							<?php endif; ?>
+						</div>
+						<div class="g one-quarter palm-one-half">
+							<?php
+								 if ( is_active_sidebar( 'homepage-optional-8' ) ) : ?>
+								 <?php dynamic_sidebar( 'homepage-optional-8' ); ?>
+							<?php endif; ?>
 						</div>
 					</div>
 				</div>
@@ -568,24 +616,7 @@
 					</div>
 				</div>
 			</section>
-			<div class="mf-offset mf-offset--wide">
-				<div class="mf-offset__position mf-offset__position--right">
-					<div class="gw">
-						<div class="g one-half">
-							<?php
-								 if ( is_active_sidebar( 'homepage-optional-0' ) ) : ?>
-								 <?php dynamic_sidebar( 'homepage-optional-0' ); ?>
-							<?php endif; ?>
-						</div>
-						<div class="g one-half">
-							<?php
-								 if ( is_active_sidebar( 'homepage-optional-2' ) ) : ?>
-								 <?php dynamic_sidebar( 'homepage-optional-2' ); ?>
-							<?php endif; ?>
-						</div>
-					</div>
-				</div>
-			</div>
+
 			<section class="border-wrap">
     			<div class="gw">
     				<div class="g one-whole lap-one-whole palm-one-whole">
@@ -619,24 +650,7 @@
 					</div>
 				</div>
 			</section>
-            <div class="mf-offset mf-offset--wide">
-				<div class="mf-offset__position mf-offset__position--right">
-					<div class="gw">
-						<div class="g one-half">
-							<?php
-								 if ( is_active_sidebar( 'homepage-optional-3' ) ) : ?>
-								 <?php dynamic_sidebar( 'homepage-optional-3' ); ?>
-							<?php endif; ?>
-						</div>
-						<div class="g one-half">
-							<?php
-								 if ( is_active_sidebar( 'homepage-optional-4' ) ) : ?>
-								 <?php dynamic_sidebar( 'homepage-optional-4' ); ?>
-							<?php endif; ?>
-						</div>
-					</div>
-				</div>
-			</div>
+
 			<section class="border-wrap">
     			<div class="gw">
     				<div class="g one-whole lap-one-whole palm-one-whole">
@@ -670,24 +684,7 @@
 					</div>
 				</div>
 			</section>
-            <div class="mf-offset mf-offset--wide">
-				<div class="mf-offset__position mf-offset__position--right">
-					<div class="gw">
-						<div class="g one-half">
-							<?php
-								 if ( is_active_sidebar( 'homepage-optional-5' ) ) : ?>
-								 <?php dynamic_sidebar( 'homepage-optional-5' ); ?>
-							<?php endif; ?>
-						</div>
-						<div class="g one-half">
-							<?php
-								 if ( is_active_sidebar( 'homepage-optional-6' ) ) : ?>
-								 <?php dynamic_sidebar( 'homepage-optional-6' ); ?>
-							<?php endif; ?>
-						</div>
-					</div>
-				</div>
-			</div>
+
 			<section class="border-wrap">
     			<div class="gw">
     				<div class="g one-whole lap-one-whole palm-one-whole">
@@ -721,24 +718,7 @@
 					</div>
 				</div>
 			</section>
-            <div class="mf-offset mf-offset--wide">
-				<div class="mf-offset__position mf-offset__position--right">
-					<div class="gw">
-						<div class="g one-half">
-							<?php
-								 if ( is_active_sidebar( 'homepage-optional-7' ) ) : ?>
-								 <?php dynamic_sidebar( 'homepage-optional-7' ); ?>
-							<?php endif; ?>
-						</div>
-						<div class="g one-half">
-							<?php
-								 if ( is_active_sidebar( 'homepage-optional-8' ) ) : ?>
-								 <?php dynamic_sidebar( 'homepage-optional-8' ); ?>
-							<?php endif; ?>
-						</div>
-					</div>
-				</div>
-			</div>
+            
 			<section class="border-wrap">
     			<div class="gw">
     				<div class="g one-whole lap-one-whole palm-one-whole">
