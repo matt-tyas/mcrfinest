@@ -184,6 +184,18 @@ get_header(); ?>
                         <?php dynamic_sidebar( 'category-page-advert-18' ); ?>
 				        <?php endif; ?>
 					</div>
+                    <div class="g one-half lap-one-quarter palm-one-quarter mob-one-half">
+					 	<?php
+				        if ( is_active_sidebar( 'category-page-advert-19' ) ) : ?>
+                        <?php dynamic_sidebar( 'category-page-advert-19' ); ?>
+				        <?php endif; ?>
+					</div>
+                    <div class="g one-half lap-one-quarter palm-one-quarter mob-one-half">
+					 	<?php
+				        if ( is_active_sidebar( 'category-page-advert-20' ) ) : ?>
+                        <?php dynamic_sidebar( 'category-page-advert-20' ); ?>
+				        <?php endif; ?>
+					</div>
 					<div class="g one-whole lap-one-half palm-one-half mob-one-half">
 						<div class="sticky-spacer">
 							<div class="ad-sense ad--sticky">

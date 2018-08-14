@@ -40,6 +40,11 @@
   max-width: 1440px;
   padding: $base-spacing-unit;
 
+  .mf-two {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
   .ad-sq {
     width: 160px;
     height: 160px;

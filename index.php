@@ -616,7 +616,36 @@
 					</div>
 				</div>
 			</section>
-
+			<div class="mf-centre">
+				<div class="mf-two">
+					<div class="gw">
+						<!-- <div class="g one-quarter palm-one-half">
+							<?php
+								 if ( is_active_sidebar( 'homepage-optional-5' ) ) : ?>
+								 <?php dynamic_sidebar( 'homepage-optional-5' ); ?>
+							<?php endif; ?>
+						</div>
+						<div class="g one-quarter palm-one-half">
+							<?php
+								 if ( is_active_sidebar( 'homepage-optional-6' ) ) : ?>
+								 <?php dynamic_sidebar( 'homepage-optional-6' ); ?>
+							<?php endif; ?>
+						</div> -->
+						<div class="g one-half palm-one-half">
+							<?php
+								 if ( is_active_sidebar( 'homepage-optional-9' ) ) : ?>
+								 <?php dynamic_sidebar( 'homepage-optional-9' ); ?>
+							<?php endif; ?>
+						</div>
+						<div class="g one-half palm-one-half">
+							<?php
+								 if ( is_active_sidebar( 'homepage-optional-10' ) ) : ?>
+								 <?php dynamic_sidebar( 'homepage-optional-10' ); ?>
+							<?php endif; ?>
+						</div>
+					</div>
+				</div>
+			</div>
 			<section class="border-wrap">
     			<div class="gw">
     				<div class="g one-whole lap-one-whole palm-one-whole">
@@ -718,7 +747,7 @@
 					</div>
 				</div>
 			</section>
-            
+
 			<section class="border-wrap">
     			<div class="gw">
     				<div class="g one-whole lap-one-whole palm-one-whole">
