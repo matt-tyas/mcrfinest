@@ -49,6 +49,11 @@
     width: 200px;
     height: 200px;
     margin: 0 auto;
+
+    @include media-query(palm) {
+      width: 100%;
+      height: auto;
+    }
   }
 }
 
