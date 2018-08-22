@@ -629,13 +629,13 @@
 								 <?php dynamic_sidebar( 'homepage-optional-10' ); ?>
 							<?php endif; ?>
 						</div>
-						<div class="g one-half palm-one-half">
+						<div class="g one-quarter palm-one-half">
 							<?php
 								 if ( is_active_sidebar( 'homepage-optional-11' ) ) : ?>
 								 <?php dynamic_sidebar( 'homepage-optional-11' ); ?>
 							<?php endif; ?>
 						</div>
-						<div class="g one-half palm-one-half">
+						<div class="g one-quarter palm-one-half">
 							<?php
 								 if ( is_active_sidebar( 'homepage-optional-12' ) ) : ?>
 								 <?php dynamic_sidebar( 'homepage-optional-12' ); ?>
@@ -692,13 +692,13 @@
 								 <?php dynamic_sidebar( 'homepage-optional-14' ); ?>
 							<?php endif; ?>
 						</div>
-						<div class="g one-half palm-one-half">
+						<div class="g one-quarter palm-one-half">
 							<?php
 								 if ( is_active_sidebar( 'homepage-optional-15' ) ) : ?>
 								 <?php dynamic_sidebar( 'homepage-optional-15' ); ?>
 							<?php endif; ?>
 						</div>
-						<div class="g one-half palm-one-half">
+						<div class="g one-quarter palm-one-half">
 							<?php
 								 if ( is_active_sidebar( 'homepage-optional-16' ) ) : ?>
 								 <?php dynamic_sidebar( 'homepage-optional-16' ); ?>
@@ -755,13 +755,13 @@
 								 <?php dynamic_sidebar( 'homepage-optional-18' ); ?>
 							<?php endif; ?>
 						</div>
-						<div class="g one-half palm-one-half">
+						<div class="g one-quarter palm-one-half">
 							<?php
 								 if ( is_active_sidebar( 'homepage-optional-19' ) ) : ?>
 								 <?php dynamic_sidebar( 'homepage-optional-19' ); ?>
 							<?php endif; ?>
 						</div>
-						<div class="g one-half palm-one-half">
+						<div class="g one-quarter palm-one-half">
 							<?php
 								 if ( is_active_sidebar( 'homepage-optional-20' ) ) : ?>
 								 <?php dynamic_sidebar( 'homepage-optional-20' ); ?>
@@ -818,13 +818,13 @@
 								 <?php dynamic_sidebar( 'homepage-optional-22' ); ?>
 							<?php endif; ?>
 						</div>
-						<div class="g one-half palm-one-half">
+						<div class="g one-quarter palm-one-half">
 							<?php
 								 if ( is_active_sidebar( 'homepage-optional-23' ) ) : ?>
 								 <?php dynamic_sidebar( 'homepage-optional-23' ); ?>
 							<?php endif; ?>
 						</div>
-						<div class="g one-half palm-one-half">
+						<div class="g one-quarter palm-one-half">
 							<?php
 								 if ( is_active_sidebar( 'homepage-optional-24' ) ) : ?>
 								 <?php dynamic_sidebar( 'homepage-optional-24' ); ?>
