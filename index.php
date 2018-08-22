@@ -22,8 +22,6 @@
  }
  ?>
 
-
-
 <div class="g one-whole">
 	<div id="content">
         <h1 class="accessibility">Manchester's Finest and the Northern Quarter</h1>
@@ -617,30 +615,30 @@
 				</div>
 			</section>
 			<div class="mf-centre">
-				<div class="mf-two">
+				<div class="mf-">
 					<div class="gw">
-						<!-- <div class="g one-quarter palm-one-half">
-							<?php
-								 if ( is_active_sidebar( 'homepage-optional-5' ) ) : ?>
-								 <?php dynamic_sidebar( 'homepage-optional-5' ); ?>
-							<?php endif; ?>
-						</div>
 						<div class="g one-quarter palm-one-half">
-							<?php
-								 if ( is_active_sidebar( 'homepage-optional-6' ) ) : ?>
-								 <?php dynamic_sidebar( 'homepage-optional-6' ); ?>
-							<?php endif; ?>
-						</div> -->
-						<div class="g one-half palm-one-half">
 							<?php
 								 if ( is_active_sidebar( 'homepage-optional-9' ) ) : ?>
 								 <?php dynamic_sidebar( 'homepage-optional-9' ); ?>
 							<?php endif; ?>
 						</div>
-						<div class="g one-half palm-one-half">
+						<div class="g one-quarter palm-one-half">
 							<?php
 								 if ( is_active_sidebar( 'homepage-optional-10' ) ) : ?>
 								 <?php dynamic_sidebar( 'homepage-optional-10' ); ?>
+							<?php endif; ?>
+						</div>
+						<div class="g one-half palm-one-half">
+							<?php
+								 if ( is_active_sidebar( 'homepage-optional-11' ) ) : ?>
+								 <?php dynamic_sidebar( 'homepage-optional-11' ); ?>
+							<?php endif; ?>
+						</div>
+						<div class="g one-half palm-one-half">
+							<?php
+								 if ( is_active_sidebar( 'homepage-optional-12' ) ) : ?>
+								 <?php dynamic_sidebar( 'homepage-optional-12' ); ?>
 							<?php endif; ?>
 						</div>
 					</div>
@@ -679,7 +677,36 @@
 					</div>
 				</div>
 			</section>
-
+			<div class="mf-centre">
+				<div class="mf-">
+					<div class="gw">
+						<div class="g one-quarter palm-one-half">
+							<?php
+								 if ( is_active_sidebar( 'homepage-optional-13' ) ) : ?>
+								 <?php dynamic_sidebar( 'homepage-optional-13' ); ?>
+							<?php endif; ?>
+						</div>
+						<div class="g one-quarter palm-one-half">
+							<?php
+								 if ( is_active_sidebar( 'homepage-optional-14' ) ) : ?>
+								 <?php dynamic_sidebar( 'homepage-optional-14' ); ?>
+							<?php endif; ?>
+						</div>
+						<div class="g one-half palm-one-half">
+							<?php
+								 if ( is_active_sidebar( 'homepage-optional-15' ) ) : ?>
+								 <?php dynamic_sidebar( 'homepage-optional-15' ); ?>
+							<?php endif; ?>
+						</div>
+						<div class="g one-half palm-one-half">
+							<?php
+								 if ( is_active_sidebar( 'homepage-optional-16' ) ) : ?>
+								 <?php dynamic_sidebar( 'homepage-optional-16' ); ?>
+							<?php endif; ?>
+						</div>
+					</div>
+				</div>
+			</div>
 			<section class="border-wrap">
     			<div class="gw">
     				<div class="g one-whole lap-one-whole palm-one-whole">
@@ -713,7 +740,36 @@
 					</div>
 				</div>
 			</section>
-
+			<div class="mf-centre">
+				<div class="mf-">
+					<div class="gw">
+						<div class="g one-quarter palm-one-half">
+							<?php
+								 if ( is_active_sidebar( 'homepage-optional-17' ) ) : ?>
+								 <?php dynamic_sidebar( 'homepage-optional-17' ); ?>
+							<?php endif; ?>
+						</div>
+						<div class="g one-quarter palm-one-half">
+							<?php
+								 if ( is_active_sidebar( 'homepage-optional-18' ) ) : ?>
+								 <?php dynamic_sidebar( 'homepage-optional-18' ); ?>
+							<?php endif; ?>
+						</div>
+						<div class="g one-half palm-one-half">
+							<?php
+								 if ( is_active_sidebar( 'homepage-optional-19' ) ) : ?>
+								 <?php dynamic_sidebar( 'homepage-optional-19' ); ?>
+							<?php endif; ?>
+						</div>
+						<div class="g one-half palm-one-half">
+							<?php
+								 if ( is_active_sidebar( 'homepage-optional-20' ) ) : ?>
+								 <?php dynamic_sidebar( 'homepage-optional-20' ); ?>
+							<?php endif; ?>
+						</div>
+					</div>
+				</div>
+			</div>
 			<section class="border-wrap">
     			<div class="gw">
     				<div class="g one-whole lap-one-whole palm-one-whole">
@@ -747,7 +803,36 @@
 					</div>
 				</div>
 			</section>
-
+			<div class="mf-centre">
+				<div class="mf-">
+					<div class="gw">
+						<div class="g one-quarter palm-one-half">
+							<?php
+								 if ( is_active_sidebar( 'homepage-optional-21' ) ) : ?>
+								 <?php dynamic_sidebar( 'homepage-optional-21' ); ?>
+							<?php endif; ?>
+						</div>
+						<div class="g one-quarter palm-one-half">
+							<?php
+								 if ( is_active_sidebar( 'homepage-optional-22' ) ) : ?>
+								 <?php dynamic_sidebar( 'homepage-optional-22' ); ?>
+							<?php endif; ?>
+						</div>
+						<div class="g one-half palm-one-half">
+							<?php
+								 if ( is_active_sidebar( 'homepage-optional-23' ) ) : ?>
+								 <?php dynamic_sidebar( 'homepage-optional-23' ); ?>
+							<?php endif; ?>
+						</div>
+						<div class="g one-half palm-one-half">
+							<?php
+								 if ( is_active_sidebar( 'homepage-optional-24' ) ) : ?>
+								 <?php dynamic_sidebar( 'homepage-optional-24' ); ?>
+							<?php endif; ?>
+						</div>
+					</div>
+				</div>
+			</div>
 			<section class="border-wrap">
     			<div class="gw">
     				<div class="g one-whole lap-one-whole palm-one-whole">

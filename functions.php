@@ -510,6 +510,146 @@ function twentytwelve_widgets_init() {
 		'after_title' => '</h5>',
 	) );
 
+    register_sidebar( array(
+		'name' => __( 'Homepage Optional 11', 'twentytwelve' ),
+		'id' => 'homepage-optional-11',
+		'description' => __( 'Homepage Optional 11', 'twentytwelve' ),
+		'before_widget' => '',
+		'after_widget' => '',
+		'before_title' => '<h5 class="sub-title">',
+		'after_title' => '</h5>',
+	) );
+
+	register_sidebar( array(
+		'name' => __( 'Homepage Optional 12', 'twentytwelve' ),
+		'id' => 'homepage-optional-12',
+		'description' => __( 'Homepage Optional 12', 'twentytwelve' ),
+		'before_widget' => '',
+		'after_widget' => '',
+		'before_title' => '<h5 class="sub-title">',
+		'after_title' => '</h5>',
+	) );
+
+    register_sidebar( array(
+		'name' => __( 'Homepage Optional 13', 'twentytwelve' ),
+		'id' => 'homepage-optional-13',
+		'description' => __( 'Homepage Optional 13', 'twentytwelve' ),
+		'before_widget' => '',
+		'after_widget' => '',
+		'before_title' => '<h5 class="sub-title">',
+		'after_title' => '</h5>',
+	) );
+
+	register_sidebar( array(
+		'name' => __( 'Homepage Optional 14', 'twentytwelve' ),
+		'id' => 'homepage-optional-14',
+		'description' => __( 'Homepage Optional 14', 'twentytwelve' ),
+		'before_widget' => '',
+		'after_widget' => '',
+		'before_title' => '<h5 class="sub-title">',
+		'after_title' => '</h5>',
+	) );
+
+    register_sidebar( array(
+		'name' => __( 'Homepage Optional 15', 'twentytwelve' ),
+		'id' => 'homepage-optional-15',
+		'description' => __( 'Homepage Optional 15', 'twentytwelve' ),
+		'before_widget' => '',
+		'after_widget' => '',
+		'before_title' => '<h5 class="sub-title">',
+		'after_title' => '</h5>',
+	) );
+
+	register_sidebar( array(
+		'name' => __( 'Homepage Optional 16', 'twentytwelve' ),
+		'id' => 'homepage-optional-16',
+		'description' => __( 'Homepage Optional 16', 'twentytwelve' ),
+		'before_widget' => '',
+		'after_widget' => '',
+		'before_title' => '<h5 class="sub-title">',
+		'after_title' => '</h5>',
+	) );
+
+    register_sidebar( array(
+        'name' => __( 'Homepage Optional 17', 'twentytwelve' ),
+        'id' => 'homepage-optional-17',
+        'description' => __( 'Homepage Optional 17', 'twentytwelve' ),
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '<h5 class="sub-title">',
+        'after_title' => '</h5>',
+    ) );
+
+    register_sidebar( array(
+        'name' => __( 'Homepage Optional 18', 'twentytwelve' ),
+        'id' => 'homepage-optional-18',
+        'description' => __( 'Homepage Optional 18', 'twentytwelve' ),
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '<h5 class="sub-title">',
+        'after_title' => '</h5>',
+    ) );
+
+	register_sidebar( array(
+        'name' => __( 'Homepage Optional 19', 'twentytwelve' ),
+        'id' => 'homepage-optional-19',
+        'description' => __( 'Homepage Optional 19', 'twentytwelve' ),
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '<h5 class="sub-title">',
+        'after_title' => '</h5>',
+    ) );
+
+    register_sidebar( array(
+        'name' => __( 'Homepage Optional 20', 'twentytwelve' ),
+        'id' => 'homepage-optional-20',
+        'description' => __( 'Homepage Optional 20', 'twentytwelve' ),
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '<h5 class="sub-title">',
+        'after_title' => '</h5>',
+    ) );
+
+	register_sidebar( array(
+        'name' => __( 'Homepage Optional 21', 'twentytwelve' ),
+        'id' => 'homepage-optional-21',
+        'description' => __( 'Homepage Optional 21', 'twentytwelve' ),
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '<h5 class="sub-title">',
+        'after_title' => '</h5>',
+    ) );
+
+    register_sidebar( array(
+        'name' => __( 'Homepage Optional 22', 'twentytwelve' ),
+        'id' => 'homepage-optional-22',
+        'description' => __( 'Homepage Optional 22', 'twentytwelve' ),
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '<h5 class="sub-title">',
+        'after_title' => '</h5>',
+    ) );
+
+	register_sidebar( array(
+        'name' => __( 'Homepage Optional 23', 'twentytwelve' ),
+        'id' => 'homepage-optional-23',
+        'description' => __( 'Homepage Optional 23', 'twentytwelve' ),
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '<h5 class="sub-title">',
+        'after_title' => '</h5>',
+    ) );
+
+    register_sidebar( array(
+        'name' => __( 'Homepage Optional 24', 'twentytwelve' ),
+        'id' => 'homepage-optional-24',
+        'description' => __( 'Homepage Optional 24', 'twentytwelve' ),
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '<h5 class="sub-title">',
+        'after_title' => '</h5>',
+    ) );
+
 	register_sidebar( array(
 		'name' => __( 'Category Page Advert 1', 'twentytwelve' ),
 		'id' => 'category-page-advert-1',
