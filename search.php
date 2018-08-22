@@ -49,6 +49,7 @@ get_header(); ?>
 
 					<?php endwhile; ?>
                 </div>
+                <?php wp_pagenavi(); ?>
 				<?php // twentytwelve_content_nav( 'nav-below' ); ?>
 
 				<?php else : ?>
