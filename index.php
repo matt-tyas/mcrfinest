@@ -866,6 +866,36 @@
 					</div>
 				</div>
 			</section>
+            <div class="mf-centre">
+				<div class="mf-">
+					<div class="gw">
+						<div class="g one-quarter palm-one-half">
+							<?php
+								 if ( is_active_sidebar( 'homepage-optional-25' ) ) : ?>
+								 <?php dynamic_sidebar( 'homepage-optional-25' ); ?>
+							<?php endif; ?>
+						</div>
+						<div class="g one-quarter palm-one-half">
+							<?php
+								 if ( is_active_sidebar( 'homepage-optional-26' ) ) : ?>
+								 <?php dynamic_sidebar( 'homepage-optional-26' ); ?>
+							<?php endif; ?>
+						</div>
+						<div class="g one-quarter palm-one-half">
+							<?php
+								 if ( is_active_sidebar( 'homepage-optional-27' ) ) : ?>
+								 <?php dynamic_sidebar( 'homepage-optional-27' ); ?>
+							<?php endif; ?>
+						</div>
+						<div class="g one-quarter palm-one-half">
+							<?php
+								 if ( is_active_sidebar( 'homepage-optional-28' ) ) : ?>
+								 <?php dynamic_sidebar( 'homepage-optional-28' ); ?>
+							<?php endif; ?>
+						</div>
+					</div>
+				</div>
+			</div>
             <section class="border-wrap">
     			<div class="gw">
     				<div class="g one-whole lap-one-whole palm-one-whole">
