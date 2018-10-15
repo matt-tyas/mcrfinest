@@ -12,6 +12,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta http-equiv="cleartype" content="on">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="FjKua0MoCBrWzMACjOejNP7EWu0LbT3O9aeZobKeR48" />
 <meta property="fb:pages" content="1557163057929499" />
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
