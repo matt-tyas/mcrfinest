@@ -152,6 +152,7 @@
         						<div class="newscta">
     								<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
     								<style type="text/css">
+                                    .readability-right .newscta {margin-left: 0;}
                                     #mc_embed_signup .mc-field-group {width: 100%;}
     								#mce-responses { position: fixed; top: 0px; left: 0; width: 100%; }
     								#mc_embed_signup div.response { width: 100%; text-align: center;  padding: 1.5em 1em 1em 1em; }
@@ -165,6 +166,8 @@
     								#mc_embed_signup .mc-field-group { min-height:60px; }
     								#mc_embed_signup form {padding: 0;}
     								#mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error { border: 1px solid #CE0000; }
+                                    .newscta #mc_embed_signup .mc-field-group input.button {color: #000 !important;}
+                                    #mc_embed_signup .mc-field-group input.button:hover {color: #000 !important; border: 3px solid #886808 !important;}
     								</style>
     								<div id="mc_embed_signup">
     								<form action="//ManchestersFinest.us2.list-manage.com/subscribe/post?u=80f2869a6d1828e3a9de6548f&amp;id=3b2131b21e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>

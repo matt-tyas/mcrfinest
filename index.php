@@ -530,7 +530,7 @@
 							?>
 							<h3 class="mf-label"><a href="<?php echo esc_url( $category_link ); ?>" class="mf-label__link">Arts &amp; culture</a></h3>
 							<div class="gw equal">
-							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => 27);
+							<?php $args1 = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => 1058); 
 					            $myposts1 = get_posts( $args1 );
 					            foreach ( $myposts1 as $post ) : setup_postdata( $post ); ?>
 				    			<div class="g one-quarter lap-one-half palm-one-half">

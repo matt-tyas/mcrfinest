@@ -244,7 +244,6 @@
 		height: auto;
 	}
 	img, p, strong {
-		// display: block;
 		@extend .cf;
 	}
 	p + ul {
@@ -255,16 +254,16 @@
 	}
 	.wp-caption-text {
 		background-color: #fff;
-		padding: $half-spacing-unit/2 $half-spacing-unit;
-		@include font-size(16px);
+		padding: 0;
+		@include font-size(14px);
 		color: lighten($darkgrey, 20%);
+    font-style: italic;
 	}
 	@include media-query(palm) {
 		img {
 			width: 100%;
 			height: auto;
 		}
-
 	}
 }
 
@@ -306,8 +305,8 @@
 .ie9 {
 	.post-categories {
 			&:before {
-					content: "" !important;
-				}
+				content: "" !important;
+			}
 		}
 }
 
@@ -326,9 +325,15 @@ a[rel~="attachment"] {
 
 .wp-caption {
 
+	img {
+		display: block;
+	}
+
 	.wp-caption-text {
-		padding: 10px;
+		padding: 0;
 		background: #fff;
+		font-style: italic;
+		@include font-size(14px);
 	}
 
 }

@@ -1394,14 +1394,14 @@ function create_post_type() {
     // );
     $args = array(
       'labels'        => $labels,
-	  'exclude_from_search' => true,
+	  'exclude_from_search' => false,
       'description'   => 'Finest business directory',
 	  'register_meta_box_address' => 'mcr_add_address_metaboxes',
       'public'        => true,
       'menu_position' => 4,
       'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
       'has_archive'   => true,
-	  'taxonomies' => array('category', 'post_tag')
+	  'taxonomies' => array('category', 'post_tag', 'locations', 'business_types')
     );
     register_post_type( 'directory', $args );
 	flush_rewrite_rules();
